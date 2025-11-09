@@ -1,0 +1,151 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "TriviaNFT Game Settings",
+  "description": "Configuration schema for TriviaNFT game parameters",
+  "type": "object",
+  "required": ["session", "limits", "eligibility", "forging", "questions", "season"],
+  "properties": {
+    "session": {
+      "type": "object",
+      "required": ["questionsPerSession", "timerSeconds", "cooldownSeconds"],
+      "properties": {
+        "questionsPerSession": {
+          "type": "integer",
+          "minimum": 5,
+          "maximum": 20,
+          "description": "Number of questions per trivia session"
+        },
+        "timerSeconds": {
+          "type": "integer",
+          "minimum": 5,
+          "maximum": 60,
+          "description": "Time limit per question in seconds"
+        },
+        "cooldownSeconds": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 300,
+          "description": "Cooldown period between sessions in seconds"
+        }
+      }
+    },
+    "limits": {
+      "type": "object",
+      "required": ["dailySessionsConnected", "dailySessionsGuest", "resetTimeET"],
+      "properties": {
+        "dailySessionsConnected": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100,
+          "description": "Daily session limit for connected players"
+        },
+        "dailySessionsGuest": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 50,
+          "description": "Daily session limit for guest players"
+        },
+        "resetTimeET": {
+          "type": "string",
+          "pattern": "^([0-1][0-9]|2[0-3]):[0-5][0-9]$",
+          "description": "Daily reset time in ET timezone (HH:MM format)"
+        }
+      }
+    },
+    "eligibility": {
+      "type": "object",
+      "required": ["connectedWindowMinutes", "guestWindowMinutes"],
+      "properties": {
+        "connectedWindowMinutes": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 1440,
+          "description": "Mint eligibility window for connected players in minutes"
+        },
+        "guestWindowMinutes": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 1440,
+          "description": "Mint eligibility window for guest players in minutes"
+        }
+      }
+    },
+    "forging": {
+      "type": "object",
+      "required": [
+        "categoryUltimateCount",
+        "masterUltimateCount",
+        "seasonalUltimateCount",
+        "seasonGraceDays"
+      ],
+      "properties": {
+        "categoryUltimateCount": {
+          "type": "integer",
+          "minimum": 2,
+          "maximum": 20,
+          "description": "Number of NFTs required to forge Category Ultimate"
+        },
+        "masterUltimateCount": {
+          "type": "integer",
+          "minimum": 2,
+          "maximum": 20,
+          "description": "Number of categories required to forge Master Ultimate"
+        },
+        "seasonalUltimateCount": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 10,
+          "description": "Number of NFTs per category required to forge Seasonal Ultimate"
+        },
+        "seasonGraceDays": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 30,
+          "description": "Grace period after season end for seasonal forging in days"
+        }
+      }
+    },
+    "questions": {
+      "type": "object",
+      "required": ["reusedRatio", "newRatio", "poolThreshold"],
+      "properties": {
+        "reusedRatio": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Ratio of reused questions when pool exceeds threshold"
+        },
+        "newRatio": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Ratio of new questions when pool exceeds threshold"
+        },
+        "poolThreshold": {
+          "type": "integer",
+          "minimum": 100,
+          "maximum": 10000,
+          "description": "Question pool size threshold for applying reused/new ratio"
+        }
+      }
+    },
+    "season": {
+      "type": "object",
+      "required": ["pointsPerCorrect", "perfectBonus"],
+      "properties": {
+        "pointsPerCorrect": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100,
+          "description": "Points awarded per correct answer"
+        },
+        "perfectBonus": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000,
+          "description": "Bonus points for perfect score (10/10)"
+        }
+      }
+    }
+  }
+}

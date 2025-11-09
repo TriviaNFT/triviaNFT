@@ -1,0 +1,6 @@
+{
+  "name": "trivia-nft-layer",
+  "version": "1.0.0",
+  "description": "Lambda layer dependencies",
+  "dependencies": {}
+}

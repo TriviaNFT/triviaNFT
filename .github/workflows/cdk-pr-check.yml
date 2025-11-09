@@ -1,0 +1,119 @@
+name: CDK PR Check
+
+on:
+  pull_request:
+    branches: [main, develop]
+    paths:
+      - 'infra/**'
+      - '.github/workflows/cdk-pr-check.yml'
+
+permissions:
+  id-token: write
+  contents: read
+  pull-requests: write
+
+jobs:
+  cdk-synth-and-diff:
+    name: CDK Synth and Diff
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20.x
+          cache: 'pnpm'
+      
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+      
+      - name: Build infrastructure
+        run: pnpm --filter @trivia-nft/infra build
+      
+      - name: CDK Synth
+        run: pnpm --filter @trivia-nft/infra synth --context environment=staging
+      
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE_ARN_STAGING }}
+          aws-region: ${{ secrets.AWS_REGION || 'us-east-1' }}
+        continue-on-error: true
+      
+      - name: CDK Diff
+        id: cdk-diff
+        run: |
+          set +e
+          pnpm --filter @trivia-nft/infra diff --context environment=staging > diff-output.txt 2>&1
+          DIFF_EXIT_CODE=$?
+          set -e
+          
+          # Read the diff output
+          DIFF_CONTENT=$(cat diff-output.txt)
+          
+          # Escape special characters for GitHub Actions output
+          DIFF_CONTENT="${DIFF_CONTENT//'%'/'%25'}"
+          DIFF_CONTENT="${DIFF_CONTENT//$'\n'/'%0A'}"
+          DIFF_CONTENT="${DIFF_CONTENT//$'\r'/'%0D'}"
+          
+          echo "diff=${DIFF_CONTENT}" >> $GITHUB_OUTPUT
+          echo "exit_code=${DIFF_EXIT_CODE}" >> $GITHUB_OUTPUT
+        continue-on-error: true
+      
+      - name: Comment PR with diff
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const diffOutput = `${{ steps.cdk-diff.outputs.diff }}`;
+            const exitCode = `${{ steps.cdk-diff.outputs.exit_code }}`;
+            
+            let body = '## 🔍 CDK Infrastructure Changes\n\n';
+            
+            if (exitCode === '0') {
+              body += '✅ No infrastructure changes detected.\n';
+            } else if (diffOutput.includes('AWS credentials')) {
+              body += '⚠️ Unable to generate diff - AWS credentials not configured.\n';
+              body += 'CDK synth completed successfully.\n';
+            } else {
+              body += '### Changes Preview:\n\n';
+              body += '```diff\n' + diffOutput + '\n```\n\n';
+              body += '⚠️ Please review these infrastructure changes carefully before merging.\n';
+            }
+            
+            // Find existing comment
+            const { data: comments } = await github.rest.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+            });
+            
+            const botComment = comments.find(comment => 
+              comment.user.type === 'Bot' && 
+              comment.body.includes('CDK Infrastructure Changes')
+            );
+            
+            if (botComment) {
+              // Update existing comment
+              await github.rest.issues.updateComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: botComment.id,
+                body: body
+              });
+            } else {
+              // Create new comment
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                body: body
+              });
+            }

@@ -1,0 +1,168 @@
+name: Frontend Deploy
+
+on:
+  workflow_run:
+    workflows: ["CDK Deploy"]
+    types:
+      - completed
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Environment to deploy'
+        required: true
+        type: choice
+        options:
+          - staging
+          - production
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  deploy-staging:
+    name: Deploy Frontend to Staging
+    runs-on: ubuntu-latest
+    if: |
+      (github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success') ||
+      (github.event_name == 'workflow_dispatch' && github.event.inputs.environment == 'staging')
+    environment:
+      name: staging
+      url: https://staging.trivia-nft.example.com
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20.x
+          cache: 'pnpm'
+      
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+      
+      - name: Build Expo Web
+        run: pnpm --filter @trivia-nft/web build
+        env:
+          EXPO_PUBLIC_API_URL: ${{ secrets.STAGING_API_URL }}
+          EXPO_PUBLIC_ENVIRONMENT: staging
+      
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE_ARN_STAGING }}
+          aws-region: ${{ secrets.AWS_REGION || 'us-east-1' }}
+      
+      - name: Sync to S3
+        run: |
+          aws s3 sync apps/web/dist s3://${{ secrets.STAGING_S3_BUCKET }} \
+            --delete \
+            --cache-control "public, max-age=31536000, immutable" \
+            --exclude "*.html" \
+            --exclude "service-worker.js" \
+            --exclude "manifest.json"
+          
+          # Upload HTML files with no-cache
+          aws s3 sync apps/web/dist s3://${{ secrets.STAGING_S3_BUCKET }} \
+            --exclude "*" \
+            --include "*.html" \
+            --include "service-worker.js" \
+            --include "manifest.json" \
+            --cache-control "public, max-age=0, must-revalidate"
+      
+      - name: Invalidate CloudFront cache
+        run: |
+          DISTRIBUTION_ID="${{ secrets.STAGING_CLOUDFRONT_DISTRIBUTION_ID }}"
+          aws cloudfront create-invalidation \
+            --distribution-id $DISTRIBUTION_ID \
+            --paths "/*"
+      
+      - name: Verify deployment
+        run: |
+          echo "Frontend deployed to staging successfully"
+          echo "URL: https://staging.trivia-nft.example.com"
+          echo "Timestamp: $(date -u +"%Y-%m-%dT%H:%M:%SZ")"
+
+  deploy-production:
+    name: Deploy Frontend to Production
+    runs-on: ubuntu-latest
+    if: github.event_name == 'workflow_dispatch' && github.event.inputs.environment == 'production'
+    environment:
+      name: production
+      url: https://trivia-nft.example.com
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20.x
+          cache: 'pnpm'
+      
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+      
+      - name: Build Expo Web
+        run: pnpm --filter @trivia-nft/web build
+        env:
+          EXPO_PUBLIC_API_URL: ${{ secrets.PRODUCTION_API_URL }}
+          EXPO_PUBLIC_ENVIRONMENT: production
+      
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE_ARN_PRODUCTION }}
+          aws-region: ${{ secrets.AWS_REGION || 'us-east-1' }}
+      
+      - name: Sync to S3
+        run: |
+          aws s3 sync apps/web/dist s3://${{ secrets.PRODUCTION_S3_BUCKET }} \
+            --delete \
+            --cache-control "public, max-age=31536000, immutable" \
+            --exclude "*.html" \
+            --exclude "service-worker.js" \
+            --exclude "manifest.json"
+          
+          # Upload HTML files with no-cache
+          aws s3 sync apps/web/dist s3://${{ secrets.PRODUCTION_S3_BUCKET }} \
+            --exclude "*" \
+            --include "*.html" \
+            --include "service-worker.js" \
+            --include "manifest.json" \
+            --cache-control "public, max-age=0, must-revalidate"
+      
+      - name: Invalidate CloudFront cache
+        run: |
+          DISTRIBUTION_ID="${{ secrets.PRODUCTION_CLOUDFRONT_DISTRIBUTION_ID }}"
+          aws cloudfront create-invalidation \
+            --distribution-id $DISTRIBUTION_ID \
+            --paths "/*"
+      
+      - name: Verify deployment
+        run: |
+          echo "Frontend deployed to production successfully"
+          echo "URL: https://trivia-nft.example.com"
+          echo "Timestamp: $(date -u +"%Y-%m-%dT%H:%M:%SZ")"
+      
+      - name: Create deployment tag
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          TAG_NAME="deploy-frontend-prod-$(date +%Y%m%d-%H%M%S)"
+          git tag -a "$TAG_NAME" -m "Frontend production deployment on $(date)"
+          git push origin "$TAG_NAME"

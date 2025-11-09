@@ -1,0 +1,53 @@
+{
+  "expo": {
+    "name": "TriviaNFT",
+    "slug": "trivia-nft",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#1a1a2e"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.trivianft.app"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#1a1a2e"
+      },
+      "package": "com.trivianft.app"
+    },
+    "web": {
+      "favicon": "./public/favicon.ico",
+      "bundler": "metro",
+      "output": "static",
+      "name": "TriviaNFT - Blockchain Trivia Game",
+      "shortName": "TriviaNFT",
+      "description": "Blockchain-based trivia gaming platform on Cardano. Answer questions, earn NFTs, and compete on the leaderboard.",
+      "themeColor": "#1a1a2e",
+      "backgroundColor": "#1a1a2e",
+      "display": "standalone",
+      "orientation": "portrait-primary",
+      "startUrl": "/",
+      "scope": "/",
+      "preferRelatedApplications": false,
+      "lang": "en-US",
+      "dir": "ltr"
+    },
+    "plugins": [
+      "expo-router"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "scheme": "trivianft"
+  }
+}
