@@ -4,7 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "tsc",
+    "dev": "tsx src/local-server.ts",
+    "build": "tsc && node --input-type=module -e \"import fs from 'fs'; fs.writeFileSync('dist/package.json', JSON.stringify({type:'module'}, null, 2))\"",
     "lint": "eslint .",
     "type-check": "tsc --noEmit",
     "test": "vitest run",
@@ -36,6 +37,7 @@
     "@types/node": "^20.11.0",
     "@types/pg": "^8.10.9",
     "@types/uuid": "^9.0.7",
+    "esbuild": "^0.26.0",
     "tsx": "^4.7.0",
     "typescript": "^5.3.3",
     "vitest": "^1.2.2"

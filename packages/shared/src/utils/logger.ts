@@ -4,8 +4,6 @@
  * Requirement 46: Observability - Logging
  */
 
-import { v4 as uuidv4 } from 'uuid';
-
 export enum LogLevel {
   DEBUG = 'DEBUG',
   INFO = 'INFO',
@@ -117,6 +115,14 @@ function sanitizeObject(obj: any): any {
 }
 
 /**
+ * Generate a correlation ID using lazy-loaded uuid
+ */
+async function generateCorrelationId(): Promise<string> {
+  const { v4: uuidv4 } = await import('uuid');
+  return uuidv4();
+}
+
+/**
  * Logger class for structured logging
  */
 export class Logger {
@@ -126,7 +132,7 @@ export class Logger {
   constructor(context: LogContext = {}, minLevel: LogLevel = LogLevel.INFO) {
     this.context = {
       ...context,
-      correlationId: context.correlationId || uuidv4(),
+      correlationId: context.correlationId || crypto.randomUUID(),
     };
     this.minLevel = minLevel;
   }
@@ -338,7 +344,7 @@ export function createLogger(lambdaContext?: any, additionalContext?: LogContext
 /**
  * Extract correlation ID from API Gateway event
  */
-export function extractCorrelationId(event: any): string {
+export async function extractCorrelationId(event: any): Promise<string> {
   // Try to get from headers
   const headers = event.headers || {};
   const correlationId =
@@ -347,7 +353,7 @@ export function extractCorrelationId(event: any): string {
     headers['x-request-id'] ||
     headers['X-Request-Id'] ||
     event.requestContext?.requestId ||
-    uuidv4();
+    (await generateCorrelationId());
 
   return correlationId;
 }

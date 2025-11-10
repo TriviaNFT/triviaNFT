@@ -11,11 +11,14 @@
       "@/*": [
         "./src/*"
       ]
-    }
+    },
+    "skipLibCheck": true
   },
   "include": [
     "src/**/*",
     "app/**/*",
+    "*.ts",
+    "*.tsx",
     "nativewind-env.d.ts",
     ".expo/types/**/*.ts",
     "expo-env.d.ts"

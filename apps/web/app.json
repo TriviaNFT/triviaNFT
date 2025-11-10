@@ -26,9 +26,8 @@
       "package": "com.trivianft.app"
     },
     "web": {
-      "favicon": "./public/favicon.ico",
       "bundler": "metro",
-      "output": "static",
+      "output": "single",
       "name": "TriviaNFT - Blockchain Trivia Game",
       "shortName": "TriviaNFT",
       "description": "Blockchain-based trivia gaming platform on Cardano. Answer questions, earn NFTs, and compete on the leaderboard.",
@@ -40,7 +39,12 @@
       "scope": "/",
       "preferRelatedApplications": false,
       "lang": "en-US",
-      "dir": "ltr"
+      "dir": "ltr",
+      "meta": {
+        "http-equiv": {
+          "Content-Security-Policy": "default-src * 'unsafe-inline' 'unsafe-eval' data: blob:; script-src * 'unsafe-inline' 'unsafe-eval'; connect-src * 'unsafe-inline'; img-src * data: blob: 'unsafe-inline'; frame-src *; style-src * 'unsafe-inline';"
+        }
+      }
     },
     "plugins": [
       "expo-router"
@@ -48,6 +52,7 @@
     "experiments": {
       "typedRoutes": true
     },
-    "scheme": "trivianft"
+    "scheme": "trivianft",
+    "jsEngine": "jsc"
   }
 }

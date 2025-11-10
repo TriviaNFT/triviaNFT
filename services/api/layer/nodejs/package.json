@@ -1,6 +1,44 @@
 {
-  "name": "trivia-nft-layer",
+  "name": "@trivia-nft/api",
   "version": "1.0.0",
-  "description": "Lambda layer dependencies",
-  "dependencies": {}
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc && node --input-type=module -e \"import fs from 'fs'; fs.writeFileSync('dist/package.json', JSON.stringify({type:'module'}, null, 2))\"",
+    "lint": "eslint .",
+    "type-check": "tsc --noEmit",
+    "test": "vitest run",
+    "migrate:up": "node-pg-migrate up",
+    "migrate:down": "node-pg-migrate down",
+    "migrate:create": "node-pg-migrate create",
+    "seed:nft-assets": "tsx scripts/generate-nft-assets.ts",
+    "seed:nft-catalog": "tsx scripts/seed-nft-catalog.ts",
+    "seed:questions": "tsx scripts/seed-questions.ts",
+    "seed:all": "pnpm seed:nft-assets && pnpm seed:nft-catalog && pnpm seed:questions"
+  },
+  "dependencies": {
+    "@aws-sdk/client-appconfigdata": "^3.927.0",
+    "@aws-sdk/client-bedrock-runtime": "^3.490.0",
+    "@aws-sdk/client-dynamodb": "^3.490.0",
+    "@aws-sdk/client-s3": "^3.490.0",
+    "@aws-sdk/client-secrets-manager": "^3.490.0",
+    "@aws-sdk/client-sfn": "^3.490.0",
+    "@trivia-nft/shared": "workspace:*",
+    "aws-lambda": "^1.0.7",
+    "node-pg-migrate": "^7.0.0",
+    "pg": "^8.11.3",
+    "redis": "^4.6.12",
+    "uuid": "^9.0.1",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.133",
+    "@types/node": "^20.11.0",
+    "@types/pg": "^8.10.9",
+    "@types/uuid": "^9.0.7",
+    "esbuild": "^0.26.0",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3",
+    "vitest": "^1.2.2"
+  }
 }

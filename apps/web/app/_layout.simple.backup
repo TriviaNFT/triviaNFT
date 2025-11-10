@@ -1,0 +1,22 @@
+import 'react-native-get-random-values';
+import '../global.css';
+import { Stack } from 'expo-router';
+import { StatusBar } from 'expo-status-bar';
+import { Text, View } from 'react-native';
+
+export default function RootLayout() {
+  console.log('RootLayout rendering');
+  
+  return (
+    <View style={{ flex: 1, backgroundColor: '#0f0f1e' }}>
+      <StatusBar style="light" />
+      <Text style={{ color: 'white', padding: 20 }}>App is loading...</Text>
+      <Stack
+        screenOptions={{
+          headerShown: false,
+          contentStyle: { backgroundColor: '#0f0f1e' },
+        }}
+      />
+    </View>
+  );
+}

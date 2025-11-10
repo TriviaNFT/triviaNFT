@@ -34,7 +34,7 @@ export class ApiEndpoint extends Construct {
       apiId: props.api.ref,
       routeKey: props.routeKey,
       target: `integrations/${this.integration.ref}`,
-      authorizationType: props.authorizerId ? 'JWT' : 'NONE',
+      authorizationType: props.authorizerId ? 'CUSTOM' : 'NONE',
       authorizerId: props.authorizerId,
     });
 

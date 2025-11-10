@@ -1,34 +1,36 @@
 /**
  * Cryptographic utility functions
+ * Note: Uses lazy imports for Node crypto to support web platforms with polyfills
  */
-
-import { createHash, randomBytes } from 'crypto';
 
 /**
  * Generate SHA256 hash of a string
  */
-export const sha256 = (data: string): string => {
+export const sha256 = async (data: string): Promise<string> => {
+  const { createHash } = await import('crypto');
   return createHash('sha256').update(data).digest('hex');
 };
 
 /**
  * Generate SHA256 hash of an object (JSON stringified)
  */
-export const hashObject = (obj: unknown): string => {
+export const hashObject = async (obj: unknown): Promise<string> => {
   return sha256(JSON.stringify(obj));
 };
 
 /**
  * Generate a random UUID v4
  */
-export const generateUUID = (): string => {
+export const generateUUID = async (): Promise<string> => {
+  const { randomBytes } = await import('crypto');
   return randomBytes(16).toString('hex').replace(/(.{8})(.{4})(.{4})(.{4})(.{12})/, '$1-$2-$3-$4-$5');
 };
 
 /**
  * Generate a random anonymous ID for guest users
  */
-export const generateAnonymousId = (): string => {
+export const generateAnonymousId = async (): Promise<string> => {
+  const { randomBytes } = await import('crypto');
   return `anon_${randomBytes(16).toString('hex')}`;
 };
 
@@ -72,7 +74,8 @@ export const maskEmail = (email: string): string => {
 /**
  * Generate a secure random token
  */
-export const generateToken = (length: number = 32): string => {
+export const generateToken = async (length: number = 32): Promise<string> => {
+  const { randomBytes } = await import('crypto');
   return randomBytes(length).toString('hex');
 };
 
@@ -80,18 +83,19 @@ export const generateToken = (length: number = 32): string => {
  * Hash a password using SHA256 (for simple use cases)
  * Note: For production password hashing, use bcrypt or argon2
  */
-export const hashPassword = (password: string, salt?: string): string => {
+export const hashPassword = async (password: string, salt?: string): Promise<string> => {
+  const { randomBytes } = await import('crypto');
   const actualSalt = salt || randomBytes(16).toString('hex');
-  const hash = sha256(password + actualSalt);
+  const hash = await sha256(password + actualSalt);
   return `${actualSalt}:${hash}`;
 };
 
 /**
  * Verify a password against a hash
  */
-export const verifyPassword = (password: string, hashedPassword: string): boolean => {
+export const verifyPassword = async (password: string, hashedPassword: string): Promise<boolean> => {
   const [salt, hash] = hashedPassword.split(':');
-  const newHash = sha256(password + salt);
+  const newHash = await sha256(password + salt);
   return newHash === hash;
 };
 
@@ -135,20 +139,23 @@ export const isJWTExpired = (payload: JWTPayload): boolean => {
 /**
  * Encode data to base64
  */
-export const encodeBase64 = (data: string): string => {
+export const encodeBase64 = async (data: string): Promise<string> => {
+  const { Buffer } = await import('buffer');
   return Buffer.from(data).toString('base64');
 };
 
 /**
  * Decode data from base64
  */
-export const decodeBase64 = (data: string): string => {
+export const decodeBase64 = async (data: string): Promise<string> => {
+  const { Buffer } = await import('buffer');
   return Buffer.from(data, 'base64').toString('utf-8');
 };
 
 /**
  * Generate a correlation ID for request tracing
  */
-export const generateCorrelationId = (): string => {
+export const generateCorrelationId = async (): Promise<string> => {
+  const { randomBytes } = await import('crypto');
   return `${Date.now()}-${randomBytes(8).toString('hex')}`;
 };

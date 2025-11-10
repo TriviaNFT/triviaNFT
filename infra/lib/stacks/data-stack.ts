@@ -98,7 +98,7 @@ export class DataStack extends cdk.Stack {
     // Create Aurora Serverless v2 cluster
     this.auroraCluster = new rds.DatabaseCluster(this, 'AuroraCluster', {
       engine: rds.DatabaseClusterEngine.auroraPostgres({
-        version: rds.AuroraPostgresEngineVersion.VER_15_4,
+        version: rds.AuroraPostgresEngineVersion.VER_15_8,
       }),
       credentials: rds.Credentials.fromSecret(this.databaseSecret),
       defaultDatabaseName: 'trivianft',
@@ -141,7 +141,7 @@ export class DataStack extends cdk.Stack {
     // Note: Aurora Serverless v2 auto-pause is configured via the cluster parameter group
     const parameterGroup = new rds.ParameterGroup(this, 'AuroraParameterGroup', {
       engine: rds.DatabaseClusterEngine.auroraPostgres({
-        version: rds.AuroraPostgresEngineVersion.VER_15_4,
+        version: rds.AuroraPostgresEngineVersion.VER_15_8,
       }),
       description: 'Parameter group for Aurora Serverless v2 with auto-pause',
       parameters: {
@@ -259,8 +259,9 @@ export class DataStack extends cdk.Stack {
             '-c',
             [
               'npm install',
+              'npm run build',
               'cp -r /asset-input/migrations /asset-output/',
-              'cp -r /asset-input/src/db /asset-output/',
+              'cp /asset-input/dist/db/*.js /asset-output/',
               'cp /asset-input/package.json /asset-output/',
               'cd /asset-output',
               'npm install --production',
@@ -294,11 +295,16 @@ export class DataStack extends cdk.Stack {
                   path.join(outputDir, 'migrations')
                 );
                 
-                // Copy src/db folder
-                copyDir(
-                  path.join(apiDir, 'src/db'),
-                  path.join(outputDir, 'db')
-                );
+                // Copy compiled JavaScript files from dist/db to root (flatten structure)
+                const dbFiles = fs.readdirSync(path.join(apiDir, 'dist/db'));
+                for (const file of dbFiles) {
+                  if (file.endsWith('.js')) {
+                    fs.copyFileSync(
+                      path.join(apiDir, 'dist/db', file),
+                      path.join(outputDir, file)
+                    );
+                  }
+                }
                 
                 // Read and modify package.json to remove workspace dependencies
                 const packageJsonPath = path.join(apiDir, 'package.json');

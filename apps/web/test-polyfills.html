@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Polyfill Verification Test</title>
+</head>
+<body>
+    <h1>Polyfill Verification</h1>
+    <div id="results"></div>
+    
+    <script>
+        const results = [];
+        
+        // Check window.Buffer
+        if (typeof window.Buffer !== 'undefined') {
+            results.push('✓ window.Buffer is defined');
+            try {
+                const buf = Buffer.from('test');
+                results.push('✓ Buffer.from() works: ' + buf.toString());
+            } catch (e) {
+                results.push('✗ Buffer.from() failed: ' + e.message);
+            }
+        } else {
+            results.push('✗ window.Buffer is NOT defined');
+        }
+        
+        // Check window.process
+        if (typeof window.process !== 'undefined') {
+            results.push('✓ window.process is defined');
+            results.push('  - process.env: ' + (typeof window.process.env));
+            results.push('  - process.browser: ' + window.process.browser);
+        } else {
+            results.push('✗ window.process is NOT defined');
+        }
+        
+        // Check window.global
+        if (typeof window.global !== 'undefined') {
+            results.push('✓ window.global is defined');
+            results.push('  - global === window: ' + (window.global === window));
+        } else {
+            results.push('✗ window.global is NOT defined');
+        }
+        
+        // Test UUID generation (if available)
+        results.push('\nTesting UUID generation:');
+        try {
+            // Try to use crypto.getRandomValues (polyfilled by react-native-get-random-values)
+            if (typeof crypto !== 'undefined' && typeof crypto.getRandomValues === 'function') {
+                const array = new Uint8Array(16);
+                crypto.getRandomValues(array);
+                results.push('✓ crypto.getRandomValues() works');
+                
+                // Simple UUID v4 generation test
+                const uuid = Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');
+                results.push('✓ Generated random hex: ' + uuid.substring(0, 16) + '...');
+            } else {
+                results.push('✗ crypto.getRandomValues() not available');
+            }
+        } catch (e) {
+            results.push('✗ UUID generation failed: ' + e.message);
+        }
+        
+        // Display results
+        document.getElementById('results').innerHTML = '<pre>' + results.join('\n') + '</pre>';
+        
+        // Also log to console
+        console.log('=== Polyfill Verification Results ===');
+        results.forEach(r => console.log(r));
+        console.log('=====================================');
+    </script>
+</body>
+</html>

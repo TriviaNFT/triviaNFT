@@ -51,12 +51,14 @@ export class ObservabilityStack extends cdk.Stack {
       displayName: `TriviaNFT ${props.environment} Warning Alarms`,
     });
 
-    // Create log groups with 30-day retention
-    const apiLogGroup = new logs.LogGroup(this, 'ApiGatewayLogGroup', {
-      logGroupName: `/aws/apigateway/trivia-nft-${props.environment}`,
-      retention: logs.RetentionDays.ONE_MONTH,
-      removalPolicy: cdk.RemovalPolicy.DESTROY,
-    });
+    // Reference the API Gateway log group created by ApiStack
+    // Note: The log group is created by ApiStack, we just reference it here for queries
+    const apiLogGroupName = `/aws/apigateway/trivia-nft-${props.environment}`;
+    const apiLogGroup = logs.LogGroup.fromLogGroupName(
+      this,
+      'ApiGatewayLogGroup',
+      apiLogGroupName
+    );
 
     const lambdaLogGroup = new logs.LogGroup(this, 'LambdaLogGroup', {
       logGroupName: `/aws/lambda/trivia-nft-${props.environment}`,
@@ -65,6 +67,7 @@ export class ObservabilityStack extends cdk.Stack {
     });
 
     // Create CloudWatch Logs Insights queries
+    // Note: These queries will work once ApiStack creates the log group
     this.logsInsightsQueries = this.createLogsInsightsQueries(props.environment, apiLogGroup, lambdaLogGroup);
 
     // Create X-Ray sampling rule
@@ -845,8 +848,8 @@ export class ObservabilityStack extends cdk.Stack {
    */
   private createLogsInsightsQueries(
     environment: string,
-    apiLogGroup: logs.LogGroup,
-    lambdaLogGroup: logs.LogGroup
+    apiLogGroup: logs.ILogGroup,
+    lambdaLogGroup: logs.ILogGroup
   ): logs.CfnQueryDefinition[] {
     const queries: logs.CfnQueryDefinition[] = [];
 

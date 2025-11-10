@@ -10,7 +10,7 @@
   "decamelize": true,
   "checkOrder": true,
   "verbose": true,
-  "ignorePattern": "\\..*",
+  "ignorePattern": "(\\..*|README\\.md)",
   "createSchema": true,
   "createMigrationsSchema": false,
   "single-transaction": true

@@ -18,6 +18,7 @@
     "@typescript-eslint/parser": "^6.21.0",
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
+    "metro-cache": "0.80.12",
     "prettier": "^3.2.5",
     "typescript": "^5.3.3",
     "vitest": "^1.2.2"

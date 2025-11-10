@@ -1,0 +1,43 @@
+{
+  "TriviaNFT-Security-staging": {
+    "ExportsOutputRefBlockfrostSecret49C786E85FEC02DF": "arn:aws:secretsmanager:us-east-1:887579662693:secret:staging/trivia-nft/blockfrost-vaJdkw",
+    "ExportsOutputRefJwtSecretB8834B392B9A9162": "arn:aws:secretsmanager:us-east-1:887579662693:secret:staging/trivia-nft/jwt-secret-V8OAlY",
+    "PolicySigningKeySecretArn": "arn:aws:secretsmanager:us-east-1:887579662693:secret:staging/trivia-nft/policy-signing-key-NdXCEZ",
+    "ExportsOutputFnGetAttWebAclArnEF1FFB35": "arn:aws:wafv2:us-east-1:887579662693:global/webacl/WebAcl-oZEulP3msa1F/be8176aa-5598-41a0-b4e4-4993525a5154",
+    "IpfsSecretArn": "arn:aws:secretsmanager:us-east-1:887579662693:secret:staging/trivia-nft/ipfs-ria7Tz",
+    "WafLogBucketName": "trivia-nft-waf-logs-staging-887579662693",
+    "SecretsAccessPolicyArn": "arn:aws:iam::887579662693:policy/TriviaNFT-SecretsAccess-staging",
+    "BlockfrostSecretArn": "arn:aws:secretsmanager:us-east-1:887579662693:secret:staging/trivia-nft/blockfrost-vaJdkw",
+    "ExportsOutputRefIpfsSecretBF9299447F847A71": "arn:aws:secretsmanager:us-east-1:887579662693:secret:staging/trivia-nft/ipfs-ria7Tz",
+    "JwtSecretArn": "arn:aws:secretsmanager:us-east-1:887579662693:secret:staging/trivia-nft/jwt-secret-V8OAlY",
+    "WebAclArn": "arn:aws:wafv2:us-east-1:887579662693:global/webacl/WebAcl-oZEulP3msa1F/be8176aa-5598-41a0-b4e4-4993525a5154",
+    "ExportsOutputRefPolicySigningKeySecretBB8BFBF1FC74D33D": "arn:aws:secretsmanager:us-east-1:887579662693:secret:staging/trivia-nft/policy-signing-key-NdXCEZ"
+  },
+  "TriviaNFT-AppConfig-staging": {
+    "DeploymentStrategyId": "iatohm5",
+    "ExportsOutputRefGameSettingsProfile2139AE2B": "nuqfzxp",
+    "ConfigurationProfileId": "nuqfzxp",
+    "EnvironmentId": "2ur0kvb",
+    "ExportsOutputRefApplication96007F15": "82ks70a",
+    "ApplicationId": "82ks70a",
+    "ExportsOutputRefEnvironment257E7837": "2ur0kvb"
+  },
+  "TriviaNFT-Data-staging": {
+    "RedisEndpoint": "clustercfg.trrk4qf02y6dtw6.0wohec.use1.cache.amazonaws.com",
+    "AuroraProxyEndpoint": "trivianftdatastagingauroraclusterauroraproxy63866c3f.proxy-cu7esog2qb88.us-east-1.rds.amazonaws.com",
+    "ExportsOutputRefVpcPrivateSubnet2Subnet3788AAA1380949A3": "subnet-05b05524d1cd24337",
+    "VpcId": "vpc-0fe7fb0fa768378a9",
+    "AuroraClusterEndpoint": "trivianft-data-staging-auroracluster23d869c0-kpuoteaywjrd.cluster-cu7esog2qb88.us-east-1.rds.amazonaws.com",
+    "ExportsOutputRefVpcPrivateSubnet1Subnet536B997AFD4CC940": "subnet-0287320d184b35715",
+    "ExportsOutputRefRedisSecretCB3BD9716380542C": "arn:aws:secretsmanager:us-east-1:887579662693:secret:staging/trivia-nft/redis-H3pAdv",
+    "ExportsOutputFnGetAttLambdaSecurityGroup0BD9FC99GroupId34A98CFB": "sg-0d3a738a160882d65",
+    "ExportsOutputRefDatabaseSecret86DBB7B353068790": "arn:aws:secretsmanager:us-east-1:887579662693:secret:staging/trivia-nft/database-GnVMjb",
+    "MigrationFunctionArn": "arn:aws:lambda:us-east-1:887579662693:function:TriviaNFT-Migration-staging"
+  },
+  "TriviaNFT-Api-staging": {
+    "LambdaLayersSharedUtilsLayerArnCC2B081A": "arn:aws:lambda:us-east-1:887579662693:layer:trivia-nft-shared-utils-staging:3",
+    "ApiEndpoint": "https://a748u5udx7.execute-api.us-east-1.amazonaws.com",
+    "ApiId": "a748u5udx7",
+    "LambdaLayersDependenciesLayerArnA9BC4F14": "arn:aws:lambda:us-east-1:887579662693:layer:trivia-nft-dependencies-staging:3"
+  }
+}

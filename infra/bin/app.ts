@@ -78,10 +78,12 @@ apiStack.addDependency(securityStack);
 // });
 
 // Create ObservabilityStack (provides CloudWatch dashboards and alarms)
-new ObservabilityStack(app, `TriviaNFT-Observability-${environment}`, {
+const observabilityStack = new ObservabilityStack(app, `TriviaNFT-Observability-${environment}`, {
   ...stackProps,
   environment,
 });
+// ObservabilityStack references the API Gateway log group created by ApiStack
+observabilityStack.addDependency(apiStack);
 
 // Create WebStack (provides S3 and CloudFront for static hosting)
 const webStack = new WebStack(app, `TriviaNFT-Web-${environment}`, {
