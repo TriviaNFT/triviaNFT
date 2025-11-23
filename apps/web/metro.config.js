@@ -19,6 +19,8 @@ config.resolver.blockList = [
   /\/services\/api\/node_modules\/.*/,
   /\/packages\/shared\/node_modules\/.*/,
   /\/infra\/node_modules\/.*/,
+  // Exclude NativeWind cache files that cause SHA-1 issues
+  /react-native-css-interop\/\.cache\/.*/,
 ];
 
 // Allow require.context (used by expo-router)
