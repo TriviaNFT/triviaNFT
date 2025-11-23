@@ -8,12 +8,6 @@
   "framework": null,
   "devCommand": "cd apps/web && pnpm dev",
   "regions": ["iad1"],
-  "functions": {
-    "apps/web/app/api/**/*.ts": {
-      "maxDuration": 60,
-      "memory": 1024
-    }
-  },
   "headers": [
     {
       "source": "/api/(.*)",
