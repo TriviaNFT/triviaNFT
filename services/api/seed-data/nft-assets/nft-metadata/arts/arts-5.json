@@ -1,0 +1,27 @@
+{
+  "name": "Arts NFT #5",
+  "description": "Arts knowledge NFT #5",
+  "image": "ipfs://QmPlaceholderarts5",
+  "mediaType": "image/svg+xml",
+  "files": [
+    {
+      "name": "arts-5.svg",
+      "mediaType": "image/svg+xml",
+      "src": "ipfs://QmPlaceholderarts5"
+    }
+  ],
+  "attributes": [
+    {
+      "trait_type": "Style",
+      "value": "Realism"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Uncommon"
+    },
+    {
+      "trait_type": "Medium",
+      "value": "Sculpture"
+    }
+  ]
+}

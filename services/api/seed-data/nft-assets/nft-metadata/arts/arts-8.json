@@ -1,0 +1,27 @@
+{
+  "name": "Arts NFT #8",
+  "description": "Arts knowledge NFT #8",
+  "image": "ipfs://QmPlaceholderarts8",
+  "mediaType": "image/svg+xml",
+  "files": [
+    {
+      "name": "arts-8.svg",
+      "mediaType": "image/svg+xml",
+      "src": "ipfs://QmPlaceholderarts8"
+    }
+  ],
+  "attributes": [
+    {
+      "trait_type": "Style",
+      "value": "Minimalism"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Common"
+    },
+    {
+      "trait_type": "Medium",
+      "value": "Charcoal"
+    }
+  ]
+}

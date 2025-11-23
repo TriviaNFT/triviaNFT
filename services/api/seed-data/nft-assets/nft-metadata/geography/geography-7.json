@@ -1,0 +1,27 @@
+{
+  "name": "Geography NFT #7",
+  "description": "Geographic knowledge NFT #7",
+  "image": "ipfs://QmPlaceholdergeography7",
+  "mediaType": "image/svg+xml",
+  "files": [
+    {
+      "name": "geography-7.svg",
+      "mediaType": "image/svg+xml",
+      "src": "ipfs://QmPlaceholdergeography7"
+    }
+  ],
+  "attributes": [
+    {
+      "trait_type": "Terrain",
+      "value": "River"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Epic"
+    },
+    {
+      "trait_type": "Climate",
+      "value": "Continental"
+    }
+  ]
+}

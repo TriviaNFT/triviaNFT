@@ -1,0 +1,27 @@
+{
+  "name": "Entertainment NFT #1",
+  "description": "Entertainment knowledge NFT #1",
+  "image": "ipfs://QmPlaceholderentertainment1",
+  "mediaType": "image/svg+xml",
+  "files": [
+    {
+      "name": "entertainment-1.svg",
+      "mediaType": "image/svg+xml",
+      "src": "ipfs://QmPlaceholderentertainment1"
+    }
+  ],
+  "attributes": [
+    {
+      "trait_type": "Genre",
+      "value": "Action"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Common"
+    },
+    {
+      "trait_type": "Era",
+      "value": "2020s"
+    }
+  ]
+}

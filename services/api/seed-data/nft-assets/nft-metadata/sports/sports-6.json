@@ -1,0 +1,27 @@
+{
+  "name": "Sports NFT #6",
+  "description": "Sports knowledge NFT #6",
+  "image": "ipfs://QmPlaceholdersports6",
+  "mediaType": "image/svg+xml",
+  "files": [
+    {
+      "name": "sports-6.svg",
+      "mediaType": "image/svg+xml",
+      "src": "ipfs://QmPlaceholdersports6"
+    }
+  ],
+  "attributes": [
+    {
+      "trait_type": "Sport",
+      "value": "Golf"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Rare"
+    },
+    {
+      "trait_type": "Achievement",
+      "value": "Hole in One"
+    }
+  ]
+}

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { View, Text } from 'react-native';
+import { useReducedMotion } from '../../hooks/useReducedMotion';
 
 export interface TimerProps {
   seconds: number;
@@ -34,41 +35,17 @@ export const Timer: React.FC<TimerProps> = ({
   showProgress = true,
   className,
 }) => {
-  const [timeLeft, setTimeLeft] = useState(seconds);
-  const [isWarning, setIsWarning] = useState(false);
+  const prefersReducedMotion = useReducedMotion();
+  
+  // Just display the seconds value passed from parent (controlled component)
+  const timeLeft = Math.max(0, seconds);
+  const isWarning = timeLeft <= 3 && timeLeft > 0;
 
-  useEffect(() => {
-    setTimeLeft(seconds);
-    setIsWarning(false);
-  }, [seconds]);
-
-  useEffect(() => {
-    if (timeLeft <= 0) {
-      onComplete?.();
-      return;
-    }
-
-    // Warning state when 3 seconds or less
-    if (timeLeft <= 3) {
-      setIsWarning(true);
-    }
-
-    const timer = setInterval(() => {
-      setTimeLeft((prev) => {
-        if (prev <= 1) {
-          clearInterval(timer);
-          return 0;
-        }
-        return prev - 1;
-      });
-    }, 1000);
-
-    return () => clearInterval(timer);
-  }, [timeLeft, onComplete]);
-
-  const progress = (timeLeft / seconds) * 100;
+  // Fixed total duration for progress calculation (assuming 10 second questions)
+  const totalSeconds = 10;
+  const progress = (timeLeft / totalSeconds) * 100;
   const circumference = 2 * Math.PI * 45; // radius = 45
-  const strokeDashoffset = circumference - (progress / 100) * circumference;
+  const strokeDashoffset = circumference - (Math.max(0, Math.min(100, progress)) / 100) * circumference;
 
   const timerColor = isWarning ? 'text-error-500' : 'text-primary-500';
   const progressColor = isWarning ? '#ef4444' : '#6d4ee3';
@@ -109,7 +86,7 @@ export const Timer: React.FC<TimerProps> = ({
       )}
       <Text
         className={`${sizeStyles[size].text} ${timerColor} font-bold ${
-          isWarning ? 'animate-pulse' : ''
+          isWarning && !prefersReducedMotion ? 'animate-pulse' : ''
         }`}
       >
         {timeLeft}

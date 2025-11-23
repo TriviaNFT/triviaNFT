@@ -1,0 +1,27 @@
+{
+  "name": "Entertainment NFT #5",
+  "description": "Entertainment knowledge NFT #5",
+  "image": "ipfs://QmPlaceholderentertainment5",
+  "mediaType": "image/svg+xml",
+  "files": [
+    {
+      "name": "entertainment-5.svg",
+      "mediaType": "image/svg+xml",
+      "src": "ipfs://QmPlaceholderentertainment5"
+    }
+  ],
+  "attributes": [
+    {
+      "trait_type": "Genre",
+      "value": "Horror"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Uncommon"
+    },
+    {
+      "trait_type": "Era",
+      "value": "1980s"
+    }
+  ]
+}

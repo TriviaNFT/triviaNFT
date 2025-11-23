@@ -1,0 +1,866 @@
+﻿[
+  {
+    "question": "Which animated movie features a character named Simba?",
+    "options": ["Aladdin", "The Lion King", "Finding Nemo", "Shrek"],
+    "correctIndex": 1,
+    "explanation": "Simba is the main protagonist of the 1994 Disney animated film, The Lion King."
+  },
+  {
+    "question": "Who played the lead role in the movie 'Titanic' alongside Kate Winslet?",
+    "options": ["Brad Pitt", "Leonardo DiCaprio", "Tom Cruise", "Johnny Depp"],
+    "correctIndex": 1,
+    "explanation": "Leonardo DiCaprio played Jack Dawson, the male lead, in the 1997 film Titanic."
+  },
+  {
+    "question": "What is the name of the wizard in the 'Harry Potter' series?",
+    "options": ["Gandalf", "Dumbledore", "Merlin", "Voldemort"],
+    "correctIndex": 1,
+    "explanation": "Albus Dumbledore is the Headmaster of Hogwarts in the Harry Potter book and film series."
+  },
+  {
+    "question": "Which pop star is known for hits like 'Single Ladies (Put a Ring on It)' and 'Crazy in Love'?",
+    "options": ["Rihanna", "Adele", "Beyoncé", "Taylor Swift"],
+    "correctIndex": 2,
+    "explanation": "Beyoncé, often referred to as Queen Bey, released both 'Single Ladies (Put a Ring on It)' and 'Crazy in Love'."
+  },
+  {
+    "question": "What TV show features a group of six friends living in New York City: Rachel, Monica, Phoebe, Joey, Chandler, and Ross?",
+    "options": ["Seinfeld", "The Office", "Friends", "How I Met Your Mother"],
+    "correctIndex": 2,
+    "explanation": "The popular sitcom Friends follows the lives of these six friends."
+  },
+  {
+    "question": "In the world of comics and movies, what color is the Hulk primarily?",
+    "options": ["Red", "Blue", "Green", "Yellow"],
+    "correctIndex": 2,
+    "explanation": "The Hulk, when transformed, is most recognizable by his green skin."
+  },
+  {
+    "question": "Who hosts the popular American game show 'Jeopardy!' (as of late 2023)?",
+    "options": ["Drew Carey", "Ryan Seacrest", "Ken Jennings", "Pat Sajak"],
+    "correctIndex": 2,
+    "explanation": "Ken Jennings is one of the current rotating hosts of Jeopardy!, having previously been its most successful contestant."
+  },
+  {
+    "question": "Which movie features the iconic phrase 'May the Force be with you'?",
+    "options": ["Star Trek", "The Lord of the Rings", "Star Wars", "Avatar"],
+    "correctIndex": 2,
+    "explanation": "This phrase is a famous line from the Star Wars film franchise."
+  },
+  {
+    "question": "What is the name of Mickey Mouse's girlfriend?",
+    "options": ["Daisy Duck", "Goofy", "Minnie Mouse", "Pluto"],
+    "correctIndex": 2,
+    "explanation": "Minnie Mouse is the longtime sweetheart of Mickey Mouse."
+  },
+  {
+    "question": "Which band recorded the hit song 'Bohemian Rhapsody'?",
+    "options": ["The Beatles", "Led Zeppelin", "Queen", "Rolling Stones"],
+    "correctIndex": 2,
+    "explanation": "'Bohemian Rhapsody' is one of the most famous songs by the British rock band Queen."
+  },
+  {
+    "question": "What is the capital city where the TV show 'Sex and the City' is primarily set?",
+    "options": ["London", "Paris", "New York City", "Los Angeles"],
+    "correctIndex": 2,
+    "explanation": "The series follows the lives of four women in New York City."
+  },
+  {
+    "question": "Which actress starred as Katniss Everdeen in 'The Hunger Games' movie series?",
+    "options": ["Emma Stone", "Jennifer Lawrence", "Scarlett Johansson", "Kristen Stewart"],
+    "correctIndex": 1,
+    "explanation": "Jennifer Lawrence played the protagonist Katniss Everdeen in the film adaptations of The Hunger Games books."
+  },
+  {
+    "question": "The Oscars are awards given for excellence in which field?",
+    "options": ["Music", "Literature", "Film", "Television"],
+    "correctIndex": 2,
+    "explanation": "The Academy Awards, or Oscars, honor cinematic achievements in the film industry."
+  },
+  {
+    "question": "Which animated character lives in a pineapple under the sea?",
+    "options": ["Patrick Star", "Dora the Explorer", "SpongeBob SquarePants", "Scooby-Doo"],
+    "correctIndex": 2,
+    "explanation": "SpongeBob SquarePants is known for living in a pineapple house in Bikini Bottom."
+  },
+  {
+    "question": "Which director is famous for creating movies like 'Jaws,' 'E.T. the Extra-Terrestrial,' and 'Jurassic Park'?",
+    "options": ["George Lucas", "Alfred Hitchcock", "Steven Spielberg", "Martin Scorsese"],
+    "correctIndex": 2,
+    "explanation": "Steven Spielberg is a prolific and celebrated director, responsible for all three of those iconic films."
+  },
+  {
+    "question": "What kind of creature is Puss in Boots?",
+    "options": ["Dog", "Cat", "Ogre", "Donkey"],
+    "correctIndex": 1,
+    "explanation": "Puss in Boots is a fictional swashbuckling cat, first appearing in the movie Shrek 2."
+  },
+  {
+    "question": "Before starring in 'The Fresh Prince of Bel-Air', Will Smith was known as a:",
+    "options": ["Comedian", "Rapper", "Model", "Professional Wrestler"],
+    "correctIndex": 1,
+    "explanation": "Will Smith was a successful rapper under the name 'The Fresh Prince' before his acting career took off."
+  },
+  {
+    "question": "What is the name of the talking snowman in the movie 'Frozen'?",
+    "options": ["Sven", "Kristoff", "Olaf", "Elsa"],
+    "correctIndex": 2,
+    "explanation": "Olaf is the name of the innocent and cheerful snowman created by Elsa in the Disney movie Frozen."
+  },
+  {
+    "question": "Which singer is often called the 'King of Pop'?",
+    "options": ["Elvis Presley", "Prince", "Michael Jackson", "Madonna"],
+    "correctIndex": 2,
+    "explanation": "Michael Jackson is widely known and honored with the title 'King of Pop'."
+  },
+  {
+    "question": "In the TV series 'Game of Thrones', what is the name of the continent where most of the story takes place?",
+    "options": ["Essos", "Sothoryos", "Westeros", "Ulthos"],
+    "correctIndex": 2,
+    "explanation": "The continent of Westeros is the primary setting for the political and military conflicts in Game of Thrones."
+  },
+  {
+    "question": "Which film won the Academy Award for Best Picture at the 1st Oscars ceremony in 1929?",
+    "options": ["The Jazz Singer", "The Circus", "Wings", "Sunrise: A Song of Two Humans"],
+    "correctIndex": 2,
+    "explanation": "The 1927 silent film Wings won the first ever Academy Award for Best Picture."
+  },
+  {
+    "question": "What is the real name of the actor who plays Iron Man in the Marvel Cinematic Universe?",
+    "options": ["Chris Evans", "Chris Hemsworth", "Robert Downey Jr.", "Mark Ruffalo"],
+    "correctIndex": 2,
+    "explanation": "Robert Downey Jr. plays the genius inventor Tony Stark, also known as Iron Man."
+  },
+  {
+    "question": "Which type of event is the 'Super Bowl Halftime Show' associated with?",
+    "options": ["Basketball", "Baseball", "American Football", "Soccer"],
+    "correctIndex": 2,
+    "explanation": "The Super Bowl is the annual championship game of the National Football League (NFL)."
+  },
+  {
+    "question": "What is the genre of music associated with artists like BTS and BLACKPINK?",
+    "options": ["J-Pop", "K-Pop", "Hip-Hop", "C-Pop"],
+    "correctIndex": 1,
+    "explanation": "BTS and BLACKPINK are both globally famous groups known for K-Pop, or Korean Pop music."
+  },
+  {
+    "question": "Which classic Disney villain is known for trying to steal the 101 Dalmatian puppies?",
+    "options": ["Maleficent", "Cruella de Vil", "Ursula", "Captain Hook"],
+    "correctIndex": 1,
+    "explanation": "Cruella de Vil is the wealthy, eccentric antagonist of 101 Dalmatians."
+  },
+  {
+    "question": "What is the name of the main fictional city where Batman operates?",
+    "options": ["Metropolis", "Star City", "Gotham City", "Central City"],
+    "correctIndex": 2,
+    "explanation": "Gotham City is the dark and crime-ridden city protected by Batman."
+  },
+  {
+    "question": "What is the name of the blue-colored, super-fast hedgehog in video games and movies?",
+    "options": ["Mario", "Pikachu", "Sonic", "Link"],
+    "correctIndex": 2,
+    "explanation": "Sonic the Hedgehog is the main character of the Sega video game series."
+  },
+  {
+    "question": "Which singer is known for her iconic red lipstick and hits like 'Shake It Off' and 'Blank Space'?",
+    "options": ["Ariana Grande", "Katy Perry", "Taylor Swift", "Dua Lipa"],
+    "correctIndex": 2,
+    "explanation": "Taylor Swift is one of the world's best-selling music artists, known for these songs and her signature red lipstick."
+  },
+  {
+    "question": "What is the main setting of the movie 'The Wizard of Oz'?",
+    "options": ["Narnia", "Wonderland", "Oz", "Neverland"],
+    "correctIndex": 2,
+    "explanation": "The magical land where Dorothy lands after a tornado is called Oz."
+  },
+  {
+    "question": "The Emmy Awards primarily recognize excellence in which medium?",
+    "options": ["Theater", "Radio", "Television", "Podcasting"],
+    "correctIndex": 2,
+    "explanation": "The Emmy Awards are given to recognize achievement in the television industry."
+  },
+  {
+    "question": "What popular video game franchise features characters like Master Chief and Cortana?",
+    "options": ["Call of Duty", "Halo", "Gears of War", "Metroid"],
+    "correctIndex": 1,
+    "explanation": "Halo is a military science fiction video game franchise where Master Chief is the protagonist."
+  },
+  {
+    "question": "Who played James Bond in the most recent films, concluding with 'No Time to Die'?",
+    "options": ["Pierce Brosnan", "Roger Moore", "Daniel Craig", "Sean Connery"],
+    "correctIndex": 2,
+    "explanation": "Daniel Craig portrayed James Bond across five films, from Casino Royale to No Time to Die."
+  },
+  {
+    "question": "What is the common term for a movie that is a continuation of a previously released movie?",
+    "options": ["Prequel", "Spin-off", "Sequel", "Remake"],
+    "correctIndex": 2,
+    "explanation": "A sequel is a movie, book, or other work that continues the story or develops the theme of an earlier one."
+  },
+  {
+    "question": "Which actress is famous for her role as Elle Woods in the 'Legally Blonde' movies?",
+    "options": ["Jennifer Aniston", "Reese Witherspoon", "Cameron Diaz", "Drew Barrymore"],
+    "correctIndex": 1,
+    "explanation": "Reese Witherspoon starred as the energetic and stylish Elle Woods."
+  },
+  {
+    "question": "What is the name of the large, furry creature that is Chewbacca's friend in 'Star Wars'?",
+    "options": ["Yoda", "Darth Vader", "Han Solo", "Luke Skywalker"],
+    "correctIndex": 2,
+    "explanation": "Han Solo is the smuggler and pilot who is the co-pilot of the Millennium Falcon with Chewbacca."
+  },
+  {
+    "question": "Which Disney Princess famously loses a glass slipper?",
+    "options": ["Sleeping Beauty", "Ariel", "Cinderella", "Belle"],
+    "correctIndex": 2,
+    "explanation": "Cinderella is the fairy tale character whose glass slipper is found by Prince Charming."
+  },
+  {
+    "question": "What is the name of the main antagonist in the first 'Toy Story' movie?",
+    "options": ["Sid", "Lotso", "Stinky Pete", "The Evil Emperor Zurg"],
+    "correctIndex": 0,
+    "explanation": "Sid Phillips is the toy-destroying next-door neighbor in the first Toy Story film."
+  },
+  {
+    "question": "Which singer is known as the 'Material Girl'?",
+    "options": ["Britney Spears", "Madonna", "Lady Gaga", "Mariah Carey"],
+    "correctIndex": 1,
+    "explanation": "Madonna popularized the song 'Material Girl' and is frequently called by that nickname."
+  },
+  {
+    "question": "What instrument is the character Lisa Simpson famous for playing on 'The Simpsons'?",
+    "options": ["Guitar", "Saxophone", "Drums", "Piano"],
+    "correctIndex": 1,
+    "explanation": "Lisa Simpson is a highly intelligent and musically talented character who plays the saxophone."
+  },
+  {
+    "question": "What movie studio created the animated movie 'Shrek'?",
+    "options": ["Disney", "Pixar", "DreamWorks Animation", "Blue Sky Studios"],
+    "correctIndex": 2,
+    "explanation": "Shrek is a famous franchise created by DreamWorks Animation."
+  },
+  {
+    "question": "What is the name of the character played by Johnny Depp in the 'Pirates of the Caribbean' movies?",
+    "options": ["Will Turner", "Hector Barbossa", "Davy Jones", "Captain Jack Sparrow"],
+    "correctIndex": 3,
+    "explanation": "Johnny Depp is famous for his eccentric portrayal of Captain Jack Sparrow."
+  },
+  {
+    "question": "What sport does the character Rocky Balboa participate in?",
+    "options": ["Wrestling", "Boxing", "Running", "Swimming"],
+    "correctIndex": 1,
+    "explanation": "Rocky Balboa, played by Sylvester Stallone, is a fictional boxer."
+  },
+  {
+    "question": "Which late-night talk show host is known for segments like 'Carpool Karaoke' and 'Crosswalk the Musical'?",
+    "options": ["Jimmy Fallon", "Jimmy Kimmel", "James Corden", "Stephen Colbert"],
+    "correctIndex": 2,
+    "explanation": "James Corden hosted The Late Late Show and became famous for these viral segments."
+  },
+  {
+    "question": "What is the first name of Mr. Bean, the famous British comedy character?",
+    "options": ["Robert", "Rowan", "Teddy", "He has no first name"],
+    "correctIndex": 3,
+    "explanation": "The character Mr. Bean, played by Rowan Atkinson, is never given an official first name in the series, only the title 'Mr.'"
+  },
+  {
+    "question": "Which singing competition show features celebrity judges and 'blind auditions'?",
+    "options": ["American Idol", "The X Factor", "The Voice", "America's Got Talent"],
+    "correctIndex": 2,
+    "explanation": "The Voice is known for its unique 'blind audition' format where judges cannot see the contestants."
+  },
+  {
+    "question": "What is the most common award given to music artists for album sales, typically colored gold or platinum?",
+    "options": ["Tony Award", "Grammy Award", "Record Certification", "ASCAP Award"],
+    "correctIndex": 2,
+    "explanation": "Gold and Platinum certifications are given to music artists to denote the number of copies of a recording sold or streamed."
+  },
+  {
+    "question": "The popular TV show 'Stranger Things' is primarily set in which decade?",
+    "options": ["1970s", "1980s", "1990s", "2000s"],
+    "correctIndex": 1,
+    "explanation": "Stranger Things is heavily influenced by 1980s pop culture, music, and movies, and is set during that decade."
+  },
+  {
+    "question": "What actor plays the superhero Superman in the DC Extended Universe (DCEU) films like 'Man of Steel'?",
+    "options": ["Ben Affleck", "Henry Cavill", "Christian Bale", "Robert Pattinson"],
+    "correctIndex": 1,
+    "explanation": "Henry Cavill portrayed Clark Kent/Superman in the early DCEU films."
+  },
+  {
+    "question": "Which musical features the songs 'Summer Nights' and 'Greased Lightnin''?",
+    "options": ["The Sound of Music", "Les Misérables", "Grease", "West Side Story"],
+    "correctIndex": 2,
+    "explanation": "Grease, set in the 1950s, is the musical that includes these famous songs."
+  },
+  {
+    "question": "What is the fictional town where the animated show 'South Park' takes place?",
+    "options": ["Springfield", "Quahog", "South Park", "Bikini Bottom"],
+    "correctIndex": 2,
+    "explanation": "The show is set in the fictional town that shares its name, South Park, Colorado."
+  },
+  {
+    "question": "Which singer is known for famously biting the head off a bat on stage?",
+    "options": ["Alice Cooper", "Marilyn Manson", "Ozzy Osbourne", "Rob Zombie"],
+    "correctIndex": 2,
+    "explanation": "Ozzy Osbourne, the 'Prince of Darkness,' is notorious for this incident during a 1982 concert."
+  },
+  {
+    "question": "What is the name of the main yellow character in the Pokémon franchise?",
+    "options": ["Squirtle", "Bulbasaur", "Pikachu", "Charmander"],
+    "correctIndex": 2,
+    "explanation": "Pikachu is the mascot of the franchise and a famous electric-type Pokémon."
+  },
+  {
+    "question": "Which classic horror movie features a killer wearing a hockey mask?",
+    "options": ["Halloween", "A Nightmare on Elm Street", "Friday the 13th", "Scream"],
+    "correctIndex": 2,
+    "explanation": "Jason Voorhees, the killer in the Friday the 13th series, is known for his signature hockey mask."
+  },
+  {
+    "question": "The show 'Doctor Who' follows the adventures of a time-traveling alien known by what name?",
+    "options": ["The Governor", "The Master", "The Doctor", "The Professor"],
+    "correctIndex": 2,
+    "explanation": "The main protagonist of the long-running British sci-fi series is simply known as The Doctor."
+  },
+  {
+    "question": "What is the title of the first movie in the 'Lord of the Rings' trilogy?",
+    "options": ["The Two Towers", "The Return of the King", "The Fellowship of the Ring", "The Hobbit"],
+    "correctIndex": 2,
+    "explanation": "The film trilogy began with 'The Lord of the Rings: The Fellowship of the Ring' in 2001."
+  },
+  {
+    "question": "What animated bear is known for constantly trying to steal picnic baskets?",
+    "options": ["Paddington Bear", "Winnie the Pooh", "Yogi Bear", "Brave Bear"],
+    "correctIndex": 2,
+    "explanation": "Yogi Bear is a Hanna-Barbera cartoon character who lives in Jellystone Park."
+  },
+  {
+    "question": "Who composed the iconic theme music for the 'Star Wars' films?",
+    "options": ["Hans Zimmer", "Ennio Morricone", "John Williams", "Bernard Herrmann"],
+    "correctIndex": 2,
+    "explanation": "John Williams is the legendary composer of the main Star Wars theme and many other famous film scores."
+  },
+  {
+    "question": "Which actress starred as the main character, Blair Waldorf, in the TV show 'Gossip Girl'?",
+    "options": ["Blake Lively", "Leighton Meester", "Jessica Szohr", "Michelle Trachtenberg"],
+    "correctIndex": 1,
+    "explanation": "Leighton Meester played the role of the fashionable Upper East Side socialite, Blair Waldorf."
+  },
+  {
+    "question": "What is the name of the main fictional villain in the 'Ghostbusters' movie who appears as a giant marshmallow man?",
+    "options": ["Gozer", "Vigo the Carpathian", "Stay Puft Marshmallow Man", "Zuul"],
+    "correctIndex": 2,
+    "explanation": "The Stay Puft Marshmallow Man is the form taken by Gozer's destructive avatar at the end of the first film."
+  },
+  {
+    "question": "Which American band had a massive hit in 1991 with the song 'Smells Like Teen Spirit'?",
+    "options": ["Pearl Jam", "Soundgarden", "Nirvana", "Green Day"],
+    "correctIndex": 2,
+    "explanation": "Nirvana's 'Smells Like Teen Spirit' is considered one of the defining songs of the Grunge era."
+  },
+  {
+    "question": "What is the nickname given to the collection of awards for Broadway theatre?",
+    "options": ["Ollies", "Emmys", "Tonys", "Globes"],
+    "correctIndex": 2,
+    "explanation": "The Antoinette Perry Awards for Excellence in Broadway Theatre are commonly known as the Tony Awards."
+  },
+  {
+    "question": "What actor plays the character Neo in 'The Matrix' film series?",
+    "options": ["Matt Damon", "Tom Hanks", "Keanu Reeves", "Will Smith"],
+    "correctIndex": 2,
+    "explanation": "Keanu Reeves stars as the hacker Thomas Anderson, who becomes Neo, 'The One.'"
+  },
+  {
+    "question": "Which animated television series about a family features the characters Homer, Marge, Bart, Lisa, and Maggie?",
+    "options": ["Family Guy", "South Park", "The Simpsons", "Futurama"],
+    "correctIndex": 2,
+    "explanation": "The Simpsons is the longest-running American animated series."
+  },
+  {
+    "question": "What kind of magical item grants Aladdin his wishes?",
+    "options": ["A Ring", "A Lamp", "A Cloak", "A Sword"],
+    "correctIndex": 1,
+    "explanation": "Aladdin finds the genie in an old oil lamp."
+  },
+  {
+    "question": "Who is the host of the popular daytime talk show that famously gives away cars and prizes, exclaiming 'You get a car! You get a car! Everybody gets a car!'?",
+    "options": ["Ellen DeGeneres", "Oprah Winfrey", "Dr. Phil", "Jerry Springer"],
+    "correctIndex": 1,
+    "explanation": "Oprah Winfrey is known for this famous 2004 car giveaway moment on her show."
+  },
+  {
+    "question": "Which fictional scientist famously drives a DeLorean time machine?",
+    "options": ["Dr. Who", "Doc Brown", "Professor X", "Sheldon Cooper"],
+    "correctIndex": 1,
+    "explanation": "Doc Brown, played by Christopher Lloyd in the Back to the Future films, invented the time machine."
+  },
+  {
+    "question": "What is the fictional school of Witchcraft and Wizardry attended by Harry Potter?",
+    "options": ["Beauxbatons", "Durmstrang", "Hogwarts", "Ilvermorny"],
+    "correctIndex": 2,
+    "explanation": "Hogwarts is the main setting and school for young witches and wizards in the series."
+  },
+  {
+    "question": "Which rock and roll legend's former home is called 'Graceland'?",
+    "options": ["Chuck Berry", "Buddy Holly", "Elvis Presley", "Jimi Hendrix"],
+    "correctIndex": 2,
+    "explanation": "Graceland is the mansion in Memphis, Tennessee, that was home to Elvis Presley."
+  },
+  {
+    "question": "What is the name of the main character in the 'Dora the Explorer' cartoon?",
+    "options": ["Boots", "Dora", "Diego", "Backpack"],
+    "correctIndex": 1,
+    "explanation": "Dora Márquez is the seven-year-old protagonist of the animated series."
+  },
+  {
+    "question": "The movie 'Pulp Fiction' was directed by which acclaimed filmmaker?",
+    "options": ["Christopher Nolan", "Steven Spielberg", "Quentin Tarantino", "David Fincher"],
+    "correctIndex": 2,
+    "explanation": "Quentin Tarantino wrote and directed the highly influential 1994 crime film."
+  },
+  {
+    "question": "Which TV show is known for its phrase 'Live long and prosper'?",
+    "options": ["Battlestar Galactica", "Stargate", "Doctor Who", "Star Trek"],
+    "correctIndex": 3,
+    "explanation": "The phrase, often accompanied by the Vulcan salute, is iconic to the Star Trek franchise."
+  },
+  {
+    "question": "What is the name of the tiny, green Jedi Master in 'Star Wars'?",
+    "options": ["Obi-Wan Kenobi", "Mace Windu", "Yoda", "Qui-Gon Jinn"],
+    "correctIndex": 2,
+    "explanation": "Master Yoda is an ancient and powerful Jedi Master in the Star Wars saga."
+  },
+  {
+    "question": "What popular toy line was turned into a major movie franchise featuring robots that transform into vehicles?",
+    "options": ["G.I. Joe", "He-Man", "Transformers", "Lego"],
+    "correctIndex": 2,
+    "explanation": "The Transformers franchise is based on the toy line of alien robots (Autobots and Decepticons) that can change their form."
+  },
+  {
+    "question": "Which actor is famous for his physical comedy and signature mustache in silent films?",
+    "options": ["Buster Keaton", "Charlie Chaplin", "Laurel", "Harold Lloyd"],
+    "correctIndex": 1,
+    "explanation": "Charlie Chaplin is one of the most famous figures in early cinema, known for his 'Tramp' character and small mustache."
+  },
+  {
+    "question": "Which American singing group had a hit with 'I Want You Back' in 1969, featuring a young Michael Jackson?",
+    "options": ["The Supremes", "The Temptations", "The Jackson 5", "New Edition"],
+    "correctIndex": 2,
+    "explanation": "'I Want You Back' was the debut single for The Jackson 5."
+  },
+  {
+    "question": "What is the name of the famous red puppet with an insatiable appetite from 'Sesame Street'?",
+    "options": ["Big Bird", "Elmo", "Grover", "Cookie Monster"],
+    "correctIndex": 3,
+    "explanation": "Cookie Monster is the fuzzy blue puppet, but Elmo is the small, red monster from Sesame Street."
+  },
+  {
+    "question": "The character of Sherlock Holmes is a famous: ",
+    "options": ["Lawyer", "Doctor", "Detective", "Journalist"],
+    "correctIndex": 2,
+    "explanation": "Sherlock Holmes is a brilliant fictional consulting detective created by Sir Arthur Conan Doyle."
+  },
+  {
+    "question": "What musical instrument does Schroeder play obsessively in 'Peanuts'?",
+    "options": ["Guitar", "Drums", "Piano", "Violin"],
+    "correctIndex": 2,
+    "explanation": "Schroeder is a child prodigy who constantly plays his toy piano, often practicing Beethoven."
+  },
+  {
+    "question": "Which streaming service produces the show 'The Crown', about the reign of Queen Elizabeth II?",
+    "options": ["Hulu", "Amazon Prime Video", "Netflix", "Disney+"],
+    "correctIndex": 2,
+    "explanation": "'The Crown' is one of the most critically acclaimed original series on Netflix."
+  },
+  {
+    "question": "What type of animal is Ariel, the main character of Disney's 'The Little Mermaid'?",
+    "options": ["Fairy", "Human", "Mermaid", "Princess"],
+    "correctIndex": 2,
+    "explanation": "Ariel is a mermaid, a mythical aquatic creature with a human torso and a fish tail."
+  },
+  {
+    "question": "Which iconic music festival took place in 1969, often representing the counterculture of the time?",
+    "options": ["Coachella", "Lollapalooza", "Woodstock", "Glastonbury"],
+    "correctIndex": 2,
+    "explanation": "The Woodstock Festival was a defining moment in popular music history, held in Bethel, New York."
+  },
+  {
+    "question": "What is the name of the actor who played the title role in the movie 'Black Panther'?",
+    "options": ["Michael B. Jordan", "Chadwick Boseman", "Sterling K. Brown", "Daniel Kaluuya"],
+    "correctIndex": 1,
+    "explanation": "Chadwick Boseman played T'Challa/Black Panther in the Marvel Cinematic Universe."
+  },
+  {
+    "question": "The Tony Awards, which honor theater, are named after which famous actress?",
+    "options": ["Angela Lansbury", "Audra McDonald", "Antoinette Perry", "Helen Hayes"],
+    "correctIndex": 2,
+    "explanation": "The Tony Awards are officially named The Antoinette Perry Awards for Excellence in Broadway Theatre."
+  },
+  {
+    "question": "Which television show stars a high school chemistry teacher who begins to cook and sell methamphetamine?",
+    "options": ["The Sopranos", "Breaking Bad", "The Wire", "Ozark"],
+    "correctIndex": 1,
+    "explanation": "Breaking Bad follows Walter White, the chemistry teacher protagonist."
+  },
+  {
+    "question": "What popular fantasy movie features a main character named Harry Potter?",
+    "options": ["Narnia", "Percy Jackson", "Harry Potter", "Twilight"],
+    "correctIndex": 2,
+    "explanation": "The series is named after its main character, Harry Potter, and is one of the most successful film franchises ever."
+  },
+  {
+    "question": "Which famous children's author wrote 'The Cat in the Hat' and 'Green Eggs and Ham'?",
+    "options": ["Roald Dahl", "Maurice Sendak", "Dr. Seuss", "Beatrix Potter"],
+    "correctIndex": 2,
+    "explanation": "Theodor Geisel, known by his pen name Dr. Seuss, authored these classics."
+  },
+  {
+    "question": "What fictional city is the home of SpongeBob SquarePants?",
+    "options": ["Shell City", "Atlantis", "Bikini Bottom", "Flippy's Place"],
+    "correctIndex": 2,
+    "explanation": "SpongeBob and his friends live in the underwater city of Bikini Bottom."
+  },
+  {
+    "question": "Who is the lead singer of the band U2?",
+    "options": ["Mick Jagger", "Chris Martin", "Bono", "Sting"],
+    "correctIndex": 2,
+    "explanation": "Bono is the stage name of Paul Hewson, the lead vocalist of the Irish rock band U2."
+  },
+  {
+    "question": "What is the name of the fictional superhero from Krypton?",
+    "options": ["Wonder Woman", "Batman", "Superman", "Flash"],
+    "correctIndex": 2,
+    "explanation": "Superman's origin story states he was born on the planet Krypton."
+  },
+  {
+    "question": "Which of these is a famous line from the movie 'Forrest Gump'?",
+    "options": ["'I'll be back.'", "'Here's looking at you, kid.'", "'Life is like a box of chocolates.'", "'You can't handle the truth!'"],
+    "correctIndex": 2,
+    "explanation": "This quote is a well-known line spoken by the title character, Forrest Gump."
+  },
+  {
+    "question": "The character Woody in the 'Toy Story' movies is a:",
+    "options": ["Space Ranger", "Potato Head", "Dinosaur", "Cowboy Doll"],
+    "correctIndex": 3,
+    "explanation": "Woody is a pull-string cowboy doll, the favorite toy of Andy in the first three films."
+  },
+  {
+    "question": "What is the genre of the popular video game 'Fortnite'?",
+    "options": ["Puzzle", "Role-Playing Game (RPG)", "Battle Royale", "Racing"],
+    "correctIndex": 2,
+    "explanation": "Fortnite is one of the most famous games in the Battle Royale genre, where players fight to be the last one standing."
+  },
+  {
+    "question": "Who directed the movie 'E.T. the Extra-Terrestrial'?",
+    "options": ["George Lucas", "Stanley Kubrick", "Steven Spielberg", "James Cameron"],
+    "correctIndex": 2,
+    "explanation": "Steven Spielberg directed the beloved 1982 science fiction film."
+  },
+  {
+    "question": "Which former Disney star had hits like 'Wrecking Ball' and 'Party in the U.S.A.'?",
+    "options": ["Demi Lovato", "Selena Gomez", "Miley Cyrus", "Vanessa Hudgens"],
+    "correctIndex": 2,
+    "explanation": "Miley Cyrus gained fame as the star of the Disney Channel series Hannah Montana."
+  },
+  {
+    "question": "What kind of creature is Grogu, often called 'Baby Yoda,' from the Star Wars series 'The Mandalorian'?",
+    "options": ["Human", "Droid", "Sith Lord", "Jedi/Yoda's Species"],
+    "correctIndex": 3,
+    "explanation": "Grogu is of the same mysterious species as the Jedi Master Yoda."
+  },
+  {
+    "question": "Who famously co-hosted the talk show 'Live!' with Regis Philbin for many years?",
+    "options": ["Kathie Lee Gifford", "Kelly Ripa", "Whoopi Goldberg", "Rosie O'Donnell"],
+    "correctIndex": 1,
+    "explanation": "Kelly Ripa co-hosted the show with Regis Philbin from 2001 until his departure in 2011."
+  },
+  {
+    "question": "What is the title of the popular TV show featuring the phrase 'Winter is Coming'?",
+    "options": ["The Witcher", "Outlander", "Game of Thrones", "Vikings"],
+    "correctIndex": 2,
+    "explanation": "This is the motto of House Stark, a main family in the Game of Thrones series."
+  },
+  {
+    "question": "What is the name of the yellow brick road's destination in 'The Wizard of Oz'?",
+    "options": ["Emerald City", "Silver City", "Ruby City", "Tin City"],
+    "correctIndex": 0,
+    "explanation": "The characters travel along the yellow brick road to reach the Emerald City."
+  },
+  {
+    "question": "Which late singer is known for their iconic purple attire and songs like 'Purple Rain' and 'Kiss'?",
+    "options": ["David Bowie", "Freddie Mercury", "Prince", "George Michael"],
+    "correctIndex": 2,
+    "explanation": "Prince, one of the most influential musicians of his time, is famously associated with the color purple."
+  },
+  {
+    "question": "What is the name of the fictional coffee shop where the characters in 'Friends' often hang out?",
+    "options": ["The Max", "Monk's Cafe", "Central Perk", "Cheers"],
+    "correctIndex": 2,
+    "explanation": "Central Perk is the group's regular hangout spot in Greenwich Village."
+  },
+  {
+    "question": "Who played the superhero Spider-Man in the 2002 movie directed by Sam Raimi?",
+    "options": ["Andrew Garfield", "Tom Holland", "Tobey Maguire", "Jake Gyllenhaal"],
+    "correctIndex": 2,
+    "explanation": "Tobey Maguire was the first to portray the character in a major blockbuster film series."
+  },
+  {
+    "question": "What animated character famously says 'That's all folks!' at the end of many Warner Bros. cartoons?",
+    "options": ["Bugs Bunny", "Daffy Duck", "Porky Pig", "Tweety Bird"],
+    "correctIndex": 2,
+    "explanation": "Porky Pig is the character who closes the Looney Tunes and Merrie Melodies cartoons with this classic line."
+  },
+  {
+    "question": "Which singer is known for the album '21', featuring the hit 'Rolling in the Deep'?",
+    "options": ["Rihanna", "Adele", "Beyoncé", "Lady Gaga"],
+    "correctIndex": 1,
+    "explanation": "Adele's album 21 was a global commercial success and included this popular song."
+  },
+  {
+    "question": "What is the name of the pig in the movie 'Babe'?",
+    "options": ["Wilbur", "Hamm", "Babe", "Arnold"],
+    "correctIndex": 2,
+    "explanation": "The movie is named after the main character, a pig who wants to be a sheepdog."
+  },
+  {
+    "question": "Which famous animated duck is known for his fiery temper and inability to speak clearly?",
+    "options": ["Daffy Duck", "Donald Duck", "Scrooge McDuck", "Huey Duck"],
+    "correctIndex": 1,
+    "explanation": "Donald Duck is recognized for his sailor suit, short temper, and slightly incomprehensible voice."
+  },
+  {
+    "question": "What is the name of the evil sorceress who turns into a dragon in 'Sleeping Beauty'?",
+    "options": ["Mother Gothel", "The Evil Queen", "Maleficent", "Cruella de Vil"],
+    "correctIndex": 2,
+    "explanation": "Maleficent is the main antagonist of Sleeping Beauty and a prominent Disney villain."
+  },
+  {
+    "question": "Which popular reality TV show features contestants stranded on a deserted location, voting each other off?",
+    "options": ["Big Brother", "The Amazing Race", "Survivor", "The Apprentice"],
+    "correctIndex": 2,
+    "explanation": "Survivor is the famous competition show where people are marooned and compete for a prize."
+  },
+  {
+    "question": "What actor plays the character Deadpool in the film series?",
+    "options": ["Hugh Jackman", "Ryan Reynolds", "Chris Pratt", "Dwayne Johnson"],
+    "correctIndex": 1,
+    "explanation": "Ryan Reynolds plays the wisecracking, anti-hero Wade Wilson/Deadpool."
+  },
+  {
+    "question": "What is the title of the James Bond movie where Daniel Craig first played 007?",
+    "options": ["Skyfall", "Quantum of Solace", "Casino Royale", "Spectre"],
+    "correctIndex": 2,
+    "explanation": "Casino Royale (2006) was the first film to feature Daniel Craig as James Bond."
+  },
+  {
+    "question": "Which band's logo is a mouth sticking out a large red tongue?",
+    "options": ["The Beatles", "Aerosmith", "The Rolling Stones", "KISS"],
+    "correctIndex": 2,
+    "explanation": "The 'Hot Lips' logo is one of the most instantly recognizable logos in rock and roll, created for The Rolling Stones."
+  },
+  {
+    "question": "What is the name of the talking animal who travels with Shrek?",
+    "options": ["Puss in Boots", "Dragon", "Donkey", "Fiona"],
+    "correctIndex": 2,
+    "explanation": "Donkey, voiced by Eddie Murphy, is Shrek's best friend and comedic sidekick."
+  },
+  {
+    "question": "What movie features two detectives known as 'Laurel and Hardy'?",
+    "options": ["Abbott and Costello Meet Frankenstein", "The Three Stooges", "Laurel and Hardy", "The Marx Brothers"],
+    "correctIndex": 2,
+    "explanation": "Laurel and Hardy were one of the most famous comedy duos in film history, with many films simply titled with their names."
+  },
+  {
+    "question": "Which singer is known as the 'Goddess of Pop' and had hits like 'Believe' and 'I Got You Babe'?",
+    "options": ["Cher", "Tina Turner", "Barbra Streisand", "Celine Dion"],
+    "correctIndex": 0,
+    "explanation": "Cher is an iconic singer and actress whose career has spanned over six decades, earning her this title."
+  },
+  {
+    "question": "In the TV series 'The Office' (US), which company do the main characters work for?",
+    "options": ["Staples", "Dunder Mifflin", "Wernham Hogg", "Vance Refrigeration"],
+    "correctIndex": 1,
+    "explanation": "The main characters work for Dunder Mifflin Paper Company, Inc."
+  },
+  {
+    "question": "Which popular franchise includes the video games 'Ocarina of Time' and 'Breath of the Wild'?",
+    "options": ["Super Mario", "Metroid", "The Legend of Zelda", "Final Fantasy"],
+    "correctIndex": 2,
+    "explanation": "These are two of the most critically acclaimed titles in The Legend of Zelda series."
+  },
+  {
+    "question": "The movie 'The Lion King' is set in which continent?",
+    "options": ["Asia", "Europe", "Africa", "North America"],
+    "correctIndex": 2,
+    "explanation": "The story takes place in the Pride Lands, a fictionalized savanna setting inspired by Africa."
+  },
+  {
+    "question": "What is the name of the main villain who fights with Captain America, known for his metal arm?",
+    "options": ["Loki", "Thanos", "Winter Soldier", "Red Skull"],
+    "correctIndex": 2,
+    "explanation": "Bucky Barnes, Captain America's former friend, is brainwashed and becomes the assassin known as the Winter Soldier."
+  },
+  {
+    "question": "Who played the character Indiana Jones in the film series?",
+    "options": ["Harrison Ford", "George Clooney", "Brad Pitt", "Mel Gibson"],
+    "correctIndex": 0,
+    "explanation": "Harrison Ford is synonymous with the adventurer and archaeologist, Indiana Jones."
+  },
+  {
+    "question": "Which animated character is a big, purple dinosaur that sings and teaches children?",
+    "options": ["Dino", "Barney", "Grimace", "Godzilla"],
+    "correctIndex": 1,
+    "explanation": "Barney is the star of the long-running children's television show 'Barney & Friends'."
+  },
+  {
+    "question": "What is the most famous award given in the American film industry?",
+    "options": ["Golden Globe", "Emmy", "Oscar", "Grammy"],
+    "correctIndex": 2,
+    "explanation": "The Academy Awards, or Oscars, are the most prestigious film awards in the US."
+  },
+  {
+    "question": "Which movie features a friendly extra-terrestrial stranded on Earth who wants to 'phone home'?",
+    "options": ["Close Encounters of the Third Kind", "Alien", "E.T. the Extra-Terrestrial", "Predator"],
+    "correctIndex": 2,
+    "explanation": "This quote is one of the most famous lines from the 1982 film E.T. the Extra-Terrestrial."
+  },
+  {
+    "question": "What is the name of the high school in the musical movie 'High School Musical'?",
+    "options": ["East High", "West High", "North High", "South High"],
+    "correctIndex": 0,
+    "explanation": "The movie is set at the fictional East High School, home of the Wildcats."
+  },
+  {
+    "question": "The character of Captain Kirk is from which science fiction franchise?",
+    "options": ["Doctor Who", "Stargate", "Star Wars", "Star Trek"],
+    "correctIndex": 3,
+    "explanation": "Captain James T. Kirk is the commander of the starship Enterprise in the original Star Trek series."
+  },
+  {
+    "question": "Which artist had a major hit with the song 'Oops!... I Did It Again'?",
+    "options": ["Christina Aguilera", "Jessica Simpson", "Britney Spears", "Mandy Moore"],
+    "correctIndex": 2,
+    "explanation": "Britney Spears released this song in 2000, and it became one of her signature hits."
+  },
+  {
+    "question": "What color is Elmo, the popular character from 'Sesame Street'?",
+    "options": ["Yellow", "Blue", "Red", "Green"],
+    "correctIndex": 2,
+    "explanation": "Elmo is known for his signature bright red fur."
+  },
+  {
+    "question": "The movie 'The Sound of Music' is primarily set during which major historical conflict?",
+    "options": ["World War I", "The Cold War", "World War II", "The Vietnam War"],
+    "correctIndex": 2,
+    "explanation": "The story takes place in Austria just before and during the Nazi takeover preceding WWII."
+  },
+  {
+    "question": "Which actor is known for starring in many Westerns and for his nickname 'The Duke'?",
+    "options": ["Clint Eastwood", "Gary Cooper", "John Wayne", "Kirk Douglas"],
+    "correctIndex": 2,
+    "explanation": "John Wayne was an American actor who became a popular icon through his roles in Westerns and war films."
+  },
+  {
+    "question": "What is the name of the main villain in the 'Harry Potter' series?",
+    "options": ["Grindelwald", "Snape", "Lord Voldemort", "Bellatrix Lestrange"],
+    "correctIndex": 2,
+    "explanation": "Lord Voldemort is the dark wizard and main antagonist of the entire series."
+  },
+  {
+    "question": "Which popular animated movie features a friendly clownfish named Nemo?",
+    "options": ["Shark Tale", "A Bug's Life", "Finding Nemo", "Toy Story"],
+    "correctIndex": 2,
+    "explanation": "Finding Nemo is the Pixar film about a clownfish named Nemo who gets lost."
+  },
+  {
+    "question": "What is the capital of the fictional country of Wakanda in the Marvel Comics universe?",
+    "options": ["Birnin Zana", "Wakanda City", "Golden City", "Jabari Land"],
+    "correctIndex": 0,
+    "explanation": "Birnin Zana is the name of the capital and largest city in Wakanda."
+  },
+  {
+    "question": "Which animated mouse is constantly chased by the cat, Tom?",
+    "options": ["Jerry", "Speedy Gonzales", "Mickey Mouse", "Stuart Little"],
+    "correctIndex": 0,
+    "explanation": "Jerry is the mouse in the classic cartoon 'Tom and Jerry'."
+  },
+  {
+    "question": "Which singer is known for their song 'Firework' and elaborate, colorful costumes and performances?",
+    "options": ["Rihanna", "Lady Gaga", "Katy Perry", "Nicki Minaj"],
+    "correctIndex": 2,
+    "explanation": "Katy Perry released the empowering anthem 'Firework' and is famous for her bright, theatrical stage presence."
+  },
+  {
+    "question": "What is the name of the protagonist in the movie 'Ferris Bueller's Day Off'?",
+    "options": ["Cameron Frye", "Sloane Peterson", "Ed Rooney", "Ferris Bueller"],
+    "correctIndex": 3,
+    "explanation": "The title character is the main character who decides to skip school for a day."
+  },
+  {
+    "question": "The Grammy Awards are given primarily for excellence in which field?",
+    "options": ["Film", "Theater", "Music", "Literature"],
+    "correctIndex": 2,
+    "explanation": "The Grammy Awards recognize outstanding achievements in the music industry."
+  },
+  {
+    "question": "What is the name of the fictional, large, and hairy monster that lives in the Himalayas in pop culture?",
+    "options": ["Bigfoot", "Loch Ness Monster", "Yeti", "Chupacabra"],
+    "correctIndex": 2,
+    "explanation": "The Yeti, or Abominable Snowman, is the famous Himalayan creature often featured in movies and cartoons."
+  },
+  {
+    "question": "Which TV show revolves around the life of a group of teenagers in the fictional town of Riverdale, based on Archie Comics?",
+    "options": ["Glee", "Pretty Little Liars", "Riverdale", "The Vampire Diaries"],
+    "correctIndex": 2,
+    "explanation": "Riverdale is a CW television series that gives a dark, modern take on the classic Archie Comics characters."
+  },
+  {
+    "question": "What classic video game features a character that eats dots and avoids ghosts named Blinky, Pinky, Inky, and Clyde?",
+    "options": ["Donkey Kong", "Pac-Man", "Space Invaders", "Tetris"],
+    "correctIndex": 1,
+    "explanation": "Pac-Man is the iconic arcade game where the player navigates a maze eating dots."
+  },
+  {
+    "question": "Who plays the lead role of Harry Potter in all eight film adaptations?",
+    "options": ["Rupert Grint", "Tom Felton", "Daniel Radcliffe", "Robert Pattinson"],
+    "correctIndex": 2,
+    "explanation": "Daniel Radcliffe starred as the titular character in the Harry Potter film series."
+  },
+  {
+    "question": "Which actress starred as the main character, Carrie Bradshaw, in 'Sex and the City'?",
+    "options": ["Kim Cattrall", "Kristin Davis", "Cynthia Nixon", "Sarah Jessica Parker"],
+    "correctIndex": 3,
+    "explanation": "Sarah Jessica Parker played the role of the fashion-conscious columnist, Carrie Bradshaw."
+  },
+  {
+    "question": "The iconic album 'Thriller' was released by which famous artist?",
+    "options": ["Prince", "Madonna", "Michael Jackson", "Stevie Wonder"],
+    "correctIndex": 2,
+    "explanation": "Michael Jackson's 'Thriller' is one of the best-selling albums of all time."
+  },
+  {
+    "question": "What is the name of the famous street where 'Sesame Street' is set?",
+    "options": ["Baker Street", "Wisteria Lane", "Sesame Street", "Elm Street"],
+    "correctIndex": 2,
+    "explanation": "The show is named after the fictional street where its human and Muppet characters live."
+  },
+  {
+    "question": "Which Pixar movie is set inside the mind of a young girl named Riley, featuring characters like Joy and Sadness?",
+    "options": ["Up", "Soul", "Inside Out", "Coco"],
+    "correctIndex": 2,
+    "explanation": "Inside Out personifies the five core emotions inside the mind of 11-year-old Riley."
+  },
+  {
+    "question": "What character does Tom Hanks famously portray in the movie 'Toy Story'?",
+    "options": ["Buzz Lightyear", "Woody", "Rex", "Slinky Dog"],
+    "correctIndex": 1,
+    "explanation": "Tom Hanks provides the voice for Woody, the cowboy doll protagonist."
+  },
+  {
+    "question": "Which movie features the song 'My Heart Will Go On'?",
+    "options": ["Pearl Harbor", "The Bodyguard", "Titanic", "Ghost"],
+    "correctIndex": 2,
+    "explanation": "Celine Dion's 'My Heart Will Go On' is the main theme song for the 1997 film Titanic."
+  }
+]

@@ -1,0 +1,27 @@
+{
+  "name": "Geography NFT #3",
+  "description": "Geographic knowledge NFT #3",
+  "image": "ipfs://QmPlaceholdergeography3",
+  "mediaType": "image/svg+xml",
+  "files": [
+    {
+      "name": "geography-3.svg",
+      "mediaType": "image/svg+xml",
+      "src": "ipfs://QmPlaceholdergeography3"
+    }
+  ],
+  "attributes": [
+    {
+      "trait_type": "Terrain",
+      "value": "Desert"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Rare"
+    },
+    {
+      "trait_type": "Climate",
+      "value": "Arid"
+    }
+  ]
+}

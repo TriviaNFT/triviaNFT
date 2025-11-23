@@ -139,6 +139,9 @@ export interface InitiateForgeRequest {
 
 export interface InitiateForgeResponse {
   forgeOperation: ForgeOperation;
+  txCBOR?: string; // Unsigned transaction for user to sign
+  policyId?: string;
+  assetFingerprint?: string;
 }
 
 export interface GetForgeStatusResponse {

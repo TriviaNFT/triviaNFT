@@ -1,0 +1,27 @@
+{
+  "name": "Technology NFT #5",
+  "description": "Technology knowledge NFT #5",
+  "image": "ipfs://QmPlaceholdertechnology5",
+  "mediaType": "image/svg+xml",
+  "files": [
+    {
+      "name": "technology-5.svg",
+      "mediaType": "image/svg+xml",
+      "src": "ipfs://QmPlaceholdertechnology5"
+    }
+  ],
+  "attributes": [
+    {
+      "trait_type": "Field",
+      "value": "Web"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Uncommon"
+    },
+    {
+      "trait_type": "Innovation",
+      "value": "Web3"
+    }
+  ]
+}

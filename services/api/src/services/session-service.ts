@@ -6,7 +6,7 @@
 
 import { v4 as uuidv4 } from 'uuid';
 import { query } from '../db/connection.js';
-import { RedisService } from './redis-service.js';
+import { UpstashRedisService } from './upstash-redis-service.js';
 import { QuestionService } from './question-service.js';
 import { LeaderboardService } from './leaderboard-service.js';
 import { getAppConfigService } from './appconfig-service.js';
@@ -35,12 +35,12 @@ interface AnswerResult {
 }
 
 export class SessionService {
-  private redis: RedisService;
+  private redis: UpstashRedisService;
   private questionService: QuestionService;
   private leaderboardService: LeaderboardService;
 
   constructor() {
-    this.redis = new RedisService();
+    this.redis = new UpstashRedisService();
     this.questionService = new QuestionService();
     this.leaderboardService = new LeaderboardService();
   }
@@ -120,13 +120,23 @@ export class SessionService {
     const sessionId = uuidv4();
     const now = new Date().toISOString();
 
+    // 🧪 TESTING MODE: Set to true to include correct answers (REMOVE IN PRODUCTION!)
+    const TESTING_MODE = true;
+
     // Prepare session questions (without correct answers for client)
     const sessionQuestions: SessionQuestion[] = questions.map((q) => ({
       questionId: q.id,
       text: q.text,
       options: q.options,
       servedAt: now,
+      // 🧪 TESTING ONLY: Include correct answer index
+      ...(TESTING_MODE && { correctIndex: q.correctIndex }),
     }));
+
+    // Debug log to verify correctIndex is included
+    if (TESTING_MODE) {
+      console.log('[TESTING] First question correctIndex:', sessionQuestions[0].correctIndex);
+    }
 
     // Store full questions in Redis (with correct answers)
     const sessionData = {

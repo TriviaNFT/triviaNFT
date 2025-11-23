@@ -8,6 +8,9 @@ export interface ScreenSize {
   isTablet: boolean;
   isDesktop: boolean;
   breakpoint: 'sm' | 'md' | 'lg' | 'xl' | '2xl';
+  orientation: 'portrait' | 'landscape';
+  isSmallMobile: boolean;
+  isTouchDevice: boolean;
 }
 
 const BREAKPOINTS = {
@@ -55,6 +58,17 @@ function calculateScreenSize(width: number, height: number): ScreenSize {
   const isMobile = width < BREAKPOINTS.md;
   const isTablet = width >= BREAKPOINTS.md && width < BREAKPOINTS.lg;
   const isDesktop = width >= BREAKPOINTS.lg;
+  
+  // Orientation detection
+  const orientation: 'portrait' | 'landscape' = height > width ? 'portrait' : 'landscape';
+  
+  // Small mobile detection (screens < 375px)
+  const isSmallMobile = width < BREAKPOINTS.sm;
+  
+  // Touch device detection
+  const isTouchDevice = Platform.OS !== 'web' || 
+    (typeof window !== 'undefined' && 
+     ('ontouchstart' in window || navigator.maxTouchPoints > 0));
 
   return {
     width,
@@ -63,6 +77,9 @@ function calculateScreenSize(width: number, height: number): ScreenSize {
     isTablet,
     isDesktop,
     breakpoint,
+    orientation,
+    isSmallMobile,
+    isTouchDevice,
   };
 }
 

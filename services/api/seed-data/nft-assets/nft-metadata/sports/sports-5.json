@@ -1,0 +1,27 @@
+{
+  "name": "Sports NFT #5",
+  "description": "Sports knowledge NFT #5",
+  "image": "ipfs://QmPlaceholdersports5",
+  "mediaType": "image/svg+xml",
+  "files": [
+    {
+      "name": "sports-5.svg",
+      "mediaType": "image/svg+xml",
+      "src": "ipfs://QmPlaceholdersports5"
+    }
+  ],
+  "attributes": [
+    {
+      "trait_type": "Sport",
+      "value": "Tennis"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Uncommon"
+    },
+    {
+      "trait_type": "Achievement",
+      "value": "Grand Slam"
+    }
+  ]
+}

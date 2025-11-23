@@ -1,0 +1,27 @@
+{
+  "name": "Technology NFT #1",
+  "description": "Technology knowledge NFT #1",
+  "image": "ipfs://QmPlaceholdertechnology1",
+  "mediaType": "image/svg+xml",
+  "files": [
+    {
+      "name": "technology-1.svg",
+      "mediaType": "image/svg+xml",
+      "src": "ipfs://QmPlaceholdertechnology1"
+    }
+  ],
+  "attributes": [
+    {
+      "trait_type": "Field",
+      "value": "AI"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Common"
+    },
+    {
+      "trait_type": "Innovation",
+      "value": "Machine Learning"
+    }
+  ]
+}

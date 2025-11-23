@@ -1,0 +1,860 @@
+﻿[
+{
+"question": "Which sport is known as the 'King of Sports'?",
+"options": ["Basketball", "Soccer (Football)", "Tennis", "Boxing"],
+"correctIndex": 1,
+"explanation": "Soccer, or football, is often called the 'King of Sports' due to its immense global popularity and widespread participation."
+},
+{
+"question": "How many players are on the field for one team in a regulation soccer match?",
+"options": ["9", "10", "11", "12"],
+"correctIndex": 2,
+"explanation": "A standard soccer team has 11 players on the field, including the goalkeeper."
+},
+{
+"question": "What country is the sport of basketball generally considered to have been invented in?",
+"options": ["Canada", "United States", "China", "Spain"],
+"correctIndex": 1,
+"explanation": "Basketball was invented in 1891 by James Naismith in Springfield, Massachusetts, United States."
+},
+{
+"question": "Which of these is a term used in baseball?",
+"options": ["Goal", "Touchdown", "Home Run", "Dunk"],
+"correctIndex": 2,
+"explanation": "A 'Home Run' is a scoring play in baseball where the batter hits the ball in such a way that they can circle all the bases and score a point."
+},
+{
+"question": "The Olympic Games are held every how many years?",
+"options": ["2", "3", "4", "5"],
+"correctIndex": 2,
+"explanation": "Both the Summer and Winter Olympic Games are held every four years, though staggered two years apart."
+},
+{
+"question": "What is the maximum number of attempts a player gets to score a 'Spare' in a single frame of ten-pin bowling?",
+"options": ["1", "2", "3", "4"],
+"correctIndex": 1,
+"explanation": "In ten-pin bowling, a player gets a maximum of two attempts to knock down all ten pins in a single frame. Knocking them down on the second attempt is a 'Spare'."
+},
+{
+"question": "Which piece of equipment is essential for playing ice hockey?",
+"options": ["Helmet", "Bat", "Goggles", "Puck"],
+"correctIndex": 3,
+"explanation": "A 'Puck' is the small, hard rubber disc used instead of a ball in ice hockey."
+},
+{
+"question": "In tennis, what score is referred to as 'Love'?",
+"options": ["5 points", "15 points", "40 points", "0 points"],
+"correctIndex": 3,
+"explanation": "In tennis scoring, 'Love' means zero points."
+},
+{
+"question": "Which famous boxer was nicknamed 'The Greatest'?",
+"options": ["Mike Tyson", "Floyd Mayweather", "Muhammad Ali", "Rocky Marciano"],
+"correctIndex": 2,
+"explanation": "Muhammad Ali is widely regarded as one of the most significant sports figures of the 20th century and was nicknamed 'The Greatest'."
+},
+{
+"question": "What is the name of the international governing body for soccer?",
+"options": ["UEFA", "FIFA", "IOC", "NBA"],
+"correctIndex": 1,
+"explanation": "FIFA (Fédération Internationale de Football Association) is the international governing body of association football, futsal, and beach soccer."
+},
+{
+"question": "How many bases are there on a baseball field?",
+"options": ["2", "3", "4", "5"],
+"correctIndex": 1,
+"explanation": "There are three bases (first, second, and third) plus home plate, which is the starting point and where runs are scored, totaling four points a runner must touch."
+},
+{
+"question": "In which sport would you perform a 'slam dunk'?",
+"options": ["Volleyball", "Rugby", "Basketball", "Handball"],
+"correctIndex": 2,
+"explanation": "A 'slam dunk' is a high-scoring move in basketball where a player jumps and forcefully dunks the ball through the basket."
+},
+{
+"question": "What colour is the centre spot on a regulation snooker table?",
+"options": ["Blue", "Yellow", "Brown", "Black"],
+"correctIndex": 2,
+"explanation": "The center spot on a snooker table is designated for the brown ball."
+},
+{
+"question": "The Tour de France is a famous annual competition in which sport?",
+"options": ["Running", "Swimming", "Cycling", "Motor Racing"],
+"correctIndex": 2,
+"explanation": "The Tour de France is a prestigious multi-stage bicycle race held primarily in France."
+},
+{
+"question": "Which of these is not a stroke in competitive swimming?",
+"options": ["Freestyle", "Dog Paddle", "Breaststroke", "Butterfly"],
+"correctIndex": 1,
+"explanation": "Competitive swimming includes Freestyle, Breaststroke, Backstroke, and Butterfly. The 'Dog Paddle' is an informal, non-competitive stroke."
+},
+{
+"question": "In American football, how many points is a 'Touchdown' typically worth (before the extra point or two-point conversion)?",
+"options": ["3", "6", "7", "10"],
+"correctIndex": 1,
+"explanation": "A touchdown in American football is worth 6 points."
+},
+{
+"question": "What object is hit by a bat in the sport of cricket?",
+"options": ["Ball", "Shuttlecock", "Puck", "Wicket"],
+"correctIndex": 0,
+"explanation": "In cricket, the players use a bat to hit a hard, leather-covered 'Ball'."
+},
+{
+"question": "Which martial art translates to 'The Way of the Empty Hand'?",
+"options": ["Taekwondo", "Judo", "Karate", "Kendo"],
+"correctIndex": 2,
+"explanation": "Karate (空手) is a martial art originating from the Ryukyu Islands (now Okinawa, Japan), where the name literally means 'empty hand'."
+},
+{
+"question": "What is the term for a perfect score in a round of golf, meaning the ball went directly into the hole from the tee?",
+"options": ["Eagle", "Birdie", "Par", "Hole-in-One"],
+"correctIndex": 3,
+"explanation": "A 'Hole-in-One' is the achievement of getting the ball into the hole on the first stroke."
+},
+{
+"question": "In which city were the first modern Olympic Games held in 1896?",
+"options": ["London", "Paris", "Athens", "Rome"],
+"correctIndex": 2,
+"explanation": "The first modern Olympic Games were held in Athens, Greece, the birthplace of the ancient Olympics."
+},
+{
+"question": "What is the colour of the ball most commonly used in table tennis?",
+"options": ["Blue", "White", "Red", "Green"],
+"correctIndex": 1,
+"explanation": "Table tennis balls are typically either white or orange."
+},
+{
+"question": "How long is a marathon race in kilometers (approximately)?",
+"options": ["21 km", "42 km", "60 km", "100 km"],
+"correctIndex": 1,
+"explanation": "A marathon race is approximately $42.195$ kilometers (or $26$ miles and $385$ yards)."
+},
+{
+"question": "Which term is used in volleyball when the serving team wins the point?",
+"options": ["Advantage", "Break Point", "Side Out", "Ace"],
+"correctIndex": 3,
+"explanation": "An 'Ace' in volleyball is a serve that results immediately in a point (the opposition does not hit the ball or cannot return it legally)."
+},
+{
+"question": "What is the scoring area called in ice hockey and lacrosse?",
+"options": ["Net", "Basket", "Goal", "Try"],
+"correctIndex": 2,
+"explanation": "The scoring structure in both ice hockey and lacrosse is called a 'Goal'."
+},
+{
+"question": "What is the primary equipment used in the sport of fencing?",
+"options": ["Bow and Arrow", "Racket", "Sword (Foil/Epee/Sabre)", "Gloves"],
+"correctIndex": 2,
+"explanation": "Fencing involves combat with three types of swords: the foil, the épée, and the sabre."
+},
+{
+"question": "Which body part is primarily used to control the ball in soccer?",
+"options": ["Hands", "Head", "Feet", "Arms"],
+"correctIndex": 2,
+"explanation": "Soccer rules prohibit the use of hands or arms (except for the goalkeeper), making the feet the primary tool for ball control."
+},
+{
+"question": "How many players are on the court for one team in a standard professional basketball game?",
+"options": ["4", "5", "6", "7"],
+"correctIndex": 1,
+"explanation": "A professional basketball team has five players on the court at any one time."
+},
+{
+"question": "The Wimbledon Championships are most famously associated with which sport?",
+"options": ["Golf", "Cricket", "Tennis", "Badminton"],
+"correctIndex": 2,
+"explanation": "Wimbledon is one of the four annual Grand Slam tennis tournaments and is the oldest."
+},
+{
+"question": "What is the flat, often rectangular, object used to hit the ball in table tennis?",
+"options": ["Paddle/Racket", "Bat", "Club", "Mallet"],
+"correctIndex": 0,
+"explanation": "In table tennis, the small, circular implement used to hit the ball is called a 'paddle' or 'racket'."
+},
+{
+"question": "Which colour flag is waved to indicate the leader of a race is starting the final lap in motorsports?",
+"options": ["Red", "White", "Checkered", "Green"],
+"correctIndex": 1,
+"explanation": "In motorsports, the 'White Flag' is traditionally shown to signal the final lap of a race."
+},
+{
+"question": "What is the name of the lightweight, feathered object used in badminton?",
+"options": ["Shuttlecock", "Birdie", "Wicket", "Javelin"],
+"correctIndex": 0,
+"explanation": "The projectile used in badminton is called a 'shuttlecock', sometimes informally referred to as a 'birdie'."
+},
+{
+"question": "In which sport do competitors race over hurdles?",
+"options": ["Swimming", "Athletics (Track and Field)", "Gymnastics", "Horse Racing"],
+"correctIndex": 1,
+"explanation": "Hurdles is a type of track event in athletics (track and field) where runners must jump over obstacles."
+},
+{
+"question": "The Masters Tournament is one of the most prestigious events in which sport?",
+"options": ["Snooker", "Golf", "Darts", "Bowling"],
+"correctIndex": 1,
+"explanation": "The Masters Tournament is one of the four major championships in professional golf."
+},
+{
+"question": "Which piece of protective gear is worn by the catcher in baseball?",
+"options": ["Shin guards", "Mask", "Glove", "Helmet"],
+"correctIndex": 1,
+"explanation": "The catcher stands directly behind the batter and must wear a protective 'Mask' to guard against foul tips and thrown balls."
+},
+{
+"question": "What is the weight class in boxing that is lighter than heavyweight?",
+"options": ["Bantamweight", "Middleweight", "Lightweight", "Cruiserweight"],
+"correctIndex": 3,
+"explanation": "Cruiserweight is the weight division directly below heavyweight in professional boxing."
+},
+{
+"question": "The term 'Hat Trick' originated in which sport?",
+"options": ["Soccer", "Ice Hockey", "Cricket", "Lacrosse"],
+"correctIndex": 2,
+"explanation": "The term 'Hat Trick' originally comes from cricket, used when a bowler takes three wickets in three consecutive balls."
+},
+{
+"question": "What shape is the playing surface in the majority of professional ice hockey leagues?",
+"options": ["Square", "Round", "Oval", "Rectangle with rounded corners"],
+"correctIndex": 3,
+"explanation": "An ice hockey rink is a rectangular area of ice with rounded corners, specifically designed for the movement of the puck and players."
+},
+{
+"question": "Which of these sports uses a 'forehand' and a 'backhand'?",
+"options": ["Wrestling", "Archery", "Tennis", "Water Polo"],
+"correctIndex": 2,
+"explanation": "'Forehand' and 'Backhand' are fundamental strokes in tennis, referring to the side of the body the racket is swung from."
+},
+{
+"question": "What is the name of the equipment used to propel a boat in rowing?",
+"options": ["Rudder", "Sail", "Oar", "Paddle"],
+"correctIndex": 2,
+"explanation": "Rowing utilizes a lever-like tool called an 'Oar' to move the boat through the water."
+},
+{
+"question": "In American football, how many players from one team are allowed on the field at one time?",
+"options": ["9", "10", "11", "12"],
+"correctIndex": 2,
+"explanation": "Each team in American football is allowed 11 players on the field at a time."
+},
+{
+"question": "Which colour jersey is typically worn by the leader of the general classification in the Tour de France?",
+"options": ["Red", "Yellow", "Green", "White"],
+"correctIndex": 1,
+"explanation": "The 'Maillot Jaune' or 'Yellow Jersey' is worn by the cyclist who is the current overall time leader in the Tour de France."
+},
+{
+"question": "What is the term for a baseball hit that lands safely in the field, allowing the batter to reach base?",
+"options": ["Strikeout", "Foul Ball", "Hit", "Walk"],
+"correctIndex": 2,
+"explanation": "A 'Hit' is a term for a successful batted ball that allows the batter to reach base safely without a fielding error."
+},
+{
+"question": "In basketball, what is the act of repeatedly bouncing the ball called?",
+"options": ["Passing", "Shooting", "Dribbling", "Traveling"],
+"correctIndex": 2,
+"explanation": "'Dribbling' is the only legal way a player can move with the ball in basketball."
+},
+{
+"question": "What type of ball is used in the sport of water polo?",
+"options": ["Small, hard ball", "Inflated, rubberized ball", "Foam ball", "Solid wood ball"],
+"correctIndex": 1,
+"explanation": "Water polo uses a fully inflated ball that is buoyant and can be gripped by players' hands."
+},
+{
+"question": "Which sport uses a 'handicap' system to level the playing field between players of different skill levels?",
+"options": ["Fencing", "Golf", "Wrestling", "Gymnastics"],
+"correctIndex": 1,
+"explanation": "In 'Golf', a 'handicap' is a numerical measure of a golfer's skill, allowing players of different abilities to compete fairly against each other."
+},
+{
+"question": "What is the main objective of the sport of curling?",
+"options": ["Throwing a discus", "Sliding stones across the ice to a target area", "Racing on skis", "Hitting a ball into a net"],
+"correctIndex": 1,
+"explanation": "Curling involves two teams sliding granite 'stones' across a sheet of ice towards a target area called the 'house'."
+},
+{
+"question": "Which of these is a famous gymnastics apparatus?",
+"options": ["Balance Beam", "Hurdle", "Trampoline", "Vault"],
+"correctIndex": 0,
+"explanation": "The 'Balance Beam' is one of the four main women's artistic gymnastics events."
+},
+{
+"question": "How many pins are set up at the beginning of a frame in ten-pin bowling?",
+"options": ["5", "10", "15", "20"],
+"correctIndex": 1,
+"explanation": "Ten-pin bowling involves knocking down 10 pins arranged in a triangular formation."
+},
+{
+"question": "What is the maximum number of holes typically played in a standard round of golf?",
+"options": ["9", "18", "27", "36"],
+"correctIndex": 1,
+"explanation": "A standard round of golf typically consists of playing 18 holes."
+},
+{
+"question": "Which term in soccer means the game is tied at the end of regulation time?",
+"options": ["Offside", "Draw/Tie", "Penalty", "Corner Kick"],
+"correctIndex": 1,
+"explanation": "A 'Draw' or 'Tie' means both teams have scored the same number of goals when the game concludes."
+},
+{
+"question": "Which of these is the name of a professional American basketball league?",
+"options": ["NFL", "MLB", "NBA", "NHL"],
+"correctIndex": 2,
+"explanation": "The NBA (National Basketball Association) is the major professional basketball league in North America."
+},
+{
+"question": "What colour flag is waved to signal the end of a motorsports race?",
+"options": ["Red", "Yellow", "Green", "Checkered"],
+"correctIndex": 3,
+"explanation": "The 'Checkered Flag' is the universal signal for the end of a race."
+},
+{
+"question": "The phrase 'Par' in golf refers to the expected number of strokes to complete a hole. What does 'Birdie' refer to?",
+"options": ["One stroke more than par", "One stroke less than par", "Two strokes less than par", "Scoring Par"],
+"correctIndex": 1,
+"explanation": "A 'Birdie' is a score of one stroke under par for a hole."
+},
+{
+"question": "In rugby, what is the act of passing the ball forward called?",
+"options": ["Scrum", "Tackle", "Forward Pass", "Ruck"],
+"correctIndex": 2,
+"explanation": "A 'Forward Pass' is generally illegal in rugby, where the ball must usually be passed backward."
+},
+{
+"question": "Which track and field event involves throwing a heavy metal sphere?",
+"options": ["Javelin Throw", "Discus Throw", "Shot Put", "Hammer Throw"],
+"correctIndex": 2,
+"explanation": "The 'Shot Put' is an event where competitors attempt to 'put' (push) a heavy spherical object called a shot as far as possible."
+},
+{
+"question": "What is the term for two consecutive games (sets) won by a player in tennis (often referring to a dominant lead)?",
+"options": ["Set Point", "Break Point", "Hold", "Double Break"],
+"correctIndex": 3,
+"explanation": "A 'Double Break' means the player has broken the opponent's serve twice in the set and is leading by two service games."
+},
+{
+"question": "Which sport uses a lightweight boat called a kayak?",
+"options": ["Rowing", "Canoeing/Kayaking", "Sailing", "Water Skiing"],
+"correctIndex": 1,
+"explanation": "Kayaking is the use of a kayak for moving across water, often as part of the sport of Canoeing/Kayaking."
+},
+{
+"question": "What is the name of the vertical post in basketball that holds the net and backboard?",
+"options": ["Pole", "Upright", "Goalpost", "Stanchion/Goal"],
+"correctIndex": 3,
+"explanation": "The entire structure supporting the hoop and backboard is often referred to as the 'Goal' or 'Stanchion'."
+},
+{
+"question": "What is the name of the penalty area goalkeeper in soccer must stay within to handle the ball?",
+"options": ["Goal Area", "Penalty Area/Box", "Center Circle", "Technical Area"],
+"correctIndex": 1,
+"explanation": "The goalkeeper is allowed to handle the ball only within the 'Penalty Area', also known as the 'Box'."
+},
+{
+"question": "Which piece of equipment is essential for the sport of archery?",
+"options": ["Target", "Bow and Arrow", "Goggles", "Net"],
+"correctIndex": 1,
+"explanation": "Archery is the sport of shooting arrows with a 'Bow'."
+},
+{
+"question": "In which sport do competitors race in a bobsled?",
+"options": ["Luge", "Skeleton", "Bobsleigh", "Alpine Skiing"],
+"correctIndex": 2,
+"explanation": "Bobsleigh is a winter sport in which teams make timed runs down narrow, twisting, banked, iced tracks in a gravity-powered sled called a bobsled."
+},
+{
+"question": "What is the term for a baseball hit over the outfield fence in fair territory?",
+"options": ["Single", "Double", "Triple", "Home Run"],
+"correctIndex": 3,
+"explanation": "A 'Home Run' is scored when the ball is hit out of the playing field, allowing the batter and any runners to score."
+},
+{
+"question": "Which sport is played with a stick and a small, hard ball, primarily on horseback?",
+"options": ["Ice Hockey", "Field Hockey", "Polo", "Lacrosse"],
+"correctIndex": 2,
+"explanation": "Polo is a team sport played on horseback where players use a long mallet to drive a small, hard ball into the opposing team's goal."
+},
+{
+"question": "What is the standard height of a regulation basketball hoop from the floor?",
+"options": ["8 feet", "9 feet", "10 feet", "11 feet"],
+"correctIndex": 2,
+"explanation": "The top of the rim of a standard basketball hoop is 10 feet ($3.05$ meters) above the court floor."
+},
+{
+"question": "In tennis, what is a 'Grand Slam'?",
+"options": ["A major tournament win", "Winning all four major tournaments in a calendar year", "A serve that is untouched", "Winning four points in a row"],
+"correctIndex": 1,
+"explanation": "A 'Grand Slam' is the achievement of winning all four major professional tennis tournaments (Australian Open, French Open, Wimbledon, US Open) in the same calendar year."
+},
+{
+"question": "Which type of race involves swimming, cycling, and running in succession?",
+"options": ["Decathlon", "Pentathlon", "Triathlon", "Marathon"],
+"correctIndex": 2,
+"explanation": "A 'Triathlon' is an endurance multisport race consisting of swimming, cycling, and running over various distances."
+},
+{
+"question": "What is the primary surface used for playing field hockey?",
+"options": ["Grass", "Asphalt", "Ice", "Sand"],
+"correctIndex": 0,
+"explanation": "While modern elite field hockey is often played on artificial turf, it traditionally (and still often) is played on natural 'Grass'."
+},
+{
+"question": "The famous boxing ring is traditionally what shape?",
+"options": ["Circle", "Square", "Hexagon", "Triangle"],
+"correctIndex": 1,
+"explanation": "Despite being called a 'ring', a boxing ring is square in shape."
+},
+{
+"question": "What is the term for an illegal movement with the ball in basketball, where a player moves both feet without dribbling?",
+"options": ["Foul", "Traveling", "Double Dribble", "Goal-tending"],
+"correctIndex": 1,
+"explanation": "'Traveling' (or walking) is an infraction where a player moves their pivot foot illegally while holding the ball."
+},
+{
+"question": "How many players are on the pitch for one team in a standard Rugby Union match?",
+"options": ["11", "13", "15", "17"],
+"correctIndex": 2,
+"explanation": "A standard Rugby Union team has 15 players on the pitch."
+},
+{
+"question": "The term 'Albatross' in golf refers to what score in relation to par?",
+"options": ["One stroke over par", "Two strokes under par", "Three strokes under par", "Four strokes under par"],
+"correctIndex": 2,
+"explanation": "An 'Albatross' (or double eagle) is a score of three strokes under par on a single hole."
+},
+{
+"question": "What is the name of the position in baseball that attempts to prevent runs from scoring by pitching the ball to the batter?",
+"options": ["Catcher", "Shortstop", "Pitcher", "First Baseman"],
+"correctIndex": 2,
+"explanation": "The 'Pitcher' is the player who throws the baseball from the mound to the batter."
+},
+{
+"question": "In the sport of darts, what is the maximum score you can get with a single dart throw?",
+"options": ["20", "50", "60", "100"],
+"correctIndex": 2,
+"explanation": "The maximum score with one dart is 60, achieved by hitting the 'triple 20' segment."
+},
+{
+"question": "The penalty area in soccer is commonly known by what shorter name?",
+"options": ["The 'Net'", "The 'Box'", "The 'Circle'", "The 'Goal'"],
+"correctIndex": 1,
+"explanation": "The 'Penalty Area' is almost universally referred to as the 'Box' in soccer."
+},
+{
+"question": "Which colour is the ball that is worth 1 point in snooker?",
+"options": ["Red", "Yellow", "Green", "Blue"],
+"correctIndex": 0,
+"explanation": "The 'Red' balls are the lowest value scoring balls in snooker, each worth 1 point."
+},
+{
+"question": "In track and field, which event involves carrying a long pole to vault over a crossbar?",
+"options": ["High Jump", "Long Jump", "Pole Vault", "Triple Jump"],
+"correctIndex": 2,
+"explanation": "The 'Pole Vault' is an event in which a long, flexible pole is used to jump over a bar."
+},
+{
+"question": "Which piece of equipment is worn on the hands in boxing?",
+"options": ["Pads", "Mittens", "Gloves", "Bracelets"],
+"correctIndex": 2,
+"explanation": "Boxers wear padded 'Gloves' to protect their hands and soften the impact of blows."
+},
+{
+"question": "What is the name of the main defensive position in ice hockey, positioned in front of the goal?",
+"options": ["Center", "Winger", "Goalie", "Defenseman"],
+"correctIndex": 2,
+"explanation": "The 'Goalie' (Goaltender) is the player whose primary role is to stop the opposing team from scoring."
+},
+{
+"question": "Which sport is played on a court with a net, where the ball must bounce once before being hit?",
+"options": ["Volleyball", "Badminton", "Tennis", "Squash"],
+"correctIndex": 2,
+"explanation": "In 'Tennis', the ball must generally bounce once on the opponent's side of the net before they return it."
+},
+{
+"question": "How many rings are on the Olympic symbol?",
+"options": ["3", "4", "5", "6"],
+"correctIndex": 2,
+"explanation": "The Olympic symbol consists of five interlocking rings, representing the five inhabited continents."
+},
+{
+"question": "What is the term for a successful attempt to score in basketball by shooting the ball through the hoop?",
+"options": ["Point", "Score", "Basket/Field Goal", "Goal"],
+"correctIndex": 2,
+"explanation": "A successful shot from the court in basketball is called a 'Field Goal' or 'Basket'."
+},
+{
+"question": "Which colour belt is typically worn by a beginner in many martial arts, such as Judo or Karate?",
+"options": ["Red", "Blue", "Black", "White"],
+"correctIndex": 3,
+"explanation": "The 'White Belt' typically signifies a beginner student (or 'kyu' rank) in martial arts."
+},
+{
+"question": "What is the name of the person who officiates a game of basketball?",
+"options": ["Umpire", "Referee", "Judge", "Linesman"],
+"correctIndex": 1,
+"explanation": "The official in charge of a basketball game is called the 'Referee'."
+},
+{
+"question": "In baseball, what is the term for three strikes against a batter?",
+"options": ["Foul Ball", "Ball", "Home Run", "Strikeout"],
+"correctIndex": 3,
+"explanation": "A 'Strikeout' occurs when the batter accumulates three strikes, ending their turn at bat."
+},
+{
+"question": "What piece of equipment is used to control the direction of a surfboard?",
+"options": ["Keel", "Rudder", "Fin", "Oar"],
+"correctIndex": 2,
+"explanation": "A 'Fin' (or set of fins) is attached to the bottom of the surfboard to provide stability and directional control."
+},
+{
+"question": "Which of these sports does not involve a ball?",
+"options": ["Golf", "Badminton", "Wrestling", "Water Polo"],
+"correctIndex": 2,
+"explanation": "Wrestling is a combat sport that involves grappling techniques and is done without a ball or projectile."
+},
+{
+"question": "The term 'Penalty Shot' is used in ice hockey and which other major sport?",
+"options": ["Baseball", "Tennis", "Soccer", "Basketball"],
+"correctIndex": 2,
+"explanation": "A 'Penalty Shot' (often called a 'Penalty Kick') is a direct, unopposed shot at the goal in both ice hockey and soccer."
+},
+{
+"question": "What is the term for two strokes under par on a hole in golf?",
+"options": ["Par", "Birdie", "Eagle", "Bogey"],
+"correctIndex": 2,
+"explanation": "An 'Eagle' is a score of two strokes fewer than par on any single hole."
+},
+{
+"question": "What is the collective name for the four major annual tournaments in tennis (Australian, French, Wimbledon, US Open)?",
+"options": ["The Majors", "The Classics", "The Opens", "The Grand Slams"],
+"correctIndex": 3,
+"explanation": "These four tournaments are collectively known as the 'Grand Slams'."
+},
+{
+"question": "Which of these sports is played with a shuttlecock?",
+"options": ["Table Tennis", "Squash", "Badminton", "Volleyball"],
+"correctIndex": 2,
+"explanation": "Badminton is the racket sport played using a lightweight feathered object called a 'shuttlecock'."
+},
+{
+"question": "What is the primary method of scoring in the sport of Judo?",
+"options": ["Pinning the opponent", "Throwing the opponent onto their back", "Punching or kicking the opponent", "Forcing a submission"],
+"correctIndex": 1,
+"explanation": "The highest score, 'Ippon', is achieved when a throw is executed that lands the opponent largely on their back with considerable force and speed."
+},
+{
+"question": "In which sport is the 'free throw' used to score points after certain fouls?",
+"options": ["Ice Hockey", "Handball", "Basketball", "Soccer"],
+"correctIndex": 2,
+"explanation": "In basketball, a 'Free Throw' is an unhindered shot awarded to a player who has been fouled."
+},
+{
+"question": "What is the name of the stick used by a player in ice hockey to control the puck?",
+"options": ["Bat", "Club", "Mallet", "Stick"],
+"correctIndex": 3,
+"explanation": "Players use a 'Stick' with a curved blade to handle, pass, and shoot the puck in ice hockey."
+},
+{
+"question": "Which Olympic event is a combination of running, jumping, and throwing events, contested by women?",
+"options": ["Decathlon", "Heptathlon", "Pentathlon", "Triathlon"],
+"correctIndex": 1,
+"explanation": "The 'Heptathlon' consists of seven track and field events and is contested by women in the Olympics."
+},
+{
+"question": "What is the term for a single race in swimming?",
+"options": ["Heat", "Lap", "Event", "Stroke"],
+"correctIndex": 0,
+"explanation": "A single competition race in swimming is often referred to as a 'Heat'."
+},
+{
+"question": "How many periods are in a standard professional ice hockey game?",
+"options": ["2", "3", "4", "5"],
+"correctIndex": 1,
+"explanation": "A regulation ice hockey game is divided into three 20-minute periods."
+},
+{
+"question": "What is the name of the board that a surfer rides on?",
+"options": ["Skateboard", "Paddleboard", "Bodyboard", "Surfboard"],
+"correctIndex": 3,
+"explanation": "The plank used for riding waves is called a 'Surfboard'."
+},
+{
+"question": "What is the colour of the largest surface area on a standard professional boxing glove?",
+"options": ["Red", "White", "Blue", "Black"],
+"correctIndex": 0,
+"explanation": "While colors vary, 'Red' is the most traditional and common color for boxing gloves in major professional fights."
+},
+{
+"question": "Which sport uses a 'club' to hit a small ball into a hole?",
+"options": ["Billiards", "Baseball", "Croquet", "Golf"],
+"correctIndex": 3,
+"explanation": "In 'Golf', players use various clubs to hit a small ball into a series of holes on a course."
+},
+{
+"question": "In track and field, what is the term for an athlete who specializes in short, fast running races?",
+"options": ["Distance Runner", "Jumper", "Sprinter", "Hurdler"],
+"correctIndex": 2,
+"explanation": "A 'Sprinter' is an athlete who competes in short-distance running events like the 100m, 200m, and 400m."
+},
+{
+"question": "What is the goal of the sport of tug-of-war?",
+"options": ["Pulling a rope across a center line", "Tackling an opponent", "Hitting a target", "Lifting a weight"],
+"correctIndex": 0,
+"explanation": "Tug-of-war is a sport that directly pits two teams against each other in a test of strength, with the goal of pulling the rope to a specified distance past a center line."
+},
+{
+"question": "Which of these is a position in volleyball?",
+"options": ["Pitcher", "Quarterback", "Setter", "Catcher"],
+"correctIndex": 2,
+"explanation": "The 'Setter' is a key position in volleyball, responsible for setting up the attack (spike)."
+},
+{
+"question": "What is the name of the curved stick used in field hockey?",
+"options": ["Club", "Putter", "Mallet", "Stick"],
+"correctIndex": 3,
+"explanation": "A 'Stick' is the primary piece of equipment used by players in field hockey to move and hit the ball."
+},
+{
+"question": "In which sport would you hear the term 'Offside' used as a penalty or violation?",
+"options": ["Swimming", "Baseball", "Soccer", "Gymnastics"],
+"correctIndex": 2,
+"explanation": "'Offside' is a rule in soccer (and other field sports like ice hockey) that governs the positioning of players relative to the ball and the opponent's goal line."
+},
+{
+"question": "What is the maximum number of times a volleyball team can hit the ball before it must cross the net (excluding blocking)?",
+"options": ["1", "2", "3", "4"],
+"correctIndex": 2,
+"explanation": "A volleyball team is allowed a maximum of three contacts (hits) with the ball before it must cross over the net."
+},
+{
+"question": "What piece of equipment is worn on the foot in ice skating?",
+"options": ["Shoe", "Boot", "Skate", "Slipper"],
+"correctIndex": 2,
+"explanation": "An 'Ice Skate' is a boot with a blade attached to the bottom, allowing the wearer to glide across ice."
+},
+{
+"question": "Which of these is a weightlifting discipline in the Olympic Games?",
+"options": ["Squat", "Bench Press", "Clean and Jerk", "Deadlift"],
+"correctIndex": 2,
+"explanation": "The two competitive lifts in Olympic weightlifting are the 'Snatch' and the 'Clean and Jerk'."
+},
+{
+"question": "In baseball, what is the term for four balls pitched outside the strike zone that allow the batter to advance to first base?",
+"options": ["Hit", "Walk", "Error", "Foul Ball"],
+"correctIndex": 1,
+"explanation": "A 'Walk' (or 'Base on Balls') is awarded to the batter when the pitcher throws four pitches ruled as 'balls' (outside the strike zone)."
+},
+{
+"question": "What colour ball is worth 7 points in snooker?",
+"options": ["Black", "Pink", "Blue", "Brown"],
+"correctIndex": 0,
+"explanation": "The 'Black' ball is the highest-value colored ball on the snooker table, worth 7 points."
+},
+{
+"question": "Which sport is played on a circular range with concentric circles as targets, using bows and arrows?",
+"options": ["Shooting", "Fencing", "Archery", "Darts"],
+"correctIndex": 2,
+"explanation": "The sport of 'Archery' involves shooting arrows at a round target with a series of colored rings."
+},
+{
+"question": "What is the term for one round of a boxing match?",
+"options": ["Set", "Inning", "Period", "Round"],
+"correctIndex": 3,
+"explanation": "A boxing match is divided into segments of time known as 'Rounds'."
+},
+{
+"question": "Which of these is the term for a type of swimming race where the athlete changes strokes throughout the race?",
+"options": ["Freestyle", "Breaststroke", "Individual Medley", "Backstroke"],
+"correctIndex": 2,
+"explanation": "The 'Individual Medley' requires the swimmer to use four different strokes (butterfly, backstroke, breaststroke, and freestyle) in a specific order."
+},
+{
+"question": "What is the name of the equipment used to push the puck in a game of curling?",
+"options": ["Broom/Brush", "Stone", "Slider", "Delivery Stick"],
+"correctIndex": 3,
+"explanation": "While 'brooms' are used to sweep the ice, the granite 'stone' is pushed by hand or with a 'Delivery Stick' if necessary."
+},
+{
+"question": "How many seconds is the shot clock typically set for in a standard professional basketball game?",
+"options": ["24", "30", "35", "45"],
+"correctIndex": 0,
+"explanation": "The shot clock in professional basketball (NBA, FIBA, etc.) is typically set for '24' seconds, meaning a team must attempt a shot within that time."
+},
+{
+"question": "In which sport would you hear the term 'Try' used as the primary score?",
+"options": ["Soccer", "Cricket", "Rugby", "Handball"],
+"correctIndex": 2,
+"explanation": "A 'Try' is the primary way of scoring points in rugby, achieved by grounding the ball in the opponent's in-goal area."
+},
+{
+"question": "What is the name of the surface on which most competitive ice skating is performed?",
+"options": ["Rink", "Pitch", "Court", "Field"],
+"correctIndex": 0,
+"explanation": "The frozen area used for ice skating is called an 'Ice Rink'."
+},
+{
+"question": "Which of these is a type of jump in figure skating?",
+"options": ["Lutz", "Axle", "Puck", "Slalom"],
+"correctIndex": 0,
+"explanation": "The 'Lutz' is one of the six main types of jumps in figure skating."
+},
+{
+"question": "What is the primary objective of the defensive team in baseball?",
+"options": ["Hit the ball", "Score a goal", "Get three outs", "Catch the ball"],
+"correctIndex": 2,
+"explanation": "The defensive team's main goal is to get three 'Outs' to end the inning and transition to offense."
+},
+{
+"question": "Which piece of equipment is commonly used by the bowler in the sport of cricket?",
+"options": ["Bat", "Helmet", "Ball", "Wicket"],
+"correctIndex": 2,
+"explanation": "The bowler's main tool is the 'Ball', which they deliver to the batter."
+},
+{
+"question": "In which sport are the terms 'serve', 'fault', and 'deuce' most commonly used?",
+"options": ["Volleyball", "Badminton", "Table Tennis", "Tennis"],
+"correctIndex": 3,
+"explanation": "These terms are central to the scoring and serving rules of 'Tennis'."
+},
+{
+"question": "What is the primary difference between a bicycle used in a road race and one used in a track race (velodrome)?",
+"options": ["Frame Material", "Wheel Size", "Presence of Gears", "Handlebar Shape"],
+"correctIndex": 2,
+"explanation": "Track bicycles ('Fixies') used in a velodrome typically do not have 'Gears' or brakes, unlike road race bikes."
+},
+{
+"question": "The term 'Spare' in bowling means knocking down all 10 pins on which attempt?",
+"options": ["First", "Second", "Third", "Fourth"],
+"correctIndex": 1,
+"explanation": "A 'Spare' is achieved when a player knocks down all 10 pins with their second roll in a single frame."
+},
+{
+"question": "What is the scoring area in American football called?",
+"options": ["The Goal", "The Net", "The End Zone", "The Goal Line"],
+"correctIndex": 2,
+"explanation": "A 'Touchdown' is scored by carrying the ball into the opponent's 'End Zone'."
+},
+{
+"question": "In basketball, how many points is a shot from inside the three-point arc worth?",
+"options": ["1", "2", "3", "4"],
+"correctIndex": 1,
+"explanation": "Any successful field goal attempt from inside the three-point arc is worth '2' points."
+},
+{
+"question": "Which of these is a famous international soccer tournament held every four years?",
+"options": ["The Super Bowl", "The World Cup", "The Stanley Cup", "The Ashes"],
+"correctIndex": 1,
+"explanation": "The FIFA 'World Cup' is the most prestigious international soccer tournament."
+},
+{
+"question": "In which sport do players use a curved stick and a small, hard ball, aiming for a small hole in the ground?",
+"options": ["Field Hockey", "Ice Hockey", "Lacrosse", "Golf"],
+"correctIndex": 3,
+"explanation": "Golf uses a 'club' (a curved stick) to hit a small ball into a 'hole'."
+},
+{
+"question": "What is the collective term for the five events in modern pentathlon (excluding the combined event)?",
+"options": ["Swimming, Cycling, Running, Archery, Fencing", "Swimming, Fencing, Horse Riding, Pistol Shooting, Running", "Running, Jumping, Throwing, Shooting, Swimming", "Swimming, Cycling, Running, Shooting, Horse Riding"],
+"correctIndex": 1,
+"explanation": "The five disciplines are 'Swimming', 'Fencing', 'Horse Riding' (show jumping), 'Pistol Shooting', and 'Running' (with the latter two combined into a single event)."
+},
+{
+"question": "What is the flat, often circular, object thrown in a track and field event?",
+"options": ["Javelin", "Shot Put", "Discus", "Hammer"],
+"correctIndex": 2,
+"explanation": "The 'Discus' is a heavy, flat disc that is thrown for distance."
+},
+{
+"question": "Which sport is played in a ring with ropes surrounding a central mat?",
+"options": ["Wrestling", "Gymnastics", "Boxing", "Taekwondo"],
+"correctIndex": 2,
+"explanation": "Boxing matches take place in a square 'Ring' surrounded by ropes."
+},
+{
+"question": "What is the term for a ball that lands outside the boundary lines in tennis?",
+"options": ["Ace", "Net", "Out", "Fault"],
+"correctIndex": 2,
+"explanation": "A ball that is hit outside of the designated playing lines is called 'Out'."
+},
+{
+"question": "Which country is generally credited with the invention of the sport of cricket?",
+"options": ["India", "Australia", "England", "South Africa"],
+"correctIndex": 2,
+"explanation": "Cricket originated in 'England' in the 16th century."
+},
+{
+"question": "What is the name of the piece of equipment worn on the head to protect a cyclist during a race?",
+"options": ["Cap", "Goggles", "Helmet", "Balaclava"],
+"correctIndex": 2,
+"explanation": "A 'Helmet' is an essential piece of safety equipment for cyclists."
+},
+{
+"question": "In soccer, what is the action of using your head to pass or shoot the ball called?",
+"options": ["Header", "Dribbling", "Volley", "Chip"],
+"correctIndex": 0,
+"explanation": "A 'Header' is the act of striking the ball with one's head."
+},
+{
+"question": "What is the highest-ranking belt a martial arts practitioner can achieve, often symbolizing mastery?",
+"options": ["Red", "White", "Brown", "Black"],
+"correctIndex": 3,
+"explanation": "The 'Black Belt' is traditionally associated with a high level of skill and mastery in most martial arts."
+},
+{
+"question": "The Stanley Cup is the championship trophy for which sport?",
+"options": ["Basketball", "American Football", "Ice Hockey", "Baseball"],
+"correctIndex": 2,
+"explanation": "The 'Stanley Cup' is the championship trophy awarded annually to the playoff winner of the National Hockey League (NHL)."
+},
+{
+"question": "What is the term for an illegal block or use of hands in American football, usually behind the line of scrimmage?",
+"options": ["Holding", "False Start", "Pass Interference", "Clipping"],
+"correctIndex": 0,
+"explanation": "'Holding' is one of the most common penalties in American football, where a player illegally grabs an opponent."
+},
+{
+"question": "Which type of race is typically the shortest sprint event in track and field?",
+"options": ["200m", "400m", "100m", "800m"],
+"correctIndex": 2,
+"explanation": "The '100m' dash is often considered the shortest and most explosive sprint event."
+},
+{
+"question": "In which sport do players use a 'paddle' to hit a small ball across a net on a table?",
+"options": ["Tennis", "Badminton", "Table Tennis", "Squash"],
+"correctIndex": 2,
+"explanation": "Table tennis, or Ping-Pong, is played with a small 'paddle' on a table divided by a net."
+},
+{
+"question": "What is the name of the sport where players throw a heavy sphere on a chain for distance?",
+"options": ["Shot Put", "Discus Throw", "Javelin Throw", "Hammer Throw"],
+"correctIndex": 3,
+"explanation": "The 'Hammer Throw' involves throwing a metal ball attached to a wire and handle."
+},
+{
+"question": "How many players are in a standard team in competitive volleyball (on the court at a time)?",
+"options": ["4", "5", "6", "7"],
+"correctIndex": 2,
+"explanation": "A standard competitive volleyball team has six players on the court at any given time."
+},
+{
+"question": "The term 'Stroke' in swimming refers to what?",
+"options": ["One length of the pool", "The number of laps", "The style of movement", "A quick movement"],
+"correctIndex": 2,
+"explanation": "A 'Stroke' refers to the specific style of arm and leg movements used to propel the body through the water (e.g., freestyle, breaststroke)."
+},
+{
+"question": "What is the equipment used to hit the ball in baseball?",
+"options": ["Racket", "Club", "Mallet", "Bat"],
+"correctIndex": 3,
+"explanation": "A 'Bat' is the cylindrical wooden or metal instrument used by the batter to hit the baseball."
+},
+{
+"question": "Which term in darts means hitting the very center of the target?",
+"options": ["Double", "Triple", "Outshot", "Bullseye"],
+"correctIndex": 3,
+"explanation": "The 'Bullseye' is the small circle in the very middle of the dartboard and is a high-value target."
+}
+]

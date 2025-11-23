@@ -1,0 +1,27 @@
+{
+  "name": "Entertainment NFT #8",
+  "description": "Entertainment knowledge NFT #8",
+  "image": "ipfs://QmPlaceholderentertainment8",
+  "mediaType": "image/svg+xml",
+  "files": [
+    {
+      "name": "entertainment-8.svg",
+      "mediaType": "image/svg+xml",
+      "src": "ipfs://QmPlaceholderentertainment8"
+    }
+  ],
+  "attributes": [
+    {
+      "trait_type": "Genre",
+      "value": "Fantasy"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Common"
+    },
+    {
+      "trait_type": "Era",
+      "value": "1950s"
+    }
+  ]
+}

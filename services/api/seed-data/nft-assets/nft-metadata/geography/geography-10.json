@@ -1,0 +1,27 @@
+{
+  "name": "Geography NFT #10",
+  "description": "Geographic knowledge NFT #10",
+  "image": "ipfs://QmPlaceholdergeography10",
+  "mediaType": "image/svg+xml",
+  "files": [
+    {
+      "name": "geography-10.svg",
+      "mediaType": "image/svg+xml",
+      "src": "ipfs://QmPlaceholdergeography10"
+    }
+  ],
+  "attributes": [
+    {
+      "trait_type": "Terrain",
+      "value": "Tundra"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Legendary"
+    },
+    {
+      "trait_type": "Climate",
+      "value": "Subarctic"
+    }
+  ]
+}

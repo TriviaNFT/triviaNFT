@@ -1,0 +1,27 @@
+{
+  "name": "Arts NFT #9",
+  "description": "Arts knowledge NFT #9",
+  "image": "ipfs://QmPlaceholderarts9",
+  "mediaType": "image/svg+xml",
+  "files": [
+    {
+      "name": "arts-9.svg",
+      "mediaType": "image/svg+xml",
+      "src": "ipfs://QmPlaceholderarts9"
+    }
+  ],
+  "attributes": [
+    {
+      "trait_type": "Style",
+      "value": "Renaissance"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Uncommon"
+    },
+    {
+      "trait_type": "Medium",
+      "value": "Fresco"
+    }
+  ]
+}

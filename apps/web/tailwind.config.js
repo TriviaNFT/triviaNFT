@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: 'class',
   content: [
     './app/**/*.{js,jsx,ts,tsx}',
     './src/**/*.{js,jsx,ts,tsx}',
@@ -15,6 +16,34 @@ module.exports = {
     },
     extend: {
       colors: {
+        // Neon-Arcade Theme Colors
+        neon: {
+          violet: '#8A5CF6',
+          'violet-glow': '#A78BFA',
+          'violet-dark': '#5B21B6',
+          cyan: '#22D3EE',
+          lime: '#A3E635',
+          amber: '#F59E0B',
+        },
+        canvas: {
+          DEFAULT: '#0B1220',
+          elevated: '#121A2A',
+          border: '#27324A',
+        },
+        glass: {
+          bg: 'rgba(18, 26, 42, 0.5)',
+          'bg-strong': 'rgba(18, 26, 42, 0.8)',
+          border: 'rgba(39, 50, 74, 0.3)',
+          highlight: 'rgba(255, 255, 255, 0.05)',
+        },
+        text: {
+          high: '#EAF2FF',
+          dim: '#9FB0CF',
+          primary: '#ffffff',
+          secondary: '#a0a0b8',
+          tertiary: '#6b6b8a',
+        },
+        // Existing color scales
         primary: {
           50: '#f0f4ff',
           100: '#e0e9ff',
@@ -81,11 +110,6 @@ module.exports = {
           secondary: '#1a1a2e',
           tertiary: '#252541',
         },
-        text: {
-          primary: '#ffffff',
-          secondary: '#a0a0b8',
-          tertiary: '#6b6b8a',
-        },
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
@@ -106,6 +130,19 @@ module.exports = {
       animation: {
         'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
         'bounce-slow': 'bounce 2s infinite',
+        'float': 'float 3s ease-in-out infinite',
+        'float-delayed': 'float 3s ease-in-out 0.5s infinite',
+        'glow-pulse': 'glow-pulse 2s ease-in-out infinite',
+      },
+      keyframes: {
+        float: {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-8px)' },
+        },
+        'glow-pulse': {
+          '0%, 100%': { opacity: '0.6' },
+          '50%': { opacity: '1.0' },
+        },
       },
     },
   },

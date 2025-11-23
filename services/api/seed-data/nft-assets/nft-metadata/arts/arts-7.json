@@ -1,0 +1,27 @@
+{
+  "name": "Arts NFT #7",
+  "description": "Arts knowledge NFT #7",
+  "image": "ipfs://QmPlaceholderarts7",
+  "mediaType": "image/svg+xml",
+  "files": [
+    {
+      "name": "arts-7.svg",
+      "mediaType": "image/svg+xml",
+      "src": "ipfs://QmPlaceholderarts7"
+    }
+  ],
+  "attributes": [
+    {
+      "trait_type": "Style",
+      "value": "Pop Art"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Epic"
+    },
+    {
+      "trait_type": "Medium",
+      "value": "Photography"
+    }
+  ]
+}

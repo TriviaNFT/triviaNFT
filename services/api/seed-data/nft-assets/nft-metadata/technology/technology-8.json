@@ -1,0 +1,27 @@
+{
+  "name": "Technology NFT #8",
+  "description": "Technology knowledge NFT #8",
+  "image": "ipfs://QmPlaceholdertechnology8",
+  "mediaType": "image/svg+xml",
+  "files": [
+    {
+      "name": "technology-8.svg",
+      "mediaType": "image/svg+xml",
+      "src": "ipfs://QmPlaceholdertechnology8"
+    }
+  ],
+  "attributes": [
+    {
+      "trait_type": "Field",
+      "value": "Robotics"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Common"
+    },
+    {
+      "trait_type": "Innovation",
+      "value": "Automation"
+    }
+  ]
+}

@@ -33,6 +33,7 @@ export const Card: React.FC<CardProps> = ({
       <Pressable
         className={`${baseStyles} active:opacity-80 transition-opacity ${className || ''}`}
         onPress={onPress}
+        accessibilityRole="button"
         {...(props as PressableProps)}
       >
         {children}

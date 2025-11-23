@@ -1,0 +1,27 @@
+{
+  "name": "Entertainment NFT #7",
+  "description": "Entertainment knowledge NFT #7",
+  "image": "ipfs://QmPlaceholderentertainment7",
+  "mediaType": "image/svg+xml",
+  "files": [
+    {
+      "name": "entertainment-7.svg",
+      "mediaType": "image/svg+xml",
+      "src": "ipfs://QmPlaceholderentertainment7"
+    }
+  ],
+  "attributes": [
+    {
+      "trait_type": "Genre",
+      "value": "Thriller"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Epic"
+    },
+    {
+      "trait_type": "Era",
+      "value": "1960s"
+    }
+  ]
+}

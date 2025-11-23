@@ -1,0 +1,1102 @@
+[
+  {
+    "question": "What does the 'www' in a website address stand for?",
+    "options": [
+      "Wide World Web",
+      "World Wide Web",
+      "Web World Wide",
+      "World Web Wide"
+    ],
+    "correctIndex": 1,
+    "explanation": "WWW stands for World Wide Web, the system of linked web pages you browse online."
+  },
+  {
+    "question": "Which device is used to click, drag, and select items on a computer screen?",
+    "options": [
+      "Keyboard",
+      "Mouse",
+      "Printer",
+      "Speaker"
+    ],
+    "correctIndex": 1,
+    "explanation": "A mouse is a pointing device used to move the cursor and interact with items on the screen."
+  },
+  {
+    "question": "What does USB stand for?",
+    "options": [
+      "Universal Serial Bus",
+      "United System Board",
+      "Universal Source Bridge",
+      "User System Bus"
+    ],
+    "correctIndex": 0,
+    "explanation": "USB stands for Universal Serial Bus, a common standard for connecting devices."
+  },
+  {
+    "question": "Which of these is an example of an operating system?",
+    "options": [
+      "Google",
+      "Windows",
+      "Chrome browser",
+      "Instagram"
+    ],
+    "correctIndex": 1,
+    "explanation": "Windows is an operating system that manages hardware and software on a computer."
+  },
+  {
+    "question": "What does the 'CPU' in a computer stand for?",
+    "options": [
+      "Central Processing Unit",
+      "Computer Personal Unit",
+      "Central Power Unit",
+      "Control Processing Utility"
+    ],
+    "correctIndex": 0,
+    "explanation": "CPU stands for Central Processing Unit, often called the brain of the computer."
+  },
+  {
+    "question": "Which part of a computer is used to store long-term data, like files and programs?",
+    "options": [
+      "RAM",
+      "Hard drive or SSD",
+      "Graphics card",
+      "Power supply"
+    ],
+    "correctIndex": 1,
+    "explanation": "Hard drives and SSDs store data even when the computer is turned off."
+  },
+  {
+    "question": "What does 'Wi-Fi' allow a device to do?",
+    "options": [
+      "Print documents",
+      "Connect to a wireless network",
+      "Play sound louder",
+      "Charge faster"
+    ],
+    "correctIndex": 1,
+    "explanation": "Wi-Fi allows devices to connect to the internet or local networks without cables."
+  },
+  {
+    "question": "Which device turns digital documents into paper copies?",
+    "options": [
+      "Scanner",
+      "Monitor",
+      "Printer",
+      "Webcam"
+    ],
+    "correctIndex": 2,
+    "explanation": "A printer creates paper copies of digital files such as documents or images."
+  },
+  {
+    "question": "Which of these is a popular web browser?",
+    "options": [
+      "Photoshop",
+      "Chrome",
+      "Excel",
+      "PowerPoint"
+    ],
+    "correctIndex": 1,
+    "explanation": "Google Chrome is a widely used web browser for accessing internet pages."
+  },
+  {
+    "question": "What does 'AI' stand for in technology?",
+    "options": [
+      "Advanced Internet",
+      "Artificial Intelligence",
+      "Automatic Input",
+      "Applied Interface"
+    ],
+    "correctIndex": 1,
+    "explanation": "AI stands for Artificial Intelligence, where machines perform tasks that usually need human intelligence."
+  },
+  {
+    "question": "Which technology is used to make phone calls over the internet?",
+    "options": [
+      "GPS",
+      "VoIP",
+      "USB",
+      "HDMI"
+    ],
+    "correctIndex": 1,
+    "explanation": "VoIP (Voice over Internet Protocol) lets people make voice calls using the internet."
+  },
+  {
+    "question": "What does 'app' usually refer to on a smartphone?",
+    "options": [
+      "Application",
+      "Appointment",
+      "Appearance",
+      "Approval"
+    ],
+    "correctIndex": 0,
+    "explanation": "App is short for application, a software program on a phone or tablet."
+  },
+  {
+    "question": "Which company is known for the iPhone?",
+    "options": [
+      "Apple",
+      "Samsung",
+      "Microsoft",
+      "Sony"
+    ],
+    "correctIndex": 0,
+    "explanation": "Apple designs and sells the iPhone line of smartphones."
+  },
+  {
+    "question": "What is the main purpose of a search engine like Google?",
+    "options": [
+      "Store your files",
+      "Search for information on the web",
+      "Design websites",
+      "Play music"
+    ],
+    "correctIndex": 1,
+    "explanation": "Search engines help users find web pages and information on the internet."
+  },
+  {
+    "question": "In technology, what does 'URL' refer to?",
+    "options": [
+      "Universal Resource Link",
+      "Uniform Resource Locator",
+      "User Registration Line",
+      "Universal Router Line"
+    ],
+    "correctIndex": 1,
+    "explanation": "URL stands for Uniform Resource Locator, the address of a web page."
+  },
+  {
+    "question": "Which of these is used to store data on a small portable device?",
+    "options": [
+      "Flash drive",
+      "Monitor",
+      "Router",
+      "Microphone"
+    ],
+    "correctIndex": 0,
+    "explanation": "A flash drive is a small USB device used to store and move data."
+  },
+  {
+    "question": "What does 'HD' usually stand for in video quality?",
+    "options": [
+      "Heavy Definition",
+      "High Definition",
+      "Hard Data",
+      "High Download"
+    ],
+    "correctIndex": 1,
+    "explanation": "HD stands for High Definition, meaning the video has a higher resolution and better clarity."
+  },
+  {
+    "question": "What is the main role of a firewall in computer security?",
+    "options": [
+      "Improve graphics",
+      "Speed up the CPU",
+      "Block unwanted network traffic",
+      "Cool the computer"
+    ],
+    "correctIndex": 2,
+    "explanation": "A firewall helps protect a network or computer by filtering incoming and outgoing traffic."
+  },
+  {
+    "question": "Which key on a keyboard is often used to remove text to the left of the cursor?",
+    "options": [
+      "Enter",
+      "Shift",
+      "Spacebar",
+      "Backspace"
+    ],
+    "correctIndex": 3,
+    "explanation": "The Backspace key deletes characters to the left of the cursor."
+  },
+  {
+    "question": "Which of these is a common file format for digital images?",
+    "options": [
+      "JPG",
+      "TXT",
+      "MP3",
+      "PDF"
+    ],
+    "correctIndex": 0,
+    "explanation": "JPG (or JPEG) is a popular format for storing digital photos and images."
+  },
+  {
+    "question": "What does 'Bluetooth' allow devices to do?",
+    "options": [
+      "Connect by short-range wireless",
+      "Connect only with cables",
+      "Print faster",
+      "Change screen color"
+    ],
+    "correctIndex": 0,
+    "explanation": "Bluetooth lets devices connect wirelessly over short distances, such as headphones to a phone."
+  },
+  {
+    "question": "Which of these is a popular video-sharing website?",
+    "options": [
+      "YouTube",
+      "Wikipedia",
+      "Amazon",
+      "Reddit"
+    ],
+    "correctIndex": 0,
+    "explanation": "YouTube is a major platform for sharing and watching videos online."
+  },
+  {
+    "question": "What is 'cloud storage'?",
+    "options": [
+      "Storage only on your phone",
+      "Storage in a physical cloud",
+      "Online storage on remote servers",
+      "Storage in a local hard drive only"
+    ],
+    "correctIndex": 2,
+    "explanation": "Cloud storage means your files are saved on remote servers and accessed over the internet."
+  },
+  {
+    "question": "What does 'PDF' stand for in documents?",
+    "options": [
+      "Portable Document Format",
+      "Public Data File",
+      "Printed Data Form",
+      "Programmed Document File"
+    ],
+    "correctIndex": 0,
+    "explanation": "PDF stands for Portable Document Format, a file type that keeps layout the same on different devices."
+  },
+  {
+    "question": "Which device turns paper documents into digital images?",
+    "options": [
+      "Printer",
+      "Projector",
+      "Scanner",
+      "Router"
+    ],
+    "correctIndex": 2,
+    "explanation": "A scanner converts paper documents and photos into digital files."
+  },
+  {
+    "question": "What is the main purpose of antivirus software?",
+    "options": [
+      "Make the screen brighter",
+      "Protect against malware and viruses",
+      "Improve internet speed",
+      "Control the keyboard"
+    ],
+    "correctIndex": 1,
+    "explanation": "Antivirus software scans for and removes malicious software from your device."
+  },
+  {
+    "question": "Which of these passwords is the strongest?",
+    "options": [
+      "123456",
+      "password",
+      "Cats2025!",
+      "abc123"
+    ],
+    "correctIndex": 2,
+    "explanation": "Cats2025! is the strongest because it mixes letters, numbers, and a symbol."
+  },
+  {
+    "question": "What does 'RAM' stand for?",
+    "options": [
+      "Random Access Memory",
+      "Read All Memory",
+      "Real Active Module",
+      "Remote Access Machine"
+    ],
+    "correctIndex": 0,
+    "explanation": "RAM stands for Random Access Memory, used for temporary data while programs are running."
+  },
+  {
+    "question": "Which company created the Android operating system for phones?",
+    "options": [
+      "Apple",
+      "Google",
+      "Microsoft",
+      "IBM"
+    ],
+    "correctIndex": 1,
+    "explanation": "Google leads the development of the Android mobile operating system."
+  },
+  {
+    "question": "Which of these is a common way to unlock a smartphone?",
+    "options": [
+      "Floppy disk",
+      "Fingerprint",
+      "CD-ROM",
+      "Printer code"
+    ],
+    "correctIndex": 1,
+    "explanation": "Many smartphones allow unlocking with a fingerprint sensor."
+  },
+  {
+    "question": "Which term describes unwanted email messages sent in bulk?",
+    "options": [
+      "Spam",
+      "Drafts",
+      "Archive",
+      "Cloud"
+    ],
+    "correctIndex": 0,
+    "explanation": "Spam refers to unwanted or junk email sent to many people."
+  },
+  {
+    "question": "What does 'GPS' help a device do?",
+    "options": [
+      "Play music",
+      "Find its location",
+      "Print images",
+      "Boost volume"
+    ],
+    "correctIndex": 1,
+    "explanation": "GPS uses satellite signals to determine the device's location on Earth."
+  },
+  {
+    "question": "Which of these is a social media platform?",
+    "options": [
+      "Excel",
+      "Twitter",
+      "PowerPoint",
+      "Word"
+    ],
+    "correctIndex": 1,
+    "explanation": "Twitter is a social media platform where users post short messages."
+  },
+  {
+    "question": "What does '4G' or '5G' in mobile networks refer to?",
+    "options": [
+      "Number of apps",
+      "Generation of network technology",
+      "Number of cameras",
+      "Screen size"
+    ],
+    "correctIndex": 1,
+    "explanation": "4G and 5G refer to the fourth and fifth generations of mobile network technology."
+  },
+  {
+    "question": "Which computer port is commonly used to connect a monitor to a computer?",
+    "options": [
+      "HDMI",
+      "Audio jack",
+      "Ethernet",
+      "Power plug"
+    ],
+    "correctIndex": 0,
+    "explanation": "HDMI ports are often used to connect monitors and TVs to computers."
+  },
+  {
+    "question": "What does 'VR' stand for in gaming and technology?",
+    "options": [
+      "Virtual Reality",
+      "Video Recording",
+      "Visual Resolution",
+      "Variable Resource"
+    ],
+    "correctIndex": 0,
+    "explanation": "VR stands for Virtual Reality, an immersive computer-generated experience."
+  },
+  {
+    "question": "Which of these file types is commonly used for digital music?",
+    "options": [
+      "MP3",
+      "DOCX",
+      "PNG",
+      "HTML"
+    ],
+    "correctIndex": 0,
+    "explanation": "MP3 is a widely used format for audio files such as music."
+  },
+  {
+    "question": "What is the main function of a router in a home network?",
+    "options": [
+      "Print documents",
+      "Connect devices to the internet",
+      "Play video games",
+      "Store photos"
+    ],
+    "correctIndex": 1,
+    "explanation": "A router directs network traffic and usually connects home devices to the internet."
+  },
+  {
+    "question": "Which key combination is commonly used to copy text on a Windows computer?",
+    "options": [
+      "Ctrl + C",
+      "Ctrl + V",
+      "Ctrl + X",
+      "Ctrl + Z"
+    ],
+    "correctIndex": 0,
+    "explanation": "Ctrl + C is the standard keyboard shortcut for copying selected text or items."
+  },
+  {
+    "question": "What does 'HTML' stand for in web development?",
+    "options": [
+      "Hyper Text Markup Language",
+      "High Tech Machine Language",
+      "Home Tool Markup Log",
+      "Hyperlink Transfer Method Layer"
+    ],
+    "correctIndex": 0,
+    "explanation": "HTML stands for Hyper Text Markup Language, the basic language of web pages."
+  },
+  {
+    "question": "Which of these is a popular office productivity suite?",
+    "options": [
+      "Microsoft Office",
+      "Adobe Photoshop",
+      "Spotify",
+      "Netflix"
+    ],
+    "correctIndex": 0,
+    "explanation": "Microsoft Office includes tools such as Word, Excel, and PowerPoint for office work."
+  },
+  {
+    "question": "In programming, what is a 'bug'?",
+    "options": [
+      "A security tool",
+      "A type of software update",
+      "An error or flaw in the code",
+      "A new feature"
+    ],
+    "correctIndex": 2,
+    "explanation": "A bug is an error in a program that causes it to behave unexpectedly."
+  },
+  {
+    "question": "Which of these is a programming language?",
+    "options": [
+      "Python",
+      "Pixel",
+      "Printer",
+      "Photoshop"
+    ],
+    "correctIndex": 0,
+    "explanation": "Python is a widely used high-level programming language."
+  },
+  {
+    "question": "What does 'open source' software mean?",
+    "options": [
+      "Software that is always free",
+      "Software with visible and modifiable source code",
+      "Software that never updates",
+      "Software that only runs on one device"
+    ],
+    "correctIndex": 1,
+    "explanation": "Open source software allows users to view and change its underlying source code."
+  },
+  {
+    "question": "Which of these is an example of a wearable technology device?",
+    "options": [
+      "Smartwatch",
+      "Desktop computer",
+      "Printer",
+      "Projector"
+    ],
+    "correctIndex": 0,
+    "explanation": "Smartwatches are worn on the wrist and can track activity, show notifications, and more."
+  },
+  {
+    "question": "Which component is most important for displaying graphics and videos smoothly in games?",
+    "options": [
+      "Graphics card (GPU)",
+      "Power cable",
+      "Keyboard",
+      "Webcam"
+    ],
+    "correctIndex": 0,
+    "explanation": "The graphics card, or GPU, handles complex visuals and game graphics."
+  },
+  {
+    "question": "What does 'Ctrl + Z' usually do on a computer?",
+    "options": [
+      "Save a file",
+      "Undo the last action",
+      "Print the document",
+      "Zoom in"
+    ],
+    "correctIndex": 1,
+    "explanation": "Ctrl + Z is a common shortcut that undoes your last action."
+  },
+  {
+    "question": "Which of these is most responsible for a computer's short-term memory?",
+    "options": [
+      "Keyboard",
+      "Hard drive",
+      "RAM",
+      "Mouse"
+    ],
+    "correctIndex": 2,
+    "explanation": "RAM provides temporary storage for data that programs are actively using."
+  },
+  {
+    "question": "What does 'SSD' stand for in computer storage?",
+    "options": [
+      "Solid State Drive",
+      "System Storage Disk",
+      "Single State Data",
+      "Secure Save Device"
+    ],
+    "correctIndex": 0,
+    "explanation": "SSD stands for Solid State Drive, a type of fast storage device with no moving parts."
+  },
+  {
+    "question": "Which of these is used to protect a smartphone screen from scratches?",
+    "options": [
+      "Screen protector",
+      "Router",
+      "USB cable",
+      "Stylus"
+    ],
+    "correctIndex": 0,
+    "explanation": "A screen protector is a thin layer applied to a screen to prevent scratches."
+  },
+  {
+    "question": "What does 'backup' mean in computing?",
+    "options": [
+      "Speeding up a program",
+      "Copying data to another location for safety",
+      "Deleting old files",
+      "Installing a new system"
+    ],
+    "correctIndex": 1,
+    "explanation": "A backup is a copy of data stored separately so it can be recovered if lost."
+  },
+  {
+    "question": "Which of these is a common sign of a phishing email?",
+    "options": [
+      "Correct spelling and grammar",
+      "From a trusted contact",
+      "Asks for passwords or personal data",
+      "Has no links"
+    ],
+    "correctIndex": 2,
+    "explanation": "Phishing emails often try to trick you into revealing passwords or personal information."
+  },
+  {
+    "question": "Which connector is commonly used to plug a network cable into a computer?",
+    "options": [
+      "Ethernet port",
+      "Audio jack",
+      "Power socket",
+      "VGA port"
+    ],
+    "correctIndex": 0,
+    "explanation": "An Ethernet port is used to connect network cables for wired internet connections."
+  },
+  {
+    "question": "What is 'streaming' when watching videos online?",
+    "options": [
+      "Downloading first, then playing later",
+      "Playing video in real time over the internet",
+      "Installing new software",
+      "Copying files to a USB drive"
+    ],
+    "correctIndex": 1,
+    "explanation": "Streaming means watching or listening as the media is delivered in real time over the internet."
+  },
+  {
+    "question": "Which of these devices is mainly used to capture photos and videos?",
+    "options": [
+      "Modem",
+      "Camera",
+      "Router",
+      "Hard drive"
+    ],
+    "correctIndex": 1,
+    "explanation": "Cameras capture images and videos digitally."
+  },
+  {
+    "question": "What does 'emoji' refer to in texting and online chats?",
+    "options": [
+      "Computer virus",
+      "Text style",
+      "Small icons that show emotions or ideas",
+      "Programming code"
+    ],
+    "correctIndex": 2,
+    "explanation": "Emojis are small images that express feelings or objects in messages."
+  },
+  {
+    "question": "Which of these is a popular online shopping website?",
+    "options": [
+      "Amazon",
+      "PowerPoint",
+      "Chrome",
+      "Outlook"
+    ],
+    "correctIndex": 0,
+    "explanation": "Amazon is a major online marketplace for buying many types of products."
+  },
+  {
+    "question": "What does the 'Like' or 'Thumbs up' button on social media usually indicate?",
+    "options": [
+      "You dislike the post",
+      "You approve or enjoy the post",
+      "You want to delete the post",
+      "You reported the post"
+    ],
+    "correctIndex": 1,
+    "explanation": "The Like button shows that you appreciate or support a post."
+  },
+  {
+    "question": "Which of these is an example of biometric security?",
+    "options": [
+      "PIN code",
+      "Password",
+      "Fingerprint scan",
+      "Security question"
+    ],
+    "correctIndex": 2,
+    "explanation": "Biometric security uses physical traits, like fingerprints, to verify identity."
+  },
+  {
+    "question": "What is 'two-factor authentication'?",
+    "options": [
+      "Logging in twice",
+      "Using two different devices",
+      "Using two steps to verify identity, like a password and a code",
+      "Using two internet providers"
+    ],
+    "correctIndex": 2,
+    "explanation": "Two-factor authentication adds a second verification step, improving account security."
+  },
+  {
+    "question": "Which of these is a disadvantage of using a very simple password?",
+    "options": [
+      "Harder to remember",
+      "Slower internet",
+      "Easier for others to guess",
+      "Phone battery drains faster"
+    ],
+    "correctIndex": 2,
+    "explanation": "Simple passwords are easier for hackers to guess or crack."
+  },
+  {
+    "question": "What does 'upload' mean on the internet?",
+    "options": [
+      "Save to your own device",
+      "Send a file from your device to a server or website",
+      "Print a document",
+      "Copy from a USB drive to a computer"
+    ],
+    "correctIndex": 1,
+    "explanation": "Uploading means sending data from your device to another location online."
+  },
+  {
+    "question": "Which of these is a common tool for video calls?",
+    "options": [
+      "Zoom",
+      "Excel",
+      "Notepad",
+      "Calculator"
+    ],
+    "correctIndex": 0,
+    "explanation": "Zoom is widely used for online video meetings and calls."
+  },
+  {
+    "question": "What does 'download' mean?",
+    "options": [
+      "Send data to the cloud",
+      "Receive data from the internet to your device",
+      "Print data",
+      "Delete data"
+    ],
+    "correctIndex": 1,
+    "explanation": "Downloading is transferring data from the internet to your own device."
+  },
+  {
+    "question": "Which of these is a benefit of using a laptop instead of a desktop?",
+    "options": [
+      "More power always",
+      "Easier to carry around",
+      "Cannot run on battery",
+      "Needs more cables"
+    ],
+    "correctIndex": 1,
+    "explanation": "Laptops are designed to be portable and can run on battery power."
+  },
+  {
+    "question": "What does 'FAQ' usually stand for on websites?",
+    "options": [
+      "Fast Answer Questions",
+      "Frequently Asked Questions",
+      "Free Access Queries",
+      "Full Account Quality"
+    ],
+    "correctIndex": 1,
+    "explanation": "FAQ stands for Frequently Asked Questions, a section that answers common questions."
+  },
+  {
+    "question": "Which of these is considered an 'input' device for a computer?",
+    "options": [
+      "Printer",
+      "Monitor",
+      "Keyboard",
+      "Speaker"
+    ],
+    "correctIndex": 2,
+    "explanation": "A keyboard is an input device used to type data into a computer."
+  },
+  {
+    "question": "Which of these is considered an 'output' device?",
+    "options": [
+      "Mouse",
+      "Microphone",
+      "Monitor",
+      "Keyboard"
+    ],
+    "correctIndex": 2,
+    "explanation": "A monitor displays visual output from the computer."
+  },
+  {
+    "question": "What does 'Ctrl + S' usually do in many computer programs?",
+    "options": [
+      "Save the current work",
+      "Shut down the computer",
+      "Search the web",
+      "Send an email"
+    ],
+    "correctIndex": 0,
+    "explanation": "Ctrl + S is a keyboard shortcut commonly used to save a file."
+  },
+  {
+    "question": "What is an 'app store' on a smartphone?",
+    "options": [
+      "A place to buy physical phones",
+      "A menu of phone settings",
+      "A marketplace to download apps",
+      "A cloud storage service"
+    ],
+    "correctIndex": 2,
+    "explanation": "An app store is where users download and update applications for their devices."
+  },
+  {
+    "question": "What is 'airplane mode' on a phone?",
+    "options": [
+      "A camera filter",
+      "A setting that turns off wireless connections",
+      "A game mode",
+      "A screen brightness option"
+    ],
+    "correctIndex": 1,
+    "explanation": "Airplane mode disables wireless signals such as cellular, Wi-Fi, and Bluetooth."
+  },
+  {
+    "question": "What is the main purpose of a 'power bank'?",
+    "options": [
+      "Boost Wi-Fi signal",
+      "Charge devices on the go",
+      "Store photos",
+      "Print documents"
+    ],
+    "correctIndex": 1,
+    "explanation": "A power bank stores electricity to recharge devices when an outlet is not available."
+  },
+  {
+    "question": "Which of these is a popular operating system for desktop and laptop computers?",
+    "options": [
+      "Android",
+      "iOS",
+      "Windows",
+      "Chrome browser"
+    ],
+    "correctIndex": 2,
+    "explanation": "Windows is a widely used operating system for personal computers."
+  },
+  {
+    "question": "What does 'GPU' stand for?",
+    "options": [
+      "General Processing Unit",
+      "Graphics Processing Unit",
+      "Global Power Unit",
+      "Graphic Program Utility"
+    ],
+    "correctIndex": 1,
+    "explanation": "GPU stands for Graphics Processing Unit, handling complex image and video tasks."
+  },
+  {
+    "question": "Which of these is an example of a smart home device?",
+    "options": [
+      "Smart light bulb",
+      "Paper notebook",
+      "Broom",
+      "Mechanical clock"
+    ],
+    "correctIndex": 0,
+    "explanation": "Smart light bulbs can be controlled by apps or voice assistants."
+  },
+  {
+    "question": "What is a 'podcast'?",
+    "options": [
+      "A type of computer virus",
+      "A digital audio program available to stream or download",
+      "A type of printer",
+      "A video game console"
+    ],
+    "correctIndex": 1,
+    "explanation": "Podcasts are digital audio shows that listeners can stream or download."
+  },
+  {
+    "question": "Which of these file formats is commonly used for videos?",
+    "options": [
+      "MP4",
+      "DOC",
+      "JPEG",
+      "TXT"
+    ],
+    "correctIndex": 0,
+    "explanation": "MP4 is a common file format for digital video."
+  },
+  {
+    "question": "What does 'reboot' a computer mean?",
+    "options": [
+      "Turn it off and then on again",
+      "Delete all files",
+      "Install new hardware",
+      "Print a document"
+    ],
+    "correctIndex": 0,
+    "explanation": "Reboot means restarting the computer to refresh the system."
+  },
+  {
+    "question": "Which device helps extend Wi-Fi coverage in a large home?",
+    "options": [
+      "Wi-Fi extender",
+      "Printer",
+      "Headphones",
+      "Scanner"
+    ],
+    "correctIndex": 0,
+    "explanation": "Wi-Fi extenders repeat the router signal to cover more area."
+  },
+  {
+    "question": "Which of these is an online tool for storing and sharing files?",
+    "options": [
+      "Google Drive",
+      "Notepad",
+      "Calculator",
+      "Paint"
+    ],
+    "correctIndex": 0,
+    "explanation": "Google Drive allows users to store, share, and access files online."
+  },
+  {
+    "question": "What is 'zooming' on a smartphone screen?",
+    "options": [
+      "Changing languages",
+      "Enlarging or shrinking the view",
+      "Deleting apps",
+      "Installing updates"
+    ],
+    "correctIndex": 1,
+    "explanation": "Zooming lets you make content look larger or smaller on the screen."
+  },
+  {
+    "question": "What is 'screen brightness' used to control?",
+    "options": [
+      "Wi-Fi speed",
+      "How loud the phone is",
+      "How light or dark the display appears",
+      "The number of apps installed"
+    ],
+    "correctIndex": 2,
+    "explanation": "Screen brightness adjusts how bright or dim the display looks."
+  },
+  {
+    "question": "Which of these is a risk of sharing personal information on public Wi-Fi?",
+    "options": [
+      "Faster internet",
+      "Reduced battery use",
+      "Others may intercept your data",
+      "Better sound quality"
+    ],
+    "correctIndex": 2,
+    "explanation": "Unsecured public Wi-Fi can let attackers capture your sensitive information."
+  },
+  {
+    "question": "What does 'screenshot' mean on a phone or computer?",
+    "options": [
+      "Taking a photo of the physical device",
+      "Recording the screen with a camera",
+      "Saving an image of what is currently on the screen",
+      "Printing the current page"
+    ],
+    "correctIndex": 2,
+    "explanation": "A screenshot is a digital image of whatever is shown on the screen at that moment."
+  },
+  {
+    "question": "Which of these is a common shortcut for pasting text on a Windows computer?",
+    "options": [
+      "Ctrl + C",
+      "Ctrl + X",
+      "Ctrl + V",
+      "Ctrl + A"
+    ],
+    "correctIndex": 2,
+    "explanation": "Ctrl + V is the standard keyboard shortcut for pasting copied content."
+  },
+  {
+    "question": "What is the main job of a 'web developer'?",
+    "options": [
+      "Design computer chips",
+      "Repair printers",
+      "Build and maintain websites",
+      "Install power cables"
+    ],
+    "correctIndex": 2,
+    "explanation": "Web developers create and maintain websites and web applications."
+  },
+  {
+    "question": "What is 'voice assistant' technology, such as Siri or Google Assistant?",
+    "options": [
+      "A physical robot",
+      "Software that responds to spoken commands",
+      "Only a contact list",
+      "A music player"
+    ],
+    "correctIndex": 1,
+    "explanation": "Voice assistants are software that understand and respond to voice commands."
+  },
+  {
+    "question": "Which of these is an example of online collaboration software?",
+    "options": [
+      "Google Docs",
+      "DVD player",
+      "Camera lens",
+      "Electric fan"
+    ],
+    "correctIndex": 0,
+    "explanation": "Google Docs lets multiple people work on the same document over the internet."
+  },
+  {
+    "question": "What is 'auto-correct' on a smartphone?",
+    "options": [
+      "Automatic photo editing",
+      "Automatic volume control",
+      "Automatic correction of typing and spelling",
+      "Automatic app updates"
+    ],
+    "correctIndex": 2,
+    "explanation": "Auto-correct tries to fix typing mistakes or spelling errors as you type."
+  },
+  {
+    "question": "Which device do people commonly use for reading e-books?",
+    "options": [
+      "E-reader",
+      "Projector",
+      "Router",
+      "Scanner"
+    ],
+    "correctIndex": 0,
+    "explanation": "E-readers are devices designed specifically for reading digital books."
+  },
+  {
+    "question": "What is 'screen time' usually used to measure?",
+    "options": [
+      "Time spent cleaning the screen",
+      "Time a screen stays turned off",
+      "Time you spend using a device's screen",
+      "Time to charge the device"
+    ],
+    "correctIndex": 2,
+    "explanation": "Screen time refers to how long you spend looking at or using screens like phones or computers."
+  },
+  {
+    "question": "Which early device is Charles Babbage often associated with?",
+    "options": [
+      "Mechanical television",
+      "Early mechanical computer designs",
+      "Radio receiver",
+      "Mobile phone"
+    ],
+    "correctIndex": 1,
+    "explanation": "Charles Babbage designed early mechanical computing machines, so he is sometimes called the father of the computer."
+  },
+  {
+    "question": "What is the main use of a 'spreadsheet' program like Excel?",
+    "options": [
+      "Editing videos",
+      "Browsing websites",
+      "Organizing data and doing calculations",
+      "Drawing pictures"
+    ],
+    "correctIndex": 2,
+    "explanation": "Spreadsheet programs organize data in rows and columns and perform calculations."
+  },
+  {
+    "question": "What is the purpose of 'dark mode' on a device?",
+    "options": [
+      "Make the device louder",
+      "Use less battery and reduce eye strain",
+      "Remove apps",
+      "Boost Wi-Fi speed"
+    ],
+    "correctIndex": 1,
+    "explanation": "Dark mode uses darker colors, which can be easier on the eyes and may save battery on some screens."
+  },
+  {
+    "question": "Which of these best describes 'robot' technology?",
+    "options": [
+      "Only a software program",
+      "A machine that can carry out tasks automatically",
+      "A type of battery",
+      "A kind of smartphone case"
+    ],
+    "correctIndex": 1,
+    "explanation": "Robots are machines that can perform tasks, often automatically or by remote control."
+  },
+  {
+    "question": "What is 'auto-save' in a computer program?",
+    "options": [
+      "Automatic emailing",
+      "Automatic saving of work at intervals",
+      "Automatic printing",
+      "Automatic login"
+    ],
+    "correctIndex": 1,
+    "explanation": "Auto-save periodically saves your work so you do not lose changes if something goes wrong."
+  },
+  {
+    "question": "Which of these companies is known for its Windows operating system?",
+    "options": [
+      "Apple",
+      "Google",
+      "Microsoft",
+      "Intel"
+    ],
+    "correctIndex": 2,
+    "explanation": "Microsoft develops and sells the Windows operating system."
+  },
+  {
+    "question": "What is 'facial recognition' used for in smartphones?",
+    "options": [
+      "Editing photos",
+      "Unlocking the device with your face",
+      "Measuring battery life",
+      "Making calls louder"
+    ],
+    "correctIndex": 1,
+    "explanation": "Facial recognition scans your face to unlock the phone or verify your identity."
+  },
+  {
+    "question": "Which term refers to a small program that adds extra features to a browser?",
+    "options": [
+      "Attachment",
+      "Extension",
+      "Emoji",
+      "Firewall"
+    ],
+    "correctIndex": 1,
+    "explanation": "Browser extensions are small programs that add extra features, like ad blocking."
+  },
+  {
+    "question": "What is 'lag' in online gaming?",
+    "options": [
+      "A type of controller",
+      "A delay between player actions and game response",
+      "A high score",
+      "A new graphics card"
+    ],
+    "correctIndex": 1,
+    "explanation": "Lag is the delay caused by slow network or device performance, making actions feel late."
+  }
+]

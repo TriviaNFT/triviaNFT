@@ -1,7 +1,8 @@
-import React from 'react';
-import { View, Text, Modal, Pressable, ScrollView, Image, Linking } from 'react-native';
-import Constants from 'expo-constants';
+import React, { useState, useRef, useEffect } from 'react';
+import { View, Text, Pressable, Image, ScrollView, Modal } from 'react-native';
 import type { NFT } from '@trivia-nft/shared';
+import { useResponsive } from '../hooks/useResponsive';
+import { useStatePreservation } from '../hooks/useStatePreservation';
 
 interface NFTDetailModalProps {
   nft: NFT | null;
@@ -9,87 +10,167 @@ interface NFTDetailModalProps {
   onClose: () => void;
 }
 
-const CARDANO_EXPLORER_URL = Constants.expoConfig?.extra?.cardanoExplorerUrl || 'https://cardanoscan.io';
-
 export const NFTDetailModal: React.FC<NFTDetailModalProps> = ({ nft, visible, onClose }) => {
+  const { isMobile, isTablet } = useResponsive();
+  useStatePreservation(false); // Modal manages its own scroll
+  const [showVideo, setShowVideo] = useState(false);
+  const scrollViewRef = useRef<ScrollView>(null);
+  const scrollPositionRef = useRef<number>(0);
+
+  // Preserve scroll position within modal during resize
+  useEffect(() => {
+    if (!visible) {
+      scrollPositionRef.current = 0;
+    }
+  }, [visible]);
+
   if (!nft) return null;
 
-  const openExplorer = () => {
-    if (nft.assetFingerprint) {
-      Linking.openURL(`${CARDANO_EXPLORER_URL}/token/${nft.assetFingerprint}`);
+  const getTierColor = (tier?: string) => {
+    if (!tier) return '#6b7280';
+    switch (tier.toLowerCase()) {
+      case 'ultimate':
+        return '#a855f7';
+      case 'master':
+        return '#eab308';
+      case 'seasonal':
+        return '#3b82f6';
+      default:
+        return '#6b7280';
     }
   };
+  const videoUrl = (nft.metadata as any).video?.replace('ipfs://', 'https://ipfs.blockfrost.dev/ipfs/');
+  const imageUrl = nft.metadata.image?.replace('ipfs://', 'https://ipfs.blockfrost.dev/ipfs/');
+  const hasVideo = !!videoUrl;
+  const hasImage = !!imageUrl;
 
   return (
     <Modal
       visible={visible}
-      animationType="slide"
-      transparent={true}
+      transparent
+      animationType="fade"
       onRequestClose={onClose}
     >
-      <View className="flex-1 bg-black/50 justify-end">
-        <View className="bg-white rounded-t-3xl max-h-[90%]">
+      <View className="flex-1 bg-black/80 items-center justify-center" style={{ padding: isMobile ? 8 : 16 }}>
+        <View 
+          className="bg-background-primary rounded-2xl w-full border border-background-tertiary shadow-2xl"
+          style={{ 
+            maxWidth: isMobile ? '100%' : isTablet ? 600 : 700,
+            maxHeight: '90vh',
+            overflow: 'hidden'
+          }}
+        >
           {/* Header */}
-          <View className="flex-row items-center justify-between p-4 border-b border-gray-200">
-            <Text className="text-xl font-bold text-gray-900">NFT Details</Text>
-            <Pressable onPress={onClose} className="p-2">
-              <Text className="text-gray-500 text-2xl">×</Text>
+          <View className="flex-row items-center justify-between p-3 border-b border-background-tertiary">
+            <Text className="text-text-primary font-bold text-lg flex-1" numberOfLines={1}>
+              {nft.metadata.name}
+            </Text>
+            <Pressable
+              onPress={onClose}
+              className="items-center justify-center rounded-full bg-background-tertiary active:opacity-70"
+              style={{ minWidth: 44, minHeight: 44 }}
+            >
+              <Text className="text-text-primary text-lg">✕</Text>
             </Pressable>
           </View>
 
-          <ScrollView className="flex-1">
-            {/* NFT Image */}
-            <View className="bg-gray-100 aspect-square items-center justify-center">
-              {nft.metadata.image ? (
+          <ScrollView 
+            ref={scrollViewRef}
+            className="flex-1"
+            onScroll={(e) => {
+              scrollPositionRef.current = e.nativeEvent.contentOffset.y;
+            }}
+            scrollEventThrottle={16}
+          >
+            {/* NFT Media */}
+            <View className="bg-black aspect-square items-center justify-center relative">
+              {showVideo && hasVideo ? (
+                <video 
+                  src={videoUrl}
+                  loop
+                  muted
+                  autoPlay
+                  playsInline
+                  className="w-full h-full object-contain"
+                  onError={(e) => {
+                    console.error('Failed to load video:', videoUrl);
+                    (e.target as HTMLVideoElement).style.display = 'none';
+                  }}
+                />
+              ) : hasImage ? (
                 <Image
-                  source={{ uri: nft.metadata.image }}
+                  source={{ uri: imageUrl }}
                   className="w-full h-full"
                   resizeMode="contain"
                 />
               ) : (
                 <View className="items-center">
                   <Text className="text-gray-400 text-6xl mb-4">🎴</Text>
-                  <Text className="text-gray-500">No Image Available</Text>
+                  <Text className="text-gray-500">No Media Available</Text>
+                </View>
+              )}
+
+              {/* Media Toggle */}
+              {hasImage && hasVideo && (
+                <View className="absolute bottom-2 right-2 flex-row gap-1">
+                  <Pressable
+                    onPress={() => setShowVideo(false)}
+                    className={`px-3 py-1.5 rounded-lg shadow-lg ${
+                      !showVideo ? 'bg-neon-cyan' : 'bg-black/60'
+                    }`}
+                  >
+                    <Text className={`text-sm font-semibold ${!showVideo ? 'text-black' : 'text-white'}`}>
+                      🖼️ Image
+                    </Text>
+                  </Pressable>
+                  <Pressable
+                    onPress={() => setShowVideo(true)}
+                    className={`px-3 py-1.5 rounded-lg shadow-lg ${
+                      showVideo ? 'bg-neon-cyan' : 'bg-black/60'
+                    }`}
+                  >
+                    <Text className={`text-sm font-semibold ${showVideo ? 'text-black' : 'text-white'}`}>
+                      🎬 Video
+                    </Text>
+                  </Pressable>
                 </View>
               )}
             </View>
 
-            <View className="p-6">
-              {/* Name and Tier */}
-              <View className="mb-4">
-                <Text className="text-2xl font-bold text-gray-900 mb-2">
-                  {nft.metadata.name}
-                </Text>
-                {nft.metadata.attributes?.find(attr => attr.trait_type === 'Tier') && (
-                  <View className="bg-purple-100 px-3 py-1 rounded-full self-start">
-                    <Text className="text-purple-700 font-semibold">
-                      {nft.metadata.attributes.find(attr => attr.trait_type === 'Tier')?.value}
-                    </Text>
-                  </View>
-                )}
-              </View>
-
+            {/* NFT Details */}
+            <View className="p-4">
               {/* Description */}
               {nft.metadata.description && (
                 <View className="mb-4">
-                  <Text className="text-gray-700">{nft.metadata.description}</Text>
+                  <Text className="text-text-secondary text-xs font-semibold mb-2">
+                    Description
+                  </Text>
+                  <Text className="text-text-primary text-sm leading-5">
+                    {nft.metadata.description}
+                  </Text>
                 </View>
               )}
 
               {/* Attributes */}
               {nft.metadata.attributes && nft.metadata.attributes.length > 0 && (
                 <View className="mb-4">
-                  <Text className="text-lg font-semibold text-gray-900 mb-3">Attributes</Text>
-                  <View className="bg-gray-50 rounded-lg p-4">
-                    {nft.metadata.attributes.map((attr: { trait_type: string; value: string }, index: number) => (
-                      <View
-                        key={index}
-                        className={`flex-row justify-between py-2 ${
-                          index < nft.metadata.attributes.length - 1 ? 'border-b border-gray-200' : ''
-                        }`}
-                      >
-                        <Text className="text-gray-600">{attr.trait_type}</Text>
-                        <Text className="text-gray-900 font-medium">{attr.value}</Text>
+                  <Text className="text-text-secondary text-xs font-semibold mb-2">
+                    Attributes
+                  </Text>
+                  <View className="flex-row flex-wrap -mx-1">
+                    {nft.metadata.attributes.map((attr, index) => (
+                      <View key={index} className="w-1/2 px-1 mb-2">
+                        <View className="bg-background-secondary rounded-lg p-2 border border-background-tertiary">
+                          <Text className="text-text-tertiary text-xs mb-1">
+                            {attr.trait_type}
+                          </Text>
+                          <Text 
+                            className="text-text-primary text-sm font-semibold"
+                            style={attr.trait_type === 'Tier' ? { color: getTierColor(attr.value) } : {}}
+                          >
+                            {attr.value}
+                          </Text>
+                        </View>
                       </View>
                     ))}
                   </View>
@@ -97,56 +178,61 @@ export const NFTDetailModal: React.FC<NFTDetailModalProps> = ({ nft, visible, on
               )}
 
               {/* Blockchain Info */}
-              <View className="mb-4">
-                <Text className="text-lg font-semibold text-gray-900 mb-3">
+              <View className="bg-background-secondary rounded-lg p-3 border border-background-tertiary">
+                <Text className="text-text-secondary text-xs font-semibold mb-2">
                   Blockchain Information
                 </Text>
-                <View className="bg-gray-50 rounded-lg p-4">
-                  <InfoRow label="Policy ID" value={nft.policyId} mono />
-                  <InfoRow label="Asset Name" value={nft.tokenName} mono />
-                  <InfoRow label="Fingerprint" value={nft.assetFingerprint} mono />
-                  <InfoRow label="Source" value={nft.source} />
-                  <InfoRow label="Status" value={nft.status} />
-                  <InfoRow
-                    label="Minted"
-                    value={new Date(nft.mintedAt).toLocaleString()}
-                  />
-                </View>
-              </View>
+                
+                {nft.policyId && (
+                  <View className="mb-2">
+                    <Text className="text-text-tertiary text-xs mb-1">Policy ID</Text>
+                    <Text className="text-text-primary font-mono text-xs break-all">
+                      {nft.policyId}
+                    </Text>
+                  </View>
+                )}
 
-              {/* View on Explorer */}
-              <Pressable
-                onPress={openExplorer}
-                className="bg-blue-600 active:bg-blue-700 py-4 rounded-lg items-center mb-4"
-              >
-                <Text className="text-white font-semibold text-base">
-                  View on Blockchain Explorer
-                </Text>
-              </Pressable>
+                {nft.tokenName && (
+                  <View className="mb-2">
+                    <Text className="text-text-tertiary text-xs mb-1">Token Name</Text>
+                    <Text className="text-text-primary font-mono text-xs break-all">
+                      {nft.tokenName}
+                    </Text>
+                  </View>
+                )}
+
+                {nft.mintedAt && (
+                  <View>
+                    <Text className="text-text-tertiary text-xs mb-1">Minted</Text>
+                    <Text className="text-text-primary text-sm">
+                      {new Date(nft.mintedAt).toLocaleString('en-US', {
+                        year: 'numeric',
+                        month: 'short',
+                        day: 'numeric',
+                        hour: '2-digit',
+                        minute: '2-digit'
+                      })}
+                    </Text>
+                  </View>
+                )}
+              </View>
             </View>
           </ScrollView>
+
+          {/* Footer Actions */}
+          <View className="p-3 border-t border-background-tertiary">
+            <Pressable
+              onPress={onClose}
+              className="bg-neon-violet rounded-lg active:opacity-80"
+              style={{ minHeight: 44, justifyContent: 'center' }}
+            >
+              <Text className="text-white text-center font-semibold text-sm">
+                Close
+              </Text>
+            </Pressable>
+          </View>
         </View>
       </View>
     </Modal>
-  );
-};
-
-interface InfoRowProps {
-  label: string;
-  value: string;
-  mono?: boolean;
-}
-
-const InfoRow: React.FC<InfoRowProps> = ({ label, value, mono = false }) => {
-  return (
-    <View className="mb-3 last:mb-0">
-      <Text className="text-gray-500 text-sm mb-1">{label}</Text>
-      <Text
-        className={`text-gray-900 ${mono ? 'font-mono text-xs' : ''}`}
-        numberOfLines={2}
-      >
-        {value}
-      </Text>
-    </View>
   );
 };

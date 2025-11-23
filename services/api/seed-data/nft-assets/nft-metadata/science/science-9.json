@@ -1,0 +1,27 @@
+{
+  "name": "Electron Cloud",
+  "description": "Particle physicist",
+  "image": "ipfs://QmPlaceholderscience9",
+  "mediaType": "image/svg+xml",
+  "files": [
+    {
+      "name": "science-9.svg",
+      "mediaType": "image/svg+xml",
+      "src": "ipfs://QmPlaceholderscience9"
+    }
+  ],
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Theory"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Uncommon"
+    },
+    {
+      "trait_type": "Element",
+      "value": "Copper"
+    }
+  ]
+}

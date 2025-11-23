@@ -18,9 +18,12 @@ interface SelectNFTInput {
 
 interface SelectNFTOutput extends SelectNFTInput {
   catalogId: string;
+  categoryName: string;
+  categorySlug: string;
   nftName: string;
   s3ArtKey: string;
   s3MetaKey: string;
+  visualDescription?: string;
   attributes: any;
 }
 
@@ -40,7 +43,24 @@ export const handler = async (
       throw new Error('No available NFTs in catalog for this category');
     }
 
-    console.log('Selected NFT:', { catalogId: nft.id, name: nft.name });
+    // Fetch category details including visual description and slug
+    const categoryResult = await db.query(
+      `SELECT name, slug, visual_description FROM categories WHERE id = $1`,
+      [input.categoryId]
+    );
+
+    const category = categoryResult.rows[0];
+    const categoryName = category?.name || 'Unknown';
+    const categorySlug = category?.slug || '';
+    const visualDescription = category?.visual_description;
+
+    console.log('Selected NFT:', { 
+      catalogId: nft.id, 
+      name: nft.name,
+      categoryName,
+      categorySlug,
+      visualDescription 
+    });
 
     // Update mint operation with catalog ID
     await db.query(
@@ -51,9 +71,12 @@ export const handler = async (
     return {
       ...input,
       catalogId: nft.id,
+      categoryName,
+      categorySlug,
       nftName: nft.name,
       s3ArtKey: nft.s3ArtKey,
       s3MetaKey: nft.s3MetaKey,
+      visualDescription,
       attributes: nft.attributes || {},
     };
   } catch (error) {

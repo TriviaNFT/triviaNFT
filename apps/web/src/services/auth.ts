@@ -20,10 +20,10 @@ export const authService = {
   /**
    * Connect wallet and get JWT token
    */
-  connectWallet: async (stakeKey: string): Promise<ConnectWalletResponse> => {
+  connectWallet: async (stakeKey: string, paymentAddress: string): Promise<ConnectWalletResponse> => {
     return apiRequest<ConnectWalletResponse>('/auth/connect', {
       method: 'POST',
-      body: JSON.stringify({ stakeKey }),
+      body: JSON.stringify({ stakeKey, paymentAddress }),
     });
   },
 

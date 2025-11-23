@@ -1,0 +1,27 @@
+{
+  "name": "Geography NFT #5",
+  "description": "Geographic knowledge NFT #5",
+  "image": "ipfs://QmPlaceholdergeography5",
+  "mediaType": "image/svg+xml",
+  "files": [
+    {
+      "name": "geography-5.svg",
+      "mediaType": "image/svg+xml",
+      "src": "ipfs://QmPlaceholdergeography5"
+    }
+  ],
+  "attributes": [
+    {
+      "trait_type": "Terrain",
+      "value": "Arctic"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Uncommon"
+    },
+    {
+      "trait_type": "Climate",
+      "value": "Polar"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "name": "Literature NFT #8",
+  "description": "Literature knowledge NFT #8",
+  "image": "ipfs://QmPlaceholderliterature8",
+  "mediaType": "image/svg+xml",
+  "files": [
+    {
+      "name": "literature-8.svg",
+      "mediaType": "image/svg+xml",
+      "src": "ipfs://QmPlaceholderliterature8"
+    }
+  ],
+  "attributes": [
+    {
+      "trait_type": "Genre",
+      "value": "Drama"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Common"
+    },
+    {
+      "trait_type": "Period",
+      "value": "Classical"
+    }
+  ]
+}

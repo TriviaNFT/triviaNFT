@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="500" height="500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad6" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4C7DFF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4C7DFF88;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="500" height="500" fill="url(#grad6)"/>
+  
+  <!-- Border -->
+  <rect x="10" y="10" width="480" height="480" fill="none" stroke="white" stroke-width="4" rx="20"/>
+  
+  <!-- Category Badge -->
+  <circle cx="250" cy="200" r="80" fill="white" opacity="0.2"/>
+  <text x="250" y="210" font-family="Arial, sans-serif" font-size="48" font-weight="bold" 
+        fill="white" text-anchor="middle">S</text>
+  
+  <!-- NFT Number -->
+  <text x="250" y="300" font-family="Arial, sans-serif" font-size="32" font-weight="bold" 
+        fill="white" text-anchor="middle">Science</text>
+  <text x="250" y="340" font-family="Arial, sans-serif" font-size="24" 
+        fill="white" text-anchor="middle" opacity="0.8">NFT #7</text>
+  
+  <!-- TriviaNFT Branding -->
+  <text x="250" y="450" font-family="Arial, sans-serif" font-size="18" 
+        fill="white" text-anchor="middle" opacity="0.6">TriviaNFT</text>
+</svg>

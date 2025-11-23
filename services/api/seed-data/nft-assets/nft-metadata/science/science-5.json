@@ -1,0 +1,27 @@
+{
+  "name": "Atomic Fusion",
+  "description": "Nuclear knowledge",
+  "image": "ipfs://QmPlaceholderscience5",
+  "mediaType": "image/svg+xml",
+  "files": [
+    {
+      "name": "science-5.svg",
+      "mediaType": "image/svg+xml",
+      "src": "ipfs://QmPlaceholderscience5"
+    }
+  ],
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Research"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Uncommon"
+    },
+    {
+      "trait_type": "Element",
+      "value": "Nitrogen"
+    }
+  ]
+}

@@ -14,24 +14,24 @@ export interface BadgeProps extends ViewProps {
 
 const variantStyles: Record<BadgeVariant, { bg: string; text: string }> = {
   primary: {
-    bg: 'bg-primary-600/20 border border-primary-600/30',
-    text: 'text-primary-400',
+    bg: 'bg-primary-500/20 border border-primary-500/60',
+    text: 'text-primary-300 font-semibold',
   },
   secondary: {
-    bg: 'bg-background-tertiary border border-background-tertiary',
-    text: 'text-text-secondary',
+    bg: 'bg-background-tertiary border border-text-secondary/30',
+    text: 'text-text-secondary font-medium',
   },
   success: {
-    bg: 'bg-success-600/20 border border-success-600/30',
-    text: 'text-success-400',
+    bg: 'bg-success-500/20 border border-success-500/50',
+    text: 'text-success-400 font-semibold',
   },
   warning: {
-    bg: 'bg-warning-600/20 border border-warning-600/30',
-    text: 'text-warning-400',
+    bg: 'bg-warning-500/20 border border-warning-500/50',
+    text: 'text-warning-400 font-semibold',
   },
   error: {
-    bg: 'bg-error-600/20 border border-error-600/30',
-    text: 'text-error-400',
+    bg: 'bg-error-500/20 border border-error-500/50',
+    text: 'text-error-400 font-semibold',
   },
   info: {
     bg: 'bg-primary-600/10 border border-primary-600/20',

@@ -1,0 +1,27 @@
+{
+  "name": "Literature NFT #4",
+  "description": "Literature knowledge NFT #4",
+  "image": "ipfs://QmPlaceholderliterature4",
+  "mediaType": "image/svg+xml",
+  "files": [
+    {
+      "name": "literature-4.svg",
+      "mediaType": "image/svg+xml",
+      "src": "ipfs://QmPlaceholderliterature4"
+    }
+  ],
+  "attributes": [
+    {
+      "trait_type": "Genre",
+      "value": "Mystery"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Common"
+    },
+    {
+      "trait_type": "Period",
+      "value": "Victorian"
+    }
+  ]
+}

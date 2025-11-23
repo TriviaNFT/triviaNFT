@@ -1,0 +1,27 @@
+{
+  "name": "Literature NFT #1",
+  "description": "Literature knowledge NFT #1",
+  "image": "ipfs://QmPlaceholderliterature1",
+  "mediaType": "image/svg+xml",
+  "files": [
+    {
+      "name": "literature-1.svg",
+      "mediaType": "image/svg+xml",
+      "src": "ipfs://QmPlaceholderliterature1"
+    }
+  ],
+  "attributes": [
+    {
+      "trait_type": "Genre",
+      "value": "Fiction"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Common"
+    },
+    {
+      "trait_type": "Period",
+      "value": "Contemporary"
+    }
+  ]
+}

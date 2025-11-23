@@ -1,0 +1,602 @@
+﻿[
+{
+"question": "What is the chemical formula for water?",
+"options": ["H2O", "CO2", "O2", "NaCl"],
+"correctIndex": 0,
+"explanation": "Water is made of two hydrogen atoms and one oxygen atom, giving it the formula H2O."
+},
+{
+"question": "What shape is the Earth closest to?",
+"options": ["A flat disk", "A perfect cube", "A sphere", "A pyramid"],
+"correctIndex": 2,
+"explanation": "The Earth is roughly spherical, more precisely an oblate spheroid, but it is closest to a sphere."
+},
+{
+"question": "What is the closest star to Earth?",
+"options": ["Sirius", "Polaris", "The Sun", "Betelgeuse"],
+"correctIndex": 2,
+"explanation": "The Sun is the star at the center of our solar system and is the closest star to Earth."
+},
+{
+"question": "Which planet is known as the Red Planet?",
+"options": ["Venus", "Mars", "Jupiter", "Mercury"],
+"correctIndex": 1,
+"explanation": "Mars appears reddish because of iron oxide (rust) on its surface, earning it the name Red Planet."
+},
+{
+"question": "Which is the largest planet in our solar system?",
+"options": ["Earth", "Mars", "Jupiter", "Saturn"],
+"correctIndex": 2,
+"explanation": "Jupiter is the largest planet in our solar system, with a diameter more than 11 times that of Earth."
+},
+{
+"question": "Which gas makes up most of the air we breathe?",
+"options": ["Oxygen", "Carbon dioxide", "Nitrogen", "Hydrogen"],
+"correctIndex": 2,
+"explanation": "About 78% of Earth's atmosphere is nitrogen, making it the most abundant gas in the air."
+},
+{
+"question": "Which organ in the human body pumps blood?",
+"options": ["Lungs", "Heart", "Stomach", "Liver"],
+"correctIndex": 1,
+"explanation": "The heart pumps blood through the body, delivering oxygen and nutrients to cells."
+},
+{
+"question": "Which sense do we use to detect sound?",
+"options": ["Sight", "Taste", "Hearing", "Smell"],
+"correctIndex": 2,
+"explanation": "We use our ears for the sense of hearing to detect sounds."
+},
+{
+"question": "What is the process called when a solid turns into a liquid?",
+"options": ["Freezing", "Evaporation", "Condensation", "Melting"],
+"correctIndex": 3,
+"explanation": "When a solid is heated and becomes a liquid, this change of state is called melting."
+},
+{
+"question": "At about what temperature does pure water boil at sea level?",
+"options": ["0°C", "50°C", "100°C", "200°C"],
+"correctIndex": 2,
+"explanation": "At sea level, pure water boils at 100 degrees Celsius."
+},
+{
+"question": "What is the main source of energy for plants during photosynthesis?",
+"options": ["Moonlight", "Sunlight", "Starlight", "Earth's heat"],
+"correctIndex": 1,
+"explanation": "Plants use sunlight as the energy source to convert carbon dioxide and water into food during photosynthesis."
+},
+{
+"question": "To which group of animals do humans belong?",
+"options": ["Reptiles", "Birds", "Mammals", "Amphibians"],
+"correctIndex": 2,
+"explanation": "Humans are mammals because we are warm-blooded, have hair, and mothers produce milk for their young."
+},
+{
+"question": "What is the largest organ of the human body?",
+"options": ["Heart", "Brain", "Skin", "Lungs"],
+"correctIndex": 2,
+"explanation": "The skin is the largest organ, covering and protecting the entire surface of the body."
+},
+{
+"question": "How many planets are in our solar system?",
+"options": ["7", "8", "9", "10"],
+"correctIndex": 1,
+"explanation": "There are 8 recognized planets in our solar system, from Mercury to Neptune."
+},
+{
+"question": "What is the force that pulls objects toward the center of the Earth?",
+"options": ["Magnetism", "Friction", "Gravity", "Electricity"],
+"correctIndex": 2,
+"explanation": "Gravity is the force that attracts objects toward one another, including toward the center of the Earth."
+},
+{
+"question": "What is the hardest natural substance on Earth?",
+"options": ["Iron", "Gold", "Diamond", "Silver"],
+"correctIndex": 2,
+"explanation": "Diamond is the hardest natural substance known, making it very resistant to scratching."
+},
+{
+"question": "What is the main gas that fuels the Sun?",
+"options": ["Helium", "Hydrogen", "Oxygen", "Carbon dioxide"],
+"correctIndex": 1,
+"explanation": "The Sun is mostly made of hydrogen, which it fuses into helium to produce energy."
+},
+{
+"question": "Which season comes after summer in the Northern Hemisphere?",
+"options": ["Spring", "Winter", "Autumn (Fall)", "Summer again"],
+"correctIndex": 2,
+"explanation": "Autumn, or fall, comes after summer and before winter in the yearly cycle of seasons."
+},
+{
+"question": "What instrument is used to measure temperature?",
+"options": ["Barometer", "Thermometer", "Microscope", "Telescope"],
+"correctIndex": 1,
+"explanation": "A thermometer measures temperature, often in degrees Celsius or Fahrenheit."
+},
+{
+"question": "Which part of a plant mainly absorbs water and minerals from the soil?",
+"options": ["Leaves", "Roots", "Flowers", "Stem"],
+"correctIndex": 1,
+"explanation": "The roots grow into the soil and absorb water and minerals for the plant."
+},
+{
+"question": "Which planet is famous for its large, bright rings?",
+"options": ["Mars", "Saturn", "Earth", "Neptune"],
+"correctIndex": 1,
+"explanation": "Saturn is well known for its beautiful rings made of ice and rock particles."
+},
+{
+"question": "Which organs in your body are mainly responsible for breathing?",
+"options": ["Kidneys", "Lungs", "Heart", "Stomach"],
+"correctIndex": 1,
+"explanation": "The lungs take in oxygen and release carbon dioxide when we breathe."
+},
+{
+"question": "Which liquid was traditionally used in many thermometers?",
+"options": ["Water", "Mercury", "Oil", "Alcohol only"],
+"correctIndex": 1,
+"explanation": "Mercury expands and contracts evenly with temperature, so it was commonly used in thermometers."
+},
+{
+"question": "Which state of matter has a fixed shape and a fixed volume?",
+"options": ["Solid", "Liquid", "Gas", "Plasma"],
+"correctIndex": 0,
+"explanation": "Solids have both a fixed shape and a fixed volume because their particles are tightly packed."
+},
+{
+"question": "What blood type is often called the universal donor?",
+"options": ["A", "B", "AB", "O negative"],
+"correctIndex": 3,
+"explanation": "People with O negative blood can donate to nearly anyone, so they are called universal donors."
+},
+{
+"question": "What is the smallest unit of life that can carry out all life processes?",
+"options": ["Atom", "Molecule", "Cell", "Tissue"],
+"correctIndex": 2,
+"explanation": "The cell is the basic unit of life; all living things are made of one or more cells."
+},
+{
+"question": "About how many days does it take Earth to orbit the Sun once?",
+"options": ["7 days", "30 days", "365 days", "730 days"],
+"correctIndex": 2,
+"explanation": "It takes Earth about 365 days, or one year, to complete one orbit around the Sun."
+},
+{
+"question": "What is it called when a liquid changes into a gas at its surface, like a puddle drying up?",
+"options": ["Freezing", "Evaporation", "Condensation", "Melting"],
+"correctIndex": 1,
+"explanation": "Evaporation is when a liquid slowly changes into a gas, usually from its surface."
+},
+{
+"question": "An animal without a backbone is called what?",
+"options": ["Vertebrate", "Invertebrate", "Mammal", "Amphibian"],
+"correctIndex": 1,
+"explanation": "Animals without a backbone are called invertebrates, such as insects and worms."
+},
+{
+"question": "Which tool helps scientists see very small objects like cells?",
+"options": ["Microscope", "Telescope", "Binoculars", "Periscope"],
+"correctIndex": 0,
+"explanation": "A microscope magnifies tiny objects so they can be seen in detail."
+},
+{
+"question": "What is the energy of motion called?",
+"options": ["Potential energy", "Thermal energy", "Kinetic energy", "Light energy"],
+"correctIndex": 2,
+"explanation": "Kinetic energy is the energy an object has because it is moving."
+},
+{
+"question": "An animal that lives part of its life in water and part on land is called what?",
+"options": ["Reptile", "Amphibian", "Bird", "Fish"],
+"correctIndex": 1,
+"explanation": "Amphibians, like frogs and salamanders, live both in water and on land during their life cycle."
+},
+{
+"question": "What is the name of the galaxy that contains our solar system?",
+"options": ["Andromeda", "Whirlpool", "Milky Way", "Sombrero"],
+"correctIndex": 2,
+"explanation": "Our solar system is located in the Milky Way galaxy."
+},
+{
+"question": "Which organ is known as the control center of the human body?",
+"options": ["Heart", "Brain", "Lungs", "Stomach"],
+"correctIndex": 1,
+"explanation": "The brain controls thoughts, movements, and many functions of the body."
+},
+{
+"question": "Which gas do plants take in from the air for photosynthesis?",
+"options": ["Oxygen", "Carbon dioxide", "Nitrogen", "Helium"],
+"correctIndex": 1,
+"explanation": "Plants take in carbon dioxide from the air and use it to make food during photosynthesis."
+},
+{
+"question": "Which planet is closest to the Sun?",
+"options": ["Earth", "Venus", "Mercury", "Mars"],
+"correctIndex": 2,
+"explanation": "Mercury is the closest planet to the Sun."
+},
+{
+"question": "What is the colored part of the eye that controls how much light enters?",
+"options": ["Pupil", "Iris", "Retina", "Cornea"],
+"correctIndex": 1,
+"explanation": "The iris is the colored ring around the pupil that controls its size and the amount of light entering the eye."
+},
+{
+"question": "Where two or more bones meet in the body is called what?",
+"options": ["Marrow", "Joint", "Muscle", "Cartilage"],
+"correctIndex": 1,
+"explanation": "A joint is the place where two or more bones come together, allowing movement."
+},
+{
+"question": "Which instrument is used to measure air pressure?",
+"options": ["Thermometer", "Barometer", "Hygrometer", "Compass"],
+"correctIndex": 1,
+"explanation": "A barometer measures air pressure, which helps in weather forecasting."
+},
+{
+"question": "Meteorology is the study of what?",
+"options": ["Rocks", "Weather", "Plants", "Insects"],
+"correctIndex": 1,
+"explanation": "Meteorology is the science that studies the atmosphere and weather."
+},
+{
+"question": "The energy stored in food that our bodies use is what type of energy?",
+"options": ["Solar energy", "Chemical energy", "Sound energy", "Nuclear energy"],
+"correctIndex": 1,
+"explanation": "Food contains chemical energy, which our bodies convert into other forms of energy to function."
+},
+{
+"question": "Which teeth at the front of your mouth are used mainly for cutting food?",
+"options": ["Molars", "Canines", "Incisors", "Wisdom teeth"],
+"correctIndex": 2,
+"explanation": "Incisors are the flat front teeth used for biting and cutting food."
+},
+{
+"question": "Which blood vessels carry blood away from the heart?",
+"options": ["Veins", "Arteries", "Capillaries", "Nerves"],
+"correctIndex": 1,
+"explanation": "Arteries carry oxygen-rich blood away from the heart to the body."
+},
+{
+"question": "A recognizable pattern of stars in the night sky is called what?",
+"options": ["Galaxy", "Constellation", "Cluster", "Nebula"],
+"correctIndex": 1,
+"explanation": "A constellation is a group of stars forming a recognizable pattern, often named after mythological figures or objects."
+},
+{
+"question": "What is the part of the water cycle where water falls from the sky as rain or snow?",
+"options": ["Evaporation", "Condensation", "Precipitation", "Infiltration"],
+"correctIndex": 2,
+"explanation": "Precipitation is when water falls from clouds to Earth as rain, snow, sleet, or hail."
+},
+{
+"question": "What is the main function of leaves on a plant?",
+"options": ["Absorb water", "Anchor the plant", "Make food", "Hold seeds"],
+"correctIndex": 2,
+"explanation": "Leaves are where most photosynthesis happens, so they make food for the plant."
+},
+{
+"question": "What is the yellowish liquid part of blood called?",
+"options": ["Plasma", "Platelets", "Red cells", "White cells"],
+"correctIndex": 0,
+"explanation": "Plasma is the liquid portion of blood that carries cells, nutrients, and waste products."
+},
+{
+"question": "What device is used to turn wind energy into electrical energy?",
+"options": ["Solar panel", "Wind turbine", "Battery", "Generator only"],
+"correctIndex": 1,
+"explanation": "Wind turbines spin in the wind and use that motion to generate electricity."
+},
+{
+"question": "Which tool is commonly used to measure the weight (force) of an object?",
+"options": ["Ruler", "Spring scale", "Thermometer", "Protractor"],
+"correctIndex": 1,
+"explanation": "A spring scale uses a spring to measure the force of gravity on an object, which we feel as weight."
+},
+{
+"question": "An animal that eats only plants is called what?",
+"options": ["Carnivore", "Herbivore", "Omnivore", "Detritivore"],
+"correctIndex": 1,
+"explanation": "Herbivores eat only plants; examples include cows and deer."
+},
+{
+"question": "Which organs filter waste from the blood to make urine?",
+"options": ["Lungs", "Kidneys", "Heart", "Intestines"],
+"correctIndex": 1,
+"explanation": "The kidneys filter waste products from the blood and produce urine."
+},
+{
+"question": "What is the smallest particle of an element that still has the properties of that element?",
+"options": ["Molecule", "Cell", "Atom", "Electron"],
+"correctIndex": 2,
+"explanation": "An atom is the smallest unit of an element that retains its chemical properties."
+},
+{
+"question": "What part of a seed grows into a new plant?",
+"options": ["Shell", "Embryo", "Soil", "Petal"],
+"correctIndex": 1,
+"explanation": "The embryo inside the seed is the tiny plant that will grow when conditions are right."
+},
+{
+"question": "What do we call a mixture in which substances are evenly mixed, like salt in water?",
+"options": ["Suspension", "Solution", "Foam", "Colloid"],
+"correctIndex": 1,
+"explanation": "A solution is a mixture where one substance is dissolved evenly in another."
+},
+{
+"question": "An animal that has hair, is warm-blooded, and feeds milk to its young is a what?",
+"options": ["Bird", "Reptile", "Mammal", "Fish"],
+"correctIndex": 2,
+"explanation": "Mammals have hair or fur, are warm-blooded, and mothers produce milk for their babies."
+},
+{
+"question": "Which phase of the Moon shows the Moon completely lit as seen from Earth?",
+"options": ["New moon", "Crescent moon", "Half moon", "Full moon"],
+"correctIndex": 3,
+"explanation": "During a full moon, the entire face of the Moon visible from Earth is illuminated."
+},
+{
+"question": "On which layer of the Earth do we live?",
+"options": ["Core", "Mantle", "Crust", "Outer core"],
+"correctIndex": 2,
+"explanation": "We live on the Earth's crust, the thin, rocky outer layer."
+},
+{
+"question": "What is the change of state called when a gas becomes a liquid?",
+"options": ["Melting", "Evaporation", "Condensation", "Freezing"],
+"correctIndex": 2,
+"explanation": "Condensation is when a gas cools and changes back into a liquid, like water droplets on a cold glass."
+},
+{
+"question": "Which scientist is famous for the theory of relativity?",
+"options": ["Isaac Newton", "Albert Einstein", "Galileo Galilei", "Marie Curie"],
+"correctIndex": 1,
+"explanation": "Albert Einstein developed the theory of relativity, which changed our understanding of space and time."
+},
+{
+"question": "What do we call the distance that light travels in one year?",
+"options": ["Astronomical unit", "Light-year", "Parsec", "Kilometer"],
+"correctIndex": 1,
+"explanation": "A light-year is the distance light travels in one year, used to measure distances in space."
+},
+{
+"question": "What is the main source of oxygen in Earth's atmosphere?",
+"options": ["Volcanoes", "Plants and algae", "Rocks", "The Moon"],
+"correctIndex": 1,
+"explanation": "Plants on land and algae in the oceans release oxygen during photosynthesis."
+},
+{
+"question": "What is the basic unit of electric current?",
+"options": ["Volt", "Ohm", "Ampere", "Watt"],
+"correctIndex": 2,
+"explanation": "The ampere (amp) is the unit used to measure electric current."
+},
+{
+"question": "Which device stores chemical energy and provides electrical energy for circuits?",
+"options": ["Switch", "Battery", "Wire", "Resistor"],
+"correctIndex": 1,
+"explanation": "A battery stores chemical energy and converts it into electrical energy for a circuit."
+},
+{
+"question": "What type of change occurs when a new substance is formed, like rust on iron?",
+"options": ["Physical change", "Chemical change", "State change", "Size change"],
+"correctIndex": 1,
+"explanation": "A chemical change forms a new substance with different properties, such as rust forming on iron."
+},
+{
+"question": "Which animal is well known for using echolocation to find food in the dark?",
+"options": ["Dog", "Bat", "Cat", "Horse"],
+"correctIndex": 1,
+"explanation": "Bats use echolocation, sending out sounds and listening for echoes to locate objects and prey."
+},
+{
+"question": "What is the main function of the skeleton in the human body?",
+"options": ["Produce saliva", "Pump blood", "Support and protect organs", "Digest food"],
+"correctIndex": 2,
+"explanation": "The skeleton provides structure, supports the body, and protects important organs like the brain and heart."
+},
+{
+"question": "Which organ helps digest fats by producing bile?",
+"options": ["Heart", "Liver", "Lungs", "Pancreas"],
+"correctIndex": 1,
+"explanation": "The liver produces bile, which helps break down fats in the small intestine."
+},
+{
+"question": "What causes day and night on Earth?",
+"options": ["Earth's revolution around the Sun", "Earth's rotation on its axis", "The Moon's orbit", "Cloud movement"],
+"correctIndex": 1,
+"explanation": "Day and night are caused by the Earth rotating on its axis, making different parts face the Sun."
+},
+{
+"question": "How many chromosomes are found in most human body cells?",
+"options": ["23", "46", "12", "92"],
+"correctIndex": 1,
+"explanation": "Human body cells usually contain 46 chromosomes arranged in 23 pairs."
+},
+{
+"question": "What is the main cause of ocean tides on Earth?",
+"options": ["Wind", "Earth's rotation only", "The Moon's gravity", "Sunlight"],
+"correctIndex": 2,
+"explanation": "The Moon's gravitational pull on Earth's oceans is the primary cause of tides."
+},
+{
+"question": "Which part of a flowering plant makes seeds?",
+"options": ["Roots", "Stem", "Leaves", "Flower"],
+"correctIndex": 3,
+"explanation": "Flowers contain the reproductive parts of the plant, where seeds are formed."
+},
+{
+"question": "What type of microorganism causes the flu?",
+"options": ["Bacteria", "Virus", "Fungus", "Algae"],
+"correctIndex": 1,
+"explanation": "The flu is caused by influenza viruses, which infect the respiratory system."
+},
+{
+"question": "What is the main function of red blood cells?",
+"options": ["Fight infections", "Clot the blood", "Carry oxygen", "Digest food"],
+"correctIndex": 2,
+"explanation": "Red blood cells contain hemoglobin, which carries oxygen from the lungs to the rest of the body."
+},
+{
+"question": "What unit is commonly used to measure how loud a sound is?",
+"options": ["Hertz", "Decibel", "Meter", "Joule"],
+"correctIndex": 1,
+"explanation": "Loudness of sound is measured in decibels (dB)."
+},
+{
+"question": "Which simple machine is a flat surface set at an angle, like a ramp?",
+"options": ["Lever", "Pulley", "Inclined plane", "Wheel and axle"],
+"correctIndex": 2,
+"explanation": "An inclined plane is a sloped surface that makes it easier to move objects up or down."
+},
+{
+"question": "Organisms that can make their own food using sunlight are called what?",
+"options": ["Consumers", "Producers", "Decomposers", "Scavengers"],
+"correctIndex": 1,
+"explanation": "Producers, like plants, make their own food through photosynthesis."
+},
+{
+"question": "Which is the largest ocean on Earth?",
+"options": ["Atlantic Ocean", "Indian Ocean", "Arctic Ocean", "Pacific Ocean"],
+"correctIndex": 3,
+"explanation": "The Pacific Ocean is the largest and deepest ocean on Earth."
+},
+{
+"question": "What is the name of Earth's natural satellite?",
+"options": ["Phobos", "Europa", "The Moon", "Titan"],
+"correctIndex": 2,
+"explanation": "The Moon is Earth's only natural satellite."
+},
+{
+"question": "What do bees mainly collect from flowers to make honey?",
+"options": ["Soil", "Nectar", "Leaves", "Seeds"],
+"correctIndex": 1,
+"explanation": "Bees collect sweet liquid called nectar from flowers and use it to make honey."
+},
+{
+"question": "Which type of organism breaks down dead plants and animals?",
+"options": ["Producer", "Consumer", "Decomposer", "Herbivore"],
+"correctIndex": 2,
+"explanation": "Decomposers, such as fungi and bacteria, break down dead material and recycle nutrients."
+},
+{
+"question": "What is it called when a solid changes directly into a gas, like dry ice disappearing?",
+"options": ["Melting", "Freezing", "Sublimation", "Condensation"],
+"correctIndex": 2,
+"explanation": "Sublimation is when a solid changes directly into a gas without becoming liquid first."
+},
+{
+"question": "What is the basic unit of heredity that carries genetic information?",
+"options": ["Atom", "Cell", "Gene", "Organ"],
+"correctIndex": 2,
+"explanation": "A gene is a segment of DNA that carries instructions for a specific trait."
+},
+{
+"question": "Which tool do scientists often use to measure short time intervals in experiments?",
+"options": ["Stopwatch", "Microscope", "Ruler", "Barometer"],
+"correctIndex": 0,
+"explanation": "A stopwatch is used to measure time in seconds and minutes during experiments."
+},
+{
+"question": "Which planet is known for its Great Red Spot, a giant storm?",
+"options": ["Mercury", "Venus", "Earth", "Jupiter"],
+"correctIndex": 3,
+"explanation": "Jupiter's Great Red Spot is a huge storm that has lasted for centuries."
+},
+{
+"question": "Which material is strongly attracted to a magnet?",
+"options": ["Plastic", "Wood", "Iron", "Glass"],
+"correctIndex": 2,
+"explanation": "Iron is a magnetic material and is strongly attracted to magnets."
+},
+{
+"question": "What is the main source of energy for life on Earth?",
+"options": ["The Moon", "The Sun", "Earth's core", "The stars"],
+"correctIndex": 1,
+"explanation": "The Sun provides light and heat, which drive most processes that support life on Earth."
+},
+{
+"question": "Which of these animals is a reptile?",
+"options": ["Frog", "Snake", "Eagle", "Salmon"],
+"correctIndex": 1,
+"explanation": "Snakes are reptiles, a group of cold-blooded animals with scaly skin."
+},
+{
+"question": "Which blood vessels return blood back to the heart?",
+"options": ["Arteries", "Veins", "Capillaries", "Bronchi"],
+"correctIndex": 1,
+"explanation": "Veins carry blood from the body back to the heart."
+},
+{
+"question": "Which instrument is used to observe distant objects like stars and planets?",
+"options": ["Microscope", "Periscope", "Telescope", "Binoculars"],
+"correctIndex": 2,
+"explanation": "A telescope collects light to help us see distant objects in space."
+},
+{
+"question": "What do we call a group of the same kind of organism living in the same place?",
+"options": ["Ecosystem", "Community", "Population", "Biome"],
+"correctIndex": 2,
+"explanation": "A population is all the members of one species living in a specific area."
+},
+{
+"question": "What device turns electrical energy into sound, like in a radio?",
+"options": ["Battery", "Speaker", "Switch", "Solar panel"],
+"correctIndex": 1,
+"explanation": "A speaker converts electrical signals into sound waves that we can hear."
+},
+{
+"question": "Which subatomic particle has a negative electric charge?",
+"options": ["Proton", "Neutron", "Electron", "Nucleus"],
+"correctIndex": 2,
+"explanation": "Electrons are negatively charged particles that orbit the nucleus of an atom."
+},
+{
+"question": "Which property describes how hot or cold something is?",
+"options": ["Mass", "Volume", "Temperature", "Density"],
+"correctIndex": 2,
+"explanation": "Temperature is a measure of how hot or cold an object or environment is."
+},
+{
+"question": "A simple electric circuit must include which of the following?",
+"options": ["Battery, wires, and a bulb", "Battery only", "Bulb only", "Wires only"],
+"correctIndex": 0,
+"explanation": "A basic circuit needs a power source (battery), connecting wires, and a device like a bulb to work."
+},
+{
+"question": "Which part of the cell is often called the powerhouse of the cell?",
+"options": ["Nucleus", "Cell membrane", "Mitochondrion", "Ribosome"],
+"correctIndex": 2,
+"explanation": "Mitochondria are called the powerhouses because they release energy from food for the cell."
+},
+{
+"question": "About how long does it take the Moon to orbit Earth once?",
+"options": ["1 day", "7 days", "27 days", "365 days"],
+"correctIndex": 2,
+"explanation": "It takes about 27 days for the Moon to complete one orbit around Earth."
+},
+{
+"question": "Which planet is often called Earth's twin because of its similar size?",
+"options": ["Mars", "Venus", "Jupiter", "Mercury"],
+"correctIndex": 1,
+"explanation": "Venus is similar in size and mass to Earth, so it is often called Earth's twin."
+},
+{
+"question": "Which animal starts life in water with gills and later develops lungs to live on land?",
+"options": ["Snake", "Frog", "Shark", "Eagle"],
+"correctIndex": 1,
+"explanation": "Frogs are amphibians; their tadpoles live in water with gills, and adults live on land with lungs."
+},
+{
+"question": "At what temperature does pure water freeze at standard pressure?",
+"options": ["0°C", "10°C", "32°C", "100°C"],
+"correctIndex": 0,
+"explanation": "Pure water freezes at 0 degrees Celsius at standard atmospheric pressure."
+},
+{
+"question": "What is the main purpose of a vaccine?",
+"options": ["To cure broken bones", "To color the blood", "To protect against disease", "To give extra energy"],
+"correctIndex": 2,
+"explanation": "Vaccines train the immune system to recognize and fight specific germs, helping protect against disease."
+}
+]

@@ -1,0 +1,27 @@
+{
+  "name": "Geography NFT #4",
+  "description": "Geographic knowledge NFT #4",
+  "image": "ipfs://QmPlaceholdergeography4",
+  "mediaType": "image/svg+xml",
+  "files": [
+    {
+      "name": "geography-4.svg",
+      "mediaType": "image/svg+xml",
+      "src": "ipfs://QmPlaceholdergeography4"
+    }
+  ],
+  "attributes": [
+    {
+      "trait_type": "Terrain",
+      "value": "Forest"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Common"
+    },
+    {
+      "trait_type": "Climate",
+      "value": "Temperate"
+    }
+  ]
+}

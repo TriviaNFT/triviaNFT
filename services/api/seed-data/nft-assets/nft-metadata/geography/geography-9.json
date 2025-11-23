@@ -1,0 +1,27 @@
+{
+  "name": "Geography NFT #9",
+  "description": "Geographic knowledge NFT #9",
+  "image": "ipfs://QmPlaceholdergeography9",
+  "mediaType": "image/svg+xml",
+  "files": [
+    {
+      "name": "geography-9.svg",
+      "mediaType": "image/svg+xml",
+      "src": "ipfs://QmPlaceholdergeography9"
+    }
+  ],
+  "attributes": [
+    {
+      "trait_type": "Terrain",
+      "value": "Volcano"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Uncommon"
+    },
+    {
+      "trait_type": "Climate",
+      "value": "Volcanic"
+    }
+  ]
+}

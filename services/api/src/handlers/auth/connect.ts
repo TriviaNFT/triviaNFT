@@ -30,7 +30,10 @@ export async function handler(
     const validatedBody = connectWalletRequestSchema.parse(body);
 
     // Connect wallet and generate token
-    const response = await connectWallet(validatedBody.stakeKey);
+    const response = await connectWallet(
+      validatedBody.stakeKey,
+      validatedBody.paymentAddress
+    );
 
     console.log('Wallet connected successfully:', {
       playerId: response.player.id,

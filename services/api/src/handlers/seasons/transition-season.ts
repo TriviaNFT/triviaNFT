@@ -6,7 +6,7 @@
 
 import { EventBridgeEvent } from 'aws-lambda';
 import { getPool } from '../../db/connection';
-import { RedisService } from '../../services/redis-service';
+import { UpstashRedisService } from '../../services/upstash-redis-service';
 import { SeasonService } from '../../services/season-service';
 
 interface SeasonTransitionEvent {
@@ -18,7 +18,7 @@ export const handler = async (event: EventBridgeEvent<'Scheduled Event', SeasonT
   console.log('Starting season transition', { event });
 
   const db = await getPool();
-  const redis = new RedisService();
+  const redis = new UpstashRedisService();
   const seasonService = new SeasonService(db);
 
   try {
@@ -125,7 +125,7 @@ function decodeCompositeScore(score: number): {
  */
 async function archiveSeasonLeaderboard(
   db: any,
-  redis: RedisService,
+  redis: UpstashRedisService,
   seasonId: string
 ) {
   // Get final standings from Redis
@@ -224,7 +224,7 @@ async function awardSeasonPrize(db: any, seasonId: string) {
 /**
  * Reset Redis leaderboards for the new season
  */
-async function resetRedisLeaderboards(redis: RedisService, newSeasonId: string) {
+async function resetRedisLeaderboards(redis: UpstashRedisService, newSeasonId: string) {
   // Delete old season leaderboards (keep for historical reference, but create new keys)
   // The new season will use new Redis keys like ladder:global:{newSeasonId}
   

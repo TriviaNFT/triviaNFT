@@ -1,0 +1,27 @@
+{
+  "name": "Technology NFT #3",
+  "description": "Technology knowledge NFT #3",
+  "image": "ipfs://QmPlaceholdertechnology3",
+  "mediaType": "image/svg+xml",
+  "files": [
+    {
+      "name": "technology-3.svg",
+      "mediaType": "image/svg+xml",
+      "src": "ipfs://QmPlaceholdertechnology3"
+    }
+  ],
+  "attributes": [
+    {
+      "trait_type": "Field",
+      "value": "Cloud"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Rare"
+    },
+    {
+      "trait_type": "Innovation",
+      "value": "Serverless"
+    }
+  ]
+}

@@ -151,8 +151,8 @@ export class AppConfigService {
         cooldownSeconds: 60,
       },
       limits: {
-        dailySessionsConnected: 10,
-        dailySessionsGuest: 5,
+        dailySessionsConnected: 20,
+        dailySessionsGuest: 10,
         resetTimeET: '00:00',
       },
       eligibility: {

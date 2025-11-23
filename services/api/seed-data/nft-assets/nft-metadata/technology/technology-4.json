@@ -1,0 +1,27 @@
+{
+  "name": "Technology NFT #4",
+  "description": "Technology knowledge NFT #4",
+  "image": "ipfs://QmPlaceholdertechnology4",
+  "mediaType": "image/svg+xml",
+  "files": [
+    {
+      "name": "technology-4.svg",
+      "mediaType": "image/svg+xml",
+      "src": "ipfs://QmPlaceholdertechnology4"
+    }
+  ],
+  "attributes": [
+    {
+      "trait_type": "Field",
+      "value": "Mobile"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Common"
+    },
+    {
+      "trait_type": "Innovation",
+      "value": "Apps"
+    }
+  ]
+}

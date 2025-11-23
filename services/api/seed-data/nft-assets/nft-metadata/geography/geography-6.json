@@ -1,0 +1,27 @@
+{
+  "name": "Geography NFT #6",
+  "description": "Geographic knowledge NFT #6",
+  "image": "ipfs://QmPlaceholdergeography6",
+  "mediaType": "image/svg+xml",
+  "files": [
+    {
+      "name": "geography-6.svg",
+      "mediaType": "image/svg+xml",
+      "src": "ipfs://QmPlaceholdergeography6"
+    }
+  ],
+  "attributes": [
+    {
+      "trait_type": "Terrain",
+      "value": "Island"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Rare"
+    },
+    {
+      "trait_type": "Climate",
+      "value": "Maritime"
+    }
+  ]
+}

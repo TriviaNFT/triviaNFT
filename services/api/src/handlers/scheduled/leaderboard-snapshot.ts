@@ -6,7 +6,7 @@
 
 import { EventBridgeEvent } from 'aws-lambda';
 import { getPool } from '../../db/connection';
-import { RedisService } from '../../services/redis-service';
+import { UpstashRedisService } from '../../services/upstash-redis-service';
 import { SeasonService } from '../../services/season-service';
 
 /**
@@ -42,7 +42,7 @@ export const handler = async (event: EventBridgeEvent<'Scheduled Event', any>) =
   console.log('Starting leaderboard snapshot', { event });
 
   const db = await getPool();
-  const redis = new RedisService();
+  const redis = new UpstashRedisService();
   const seasonService = new SeasonService(db);
 
   try {

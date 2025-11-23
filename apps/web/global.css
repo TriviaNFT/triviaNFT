@@ -2,48 +2,144 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom base styles */
-@layer base {
-  * {
-    @apply border-border;
+/* Ensure full height and consistent background */
+html, body, #root {
+  height: 100%;
+  min-height: 100vh;
+  background-color: #0f0f1e;
+  margin: 0;
+  padding: 0;
+}
+
+/* Custom Keyframe Animations - Optimized for 60fps */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
   }
-  
-  body {
-    @apply bg-background text-text-primary;
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  50% {
+    transform: translateY(-8px);
   }
 }
 
-/* Custom component styles */
-@layer components {
-  .btn {
-    @apply px-4 py-2 rounded-lg font-medium transition-all duration-200;
+@keyframes glow-pulse {
+  0%, 100% {
+    opacity: 0.6;
   }
-  
-  .btn-primary {
-    @apply bg-primary-600 text-white hover:bg-primary-700 active:bg-primary-800;
-  }
-  
-  .btn-secondary {
-    @apply bg-background-tertiary text-text-primary hover:bg-background-secondary;
-  }
-  
-  .card {
-    @apply bg-background-secondary rounded-xl p-4 shadow-lg;
-  }
-  
-  .input {
-    @apply bg-background-tertiary text-text-primary border border-background-tertiary rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500;
+  50% {
+    opacity: 1.0;
   }
 }
 
-/* Custom utility styles */
+/* Performance optimizations for animations */
+.animate-float,
+.animate-float-delayed,
+.animate-glow-pulse {
+  /* Use GPU acceleration for smooth 60fps animations */
+  will-change: transform, opacity;
+  /* Force hardware acceleration */
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Optimize hover transitions for 60fps */
+[class*="hover:"],
+[class*="focus:"] {
+  will-change: transform, box-shadow, opacity;
+}
+
+/* Custom Utility Classes */
 @layer utilities {
-  .text-gradient {
-    @apply bg-gradient-to-r from-primary-400 to-primary-600 bg-clip-text text-transparent;
+  .backdrop-blur-glass {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
   }
   
-  .glow {
-    box-shadow: 0 0 20px rgba(124, 111, 240, 0.3);
+  .border-glow-violet {
+    box-shadow: 0 0 20px rgba(138, 92, 246, 0.6);
+  }
+  
+  .border-glow-cyan {
+    box-shadow: 0 0 20px rgba(34, 211, 238, 0.6);
+  }
+  
+  .border-glow-lime {
+    box-shadow: 0 0 20px rgba(163, 230, 53, 0.6);
+  }
+  
+  .text-shadow-glow {
+    text-shadow: 0 0 20px currentColor;
+  }
+  
+  /* Focus ring utilities for accessibility */
+  .focus-ring-primary {
+    outline: 3px solid rgba(138, 92, 246, 1);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 3px rgba(138, 92, 246, 0.25);
+  }
+  
+  .focus-ring-secondary {
+    outline: 3px solid rgba(34, 211, 238, 1);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.25);
+  }
+  
+  .focus-ring-success {
+    outline: 3px solid rgba(34, 197, 94, 1);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.25);
+  }
+  
+  .focus-ring-danger {
+    outline: 3px solid rgba(220, 38, 38, 1);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.25);
+  }
+}
+
+/* Ensure focus indicators are visible on all interactive elements */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+[role="button"]:focus-visible,
+[role="link"]:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid rgba(138, 92, 246, 1);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 3px rgba(138, 92, 246, 0.25);
+}
+
+/* Remove default focus outline but keep focus-visible */
+button:focus:not(:focus-visible),
+a:focus:not(:focus-visible),
+input:focus:not(:focus-visible),
+textarea:focus:not(:focus-visible),
+select:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  /* Disable floating animations */
+  .animate-float,
+  .animate-float-delayed {
+    animation: none !important;
+  }
+  
+  /* Disable glow pulse */
+  .animate-glow-pulse {
+    animation: none !important;
+    opacity: 0.8 !important;
   }
 }

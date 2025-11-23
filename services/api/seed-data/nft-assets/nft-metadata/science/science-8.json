@@ -1,0 +1,27 @@
+{
+  "name": "Photon Beam",
+  "description": "Light specialist",
+  "image": "ipfs://QmPlaceholderscience8",
+  "mediaType": "image/svg+xml",
+  "files": [
+    {
+      "name": "science-8.svg",
+      "mediaType": "image/svg+xml",
+      "src": "ipfs://QmPlaceholderscience8"
+    }
+  ],
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Innovation"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Common"
+    },
+    {
+      "trait_type": "Element",
+      "value": "Iron"
+    }
+  ]
+}

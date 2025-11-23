@@ -15,6 +15,7 @@ export * from './MintEligibilityList';
 export * from './MintingInterface';
 export * from './NFTCard';
 export * from './NFTDetailModal';
+export * from './NFTGallery';
 export * from './NFTInventory';
 export * from './ForgeProgressCard';
 export * from './ForgeProgressDisplay';

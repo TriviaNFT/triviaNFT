@@ -1,0 +1,27 @@
+{
+  "name": "History NFT #6",
+  "description": "Historical knowledge NFT #6",
+  "image": "ipfs://QmPlaceholderhistory6",
+  "mediaType": "image/svg+xml",
+  "files": [
+    {
+      "name": "history-6.svg",
+      "mediaType": "image/svg+xml",
+      "src": "ipfs://QmPlaceholderhistory6"
+    }
+  ],
+  "attributes": [
+    {
+      "trait_type": "Era",
+      "value": "Contemporary"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Rare"
+    },
+    {
+      "trait_type": "Civilization",
+      "value": "Persian"
+    }
+  ]
+}

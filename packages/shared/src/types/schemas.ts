@@ -115,6 +115,7 @@ export const categorySchema = z.object({
   isActive: z.boolean(),
   iconUrl: z.string().url().optional(),
   nftCount: z.number().int().min(0).optional(),
+  ownedCount: z.number().int().min(0).optional(),
   stockAvailable: z.number().int().min(0).optional(),
 });
 
@@ -273,6 +274,7 @@ export const leaderboardPageSchema = z.object({
 
 export const connectWalletRequestSchema = z.object({
   stakeKey: stakeKeySchema,
+  paymentAddress: z.string().optional(), // Hex-encoded CBOR address from wallet
 });
 
 export const createProfileRequestSchema = z.object({

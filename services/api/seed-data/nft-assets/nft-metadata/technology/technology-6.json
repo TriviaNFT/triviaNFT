@@ -1,0 +1,27 @@
+{
+  "name": "Technology NFT #6",
+  "description": "Technology knowledge NFT #6",
+  "image": "ipfs://QmPlaceholdertechnology6",
+  "mediaType": "image/svg+xml",
+  "files": [
+    {
+      "name": "technology-6.svg",
+      "mediaType": "image/svg+xml",
+      "src": "ipfs://QmPlaceholdertechnology6"
+    }
+  ],
+  "attributes": [
+    {
+      "trait_type": "Field",
+      "value": "IoT"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Rare"
+    },
+    {
+      "trait_type": "Innovation",
+      "value": "Smart Devices"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "name": "History NFT #4",
+  "description": "Historical knowledge NFT #4",
+  "image": "ipfs://QmPlaceholderhistory4",
+  "mediaType": "image/svg+xml",
+  "files": [
+    {
+      "name": "history-4.svg",
+      "mediaType": "image/svg+xml",
+      "src": "ipfs://QmPlaceholderhistory4"
+    }
+  ],
+  "attributes": [
+    {
+      "trait_type": "Era",
+      "value": "Industrial"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Common"
+    },
+    {
+      "trait_type": "Civilization",
+      "value": "Chinese"
+    }
+  ]
+}

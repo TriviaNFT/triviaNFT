@@ -1,0 +1,27 @@
+{
+  "name": "Literature NFT #7",
+  "description": "Literature knowledge NFT #7",
+  "image": "ipfs://QmPlaceholderliterature7",
+  "mediaType": "image/svg+xml",
+  "files": [
+    {
+      "name": "literature-7.svg",
+      "mediaType": "image/svg+xml",
+      "src": "ipfs://QmPlaceholderliterature7"
+    }
+  ],
+  "attributes": [
+    {
+      "trait_type": "Genre",
+      "value": "Biography"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Epic"
+    },
+    {
+      "trait_type": "Period",
+      "value": "Historical"
+    }
+  ]
+}

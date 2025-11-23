@@ -21,6 +21,7 @@ interface AuthContextValue {
   isAuthenticated: boolean;
   isLoading: boolean;
   anonId: string;
+  isNewUser: boolean;
 
   // Actions
   connectWallet: (walletName: WalletType) => Promise<void>;
@@ -48,6 +49,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   const [wallet, setWallet] = useState<ConnectedWallet | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [anonId] = useState(() => getOrCreateAnonId());
+  const [isNewUser, setIsNewUser] = useState(false);
 
   // Initialize auth state on mount
   useEffect(() => {
@@ -96,14 +98,25 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   const connectWallet = useCallback(async (walletName: WalletType) => {
     try {
       setIsLoading(true);
+      console.log(`[AuthContext] Starting wallet connection for ${walletName}...`);
 
       // Connect to wallet
+      console.log('[AuthContext] Connecting to wallet extension...');
       const api = await connectWalletUtil(walletName);
+      console.log('[AuthContext] Wallet extension connected, getting stake key...');
+      
       const stakeKey = await getStakeKey(api);
+      console.log('[AuthContext] Stake key retrieved:', stakeKey.substring(0, 20) + '...');
+      
       const address = await getAddress(api);
+      console.log('[AuthContext] Address retrieved:', address.substring(0, 20) + '...');
 
-      // Call backend to get JWT
-      const response = await authService.connectWallet(stakeKey);
+      // Call backend to get JWT (send both stake key and payment address)
+      console.log('[AuthContext] Calling backend API to authenticate...');
+      const response = await authService.connectWallet(stakeKey, address);
+      console.log('[AuthContext] Backend authentication successful');
+      console.log('[AuthContext] Is new user:', response.isNewUser);
+      console.log('[AuthContext] Player has username:', !!response.player.username);
 
       // Save tokens
       saveAuthTokens({
@@ -122,13 +135,25 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
         api,
       });
       setPlayer(response.player);
+      
+      // Set new user flag if they don't have a username
+      setIsNewUser(response.isNewUser || !response.player.username);
 
       // Clear anon ID if user was guest
       if (!response.isNewUser) {
         clearAnonId();
       }
+      
+      console.log('[AuthContext] Wallet connection complete');
     } catch (error) {
-      console.error('Failed to connect wallet:', error);
+      console.error('[AuthContext] Failed to connect wallet:', error);
+      if (error instanceof Error) {
+        console.error('[AuthContext] Error details:', {
+          name: error.name,
+          message: error.message,
+          stack: error.stack,
+        });
+      }
       throw error;
     } finally {
       setIsLoading(false);
@@ -147,6 +172,8 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
 
       const response = await authService.createProfile({ username, email });
       setPlayer(response.player);
+      setIsNewUser(false); // User is no longer new after creating profile
+      console.log('[AuthContext] Profile created successfully');
     } catch (error) {
       console.error('Failed to create profile:', error);
       throw error;
@@ -171,6 +198,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     isAuthenticated: !!player && !!wallet,
     isLoading,
     anonId,
+    isNewUser,
     connectWallet,
     disconnectWallet,
     createProfile,

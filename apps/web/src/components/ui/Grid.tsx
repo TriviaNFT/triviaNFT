@@ -4,22 +4,22 @@ import type { ViewProps } from 'react-native';
 
 export interface GridProps extends ViewProps {
   children: React.ReactNode;
-  cols?: {
-    default?: number;
+  columns?: {
     sm?: number;
     md?: number;
     lg?: number;
     xl?: number;
   };
-  gap?: number;
+  gap?: number | string;
 }
 
 /**
  * Responsive grid component that adapts column count based on screen size.
+ * Supports breakpoint-specific column configuration and flexible gap spacing.
  */
 export const Grid: React.FC<GridProps> = ({
   children,
-  cols = { default: 1, sm: 1, md: 2, lg: 3, xl: 4 },
+  columns = { sm: 1, md: 2, lg: 3, xl: 4 },
   gap = 4,
   className,
   ...props
@@ -27,18 +27,23 @@ export const Grid: React.FC<GridProps> = ({
   const getGridClasses = () => {
     const classes: string[] = [];
     
-    // Default columns
-    if (cols.default) {
-      classes.push(`grid-cols-${cols.default}`);
-    }
+    // Base columns (mobile-first, use sm breakpoint as default)
+    const baseColumns = columns.sm || 1;
+    classes.push(`grid-cols-${baseColumns}`);
     
     // Responsive columns
-    if (cols.sm) classes.push(`sm:grid-cols-${cols.sm}`);
-    if (cols.md) classes.push(`md:grid-cols-${cols.md}`);
-    if (cols.lg) classes.push(`lg:grid-cols-${cols.lg}`);
-    if (cols.xl) classes.push(`xl:grid-cols-${cols.xl}`);
+    if (columns.md) classes.push(`md:grid-cols-${columns.md}`);
+    if (columns.lg) classes.push(`lg:grid-cols-${columns.lg}`);
+    if (columns.xl) classes.push(`xl:grid-cols-${columns.xl}`);
     
     return classes.join(' ');
+  };
+
+  const getGapClass = () => {
+    if (typeof gap === 'string') {
+      return gap;
+    }
+    return `gap-${gap}`;
   };
 
   return (
@@ -46,7 +51,7 @@ export const Grid: React.FC<GridProps> = ({
       className={`
         grid
         ${getGridClasses()}
-        gap-${gap}
+        ${getGapClass()}
         ${className || ''}
       `}
       {...props}

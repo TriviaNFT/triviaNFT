@@ -1,0 +1,27 @@
+{
+  "name": "Sports NFT #9",
+  "description": "Sports knowledge NFT #9",
+  "image": "ipfs://QmPlaceholdersports9",
+  "mediaType": "image/svg+xml",
+  "files": [
+    {
+      "name": "sports-9.svg",
+      "mediaType": "image/svg+xml",
+      "src": "ipfs://QmPlaceholdersports9"
+    }
+  ],
+  "attributes": [
+    {
+      "trait_type": "Sport",
+      "value": "Boxing"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Uncommon"
+    },
+    {
+      "trait_type": "Achievement",
+      "value": "Knockout"
+    }
+  ]
+}

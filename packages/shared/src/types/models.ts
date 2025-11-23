@@ -24,6 +24,7 @@ export interface Player {
   anonId?: string;
   username?: string;
   email?: string;
+  paymentAddress?: string; // Bech32 payment address for NFT minting
   createdAt: Date;
   lastSeenAt: Date;
 }
@@ -54,6 +55,8 @@ export interface SessionQuestion {
   servedAt: string;
   answeredIndex?: number;
   timeMs?: number;
+  // 🧪 TESTING ONLY: Remove in production
+  correctIndex?: number;
 }
 
 export interface SessionResult {
@@ -100,8 +103,12 @@ export interface Category {
   description?: string;
   isActive: boolean;
   iconUrl?: string;
-  nftCount?: number;
-  stockAvailable?: number;
+  nftImageIpfs?: string; // IPFS hash for NFT thumbnail
+  nftVideoIpfs?: string; // IPFS hash for NFT video
+  visualDescription?: string; // Description of what the NFT visual represents
+  nftCount?: number; // Number of NFT designs available
+  ownedCount?: number; // Number of NFTs owned by the current player
+  stockAvailable?: number; // Deprecated: kept for backward compatibility
 }
 
 // ============================================================================

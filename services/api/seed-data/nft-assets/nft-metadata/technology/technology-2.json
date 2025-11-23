@@ -1,0 +1,27 @@
+{
+  "name": "Technology NFT #2",
+  "description": "Technology knowledge NFT #2",
+  "image": "ipfs://QmPlaceholdertechnology2",
+  "mediaType": "image/svg+xml",
+  "files": [
+    {
+      "name": "technology-2.svg",
+      "mediaType": "image/svg+xml",
+      "src": "ipfs://QmPlaceholdertechnology2"
+    }
+  ],
+  "attributes": [
+    {
+      "trait_type": "Field",
+      "value": "Blockchain"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Uncommon"
+    },
+    {
+      "trait_type": "Innovation",
+      "value": "Smart Contracts"
+    }
+  ]
+}

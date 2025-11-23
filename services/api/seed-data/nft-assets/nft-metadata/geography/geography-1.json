@@ -1,0 +1,27 @@
+{
+  "name": "Geography NFT #1",
+  "description": "Geographic knowledge NFT #1",
+  "image": "ipfs://QmPlaceholdergeography1",
+  "mediaType": "image/svg+xml",
+  "files": [
+    {
+      "name": "geography-1.svg",
+      "mediaType": "image/svg+xml",
+      "src": "ipfs://QmPlaceholdergeography1"
+    }
+  ],
+  "attributes": [
+    {
+      "trait_type": "Terrain",
+      "value": "Mountain"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Common"
+    },
+    {
+      "trait_type": "Climate",
+      "value": "Alpine"
+    }
+  ]
+}

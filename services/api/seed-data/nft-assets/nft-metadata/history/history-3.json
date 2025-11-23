@@ -1,0 +1,27 @@
+{
+  "name": "History NFT #3",
+  "description": "Historical knowledge NFT #3",
+  "image": "ipfs://QmPlaceholderhistory3",
+  "mediaType": "image/svg+xml",
+  "files": [
+    {
+      "name": "history-3.svg",
+      "mediaType": "image/svg+xml",
+      "src": "ipfs://QmPlaceholderhistory3"
+    }
+  ],
+  "attributes": [
+    {
+      "trait_type": "Era",
+      "value": "Renaissance"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Rare"
+    },
+    {
+      "trait_type": "Civilization",
+      "value": "Greek"
+    }
+  ]
+}

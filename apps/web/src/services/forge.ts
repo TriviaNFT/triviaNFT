@@ -43,4 +43,15 @@ export const forgeService = {
       requiresAuth: true,
     });
   },
+
+  /**
+   * Submit signed forge transaction
+   */
+  submitSignedForge: async (params: { forgeId: string; signedTxCBOR: string }): Promise<{ txHash: string; status: string; assetFingerprint: string }> => {
+    return apiRequest(`/forge/submit-signed`, {
+      method: 'POST',
+      requiresAuth: true,
+      body: JSON.stringify(params),
+    });
+  },
 };

@@ -1,0 +1,27 @@
+{
+  "name": "Molecular Bond",
+  "description": "Molecular master",
+  "image": "ipfs://QmPlaceholderscience10",
+  "mediaType": "image/svg+xml",
+  "files": [
+    {
+      "name": "science-10.svg",
+      "mediaType": "image/svg+xml",
+      "src": "ipfs://QmPlaceholderscience10"
+    }
+  ],
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Quantum"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Legendary"
+    },
+    {
+      "trait_type": "Element",
+      "value": "Platinum"
+    }
+  ]
+}

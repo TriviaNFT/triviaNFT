@@ -1,0 +1,27 @@
+{
+  "name": "History NFT #7",
+  "description": "Historical knowledge NFT #7",
+  "image": "ipfs://QmPlaceholderhistory7",
+  "mediaType": "image/svg+xml",
+  "files": [
+    {
+      "name": "history-7.svg",
+      "mediaType": "image/svg+xml",
+      "src": "ipfs://QmPlaceholderhistory7"
+    }
+  ],
+  "attributes": [
+    {
+      "trait_type": "Era",
+      "value": "Colonial"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Epic"
+    },
+    {
+      "trait_type": "Civilization",
+      "value": "Aztec"
+    }
+  ]
+}

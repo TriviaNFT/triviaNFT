@@ -1,0 +1,27 @@
+{
+  "name": "Entertainment NFT #9",
+  "description": "Entertainment knowledge NFT #9",
+  "image": "ipfs://QmPlaceholderentertainment9",
+  "mediaType": "image/svg+xml",
+  "files": [
+    {
+      "name": "entertainment-9.svg",
+      "mediaType": "image/svg+xml",
+      "src": "ipfs://QmPlaceholderentertainment9"
+    }
+  ],
+  "attributes": [
+    {
+      "trait_type": "Genre",
+      "value": "Musical"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Uncommon"
+    },
+    {
+      "trait_type": "Era",
+      "value": "Golden Age"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "name": "Cosmic Ray",
+  "description": "Astronomy ace",
+  "image": "ipfs://QmPlaceholderscience6",
+  "mediaType": "image/svg+xml",
+  "files": [
+    {
+      "name": "science-6.svg",
+      "mediaType": "image/svg+xml",
+      "src": "ipfs://QmPlaceholderscience6"
+    }
+  ],
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Experiment"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Rare"
+    },
+    {
+      "trait_type": "Element",
+      "value": "Gold"
+    }
+  ]
+}

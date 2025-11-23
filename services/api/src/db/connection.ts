@@ -2,136 +2,98 @@
  * Database Connection Utility
  * 
  * Provides connection pooling and query helpers for PostgreSQL database.
- * Supports both direct connections and RDS Proxy connections.
+ * Optimized for Neon PostgreSQL with serverless connection pooling.
+ * Supports both pooled connections (for Vercel Functions) and direct connections (for migrations).
  */
 
 import { Pool, QueryResult, PoolClient, QueryResultRow } from 'pg';
-import { SecretsManagerClient, GetSecretValueCommand } from '@aws-sdk/client-secrets-manager';
 
 interface DatabaseConfig {
-  host: string;
-  port: number;
-  database: string;
-  user: string;
-  password: string;
-  ssl?: boolean;
-}
-
-interface DatabaseSecret {
-  username: string;
-  password: string;
-  engine: string;
-  host: string;
-  port: number;
-  dbname: string;
-  proxyEndpoint?: string;
+  connectionString: string;
+  ssl: boolean;
+  max: number;
+  idleTimeoutMillis: number;
+  connectionTimeoutMillis: number;
 }
 
 let poolInstance: Pool | null = null;
-let secretsCache: Map<string, { value: DatabaseSecret; expiresAt: number }> = new Map();
 
 /**
- * Get database credentials from Secrets Manager with caching
+ * Get database configuration optimized for Neon PostgreSQL
+ * 
+ * Neon-specific optimizations:
+ * - Uses connection pooling via Neon's pooler endpoint (-pooler suffix)
+ * - SSL is always enabled for Neon connections
+ * - Smaller pool size (10) optimized for serverless functions
+ * - Shorter idle timeout (20s) to release connections quickly
  */
-async function getSecretValue(secretArn: string): Promise<DatabaseSecret> {
-  // Check cache first (5 minute TTL)
-  const cached = secretsCache.get(secretArn);
-  if (cached && cached.expiresAt > Date.now()) {
-    return cached.value;
-  }
-
-  const client = new SecretsManagerClient({});
+function getDatabaseConfig(): DatabaseConfig {
+  // DATABASE_URL should point to Neon's pooled connection string
+  // Format: postgresql://user:pass@host-pooler.neon.tech/db?sslmode=require
+  const connectionString = process.env.DATABASE_URL;
   
-  try {
-    const response = await client.send(
-      new GetSecretValueCommand({
-        SecretId: secretArn,
-      })
-    );
-
-    if (!response.SecretString) {
-      throw new Error('Secret value is empty');
-    }
-
-    const secret: DatabaseSecret = JSON.parse(response.SecretString);
-    
-    // Cache for 5 minutes
-    secretsCache.set(secretArn, {
-      value: secret,
-      expiresAt: Date.now() + 5 * 60 * 1000,
-    });
-    
-    return secret;
-  } catch (error) {
-    console.error('Error retrieving database credentials:', error);
-    throw error;
-  }
-}
-
-/**
- * Get database configuration from environment or Secrets Manager
- */
-async function getDatabaseConfig(): Promise<DatabaseConfig> {
-  // If DATABASE_URL is set (local development), use it
-  if (process.env.DATABASE_URL) {
-    const url = new URL(process.env.DATABASE_URL);
-    return {
-      host: url.hostname,
-      port: parseInt(url.port || '5432'),
-      database: url.pathname.slice(1),
-      user: url.username,
-      password: url.password,
-      ssl: url.searchParams.get('sslmode') === 'require',
-    };
+  if (!connectionString) {
+    throw new Error('DATABASE_URL environment variable must be set');
   }
 
-  // Otherwise, get from Secrets Manager
-  const secretArn = process.env.DATABASE_SECRET_ARN;
-  if (!secretArn) {
-    throw new Error('DATABASE_URL or DATABASE_SECRET_ARN must be set');
+  // Validate that we're using a Neon connection string
+  if (!connectionString.includes('neon.tech') && process.env.NODE_ENV === 'production') {
+    console.warn('Warning: DATABASE_URL does not appear to be a Neon connection string');
   }
 
-  const secret = await getSecretValue(secretArn);
-  
-  // Use RDS Proxy endpoint if available, otherwise direct connection
-  const host = secret.proxyEndpoint || secret.host;
-  
+  // Check if using pooled connection (recommended for serverless)
+  const isPooled = connectionString.includes('-pooler.');
+  if (!isPooled && process.env.NODE_ENV === 'production') {
+    console.warn('Warning: Using direct Neon connection instead of pooled connection. Consider using the pooled endpoint for better performance.');
+  }
+
   return {
-    host,
-    port: secret.port,
-    database: secret.dbname,
-    user: secret.username,
-    password: secret.password,
-    ssl: process.env.NODE_ENV === 'production',
+    connectionString,
+    ssl: true, // Always use SSL for Neon
+    max: 10, // Smaller pool size for serverless (Neon handles pooling)
+    idleTimeoutMillis: 20000, // 20 seconds - release idle connections quickly
+    connectionTimeoutMillis: 10000, // 10 seconds - fail fast if can't connect
   };
 }
 
 /**
  * Get or create database connection pool
+ * 
+ * For Neon PostgreSQL:
+ * - Uses pooled connection string (via Neon's connection pooler)
+ * - SSL is always enabled
+ * - Optimized pool settings for serverless environments
+ * - Connection pooling is handled by Neon's infrastructure
  */
 export async function getPool(): Promise<Pool> {
   if (poolInstance) {
     return poolInstance;
   }
 
-  const config = await getDatabaseConfig();
+  const config = getDatabaseConfig();
   
   poolInstance = new Pool({
-    host: config.host,
-    port: config.port,
-    database: config.database,
-    user: config.user,
-    password: config.password,
+    connectionString: config.connectionString,
     ssl: config.ssl ? { rejectUnauthorized: false } : undefined,
-    max: 20, // Maximum connections per Lambda instance
-    idleTimeoutMillis: 30000,
-    connectionTimeoutMillis: 10000,
+    max: config.max,
+    idleTimeoutMillis: config.idleTimeoutMillis,
+    connectionTimeoutMillis: config.connectionTimeoutMillis,
     statement_timeout: 30000, // 30 second query timeout
   });
 
   // Handle pool errors
   poolInstance.on('error', (err: Error) => {
     console.error('Unexpected database pool error:', err);
+  });
+
+  // Log connection info (without credentials)
+  const urlObj = new URL(config.connectionString);
+  console.log('Database pool initialized:', {
+    host: urlObj.hostname,
+    database: urlObj.pathname.slice(1),
+    ssl: config.ssl,
+    maxConnections: config.max,
+    isNeonPooled: urlObj.hostname.includes('-pooler.'),
   });
 
   return poolInstance;

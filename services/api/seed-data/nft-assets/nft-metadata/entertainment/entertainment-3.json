@@ -1,0 +1,27 @@
+{
+  "name": "Entertainment NFT #3",
+  "description": "Entertainment knowledge NFT #3",
+  "image": "ipfs://QmPlaceholderentertainment3",
+  "mediaType": "image/svg+xml",
+  "files": [
+    {
+      "name": "entertainment-3.svg",
+      "mediaType": "image/svg+xml",
+      "src": "ipfs://QmPlaceholderentertainment3"
+    }
+  ],
+  "attributes": [
+    {
+      "trait_type": "Genre",
+      "value": "Drama"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Rare"
+    },
+    {
+      "trait_type": "Era",
+      "value": "2000s"
+    }
+  ]
+}

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Pressable, View } from 'react-native';
 import type { PressableProps } from 'react-native';
+import { useFocusRing } from '../../hooks/useFocusRing';
 
 export interface TouchableCardProps extends PressableProps {
   children: React.ReactNode;
@@ -17,6 +18,7 @@ const variantStyles = {
 /**
  * Touchable card component with proper touch feedback and minimum touch target size.
  * Ensures 44x44px minimum touch target for accessibility.
+ * Includes visible focus indicators for keyboard navigation.
  */
 export const TouchableCard: React.FC<TouchableCardProps> = ({
   children,
@@ -25,6 +27,8 @@ export const TouchableCard: React.FC<TouchableCardProps> = ({
   className,
   ...props
 }) => {
+  const { isFocused, onFocus, onBlur, getFocusRingStyle } = useFocusRing();
+
   return (
     <Pressable
       className={`
@@ -36,7 +40,11 @@ export const TouchableCard: React.FC<TouchableCardProps> = ({
         transition-all duration-150
         ${className || ''}
       `}
+      style={getFocusRingStyle()}
       disabled={disabled}
+      onFocus={onFocus}
+      onBlur={onBlur}
+      accessibilityRole="button"
       {...props}
     >
       {children}

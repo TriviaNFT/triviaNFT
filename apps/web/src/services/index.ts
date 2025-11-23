@@ -8,3 +8,4 @@ export * from './forge';
 export * from './leaderboard';
 export * from './season';
 export * from './profile';
+export * from './question';

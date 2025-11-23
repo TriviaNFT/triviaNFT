@@ -10,6 +10,7 @@ import { UnauthorizedError } from '@trivia-nft/shared';
 interface JWTPayload {
   sub: string; // player ID
   stakeKey?: string;
+  anonId?: string;
   username?: string;
   iat: number;
   exp: number;

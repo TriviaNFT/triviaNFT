@@ -54,7 +54,7 @@ test.describe('NFT Forging', () => {
           canForge: false,
           nfts: Array.from({ length: 7 }, (_, i) => ({
             id: `nft-${i}`,
-            name: `Science NFT #${i + 1}`,
+            name: `Science NFT`,
             assetFingerprint: `asset${i}`,
           })),
         },
@@ -120,7 +120,7 @@ test.describe('NFT Forging', () => {
           canForge: true,
           nfts: Array.from({ length: 10 }, (_, i) => ({
             id: `nft-${i}`,
-            name: `Science NFT #${i + 1}`,
+            name: `Science NFT`,
             assetFingerprint: `asset${i}`,
           })),
         },
@@ -138,8 +138,7 @@ test.describe('NFT Forging', () => {
     await waitForText(page, 'Proceed?');
     
     // Verify NFT list in dialog
-    await waitForText(page, 'Science NFT #1');
-    await waitForText(page, 'Science NFT #10');
+    await waitForText(page, 'Science NFT');
     
     // Verify Cancel and Confirm buttons
     await waitForElement(page, 'button:has-text("Cancel")');

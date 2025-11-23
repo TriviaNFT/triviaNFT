@@ -1,0 +1,27 @@
+{
+  "name": "General NFT #9",
+  "description": "General knowledge NFT #9",
+  "image": "ipfs://QmPlaceholdergeneral9",
+  "mediaType": "image/svg+xml",
+  "files": [
+    {
+      "name": "general-9.svg",
+      "mediaType": "image/svg+xml",
+      "src": "ipfs://QmPlaceholdergeneral9"
+    }
+  ],
+  "attributes": [
+    {
+      "trait_type": "Type",
+      "value": "Learn"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Uncommon"
+    },
+    {
+      "trait_type": "Level",
+      "value": "Professor"
+    }
+  ]
+}

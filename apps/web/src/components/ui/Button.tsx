@@ -1,6 +1,7 @@
 import React from 'react';
-import { Pressable, Text, ActivityIndicator, View } from 'react-native';
+import { Pressable, Text, ActivityIndicator, View, Platform } from 'react-native';
 import type { PressableProps } from 'react-native';
+import { useFocusRing } from '../../hooks/useFocusRing';
 
 export type ButtonVariant = 'primary' | 'secondary' | 'outline' | 'ghost' | 'danger';
 export type ButtonSize = 'sm' | 'md' | 'lg';
@@ -60,6 +61,10 @@ export const Button: React.FC<ButtonProps> = ({
   ...props
 }) => {
   const isDisabled = disabled || loading;
+  const { isFocused, onFocus, onBlur, getFocusRingStyle } = useFocusRing();
+
+  // Determine focus ring color based on variant
+  const focusColor = variant === 'danger' ? '#DC2626' : '#8A5CF6';
 
   return (
     <Pressable
@@ -72,7 +77,11 @@ export const Button: React.FC<ButtonProps> = ({
         transition-all duration-200
         ${className || ''}
       `}
+      style={getFocusRingStyle(focusColor)}
       disabled={isDisabled}
+      onFocus={onFocus}
+      onBlur={onBlur}
+      accessibilityRole="button"
       {...props}
     >
       {loading ? (

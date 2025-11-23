@@ -1,0 +1,27 @@
+{
+  "name": "Technology NFT #9",
+  "description": "Technology knowledge NFT #9",
+  "image": "ipfs://QmPlaceholdertechnology9",
+  "mediaType": "image/svg+xml",
+  "files": [
+    {
+      "name": "technology-9.svg",
+      "mediaType": "image/svg+xml",
+      "src": "ipfs://QmPlaceholdertechnology9"
+    }
+  ],
+  "attributes": [
+    {
+      "trait_type": "Field",
+      "value": "Cybersecurity"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Uncommon"
+    },
+    {
+      "trait_type": "Innovation",
+      "value": "Encryption"
+    }
+  ]
+}

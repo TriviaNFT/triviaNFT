@@ -20,28 +20,29 @@ export class ForgeService {
    * Returns progress for Category, Master, and Seasonal forging
    */
   async getForgeProgress(stakeKey: string): Promise<ForgeProgress[]> {
-    // Get all owned NFTs for the player
+    // Get all owned NFTs for the player with category slug
     const nftsQuery = `
       SELECT 
-        id,
-        stake_key as "stakeKey",
-        policy_id as "policyId",
-        asset_fingerprint as "assetFingerprint",
-        token_name as "tokenName",
-        source,
-        category_id as "categoryId",
-        season_id as "seasonId",
-        tier,
-        status,
-        minted_at as "mintedAt",
-        burned_at as "burnedAt",
-        metadata,
-        created_at as "createdAt"
-      FROM player_nfts
-      WHERE stake_key = $1
-        AND status = 'confirmed'
-        AND tier = 'category'
-      ORDER BY category_id, minted_at
+        pn.id,
+        pn.stake_key as "stakeKey",
+        pn.policy_id as "policyId",
+        pn.asset_fingerprint as "assetFingerprint",
+        pn.token_name as "tokenName",
+        pn.source,
+        c.slug as "categoryId",
+        pn.season_id as "seasonId",
+        pn.tier,
+        pn.status,
+        pn.minted_at as "mintedAt",
+        pn.burned_at as "burnedAt",
+        pn.metadata,
+        pn.created_at as "createdAt"
+      FROM player_nfts pn
+      LEFT JOIN categories c ON pn.category_id = c.id
+      WHERE pn.stake_key = $1
+        AND pn.status = 'confirmed'
+        AND pn.tier = 'category'
+      ORDER BY c.slug, pn.minted_at
     `;
 
     const nftsResult = await this.db.query(nftsQuery, [stakeKey]);
@@ -80,7 +81,7 @@ export class ForgeService {
         categoryId,
         required,
         current: count,
-        nfts: categoryNFTs.slice(0, required),
+        nfts: categoryNFTs, // Return ALL NFTs so user can choose which to burn
         canForge: count >= required,
       });
     }
@@ -314,7 +315,8 @@ export class ForgeService {
     tier: 'ultimate' | 'master' | 'seasonal',
     categoryId: string | undefined,
     seasonId: string | undefined,
-    metadata: any
+    metadata: any,
+    typeCode?: string
   ): Promise<void> {
     const query = `
       INSERT INTO player_nfts (
@@ -328,8 +330,9 @@ export class ForgeService {
         tier,
         status,
         minted_at,
-        metadata
-      ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, NOW(), $10)
+        metadata,
+        type_code
+      ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, NOW(), $10, $11)
     `;
 
     await this.db.query(query, [
@@ -343,6 +346,7 @@ export class ForgeService {
       tier,
       'confirmed',
       JSON.stringify(metadata),
+      typeCode || null,
     ]);
   }
 

@@ -1,0 +1,27 @@
+{
+  "name": "Arts NFT #4",
+  "description": "Arts knowledge NFT #4",
+  "image": "ipfs://QmPlaceholderarts4",
+  "mediaType": "image/svg+xml",
+  "files": [
+    {
+      "name": "arts-4.svg",
+      "mediaType": "image/svg+xml",
+      "src": "ipfs://QmPlaceholderarts4"
+    }
+  ],
+  "attributes": [
+    {
+      "trait_type": "Style",
+      "value": "Abstract"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Common"
+    },
+    {
+      "trait_type": "Medium",
+      "value": "Digital"
+    }
+  ]
+}

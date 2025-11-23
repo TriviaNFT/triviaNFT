@@ -1,0 +1,27 @@
+{
+  "name": "Literature NFT #10",
+  "description": "Literature knowledge NFT #10",
+  "image": "ipfs://QmPlaceholderliterature10",
+  "mediaType": "image/svg+xml",
+  "files": [
+    {
+      "name": "literature-10.svg",
+      "mediaType": "image/svg+xml",
+      "src": "ipfs://QmPlaceholderliterature10"
+    }
+  ],
+  "attributes": [
+    {
+      "trait_type": "Genre",
+      "value": "Classic"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Legendary"
+    },
+    {
+      "trait_type": "Period",
+      "value": "Ancient"
+    }
+  ]
+}

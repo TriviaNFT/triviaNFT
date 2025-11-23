@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Clear Auth Data</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #0B1220;
+            color: #EAF2FF;
+        }
+        .container {
+            background: #1a1a2e;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #27324a;
+        }
+        button {
+            background: #8a5cf6;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px 5px;
+        }
+        button:hover {
+            background: #7c3aed;
+        }
+        .success {
+            color: #22c55e;
+            margin-top: 20px;
+        }
+        .info {
+            background: #27324a;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+        code {
+            background: #0B1220;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧹 Clear TriviaNFT Auth Data</h1>
+        
+        <div class="info">
+            <h3>What this does:</h3>
+            <ul>
+                <li>Clears JWT tokens from localStorage</li>
+                <li>Clears wallet connection data</li>
+                <li>Clears anonymous ID</li>
+                <li>Forces you to reconnect wallet</li>
+            </ul>
+        </div>
+
+        <button onclick="clearAuth()">Clear Browser Auth Data</button>
+        <button onclick="clearServerPlayers()">Clear Server Players</button>
+        <button onclick="clearAll()">Clear Everything</button>
+        
+        <div id="result"></div>
+
+        <div class="info" style="margin-top: 30px;">
+            <h3>Manual Commands:</h3>
+            <p>In browser console:</p>
+            <code>localStorage.clear()</code>
+            
+            <p style="margin-top: 15px;">Via curl:</p>
+            <code>curl -X POST http://localhost:3001/api/dev/clear-players</code>
+        </div>
+    </div>
+
+    <script>
+        function clearAuth() {
+            // Clear all localStorage
+            const keys = Object.keys(localStorage);
+            const authKeys = keys.filter(k => 
+                k.includes('auth') || 
+                k.includes('wallet') || 
+                k.includes('anon') ||
+                k.includes('token')
+            );
+            
+            authKeys.forEach(key => localStorage.removeItem(key));
+            
+            document.getElementById('result').innerHTML = 
+                `<div class="success">✓ Cleared ${authKeys.length} auth items from browser storage</div>`;
+            
+            setTimeout(() => {
+                window.location.href = 'http://localhost:8081';
+            }, 1500);
+        }
+
+        async function clearServerPlayers() {
+            try {
+                const response = await fetch('http://localhost:3001/api/dev/clear-players', {
+                    method: 'POST'
+                });
+                const data = await response.json();
+                
+                document.getElementById('result').innerHTML = 
+                    `<div class="success">✓ ${data.message}</div>`;
+            } catch (error) {
+                document.getElementById('result').innerHTML = 
+                    `<div style="color: #ef4444;">✗ Error: ${error.message}</div>`;
+            }
+        }
+
+        async function clearAll() {
+            clearAuth();
+            await clearServerPlayers();
+            
+            document.getElementById('result').innerHTML = 
+                `<div class="success">✓ Cleared everything! Redirecting...</div>`;
+            
+            setTimeout(() => {
+                window.location.href = 'http://localhost:8081';
+            }, 2000);
+        }
+    </script>
+</body>
+</html>

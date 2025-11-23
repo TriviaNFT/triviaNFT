@@ -41,6 +41,7 @@ export const sessionService = {
   getSessionLimits: async (): Promise<SessionLimitsResponse> => {
     return apiRequest<SessionLimitsResponse>('/sessions/limits', {
       method: 'GET',
+      requiresAuth: true,
     });
   },
 
@@ -51,6 +52,7 @@ export const sessionService = {
     return apiRequest<StartSessionResponse>('/sessions/start', {
       method: 'POST',
       body: JSON.stringify(data),
+      requiresAuth: true,
     });
   },
 
@@ -61,6 +63,7 @@ export const sessionService = {
     return apiRequest<SubmitAnswerResponse>(`/sessions/${sessionId}/answer`, {
       method: 'POST',
       body: JSON.stringify(data),
+      requiresAuth: true,
     });
   },
 
@@ -70,6 +73,7 @@ export const sessionService = {
   completeSession: async (sessionId: string): Promise<CompleteSessionResponse> => {
     return apiRequest<CompleteSessionResponse>(`/sessions/${sessionId}/complete`, {
       method: 'POST',
+      requiresAuth: true,
     });
   },
 
@@ -79,6 +83,7 @@ export const sessionService = {
   getSession: async (sessionId: string): Promise<{ session: Session }> => {
     return apiRequest<{ session: Session }>(`/sessions/${sessionId}`, {
       method: 'GET',
+      requiresAuth: true,
     });
   },
 };

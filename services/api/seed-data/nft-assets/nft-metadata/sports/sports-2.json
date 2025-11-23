@@ -1,0 +1,27 @@
+{
+  "name": "Sports NFT #2",
+  "description": "Sports knowledge NFT #2",
+  "image": "ipfs://QmPlaceholdersports2",
+  "mediaType": "image/svg+xml",
+  "files": [
+    {
+      "name": "sports-2.svg",
+      "mediaType": "image/svg+xml",
+      "src": "ipfs://QmPlaceholdersports2"
+    }
+  ],
+  "attributes": [
+    {
+      "trait_type": "Sport",
+      "value": "Basketball"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Uncommon"
+    },
+    {
+      "trait_type": "Achievement",
+      "value": "MVP"
+    }
+  ]
+}

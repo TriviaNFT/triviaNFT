@@ -1,14 +1,27 @@
 /**
  * Cryptographic utility functions
- * Note: Uses lazy imports for Node crypto to support web platforms with polyfills
+ * Platform-aware: Uses Web Crypto API on web, Node crypto on server
  */
+
+// Detect if we're in a browser environment
+const isBrowser = typeof window !== 'undefined' && typeof window.crypto !== 'undefined';
 
 /**
  * Generate SHA256 hash of a string
  */
 export const sha256 = async (data: string): Promise<string> => {
-  const { createHash } = await import('crypto');
-  return createHash('sha256').update(data).digest('hex');
+  if (isBrowser) {
+    // Use Web Crypto API
+    const encoder = new TextEncoder();
+    const dataBuffer = encoder.encode(data);
+    const hashBuffer = await crypto.subtle.digest('SHA-256', dataBuffer);
+    const hashArray = Array.from(new Uint8Array(hashBuffer));
+    return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+  } else {
+    // Use Node crypto
+    const { createHash } = await import('crypto');
+    return createHash('sha256').update(data).digest('hex');
+  }
 };
 
 /**
@@ -19,19 +32,41 @@ export const hashObject = async (obj: unknown): Promise<string> => {
 };
 
 /**
+ * Generate random bytes (platform-aware)
+ */
+const getRandomBytes = async (length: number): Promise<Uint8Array> => {
+  if (isBrowser) {
+    // Use Web Crypto API
+    return crypto.getRandomValues(new Uint8Array(length));
+  } else {
+    // Use Node crypto
+    const { randomBytes } = await import('crypto');
+    return new Uint8Array(randomBytes(length));
+  }
+};
+
+/**
+ * Convert Uint8Array to hex string
+ */
+const bytesToHex = (bytes: Uint8Array): string => {
+  return Array.from(bytes).map(b => b.toString(16).padStart(2, '0')).join('');
+};
+
+/**
  * Generate a random UUID v4
  */
 export const generateUUID = async (): Promise<string> => {
-  const { randomBytes } = await import('crypto');
-  return randomBytes(16).toString('hex').replace(/(.{8})(.{4})(.{4})(.{4})(.{12})/, '$1-$2-$3-$4-$5');
+  const bytes = await getRandomBytes(16);
+  const hex = bytesToHex(bytes);
+  return hex.replace(/(.{8})(.{4})(.{4})(.{4})(.{12})/, '$1-$2-$3-$4-$5');
 };
 
 /**
  * Generate a random anonymous ID for guest users
  */
 export const generateAnonymousId = async (): Promise<string> => {
-  const { randomBytes } = await import('crypto');
-  return `anon_${randomBytes(16).toString('hex')}`;
+  const bytes = await getRandomBytes(16);
+  return `anon_${bytesToHex(bytes)}`;
 };
 
 /**
@@ -75,8 +110,8 @@ export const maskEmail = (email: string): string => {
  * Generate a secure random token
  */
 export const generateToken = async (length: number = 32): Promise<string> => {
-  const { randomBytes } = await import('crypto');
-  return randomBytes(length).toString('hex');
+  const bytes = await getRandomBytes(length);
+  return bytesToHex(bytes);
 };
 
 /**
@@ -84,8 +119,8 @@ export const generateToken = async (length: number = 32): Promise<string> => {
  * Note: For production password hashing, use bcrypt or argon2
  */
 export const hashPassword = async (password: string, salt?: string): Promise<string> => {
-  const { randomBytes } = await import('crypto');
-  const actualSalt = salt || randomBytes(16).toString('hex');
+  const saltBytes = await getRandomBytes(16);
+  const actualSalt = salt || bytesToHex(saltBytes);
   const hash = await sha256(password + actualSalt);
   return `${actualSalt}:${hash}`;
 };
@@ -137,25 +172,37 @@ export const isJWTExpired = (payload: JWTPayload): boolean => {
 };
 
 /**
- * Encode data to base64
+ * Encode data to base64 (platform-aware)
  */
 export const encodeBase64 = async (data: string): Promise<string> => {
-  const { Buffer } = await import('buffer');
-  return Buffer.from(data).toString('base64');
+  if (isBrowser) {
+    // Use browser's btoa
+    return btoa(data);
+  } else {
+    // Use Node Buffer
+    const { Buffer } = await import('buffer');
+    return Buffer.from(data).toString('base64');
+  }
 };
 
 /**
- * Decode data from base64
+ * Decode data from base64 (platform-aware)
  */
 export const decodeBase64 = async (data: string): Promise<string> => {
-  const { Buffer } = await import('buffer');
-  return Buffer.from(data, 'base64').toString('utf-8');
+  if (isBrowser) {
+    // Use browser's atob
+    return atob(data);
+  } else {
+    // Use Node Buffer
+    const { Buffer } = await import('buffer');
+    return Buffer.from(data, 'base64').toString('utf-8');
+  }
 };
 
 /**
  * Generate a correlation ID for request tracing
  */
 export const generateCorrelationId = async (): Promise<string> => {
-  const { randomBytes } = await import('crypto');
-  return `${Date.now()}-${randomBytes(8).toString('hex')}`;
+  const bytes = await getRandomBytes(8);
+  return `${Date.now()}-${bytesToHex(bytes)}`;
 };

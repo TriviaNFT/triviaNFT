@@ -1,0 +1,27 @@
+{
+  "name": "General NFT #5",
+  "description": "General knowledge NFT #5",
+  "image": "ipfs://QmPlaceholdergeneral5",
+  "mediaType": "image/svg+xml",
+  "files": [
+    {
+      "name": "general-5.svg",
+      "mediaType": "image/svg+xml",
+      "src": "ipfs://QmPlaceholdergeneral5"
+    }
+  ],
+  "attributes": [
+    {
+      "trait_type": "Type",
+      "value": "Quiz"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Uncommon"
+    },
+    {
+      "trait_type": "Level",
+      "value": "Master"
+    }
+  ]
+}

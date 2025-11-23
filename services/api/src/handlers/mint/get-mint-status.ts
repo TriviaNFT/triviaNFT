@@ -78,44 +78,10 @@ export const handler = async (
       };
     }
 
-    // If confirmed, get NFT details
+    // If confirmed, get NFT details by mint operation ID (for idempotency)
     let nft = undefined;
-    if (mintOperation.status === MintStatus.CONFIRMED && mintOperation.txHash) {
-      const nftQuery = `
-        SELECT 
-          id,
-          stake_key as "stakeKey",
-          policy_id as "policyId",
-          asset_fingerprint as "assetFingerprint",
-          token_name as "tokenName",
-          source,
-          category_id as "categoryId",
-          season_id as "seasonId",
-          tier,
-          status,
-          minted_at as "mintedAt",
-          metadata
-        FROM player_nfts
-        WHERE stake_key = (
-          SELECT stake_key FROM mints WHERE id = $1
-        )
-        AND policy_id = (
-          SELECT policy_id FROM mints WHERE id = $1
-        )
-        ORDER BY minted_at DESC
-        LIMIT 1
-      `;
-
-      const nftResult = await db.query(nftQuery, [mintId]);
-      
-      if (nftResult.rows.length > 0) {
-        const row = nftResult.rows[0];
-        nft = {
-          ...row,
-          mintedAt: row.mintedAt,
-          metadata: row.metadata,
-        };
-      }
+    if (mintOperation.status === MintStatus.CONFIRMED) {
+      nft = await mintService.getNFTByMintOperation(mintId);
     }
 
     const response: GetMintStatusResponse = {

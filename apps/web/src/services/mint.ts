@@ -17,6 +17,25 @@ export const mintService = {
   },
 
   /**
+   * Get NFT preview for an eligibility
+   */
+  getNFTPreview: async (eligibilityId: string): Promise<{
+    preview: {
+      name: string;
+      description: string;
+      image: string;
+      video?: string;
+      visualDescription?: string;
+      categoryName: string;
+    };
+  }> => {
+    return apiRequest(`/mint/${eligibilityId}/preview`, {
+      method: 'GET',
+      requiresAuth: true,
+    });
+  },
+
+  /**
    * Initiate minting process for an eligibility
    */
   initiateMint: async (eligibilityId: string): Promise<InitiateMintResponse> => {

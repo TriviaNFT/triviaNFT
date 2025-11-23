@@ -32,7 +32,7 @@ export function withLogging(
 ): (event: APIGatewayProxyEvent, context: Context) => Promise<APIGatewayProxyResult> {
   return async (event: APIGatewayProxyEvent, context: Context): Promise<APIGatewayProxyResult> => {
     const startTime = Date.now();
-    const correlationId = extractCorrelationId(event);
+    const correlationId = await extractCorrelationId(event);
 
     // Create logger with correlation ID
     const logger = createLogger(context, {

@@ -1,0 +1,27 @@
+{
+  "name": "Entertainment NFT #6",
+  "description": "Entertainment knowledge NFT #6",
+  "image": "ipfs://QmPlaceholderentertainment6",
+  "mediaType": "image/svg+xml",
+  "files": [
+    {
+      "name": "entertainment-6.svg",
+      "mediaType": "image/svg+xml",
+      "src": "ipfs://QmPlaceholderentertainment6"
+    }
+  ],
+  "attributes": [
+    {
+      "trait_type": "Genre",
+      "value": "Romance"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Rare"
+    },
+    {
+      "trait_type": "Era",
+      "value": "1970s"
+    }
+  ]
+}

@@ -1,0 +1,481 @@
+﻿[
+   {
+    "question": "What famous German scientist developed the Theory of Relativity?",
+    "options": ["Nikola Tesla", "Isaac Newton", "Albert Einstein", "Galileo Galilei"],
+    "correctIndex": 2,
+    "explanation": "Albert Einstein developed the special and general theories of relativity in the early 20th century."
+  },
+  {
+    "question": "Which of these structures was one of the Seven Wonders of the Ancient World?",
+    "options": ["Colosseum", "Eiffel Tower", "Hanging Gardens of Babylon", "Statue of Liberty"],
+    "correctIndex": 2,
+    "explanation": "The Hanging Gardens of Babylon are listed among the classic Seven Wonders of the Ancient World."
+  },
+  {
+    "question": "What major war did the United States enter after the attack on Pearl Harbor?",
+    "options": ["World War I", "Vietnam War", "Korean War", "World War II"],
+    "correctIndex": 3,
+    "explanation": "The Japanese attack on Pearl Harbor on December 7, 1941, led directly to the U.S. entering World War II."
+  },
+  {
+    "question": "Who was the legendary leader of the Huns who invaded the Roman Empire in the 5th century?",
+    "options": ["Genghis Khan", "Hannibal", "Attila", "Alaric"],
+    "correctIndex": 2,
+    "explanation": "Attila the Hun led the nomadic Huns and was a major enemy of the Eastern and Western Roman Empires."
+  },
+  {
+    "question": "The historical period known as the 'Gilded Age' primarily took place in which country?",
+    "options": ["France", "United States", "Great Britain", "China"],
+    "correctIndex": 1,
+    "explanation": "The Gilded Age (roughly 1870–1900) refers to a period of rapid economic growth but also deep social conflict and political corruption in the U.S."
+  },
+  {
+    "question": "What instrument, invented by Bartolomeo Cristofori, was named for its ability to play soft and loud?",
+    "options": ["Organ", "Violin", "Piano", "Harpsichord"],
+    "correctIndex": 2,
+    "explanation": "The 'piano' is a shortened version of its original name, *pianoforte*, meaning soft (piano) and loud (forte) in Italian."
+  },
+  {
+    "question": "Which ancient writing system used wedge-shaped marks pressed into clay tablets?",
+    "options": ["Hieroglyphics", "Cuneiform", "Alphabet", "Piktogram"],
+    "correctIndex": 1,
+    "explanation": "Cuneiform was one of the earliest systems of writing, invented by the Sumerians in ancient Mesopotamia."
+  },
+  {
+    "question": "Who was the queen of England during the defeat of the Spanish Armada in 1588?",
+    "options": ["Queen Victoria", "Queen Mary I", "Queen Elizabeth I", "Queen Anne"],
+    "correctIndex": 2,
+    "explanation": "Queen Elizabeth I ruled England during this famous naval victory over the Spanish fleet."
+  },
+  {
+    "question": "In what year did the sinking of the Titanic occur?",
+    "options": ["1905", "1912", "1929", "1898"],
+    "correctIndex": 1,
+    "explanation": "The RMS Titanic sank on its maiden voyage on April 15, 1912, after striking an iceberg."
+  },
+  {
+    "question": "What modern country was the heart of the Ottoman Empire?",
+    "options": ["Greece", "Egypt", "Turkey", "Iraq"],
+    "correctIndex": 2,
+    "explanation": "The Ottoman Empire was centered in modern-day Turkey, with its capital in Constantinople (Istanbul)."
+  },
+  {
+    "question": "Who was the only U.S. President to serve more than two terms?",
+    "options": ["George Washington", "Ronald Reagan", "Franklin D. Roosevelt", "Abraham Lincoln"],
+    "correctIndex": 2,
+    "explanation": "Franklin D. Roosevelt (FDR) was elected four times, serving from 1933 until his death in 1945."
+  },
+  {
+    "question": "What metal defined the period of human history immediately preceding the Iron Age?",
+    "options": ["Gold", "Silver", "Copper", "Bronze"],
+    "correctIndex": 3,
+    "explanation": "The Bronze Age is named for the use of bronze, an alloy of copper and tin, for tools and weapons."
+  },
+  {
+    "question": "Which of these explorers opened up the Silk Road to Europe during the Middle Ages?",
+    "options": ["Leif Erikson", "Vasco da Gama", "Marco Polo", "Captain Cook"],
+    "correctIndex": 2,
+    "explanation": "Marco Polo's account of his travels through Asia greatly popularized the Silk Road trade routes to Europe."
+  },
+  {
+    "question": "What significant event happened in Russia in 1917, leading to the establishment of the Soviet Union?",
+    "options": ["Crimean War", "Emancipation of Serfs", "Russian Revolution", "Battle of Stalingrad"],
+    "correctIndex": 2,
+    "explanation": "The Russian Revolution of 1917 overthrew the Tsarist autocracy and led to the rise of the Bolsheviks."
+  },
+  {
+    "question": "In what city was the historical, intellectual, and cultural movement known as the Harlem Renaissance centered?",
+    "options": ["Chicago", "New Orleans", "New York City", "Philadelphia"],
+    "correctIndex": 2,
+    "explanation": "The Harlem Renaissance was an explosion of African American arts and culture in the Harlem neighborhood of New York City during the 1920s and 1930s."
+  },
+  {
+    "question": "Which Roman structure was primarily used for gladiator contests and public spectacles?",
+    "options": ["Pantheon", "Circus Maximus", "Colosseum", "Aqueduct"],
+    "correctIndex": 2,
+    "explanation": "The Colosseum (or Flavian Amphitheatre) is the largest ancient amphitheater ever built and was primarily used for gladiator fights."
+  },
+  {
+    "question": "Who is famous for allegedly saying, 'L'État, c'est moi' (The state, it is I)?",
+    "options": ["King Henry VIII", "Louis XIV of France", "Napoleon Bonaparte", "Peter the Great"],
+    "correctIndex": 1,
+    "explanation": "This quote is commonly attributed to Louis XIV, the 'Sun King,' symbolizing his absolute monarchical power."
+  },
+  {
+    "question": "The prehistoric period before writing was invented is called the...",
+    "options": ["Classical Era", "Antiquity", "Prehistory", "Feudal Age"],
+    "correctIndex": 2,
+    "explanation": "Prehistory is the period of human activity occurring before the invention of writing systems."
+  },
+  {
+    "question": "What U.S. territory was purchased from France in 1803?",
+    "options": ["Florida", "Alaska", "California", "Louisiana"],
+    "correctIndex": 3,
+    "explanation": "The Louisiana Purchase of 1803 acquired approximately 828,000 square miles of territory from France for the U.S."
+  },
+  {
+    "question": "Who led the Protestant Reformation by posting his 95 Theses in 1517?",
+    "options": ["John Calvin", "Martin Luther", "Henry VIII", "Jan Hus"],
+    "correctIndex": 1,
+    "explanation": "Martin Luther, a German theologian, is widely considered the catalyst for the Protestant Reformation."
+  },
+  {
+    "question": "The ancient Mayan civilization was primarily located in which region?",
+    "options": ["Andes Mountains", "Central America and Yucatán Peninsula", "Mesopotamia", "North Africa"],
+    "correctIndex": 1,
+    "explanation": "The Maya civilization developed in the tropical lowlands of what is now southern Mexico and northern Central America."
+  },
+  {
+    "question": "What name was given to the route taken by slave ships from West Africa to the Americas?",
+    "options": ["The Freedom Line", "The Middle Passage", "The Atlantic Bridge", "The Trade Winds"],
+    "correctIndex": 1,
+    "explanation": "The Middle Passage was the brutal and deadly leg of the triangular trade route that forcibly transported millions of enslaved Africans."
+  },
+  {
+    "question": "Which famous general crossed the Alps with elephants to attack Rome?",
+    "options": ["Julius Caesar", "Alexander the Great", "Hannibal Barca", "Scipio Africanus"],
+    "correctIndex": 2,
+    "explanation": "Hannibal Barca, a Carthaginian general, famously led an army, including war elephants, across the Alps during the Second Punic War."
+  },
+  {
+    "question": "The term 'Sputnik' refers to the first satellite launched into orbit by which country in 1957?",
+    "options": ["United States", "China", "Soviet Union", "France"],
+    "correctIndex": 2,
+    "explanation": "Sputnik 1 was the first artificial Earth satellite, launched by the Soviet Union, marking the start of the Space Race."
+  },
+  {
+    "question": "What group of people migrated out of Scandinavia to raid and settle across Europe starting in the late 8th century?",
+    "options": ["Goths", "Huns", "Vikings", "Franks"],
+    "correctIndex": 2,
+    "explanation": "The Vikings were Norse seafarers, mainly speaking Old Norse, who raided and traded from the late 8th to the mid-11th centuries."
+  },
+  {
+    "question": "Who was the U.S. President when the stock market crashed in 1929, leading to the Great Depression?",
+    "options": ["Woodrow Wilson", "Herbert Hoover", "Franklin D. Roosevelt", "Calvin Coolidge"],
+    "correctIndex": 1,
+    "explanation": "Herbert Hoover was President when the crash occurred, and his administration initially struggled to cope with the Depression's severity."
+  },
+  {
+    "question": "What famous speech was given by Abraham Lincoln during the American Civil War, consecrating a battlefield?",
+    "options": ["First Inaugural Address", "Gettysburg Address", "House Divided Speech", "Second Inaugural Address"],
+    "correctIndex": 1,
+    "explanation": "The Gettysburg Address was delivered by Lincoln in November 1863 at the dedication of the Soldiers' National Cemetery in Gettysburg, Pennsylvania."
+  },
+  {
+    "question": "What was the name of the last Russian Emperor (Czar) who was overthrown in the 1917 Revolution?",
+    "options": ["Peter the Great", "Ivan the Terrible", "Nicholas II", "Alexander I"],
+    "correctIndex": 2,
+    "explanation": "Czar Nicholas II was the last Emperor of Russia, whose abdication ended the Romanov dynasty's 300-year rule."
+  },
+  {
+    "question": "The period of European history defined by new philosophical ideas emphasizing reason and individualism is called the...",
+    "options": ["Reformation", "Middle Ages", "Enlightenment", "Baroque Era"],
+    "correctIndex": 2,
+    "explanation": "The Age of Enlightenment (or simply the Enlightenment) was an intellectual and philosophical movement dominating the world of ideas in Europe during the 18th century."
+  },
+  {
+    "question": "In what year did Christopher Columbus first reach the Americas?",
+    "options": ["1776", "1066", "1492", "1620"],
+    "correctIndex": 2,
+    "explanation": "Columbus's first voyage across the Atlantic reached the Americas in 1492, marking a major turning point in global history."
+  },
+  {
+    "question": "Which empire was ruled by the famous leader, Alexander the Great?",
+    "options": ["Roman", "Persian", "Macedonian", "Egyptian"],
+    "correctIndex": 2,
+    "explanation": "Alexander the Great was a king of the ancient Greek kingdom of Macedon, from which he conquered vast territories."
+  },
+  {
+    "question": "The medieval period in European history is also commonly known as the...",
+    "options": ["Age of Enlightenment", "Renaissance", "Dark Ages", "Iron Age"],
+    "correctIndex": 2,
+    "explanation": "The term 'Dark Ages' is an older, but still common, name for the Early Middle Ages, roughly 500-1000 AD."
+  },
+  {
+    "question": "Which city was the capital of the Western Roman Empire before it fell in 476 AD?",
+    "options": ["Athens", "Rome", "Carthage", "Alexandria"],
+    "correctIndex": 1,
+    "explanation": "Rome was the traditional capital of the Roman Empire, though the administrative capital later moved to Ravenna."
+  },
+  {
+    "question": "What famous document begins with the words, 'When in the course of human events...'",
+    "options": ["U.S. Constitution", "Magna Carta", "Gettysburg Address", "Declaration of Independence"],
+    "correctIndex": 3,
+    "explanation": "The U.S. Declaration of Independence, adopted in 1776, begins with this phrase."
+  },
+  {
+    "question": "Who was the first woman to fly solo across the Atlantic Ocean?",
+    "options": ["Bessie Coleman", "Amelia Earhart", "Sally Ride", "Jacqueline Cochran"],
+    "correctIndex": 1,
+    "explanation": "Amelia Earhart achieved this historic solo flight in 1932."
+  },
+  {
+    "question": "What major global conflict ended with the signing of the Treaty of Versailles?",
+    "options": ["American Revolution", "Napoleonic Wars", "World War I", "World War II"],
+    "correctIndex": 2,
+    "explanation": "The Treaty of Versailles, signed in 1919, officially ended World War I."
+  },
+  {
+    "question": "In ancient Egypt, who was the female pharaoh known for her extensive building projects and peaceful rule?",
+    "options": ["Cleopatra", "Nefertiti", "Hatshepsut", "Nefertari"],
+    "correctIndex": 2,
+    "explanation": "Hatshepsut was one of the most powerful female pharaohs of the New Kingdom, known for a stable and prosperous reign."
+  },
+  {
+    "question": "The Renaissance, a period of renewed interest in art and learning, began in which country?",
+    "options": ["France", "Spain", "Italy", "Germany"],
+    "correctIndex": 2,
+    "explanation": "The Renaissance began in Florence, Italy, in the 14th century."
+  },
+  {
+    "question": "What was the name of the German political party led by Adolf Hitler?",
+    "options": ["Communist Party", "Social Democratic Party", "Liberal Party", "Nazi Party"],
+    "correctIndex": 3,
+    "explanation": "Hitler led the National Socialist German Workers' Party, commonly known as the Nazi Party."
+  },
+  {
+    "question": "Which famous explorer is credited with being the first to circumnavigate the Earth?",
+    "options": ["Vasco da Gama", "Ferdinand Magellan", "James Cook", "Marco Polo"],
+    "correctIndex": 1,
+    "explanation": "Ferdinand Magellan led the first expedition to sail around the world, although he died mid-voyage in the Philippines."
+  },
+  {
+    "question": "What year is generally considered the start of the California Gold Rush?",
+    "options": ["1865", "1849", "1803", "1901"],
+    "correctIndex": 1,
+    "explanation": "The Gold Rush began in 1848 after gold was found at Sutter's Mill, but the massive influx of people ('49ers) started in 1849."
+  },
+  {
+    "question": "Who authored the communist pamphlet 'The Communist Manifesto' with Friedrich Engels?",
+    "options": ["Vladimir Lenin", "Karl Marx", "Joseph Stalin", "Mao Zedong"],
+    "correctIndex": 1,
+    "explanation": "Karl Marx and Friedrich Engels co-authored this highly influential political text in 1848."
+  },
+  {
+    "question": "The ancient Greek Olympics were originally held to honor which god?",
+    "options": ["Apollo", "Poseidon", "Zeus", "Ares"],
+    "correctIndex": 2,
+    "explanation": "The ancient games were part of a religious festival in honor of Zeus, the king of the Greek gods, at Olympia."
+  },
+  {
+    "question": "Which U.S. President is known for issuing the Emancipation Proclamation?",
+    "options": ["Franklin D. Roosevelt", "George Washington", "Abraham Lincoln", "Theodore Roosevelt"],
+    "correctIndex": 2,
+    "explanation": "Abraham Lincoln issued the Emancipation Proclamation on January 1, 1863, during the American Civil War."
+  },
+  {
+    "question": "Which invention by Eli Whitney dramatically increased cotton production in the American South?",
+    "options": ["Steam Engine", "Cotton Gin", "Spinning Jenny", "Telegraph"],
+    "correctIndex": 1,
+    "explanation": "The cotton gin, invented in 1793, mechanized the separation of cotton fiber from its seeds."
+  },
+  {
+    "question": "Which famous battle in 1066 led to the Norman conquest of England?",
+    "options": ["Battle of Agincourt", "Battle of Hastings", "Battle of Stamford Bridge", "Battle of Bosworth Field"],
+    "correctIndex": 1,
+    "explanation": "The Battle of Hastings was fought on October 14, 1066, between the Norman-French army of William, Duke of Normandy, and the English army of King Harold Godwinson."
+  },
+  {
+    "question": "The Cold War was primarily a geopolitical conflict between the United States and what other country/bloc?",
+    "options": ["Nazi Germany", "China", "Soviet Union", "Japan"],
+    "correctIndex": 2,
+    "explanation": "The Cold War (c. 1947–1991) was a state of political and military tension between the U.S. and its allies and the Soviet Union and its satellite states."
+  },
+  {
+    "question": "Who was the co-leader of the Provisional Government of Russia after the February Revolution of 1917, before the Bolsheviks took power?",
+    "options": ["Joseph Stalin", "Alexander Kerensky", "Leon Trotsky", "Czar Nicholas II"],
+    "correctIndex": 1,
+    "explanation": "Alexander Kerensky was the Prime Minister of the Russian Provisional Government until the October Revolution."
+  },
+  {
+    "question": "What event is considered the start of the French Revolution in 1789?",
+    "options": ["Storming of the Bastille", "Reign of Terror", "Battle of Waterloo", "Execution of Louis XVI"],
+    "correctIndex": 0,
+    "explanation": "The Storming of the Bastille prison fortress in Paris on July 14, 1789, is widely considered the pivotal event that marked the start of the French Revolution."
+  },
+  {
+    "question": "Which prehistoric period is defined by the development of farming and permanent settlements?",
+    "options": ["Paleolithic", "Mesolithic", "Neolithic", "Bronze Age"],
+    "correctIndex": 2,
+    "explanation": "The Neolithic Age (or New Stone Age) is when the Neolithic Revolution—the shift to agriculture—occurred."
+  },
+  {
+    "question": "What was the system of racial segregation in South Africa, officially ended in 1994, called?",
+    "options": ["Imperialism", "Slavery", "Apartheid", "Zionism"],
+    "correctIndex": 2,
+    "explanation": "Apartheid (Afrikaans for 'apartness') was a system of institutionalized racial segregation and discrimination in South Africa from 1948 to 1994."
+  },
+  {
+    "question": "Who was the first Roman emperor, succeeding Julius Caesar?",
+    "options": ["Tiberius", "Augustus", "Nero", "Caligula"],
+    "correctIndex": 1,
+    "explanation": "Augustus (born Octavian) was the founder of the Roman Principate and considered the first Roman emperor, reigning from 27 BC until his death in AD 14."
+  },
+  {
+    "question": "Which war saw the defeat of Napoleon Bonaparte in 1815?",
+    "options": ["Seven Years' War", "French and Indian War", "Crimean War", "Napoleonic Wars"],
+    "correctIndex": 3,
+    "explanation": "The Napoleonic Wars culminated in Napoleon's final defeat at the Battle of Waterloo in 1815."
+  },
+  {
+    "question": "What civilization invented the concept of zero, which greatly aided mathematics?",
+    "options": ["Mayan", "Indian", "Chinese", "Greek"],
+    "correctIndex": 1,
+    "explanation": "While several ancient civilizations used place-value systems, the concept of zero as a number and placeholder in a decimal system was fully developed in ancient India."
+  },
+  {
+    "question": "What U.S. national monument was attacked by Japan on December 7, 1941?",
+    "options": ["Midway", "Pearl Harbor", "Guam", "Okinawa"],
+    "correctIndex": 1,
+    "explanation": "The surprise attack on the U.S. naval base at Pearl Harbor, Hawaii, brought the United States into World War II."
+  },
+  {
+    "question": "Which Chinese dynasty is famous for uniting China and starting the building of the Great Wall?",
+    "options": ["Han Dynasty", "Ming Dynasty", "Qing Dynasty", "Qin Dynasty"],
+    "correctIndex": 3,
+    "explanation": "The Qin Dynasty, under Qin Shi Huang, unified China in 221 BC and started connecting earlier walls into what became the Great Wall."
+  },
+  {
+    "question": "Who was the British Prime Minister during most of World War II?",
+    "options": ["Neville Chamberlain", "Winston Churchill", "Clement Attlee", "Margaret Thatcher"],
+    "correctIndex": 1,
+    "explanation": "Winston Churchill led the United Kingdom during the darkest days of WWII, from 1940 to 1945."
+  },
+  {
+    "question": "What famous trial in 1925 centered on the teaching of evolution in public schools?",
+    "options": ["Scopes Trial", "Salem Witch Trials", "Nuremberg Trials", "Sacco and Vanzetti Trial"],
+    "correctIndex": 0,
+    "explanation": "The Scopes Trial, or 'Monkey Trial,' tested the constitutionality of a Tennessee law banning the teaching of evolution."
+  },
+  {
+    "question": "The famous philosopher Socrates lived in which ancient city-state?",
+    "options": ["Sparta", "Corinth", "Thebes", "Athens"],
+    "correctIndex": 3,
+    "explanation": "Socrates was an influential classical Greek philosopher credited as one of the founders of Western philosophy, and he lived in Athens."
+  },
+  {
+    "question": "What type of artifact are the Rosetta Stone and the Dead Sea Scrolls?",
+    "options": ["Sculptures", "Pottery", "Written Texts", "Jewelry"],
+    "correctIndex": 2,
+    "explanation": "Both the Rosetta Stone (a decree inscribed in three scripts) and the Dead Sea Scrolls (ancient religious manuscripts) are important written historical texts."
+  },
+  {
+    "question": "What event in 1929 is commonly considered the beginning of the Great Depression?",
+    "options": ["End of WWI", "Stock Market Crash", "Dust Bowl", "Pearl Harbor Attack"],
+    "correctIndex": 1,
+    "explanation": "The Wall Street Crash of October 1929 led to a severe worldwide economic downturn known as the Great Depression."
+  },
+  {
+    "question": "What was the name of the system of roads built by the Incas in South America?",
+    "options": ["Royal Road", "Silk Road", "Inca Trail", "Appian Way"],
+    "correctIndex": 2,
+    "explanation": "The Inca Trail (or Qhapaq Ñan in Quechua) was an extensive network of roads that linked the vast Inca Empire."
+  },
+  {
+    "question": "Who was the first man to walk on the Moon in 1969?",
+    "options": ["Buzz Aldrin", "Yuri Gagarin", "Neil Armstrong", "John Glenn"],
+    "correctIndex": 2,
+    "explanation": "Neil Armstrong, aboard the Apollo 11 mission, achieved this milestone on July 20, 1969."
+  },
+  {
+    "question": "Which Spanish conquistador led the expedition that caused the fall of the Aztec Empire?",
+    "options": ["Francisco Pizarro", "Hernán Cortés", "Juan Ponce de León", "Vasco Núñez de Balboa"],
+    "correctIndex": 1,
+    "explanation": "Hernán Cortés led the Spanish conquest of the Aztec Empire between 1519 and 1521."
+  },
+  {
+    "question": "What was the name of the ship that exploded in Havana Harbor, helping to start the Spanish-American War?",
+    "options": ["USS Constitution", "USS Enterprise", "USS Maine", "USS Arizona"],
+    "correctIndex": 2,
+    "explanation": "The sinking of the USS Maine in February 1898 was a major catalyst for the Spanish-American War."
+  },
+  {
+    "question": "The historical period of the 'Roaring Twenties' is named for the decade of the...",
+    "options": ["1910s", "1920s", "1930s", "1950s"],
+    "correctIndex": 1,
+    "explanation": "The 1920s in North America and Europe saw a period of economic prosperity, distinct cultural changes, and social dynamism."
+  },
+  {
+    "question": "Which ancient city was famously destroyed by the eruption of Mount Vesuvius in 79 AD?",
+    "options": ["Olympia", "Ephesus", "Pompeii", "Troy"],
+    "correctIndex": 2,
+    "explanation": "Pompeii, a Roman city near modern Naples, was buried under ash and pumice from the eruption."
+  },
+  {
+    "question": "Who led the American forces during the Revolutionary War and became the first U.S. President?",
+    "options": ["Benjamin Franklin", "Thomas Jefferson", "Paul Revere", "George Washington"],
+    "correctIndex": 3,
+    "explanation": "George Washington was the Commander-in-Chief of the Continental Army during the American Revolution."
+  },
+  {
+    "question": "What was the primary motive for European exploration and colonization of the Americas in the 16th century?",
+    "options": ["Spreading Democracy", "Scientific Research", "Gold, God, and Glory", "Environmental Protection"],
+    "correctIndex": 2,
+    "explanation": "European motives are often summarized as 'Gold, God, and Glory'—seeking wealth, converting natives to Christianity, and gaining personal/national prestige."
+  },
+  {
+    "question": "The famous 'I Have a Dream' speech was delivered by which Civil Rights leader?",
+    "options": ["Malcolm X", "Martin Luther King Jr.", "Rosa Parks", "W.E.B. Du Bois"],
+    "correctIndex": 1,
+    "explanation": "Dr. Martin Luther King Jr. delivered the 'I Have a Dream' speech in Washington D.C. in 1963."
+  },
+  {
+    "question": "In what decade did the Berlin Wall fall, symbolizing the end of the Cold War?",
+    "options": ["1970s", "1980s", "1990s", "2000s"],
+    "correctIndex": 2,
+    "explanation": "The Berlin Wall was torn down in November 1989, a major symbolic step toward the end of Soviet influence in Europe."
+  },
+  {
+    "question": "Which dynasty ruled China for the longest period?",
+    "options": ["Qin Dynasty", "Han Dynasty", "Zhou Dynasty", "Tang Dynasty"],
+    "correctIndex": 2,
+    "explanation": "The Zhou Dynasty lasted for nearly eight centuries, from c. 1046 BC to 256 BC."
+  },
+  {
+    "question": "What name is given to the mass migration of African Americans from the Southern U.S. to the North in the early 20th century?",
+    "options": ["The Exodus", "The Trail of Tears", "The Great Migration", "The Freedom Ride"],
+    "correctIndex": 2,
+    "explanation": "The Great Migration refers to the movement of millions of African Americans out of the rural Southern United States to the urban Northeast, Midwest, and West from about 1916 to 1970."
+  },
+  {
+    "question": "Who was the founder of the Mongol Empire in the 13th century?",
+    "options": ["Kublai Khan", "Batu Khan", "Genghis Khan", "Tamerlane"],
+    "correctIndex": 2,
+    "explanation": "Temüjin, better known by his title Genghis Khan, united the Mongol tribes and founded the largest contiguous land empire in history."
+  },
+  {
+    "question": "The Declaration of Independence was primarily written by which Founding Father?",
+    "options": ["John Adams", "Benjamin Franklin", "Thomas Jefferson", "James Madison"],
+    "correctIndex": 2,
+    "explanation": "Thomas Jefferson was the principal author of the Declaration of Independence."
+  },
+  {
+    "question": "Which battle in 480 BC saw a small force of Spartans and Greeks heroically defend a narrow pass against the massive Persian army?",
+    "options": ["Battle of Marathon", "Battle of Salamis", "Battle of Thermopylae", "Battle of Gaugamela"],
+    "correctIndex": 2,
+    "explanation": "The Battle of Thermopylae is famous for the heroic stand of King Leonidas and his small force against the Persian army of Xerxes I."
+  },
+  {
+    "question": "The use of what major technological advancement defines the Bronze Age?",
+    "options": ["Iron Tools", "The Wheel", "Bronze Tools", "Gunpowder"],
+    "correctIndex": 2,
+    "explanation": "The Bronze Age is a historical period characterized by the use of bronze, an alloy of copper and typically tin."
+  },
+  {
+    "question": "Which country did the United States fight in the Vietnam War?",
+    "options": ["China", "Soviet Union", "North Vietnam", "South Korea"],
+    "correctIndex": 2,
+    "explanation": "The U.S. primarily fought against North Vietnam and the Viet Cong insurgency in South Vietnam."
+  },
+  {
+    "question": "What ancient structure was built as a tomb for the Mughal Emperor Shah Jahan's favorite wife, Mumtaz Mahal?",
+    "options": ["Forbidden City", "Great Wall of China", "Taj Mahal", "Hagia Sophia"],
+    "correctIndex": 2,
+    "explanation": "The Taj Mahal, located in Agra, India, is an immense mausoleum commissioned in 1632."
+  },
+  {
+    "question": "The year 1765 saw the British Parliament pass what act that taxed all printed materials in the American colonies?",
+    "options": ["Tea Act", "Quartering Act", "Stamp Act", "Townshend Acts"],
+    "correctIndex": 2,
+    "explanation": "The Stamp Act of 1765 required colonists to pay a tax on every piece of printed paper, leading to widespread protests."
+  }]

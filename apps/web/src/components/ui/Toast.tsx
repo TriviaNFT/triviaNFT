@@ -106,13 +106,20 @@ export const Toast: React.FC<ToastProps> = ({ toast }) => {
               handleClose();
             }}
             style={styles.actionButton}
+            accessibilityRole="button"
+            accessibilityLabel={toast.action.label}
           >
             <Text style={[styles.actionText, { color: colors.text }]}>
               {toast.action.label}
             </Text>
           </Pressable>
         )}
-        <Pressable onPress={handleClose} style={styles.closeButton}>
+        <Pressable 
+          onPress={handleClose} 
+          style={styles.closeButton}
+          accessibilityRole="button"
+          accessibilityLabel="Dismiss notification"
+        >
           <Text style={[styles.closeText, { color: colors.text }]}>✕</Text>
         </Pressable>
       </View>

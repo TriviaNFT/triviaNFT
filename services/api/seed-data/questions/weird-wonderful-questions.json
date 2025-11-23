@@ -1,0 +1,1102 @@
+[
+{
+"question": "Which small creature can sleep for years during extreme drought?",
+"options": [
+"Snail",
+"Mouse",
+"Lizard",
+"Hedgehog"
+],
+"correctIndex": 0,
+"explanation": "Some snails enter a state called estivation, sealing themselves in their shells and surviving without food or water for years."
+},
+{
+"question": "Which human organ is famous for its ability to regrow after damage?",
+"options": [
+"Heart",
+"Liver",
+"Lungs",
+"Kidneys"
+],
+"correctIndex": 1,
+"explanation": "The liver can regenerate a large portion of its mass after injury or surgery, which is why partial liver donations are possible."
+},
+{
+"question": "Which planet has a day that is longer than its year?",
+"options": [
+"Mercury",
+"Earth",
+"Venus",
+"Mars"
+],
+"correctIndex": 2,
+"explanation": "Venus rotates so slowly that one full spin takes longer than its orbit around the Sun, making its day longer than its year."
+},
+{
+"question": "Which animal has its heart located in its head region?",
+"options": [
+"Starfish",
+"Crab",
+"Lobster",
+"Shrimp"
+],
+"correctIndex": 3,
+"explanation": "A shrimp’s heart is in its head-like thorax region, which is fused with the head, creating this unusual body layout."
+},
+{
+"question": "What is unusual about honey’s shelf life?",
+"options": [
+"It never spoils",
+"It melts metal",
+"It loses sweetness fast",
+"It freezes solid in days"
+],
+"correctIndex": 0,
+"explanation": "Thanks to its low water content and acidity, properly sealed honey can remain edible for thousands of years without spoiling."
+},
+{
+"question": "Which animal has fingerprints so similar to humans they can confuse forensics?",
+"options": [
+"Raccoon",
+"Koala",
+"Gorilla",
+"Panda"
+],
+"correctIndex": 1,
+"explanation": "Koalas have ridge patterns on their fingers that closely resemble human fingerprints, even under a microscope."
+},
+{
+"question": "The Atacama in Chile is famous for being what?",
+"options": [
+"Coldest desert",
+"Largest desert",
+"Driest nonpolar desert",
+"Highest desert"
+],
+"correctIndex": 2,
+"explanation": "Parts of the Atacama Desert are so dry they have recorded virtually no rainfall for centuries, making it the driest nonpolar desert."
+},
+{
+"question": "Which planet hosts the Great Red Spot, a storm larger than Earth?",
+"options": [
+"Mars",
+"Saturn",
+"Neptune",
+"Jupiter"
+],
+"correctIndex": 3,
+"explanation": "Jupiter’s Great Red Spot is a gigantic storm that has been raging for at least hundreds of years and is wider than Earth."
+},
+{
+"question": "Which jellyfish can revert to a younger stage, earning it the name 'immortal'?",
+"options": [
+"Turritopsis dohrnii",
+"Lion’s mane",
+"Box jellyfish",
+"Moon jellyfish"
+],
+"correctIndex": 0,
+"explanation": "Turritopsis dohrnii can revert its adult cells back to a juvenile form, effectively resetting its life cycle under stress."
+},
+{
+"question": "How many hearts does an octopus have?",
+"options": [
+"One",
+"Three",
+"Four",
+"Two"
+],
+"correctIndex": 1,
+"explanation": "Octopuses have three hearts: two pump blood to the gills, while the third pumps blood to the rest of the body."
+},
+{
+"question": "What strange shape are a goat’s pupils?",
+"options": [
+"Round",
+"Vertical",
+"Rectangular",
+"Star-shaped"
+],
+"correctIndex": 2,
+"explanation": "Goats have horizontal, rectangular pupils that give them a wide field of view to spot predators on open terrain."
+},
+{
+"question": "What surprising botanical fact is true about bananas?",
+"options": [
+"They are a root",
+"They are nuts",
+"They are berries",
+"They are seeds"
+],
+"correctIndex": 2,
+"explanation": "Botanically, bananas are classified as berries because they develop from a single ovary and contain seeds, even if they are tiny."
+},
+{
+"question": "What causes 'volcanic lightning' in some eruptions?",
+"options": [
+"Lava glowing",
+"Friction of ash particles",
+"Sunlight reflections",
+"Radio signals"
+],
+"correctIndex": 1,
+"explanation": "Colliding ash particles build up electric charges in volcanic plumes, which discharge as dramatic lightning bolts."
+},
+{
+"question": "How big is a blue whale’s heart compared to common objects?",
+"options": [
+"Apple-sized",
+"Soccer-ball sized",
+"Small car sized",
+"Golf-ball sized"
+],
+"correctIndex": 2,
+"explanation": "A blue whale’s heart can weigh hundreds of kilograms, roughly the size of a small car, powering the largest animal on Earth."
+},
+{
+"question": "Which planet is so low in density it could float in a giant ocean?",
+"options": [
+"Mars",
+"Saturn",
+"Neptune",
+"Mercury"
+],
+"correctIndex": 1,
+"explanation": "Saturn’s average density is lower than water, so in theory it would float if you had an impossibly huge bathtub of water."
+},
+{
+"question": "Which animal is known for producing cube-shaped poop?",
+"options": [
+"Kangaroo",
+"Koala",
+"Wombat",
+"Badger"
+],
+"correctIndex": 2,
+"explanation": "Wombats produce cube-shaped droppings, which helps keep them from rolling away and may aid in territory marking."
+},
+{
+"question": "Which frog has skin so transparent you can see its organs?",
+"options": [
+"Poison dart frog",
+"Glass frog",
+"Tree frog",
+"Bullfrog"
+],
+"correctIndex": 1,
+"explanation": "Glass frogs have translucent skin on their underside, allowing their beating heart and organs to be seen through the skin."
+},
+{
+"question": "Which tiny animal can survive the vacuum of space?",
+"options": [
+"Ant",
+"Fruit fly",
+"Tardigrade",
+"Bee"
+],
+"correctIndex": 2,
+"explanation": "Tardigrades, or water bears, can endure extreme conditions including radiation, freezing, and even exposure to outer space."
+},
+{
+"question": "Why do people float so easily in the Dead Sea?",
+"options": [
+"No gravity there",
+"Water is very cold",
+"Water is extremely salty",
+"Air pushes you up"
+],
+"correctIndex": 2,
+"explanation": "The Dead Sea’s water has such a high salt content that its density makes it easy for people to float on the surface."
+},
+{
+"question": "What unusual effect does a cat’s purr have?",
+"options": [
+"It repels insects",
+"It cures colds instantly",
+"It may promote healing",
+"It stops time briefly"
+],
+"correctIndex": 2,
+"explanation": "The frequencies of a cat’s purr may help stimulate bone and tissue healing, though research is still ongoing."
+},
+{
+"question": "What is happening to Mount Everest over time?",
+"options": [
+"It is shrinking",
+"It is slowly growing",
+"It is hollowing out",
+"It is moving to Europe"
+],
+"correctIndex": 1,
+"explanation": "Due to tectonic plate movement, the Himalayas, including Everest, are still rising a tiny amount each year."
+},
+{
+"question": "Which body part is said to have a unique print like a fingerprint?",
+"options": [
+"Ear",
+"Tongue",
+"Knee",
+"Nostril"
+],
+"correctIndex": 1,
+"explanation": "Tongues have unique surface patterns and shapes, making tongue prints theoretically as individual as fingerprints."
+},
+{
+"question": "Can lightning strike the same place more than once?",
+"options": [
+"Never",
+"Only twice",
+"Yes, many times",
+"Only at sea"
+],
+"correctIndex": 2,
+"explanation": "Lightning often strikes tall structures repeatedly; for example, skyscrapers can be hit many times in a single year."
+},
+{
+"question": "What happens to the Eiffel Tower on a hot day?",
+"options": [
+"It shrinks",
+"It tilts",
+"It changes color",
+"It grows taller"
+],
+"correctIndex": 3,
+"explanation": "Metal expands in heat, so the Eiffel Tower can grow several centimeters taller on hot days."
+},
+{
+"question": "Roughly how much of the body’s energy does the brain use?",
+"options": [
+"1%",
+"5%",
+"20%",
+"50%"
+],
+"correctIndex": 2,
+"explanation": "The brain uses about 20% of the body’s energy, even though it makes up only about 2% of body weight."
+},
+{
+"question": "How long does sunlight take to travel from the Sun to Earth?",
+"options": [
+"About 8 minutes",
+"About 1 second",
+"About 1 hour",
+"About 1 day"
+],
+"correctIndex": 0,
+"explanation": "Light from the Sun travels the 150 million kilometers to Earth in roughly 8 minutes and 20 seconds."
+},
+{
+"question": "How do many trees 'communicate' underground?",
+"options": [
+"By sound waves",
+"By Wi-Fi signals",
+"Through fungal networks",
+"Via magnetic pulses"
+],
+"correctIndex": 2,
+"explanation": "Trees exchange nutrients and chemical signals via mycorrhizal fungi, forming a 'wood-wide web' underground."
+},
+{
+"question": "Which famous city is slowly sinking into a lagoon?",
+"options": [
+"Amsterdam",
+"Venice",
+"Lisbon",
+"Dublin"
+],
+"correctIndex": 1,
+"explanation": "Venice is gradually sinking due to soft ground, rising sea levels, and human activity affecting its foundations."
+},
+{
+"question": "Which is actually the world’s largest desert by area?",
+"options": [
+"Sahara",
+"Gobi",
+"Antarctica",
+"Atacama"
+],
+"correctIndex": 2,
+"explanation": "Antarctica is a cold desert with extremely low precipitation, making it the largest desert on Earth by area."
+},
+{
+"question": "A 'blue moon' refers to which event?",
+"options": [
+"Moon turns blue",
+"Second full moon in a month",
+"Moon vanishes",
+"Moon rises at noon"
+],
+"correctIndex": 1,
+"explanation": "A blue moon is the second full moon in a calendar month, a rare timing event, not a change in color."
+},
+{
+"question": "What existed on Earth before trees evolved?",
+"options": [
+"Birds",
+"Sharks",
+"Grass",
+"Humans"
+],
+"correctIndex": 1,
+"explanation": "Sharks have been swimming in Earth’s oceans for hundreds of millions of years, long before the first trees appeared."
+},
+{
+"question": "Why were high heels originally worn by some men?",
+"options": [
+"Acting tradition",
+"To look taller in court",
+"To keep feet in stirrups",
+"To dance better"
+],
+"correctIndex": 2,
+"explanation": "Persian cavalry used heels to keep their feet secure in stirrups, and the fashion later spread to European men."
+},
+{
+"question": "How do the number of bones in a baby compare with an adult?",
+"options": [
+"Same number",
+"Fewer bones",
+"More bones",
+"No bones at birth"
+],
+"correctIndex": 2,
+"explanation": "Babies have more bones, which later fuse as they grow, resulting in fewer bones in adults."
+},
+{
+"question": "Which sense is most strongly linked to memory?",
+"options": [
+"Sight",
+"Hearing",
+"Smell",
+"Taste"
+],
+"correctIndex": 2,
+"explanation": "The olfactory system is closely connected to brain regions for emotion and memory, making smells powerful memory triggers."
+},
+{
+"question": "What unusual document did Pharaoh Ramses II receive in modern times?",
+"options": [
+"Gym membership",
+"Driver’s license",
+"Passport",
+"Library card"
+],
+"correctIndex": 2,
+"explanation": "When his mummy was flown to France for restoration, Ramses II was issued an official Egyptian passport."
+},
+{
+"question": "Which is older as an institution: Oxford University or the Aztec Empire?",
+"options": [
+"Aztec Empire",
+"They are the same age",
+"Oxford University",
+"Neither, both are modern"
+],
+"correctIndex": 2,
+"explanation": "Teaching at Oxford began by the 12th century, predating the rise of the Aztec Empire in the 14th century."
+},
+{
+"question": "Which animal can delay giving birth for months after becoming pregnant?",
+"options": [
+"Elephant",
+"Kangaroo",
+"Lion",
+"Horse"
+],
+"correctIndex": 1,
+"explanation": "Kangaroos can pause embryo development in a process called embryonic diapause until conditions improve."
+},
+{
+"question": "Which part of your body is constantly being replaced every few days?",
+"options": [
+"Skull",
+"Stomach lining",
+"Spine",
+"Teeth"
+],
+"correctIndex": 1,
+"explanation": "The stomach lining renews rapidly to protect itself from strong digestive acids that would otherwise damage tissues."
+},
+{
+"question": "What kind of digital data once came on physical punch cards?",
+"options": [
+"Streaming video",
+"Computer programs",
+"3D printing files",
+"GPS maps"
+],
+"correctIndex": 1,
+"explanation": "Early computers used punch cards with holes representing data and instructions, a far cry from modern storage."
+},
+{
+"question": "Which animal’s milk is naturally pink?",
+"options": [
+"Dolphin",
+"Hippo",
+"Zebra",
+"Camel"
+],
+"correctIndex": 1,
+"explanation": "Hippo milk looks pinkish because of natural pigments in the oily secretions that protect their skin."
+},
+{
+"question": "Which country once fought a 'war' against emus?",
+"options": [
+"United States",
+"Australia",
+"Argentina",
+"India"
+],
+"correctIndex": 1,
+"explanation": "In 1932, Australia attempted to cull emus that were damaging crops in a campaign jokingly known as the Emu War."
+},
+{
+"question": "What unusual thing can some lizards do to escape predators?",
+"options": [
+"Grow wings",
+"Explode",
+"Drop their tails",
+"Turn invisible fully"
+],
+"correctIndex": 2,
+"explanation": "Many lizards can detach their tails, which wriggle to distract predators while the lizard escapes."
+},
+{
+"question": "Which mammal can truly fly, not just glide?",
+"options": [
+"Flying squirrel",
+"Sugar glider",
+"Bat",
+"Colugo"
+],
+"correctIndex": 2,
+"explanation": "Bats are the only mammals capable of sustained powered flight, using wings formed from skin and elongated fingers."
+},
+{
+"question": "Which bird has the largest wingspan of any living species?",
+"options": [
+"Golden eagle",
+"Bald eagle",
+"Wandering albatross",
+"Condor"
+],
+"correctIndex": 2,
+"explanation": "The wandering albatross has a wingspan that can exceed 3 meters, enabling it to soar across oceans for hours."
+},
+{
+"question": "Which human-made object has traveled farthest into space?",
+"options": [
+"Hubble Telescope",
+"Voyager 1",
+"ISS",
+"Sputnik 1"
+],
+"correctIndex": 1,
+"explanation": "NASA’s Voyager 1 spacecraft has traveled beyond the heliosphere, making it the most distant human-made object."
+},
+{
+"question": "What oddity do ostriches show when threatened?",
+"options": [
+"They hide in trees",
+"They roar like lions",
+"They sometimes eat stones",
+"They turn completely white"
+],
+"correctIndex": 2,
+"explanation": "Ostriches swallow stones to help grind food in their stomach, aiding digestion since they lack teeth."
+},
+{
+"question": "Which ocean is home to a permanent 'garbage patch' of plastic debris?",
+"options": [
+"Arctic Ocean",
+"Indian Ocean",
+"Southern Ocean",
+"Pacific Ocean"
+],
+"correctIndex": 3,
+"explanation": "The Great Pacific Garbage Patch is a massive accumulation of floating plastic and waste trapped by ocean currents."
+},
+{
+"question": "What happens to astronauts’ height while they are in space?",
+"options": [
+"They shrink",
+"They grow taller",
+"They stay exactly same",
+"They randomly change"
+],
+"correctIndex": 1,
+"explanation": "In microgravity, spinal discs expand slightly, so astronauts can grow a few centimeters taller temporarily."
+},
+{
+"question": "What is strange about the dark side of the Moon?",
+"options": [
+"It never exists",
+"It always faces Earth",
+"It never sees sunlight",
+"It is just the far side"
+],
+"correctIndex": 3,
+"explanation": "What people call the 'dark side' is actually the far side; it still gets sunlight but never faces Earth."
+},
+{
+"question": "What odd food did ancient Romans sometimes use as toothpaste?",
+"options": [
+"Honey",
+"Ground bones",
+"Chocolate",
+"Cheese"
+],
+"correctIndex": 1,
+"explanation": "Some Roman tooth powders included crushed bones and shells mixed with flavorings to clean teeth."
+},
+{
+"question": "Which animal can recognize itself in a mirror, suggesting self-awareness?",
+"options": [
+"Dog",
+"Cat",
+"Chimpanzee",
+"Goldfish"
+],
+"correctIndex": 2,
+"explanation": "Chimpanzees can pass the mirror test, recognizing that a mark on their reflection is actually on their own body."
+},
+{
+"question": "Which organ continues to grow slowly throughout most of your life?",
+"options": [
+"Liver",
+"Heart",
+"Ears",
+"Brain"
+],
+"correctIndex": 2,
+"explanation": "Cartilage in the ears and nose can keep growing or changing shape over time, making them appear larger with age."
+},
+{
+"question": "Which part of the world has a lake that is naturally bright pink?",
+"options": [
+"Canada",
+"Australia",
+"Iceland",
+"Japan"
+],
+"correctIndex": 1,
+"explanation": "Australia’s Lake Hillier is pink due to microorganisms and high salinity, and the water stays pink even in bottles."
+},
+{
+"question": "In which country do people throw cinnamon at unmarried 25-year-olds?",
+"options": [
+"Italy",
+"Denmark",
+"Mexico",
+"Japan"
+],
+"correctIndex": 1,
+"explanation": "In Denmark, it’s a quirky tradition to shower 25-year-olds who are still unmarried with cinnamon."
+},
+{
+"question": "Which animal can change its sex multiple times during its life?",
+"options": [
+"Crocodile",
+"Clownfish",
+"Giraffe",
+"Rabbit"
+],
+"correctIndex": 1,
+"explanation": "In clownfish groups, if the dominant female dies, a male can change sex and become the new female."
+},
+{
+"question": "What strange thing do some ants do when they find food?",
+"options": [
+"Sing",
+"Explode",
+"Lay scent trails",
+"Glow in the dark"
+],
+"correctIndex": 2,
+"explanation": "Ants lay pheromone scent trails for other ants to follow, creating busy highways between nest and food."
+},
+{
+"question": "Which language holds the record for the longest word in a major dictionary?",
+"options": [
+"Spanish",
+"Russian",
+"English",
+"German"
+],
+"correctIndex": 2,
+"explanation": "English includes extremely long technical words, with some chemical names stretching to hundreds of letters."
+},
+{
+"question": "What unusual weather phenomenon rained on Honduras several times?",
+"options": [
+"Fish",
+"Diamonds",
+"Frogs",
+"Leaves"
+],
+"correctIndex": 0,
+"explanation": "In Honduras, a phenomenon called 'Lluvia de Peces' involves fish appearing after storms, likely lifted from nearby waters."
+},
+{
+"question": "What’s strange about how bats sleep?",
+"options": [
+"They sleep underwater",
+"They never sleep",
+"They sleep standing up",
+"They sleep upside down"
+],
+"correctIndex": 3,
+"explanation": "Bats hang upside down to rest, using special tendons in their feet that lock in place without effort."
+},
+{
+"question": "Which animal’s heart can stop beating when it dives but it survives?",
+"options": [
+"Penguin",
+"Sea otter",
+"Seal",
+"Whale"
+],
+"correctIndex": 2,
+"explanation": "Some seals can slow their heart rate dramatically during deep dives to conserve oxygen, sometimes seeming to stop between beats."
+},
+{
+"question": "What surprising household item did early computer mice use as a base idea?",
+"options": [
+"Rolling pin",
+"Soap bar",
+"Trackball from radar",
+"Pencil sharpener"
+],
+"correctIndex": 2,
+"explanation": "The first trackballs, precursors to computer mice, were adapted from radar control devices using a rolling ball mechanism."
+},
+{
+"question": "Which animal has blue blood because of copper-based molecules?",
+"options": [
+"Cat",
+"Horse",
+"Horseshoe crab",
+"Shark"
+],
+"correctIndex": 2,
+"explanation": "Horseshoe crabs use hemocyanin, a copper-based molecule, giving their blood a blue color instead of red."
+},
+{
+"question": "Which part of the human eye has no blood vessels?",
+"options": [
+"Iris",
+"Pupil",
+"Cornea",
+"Retina"
+],
+"correctIndex": 2,
+"explanation": "The cornea has no blood vessels, receiving oxygen directly from the air and tears to stay clear."
+},
+{
+"question": "Which country invented the first known vending machine in ancient times?",
+"options": [
+"China",
+"Greece",
+"Egypt",
+"India"
+],
+"correctIndex": 1,
+"explanation": "Hero of Alexandria, a Greek engineer, designed a coin-operated device that dispensed holy water in temples."
+},
+{
+"question": "Which planet rains diamonds deep in its atmosphere, according to models?",
+"options": [
+"Mars",
+"Venus",
+"Uranus and Neptune",
+"Mercury"
+],
+"correctIndex": 2,
+"explanation": "High pressure inside Uranus and Neptune may turn methane into diamond rain deep within their atmospheres."
+},
+{
+"question": "What is unusual about Jupiter’s moon Io?",
+"options": [
+"Ice-covered",
+"No gravity",
+"Most volcanic body",
+"Bright blue color"
+],
+"correctIndex": 2,
+"explanation": "Io is the most volcanically active world in the solar system, with hundreds of active volcanoes."
+},
+{
+"question": "Which animal can recognize individual human faces and remember them?",
+"options": [
+"Chicken",
+"Cow",
+"Crow",
+"Frog"
+],
+"correctIndex": 2,
+"explanation": "Crows can recognize human faces, hold grudges, and even teach other crows about threatening individuals."
+},
+{
+"question": "What strange thing does the pistol shrimp do?",
+"options": [
+"Shoots ink",
+"Claps to stun prey",
+"Turns invisible",
+"Sings to lure fish"
+],
+"correctIndex": 1,
+"explanation": "The pistol shrimp snaps its claw so fast it creates a cavitation bubble that stuns or kills nearby prey."
+},
+{
+"question": "Which animal has the strongest bite force relative to its size?",
+"options": [
+"Lion",
+"Crocodile",
+"Hyena",
+"Ant"
+],
+"correctIndex": 3,
+"explanation": "Some ants can exert a bite force many times their body weight, making them incredibly strong for their size."
+},
+{
+"question": "Which continent has no native species of ants?",
+"options": [
+"Asia",
+"Europe",
+"Antarctica",
+"South America"
+],
+"correctIndex": 2,
+"explanation": "Ants are found on nearly every landmass except Antarctica, where the extreme cold prevents their survival."
+},
+{
+"question": "What is strange about the way dolphins sleep?",
+"options": [
+"They never sleep",
+"They sleep while flying",
+"Half their brain sleeps",
+"They sleep upright on land"
+],
+"correctIndex": 2,
+"explanation": "Dolphins let one half of their brain sleep at a time so they can surface to breathe and watch for danger."
+},
+{
+"question": "Which animal’s eye is bigger than its brain?",
+"options": [
+"Ostrich",
+"Cat",
+"Dog",
+"Rabbit"
+],
+"correctIndex": 0,
+"explanation": "An ostrich’s eyes are so large that each eye is bigger than its brain, giving it excellent vision."
+},
+{
+"question": "Which country has a town where it’s illegal for cats to go outside freely?",
+"options": [
+"Norway",
+"New Zealand",
+"Italy",
+"Japan"
+],
+"correctIndex": 1,
+"explanation": "In some New Zealand communities, outdoor cats are restricted or banned to protect fragile native wildlife."
+},
+{
+"question": "Which primate has a call so loud it can be heard several kilometers away?",
+"options": [
+"Chimpanzee",
+"Gibbon",
+"Howler monkey",
+"Baboon"
+],
+"correctIndex": 2,
+"explanation": "Howler monkeys have enlarged throat structures that let their calls carry for several kilometers through forests."
+},
+{
+"question": "What is unusual about the way male seahorses reproduce?",
+"options": [
+"They lay eggs on land",
+"They split in two",
+"Males carry the babies",
+"They never have babies"
+],
+"correctIndex": 2,
+"explanation": "Male seahorses receive eggs from females and carry them in a brood pouch until giving birth."
+},
+{
+"question": "Which animal can rotate its head up to 270 degrees?",
+"options": [
+"Cat",
+"Owl",
+"Eagle",
+"Lemur"
+],
+"correctIndex": 1,
+"explanation": "Owls have extra neck vertebrae that allow them to rotate their heads about 270 degrees without harming blood flow."
+},
+{
+"question": "What happens to a day length on Earth as the Moon slowly drifts away?",
+"options": [
+"Days get shorter",
+"Days stay the same",
+"Days get longer",
+"Days stop entirely"
+],
+"correctIndex": 2,
+"explanation": "The Moon’s gradual drift slows Earth’s rotation, very slowly making days longer over millions of years."
+},
+{
+"question": "Which animal’s tongue can be longer than its entire body (excluding tail)?",
+"options": [
+"Dog",
+"Giraffe",
+"Chameleon",
+"Cat"
+],
+"correctIndex": 2,
+"explanation": "A chameleon’s tongue can extend longer than its body length, letting it snatch prey from a distance."
+},
+{
+"question": "What bizarre geological feature is found in the Danakil Depression of Ethiopia?",
+"options": [
+"Frozen desert",
+"Boiling lava lakes",
+"Colorful acid pools",
+"Floating rocks"
+],
+"correctIndex": 2,
+"explanation": "The Danakil Depression has neon-colored acidic hot springs and mineral formations that look almost alien."
+},
+{
+"question": "Which mammal can lower its body temperature below freezing without freezing solid?",
+"options": [
+"Mouse",
+"Bear",
+"Arctic ground squirrel",
+"Rabbit"
+],
+"correctIndex": 2,
+"explanation": "Arctic ground squirrels can supercool their bodies below 0°C during hibernation without ice forming in their tissues."
+},
+{
+"question": "What strange thing can sharks detect with special organs?",
+"options": [
+"Wi-Fi signals",
+"Earth’s rotation",
+"Electric fields",
+"Radio waves"
+],
+"correctIndex": 2,
+"explanation": "Sharks have electroreceptors called ampullae of Lorenzini that detect weak electric fields from prey."
+},
+{
+"question": "Which animal produces the loudest sound of any creature on Earth?",
+"options": [
+"Lion",
+"Pistol shrimp",
+"Blue whale",
+"Elephant"
+],
+"correctIndex": 2,
+"explanation": "Blue whales produce low-frequency calls that can reach around 180 decibels, louder than a jet engine."
+},
+{
+"question": "Which animal’s nursery web can cover entire trees?",
+"options": [
+"Orb-weaver spider",
+"Tent caterpillar",
+"Silkworm",
+"Moth"
+],
+"correctIndex": 1,
+"explanation": "Tent caterpillars weave communal silk tents in trees, sometimes covering large portions of branches."
+},
+{
+"question": "Which unusual material was once used to make airplane parts and furniture?",
+"options": [
+"Bread",
+"Milk plastic",
+"Sandpaper",
+"Cloud foam"
+],
+"correctIndex": 1,
+"explanation": "Casein plastic made from milk was used in early 20th-century buttons, jewelry, and some components."
+},
+{
+"question": "Which animal uses tools like sponges to protect its nose while foraging?",
+"options": [
+"Dolphin",
+"Octopus",
+"Seal",
+"Manatee"
+],
+"correctIndex": 0,
+"explanation": "Some dolphins pick up sea sponges and place them on their snouts to protect them when searching the seafloor."
+},
+{
+"question": "Which animal can regenerate lost limbs, tail, and even parts of its heart?",
+"options": [
+"Frog",
+"Lizard",
+"Axolotl",
+"Snake"
+],
+"correctIndex": 2,
+"explanation": "Axolotls are salamanders that can regrow limbs, spinal cord tissue, and parts of their heart and brain."
+},
+{
+"question": "Which plant can 'eat' small animals like insects?",
+"options": [
+"Cactus",
+"Sunflower",
+"Venus flytrap",
+"Rose"
+],
+"correctIndex": 2,
+"explanation": "Venus flytraps snap shut when trigger hairs are touched, digesting trapped insects for nutrients."
+},
+{
+"question": "Which ocean phenomenon can create glowing waves at night?",
+"options": [
+"Oil slicks",
+"Seafoam",
+"Bioluminescent plankton",
+"Floating ice"
+],
+"correctIndex": 2,
+"explanation": "Bioluminescent plankton emit light when disturbed, making waves and shorelines glow an eerie blue at night."
+},
+{
+"question": "What strange feature can appear in deserts after rain?",
+"options": [
+"Snowstorms",
+"Carpet of flowers",
+"Frozen lakes",
+"Glowing sand"
+],
+"correctIndex": 1,
+"explanation": "Some deserts burst into bloom after rare rains, with seeds waiting dormant for years until conditions are right."
+},
+{
+"question": "Which insect can see colors humans can’t, like ultraviolet patterns?",
+"options": [
+"Ant",
+"Bee",
+"Cockroach",
+"Termite"
+],
+"correctIndex": 1,
+"explanation": "Bees can see ultraviolet light, helping them find nectar guides on flowers that are invisible to humans."
+},
+{
+"question": "What is unusual about the fingerprints of some primates besides humans?",
+"options": [
+"They have none",
+"They glow in the dark",
+"They may match humans’ patterns",
+"They are on their tongues"
+],
+"correctIndex": 2,
+"explanation": "Some primates have fingerprint patterns similar to humans, reflecting shared evolutionary adaptations for grip."
+},
+{
+"question": "Which animal can hold its breath longest underwater?",
+"options": [
+"Sperm whale",
+"Sea lion",
+"Walrus",
+"Sea turtle"
+],
+"correctIndex": 0,
+"explanation": "Sperm whales are champion divers, able to hold their breath for over an hour while diving deep in search of squid."
+},
+{
+"question": "Which substance is used by some fungi to literally control ant behavior?",
+"options": [
+"Sugar",
+"Parasitic fungus",
+"Plant toxins",
+"Bacteria"
+],
+"correctIndex": 1,
+"explanation": "Ophiocordyceps fungi infect ants, altering their behavior so they climb and clamp onto leaves before the fungus bursts out."
+},
+{
+"question": "Which planet in our solar system rotates on its side like a rolling ball?",
+"options": [
+"Mars",
+"Venus",
+"Uranus",
+"Neptune"
+],
+"correctIndex": 2,
+"explanation": "Uranus is tilted by about 98 degrees, likely due to an ancient impact, so it appears to roll around the Sun on its side."
+},
+{
+"question": "Which animal has stripes that are unique like human fingerprints?",
+"options": [
+"Tiger",
+"Zebra",
+"Okapi",
+"Giraffe"
+],
+"correctIndex": 3,
+"explanation": "Every zebra has a unique stripe pattern, which can be used to distinguish individuals much like fingerprints in humans."
+},
+{
+"question": "Which metal can melt in your hand because its melting point is so low?",
+"options": [
+"Gallium",
+"Mercury",
+"Aluminum",
+"Tin"
+],
+"correctIndex": 0,
+"explanation": "Gallium melts at about 30°C, so the warmth of a human hand is enough to slowly turn it from solid to liquid."
+},
+{
+"question": "Which animal famously sleeps standing up but lies down for deep sleep?",
+"options": [
+"Horse",
+"Cow",
+"Flamingo",
+"Elephant"
+],
+"correctIndex": 1,
+"explanation": "Cows can doze while standing but generally lie down when entering deeper, more restful stages of sleep."
+},
+{
+"question": "Which fruit was once so rare in Europe it was rented as a table centerpiece?",
+"options": [
+"Apple",
+"Banana",
+"Pineapple",
+"Orange"
+],
+"correctIndex": 3,
+"explanation": "Pineapples were extremely rare and expensive, so wealthy hosts sometimes rented them to display, but this practice is most often cited with oranges as luxury gifts and decor in winter feasts."
+},
+{
+"question": "Which ocean creature has three hearts and blue blood?",
+"options": [
+"Squid",
+"Starfish",
+"Lobster",
+"Octopus"
+],
+"correctIndex": 0,
+"explanation": "Like octopuses, many squids have three hearts and copper-based blood that appears blue, helping them thrive in cold, low-oxygen waters."
+},
+{
+"question": "Which animal’s fur is actually transparent, not white, helping it blend into snow?",
+"options": [
+"Arctic fox",
+"Snow leopard",
+"Polar bear",
+"Harp seal"
+],
+"correctIndex": 3,
+"explanation": "Polar bear fur is transparent and hollow, scattering light so it appears white; harp seal pups also have translucent fur that looks snowy white, aiding camouflage on ice."
+}
+]

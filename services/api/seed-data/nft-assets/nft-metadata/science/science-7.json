@@ -1,0 +1,27 @@
+{
+  "name": "Neural Network",
+  "description": "Neuroscience ninja",
+  "image": "ipfs://QmPlaceholderscience7",
+  "mediaType": "image/svg+xml",
+  "files": [
+    {
+      "name": "science-7.svg",
+      "mediaType": "image/svg+xml",
+      "src": "ipfs://QmPlaceholderscience7"
+    }
+  ],
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Discovery"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Epic"
+    },
+    {
+      "trait_type": "Element",
+      "value": "Silver"
+    }
+  ]
+}

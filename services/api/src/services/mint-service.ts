@@ -343,7 +343,9 @@ export class MintService {
     assetFingerprint: string,
     tokenName: string,
     categoryId: string,
-    metadata: any
+    metadata: any,
+    typeCode: string,
+    mintOperationId?: string
   ): Promise<void> {
     const query = `
       INSERT INTO player_nfts (
@@ -354,10 +356,12 @@ export class MintService {
         source,
         category_id,
         tier,
+        type_code,
         status,
         minted_at,
-        metadata
-      ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, NOW(), $9)
+        metadata,
+        mint_operation_id
+      ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, NOW(), $10, $11)
     `;
 
     await this.db.query(query, [
@@ -368,8 +372,49 @@ export class MintService {
       'mint',
       categoryId,
       'category',
+      typeCode,
       'confirmed',
       JSON.stringify(metadata),
+      mintOperationId || null,
     ]);
+  }
+
+  /**
+   * Get player NFT by mint operation ID
+   * Used for idempotency - check if NFT already exists for a mint operation
+   */
+  async getNFTByMintOperation(mintOperationId: string): Promise<any | null> {
+    const query = `
+      SELECT 
+        id,
+        stake_key as "stakeKey",
+        policy_id as "policyId",
+        asset_fingerprint as "assetFingerprint",
+        token_name as "tokenName",
+        source,
+        category_id as "categoryId",
+        season_id as "seasonId",
+        tier,
+        status,
+        minted_at as "mintedAt",
+        burned_at as "burnedAt",
+        metadata,
+        mint_operation_id as "mintOperationId"
+      FROM player_nfts
+      WHERE mint_operation_id = $1
+    `;
+
+    const result = await this.db.query(query, [mintOperationId]);
+
+    if (result.rows.length === 0) {
+      return null;
+    }
+
+    const row = result.rows[0];
+    return {
+      ...row,
+      mintedAt: row.mintedAt,
+      burnedAt: row.burnedAt || undefined,
+    };
   }
 }

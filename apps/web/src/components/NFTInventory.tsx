@@ -246,9 +246,9 @@ export const NFTInventory: React.FC = () => {
                 <Text className="text-lg font-semibold text-gray-900 mb-3">
                   {getCategoryName(categoryId)} ({categoryNFTs.length})
                 </Text>
-                <View className="flex-row flex-wrap -mx-2">
+                <View className="flex-row flex-wrap -mx-1">
                   {categoryNFTs.map((nft) => (
-                    <View key={nft.id} className="w-1/2 px-2 mb-4">
+                    <View key={nft.id} className="w-1/5 px-1 mb-2">
                       <NFTCard nft={nft} onPress={setSelectedNFT} />
                     </View>
                   ))}
@@ -257,9 +257,9 @@ export const NFTInventory: React.FC = () => {
             ))
           ) : (
             // Regular grid
-            <View className="flex-row flex-wrap -mx-2">
+            <View className="flex-row flex-wrap -mx-1">
               {displayNFTs.map((nft) => (
-                <View key={nft.id} className="w-1/2 px-2 mb-4">
+                <View key={nft.id} className="w-1/5 px-1 mb-2">
                   <NFTCard nft={nft} onPress={setSelectedNFT} />
                 </View>
               ))}

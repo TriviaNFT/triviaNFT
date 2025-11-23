@@ -5,12 +5,12 @@
  */
 
 import { EventBridgeEvent } from 'aws-lambda';
-import { RedisService } from '../../services/redis-service';
+import { UpstashRedisService } from '../../services/upstash-redis-service';
 
 export const handler = async (event: EventBridgeEvent<'Scheduled Event', any>) => {
   console.log('Starting daily reset', { event });
 
-  const redis = new RedisService();
+  const redis = new UpstashRedisService();
 
   try {
     // Get all keys for daily limits and question seen sets

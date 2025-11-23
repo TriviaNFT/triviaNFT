@@ -1,0 +1,27 @@
+{
+  "name": "Geography NFT #2",
+  "description": "Geographic knowledge NFT #2",
+  "image": "ipfs://QmPlaceholdergeography2",
+  "mediaType": "image/svg+xml",
+  "files": [
+    {
+      "name": "geography-2.svg",
+      "mediaType": "image/svg+xml",
+      "src": "ipfs://QmPlaceholdergeography2"
+    }
+  ],
+  "attributes": [
+    {
+      "trait_type": "Terrain",
+      "value": "Ocean"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Uncommon"
+    },
+    {
+      "trait_type": "Climate",
+      "value": "Tropical"
+    }
+  ]
+}

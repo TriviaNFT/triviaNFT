@@ -1,0 +1,27 @@
+{
+  "name": "Literature NFT #9",
+  "description": "Literature knowledge NFT #9",
+  "image": "ipfs://QmPlaceholderliterature9",
+  "mediaType": "image/svg+xml",
+  "files": [
+    {
+      "name": "literature-9.svg",
+      "mediaType": "image/svg+xml",
+      "src": "ipfs://QmPlaceholderliterature9"
+    }
+  ],
+  "attributes": [
+    {
+      "trait_type": "Genre",
+      "value": "Thriller"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Uncommon"
+    },
+    {
+      "trait_type": "Period",
+      "value": "Noir"
+    }
+  ]
+}

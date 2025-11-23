@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { View, Text, ScrollView, Pressable } from 'react-native';
-import { Stack } from 'expo-router';
+import { Stack, useLocalSearchParams } from 'expo-router';
 import {
   MintEligibilityList,
   MintingInterface,
@@ -11,8 +11,17 @@ import type { NFT } from '@trivia-nft/shared';
 type ViewMode = 'eligibilities' | 'minting' | 'inventory';
 
 export default function MintDemoScreen() {
+  const params = useLocalSearchParams<{ eligibilityId?: string; autoMint?: string }>();
   const [viewMode, setViewMode] = useState<ViewMode>('eligibilities');
   const [selectedEligibilityId, setSelectedEligibilityId] = useState<string | null>(null);
+
+  // Auto-start minting if eligibilityId is provided in URL
+  useEffect(() => {
+    if (params.eligibilityId && params.autoMint === 'true') {
+      setSelectedEligibilityId(params.eligibilityId);
+      setViewMode('minting');
+    }
+  }, [params.eligibilityId, params.autoMint]);
 
   const handleMintClick = (eligibilityId: string) => {
     setSelectedEligibilityId(eligibilityId);

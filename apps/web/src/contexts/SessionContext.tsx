@@ -80,13 +80,14 @@ export const SessionProvider: React.FC<SessionProviderProps> = ({ children }) =>
 
         const { sessionId, timestamp } = JSON.parse(savedData);
         
-        // Check if session is still valid (within 15 minutes)
+        // Check if session is still valid (within 3 minutes - generous buffer for 100s game)
         const now = Date.now();
-        const fifteenMinutes = 15 * 60 * 1000;
+        const threeMinutes = 3 * 60 * 1000;
         
-        if (now - timestamp > fifteenMinutes) {
+        if (now - timestamp > threeMinutes) {
           // Session expired
           localStorage.removeItem(SESSION_STORAGE_KEY);
+          localStorage.removeItem(SESSION_LOCK_KEY);
           return;
         }
 
@@ -102,7 +103,10 @@ export const SessionProvider: React.FC<SessionProviderProps> = ({ children }) =>
         }
       } catch (error) {
         console.error('Failed to restore session:', error);
+        // Clear both session data and lock on failure
         localStorage.removeItem(SESSION_STORAGE_KEY);
+        localStorage.removeItem(SESSION_LOCK_KEY);
+        setHasActiveSessionLock(false);
       }
     };
 
@@ -117,13 +121,14 @@ export const SessionProvider: React.FC<SessionProviderProps> = ({ children }) =>
       if (lockData) {
         const { timestamp } = JSON.parse(lockData);
         const now = Date.now();
-        const fifteenMinutes = 15 * 60 * 1000;
+        const threeMinutes = 3 * 60 * 1000;
         
-        if (now - timestamp < fifteenMinutes) {
+        if (now - timestamp < threeMinutes) {
           setHasActiveSessionLock(true);
         } else {
           // Lock expired
           localStorage.removeItem(SESSION_LOCK_KEY);
+          localStorage.removeItem(SESSION_STORAGE_KEY);
           setHasActiveSessionLock(false);
         }
       } else {

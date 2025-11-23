@@ -76,6 +76,9 @@ export const SeasonHistory: React.FC<SeasonHistoryProps> = ({
               <Pressable
                 onPress={() => handleSeasonSelect(season.id)}
                 className="bg-gray-900 rounded-lg p-4"
+                accessibilityRole="button"
+                accessibilityLabel={`View standings for ${season.name}`}
+                accessibilityState={{ expanded: isExpanded }}
               >
                 <View className="flex-row items-center justify-between">
                   <View className="flex-1">

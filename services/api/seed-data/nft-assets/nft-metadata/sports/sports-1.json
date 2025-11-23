@@ -1,0 +1,27 @@
+{
+  "name": "Sports NFT #1",
+  "description": "Sports knowledge NFT #1",
+  "image": "ipfs://QmPlaceholdersports1",
+  "mediaType": "image/svg+xml",
+  "files": [
+    {
+      "name": "sports-1.svg",
+      "mediaType": "image/svg+xml",
+      "src": "ipfs://QmPlaceholdersports1"
+    }
+  ],
+  "attributes": [
+    {
+      "trait_type": "Sport",
+      "value": "Football"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Common"
+    },
+    {
+      "trait_type": "Achievement",
+      "value": "Championship"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "name": "Arts NFT #6",
+  "description": "Arts knowledge NFT #6",
+  "image": "ipfs://QmPlaceholderarts6",
+  "mediaType": "image/svg+xml",
+  "files": [
+    {
+      "name": "arts-6.svg",
+      "mediaType": "image/svg+xml",
+      "src": "ipfs://QmPlaceholderarts6"
+    }
+  ],
+  "attributes": [
+    {
+      "trait_type": "Style",
+      "value": "Expressionism"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Rare"
+    },
+    {
+      "trait_type": "Medium",
+      "value": "Mixed Media"
+    }
+  ]
+}

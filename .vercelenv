@@ -1,0 +1,135 @@
+# TriviaNFT - Required Environment Variables for Vercel
+# 
+# This file documents all environment variables that must be configured
+# in the Vercel dashboard or via the Vercel CLI before deployment.
+#
+# To set environment variables:
+#   vercel env add <VARIABLE_NAME>
+#
+# Or use the Vercel dashboard:
+#   https://vercel.com/[your-team]/[your-project]/settings/environment-variables
+
+# ============================================================================
+# REQUIRED ENVIRONMENT VARIABLES
+# ============================================================================
+
+# Database (Neon PostgreSQL)
+# ---------------------------
+# DATABASE_URL - Neon PostgreSQL pooled connection string
+#   Format: postgresql://user:pass@host-pooler.neon.tech/db?sslmode=require
+#   Get from: Neon dashboard > Connection Details > Pooled connection
+#
+# DATABASE_URL_UNPOOLED - Neon PostgreSQL direct connection string
+#   Format: postgresql://user:pass@host.neon.tech/db?sslmode=require
+#   Get from: Neon dashboard > Connection Details > Direct connection
+#   Used for: Database migrations
+
+# Redis (Upstash)
+# ---------------
+# REDIS_URL - Upstash Redis REST URL
+#   Format: https://endpoint.upstash.io
+#   Get from: Upstash dashboard > REST API > UPSTASH_REDIS_REST_URL
+#
+# REDIS_TOKEN - Upstash Redis REST token
+#   Get from: Upstash dashboard > REST API > UPSTASH_REDIS_REST_TOKEN
+
+# Inngest (Workflow Orchestration)
+# ---------------------------------
+# INNGEST_EVENT_KEY - Inngest event key for sending events
+#   Get from: Inngest dashboard > Keys > Event Key
+#
+# INNGEST_SIGNING_KEY - Inngest signing key for verifying requests
+#   Format: signkey-prod-...
+#   Get from: Inngest dashboard > Keys > Signing Key
+
+# Blockchain (Cardano via Blockfrost)
+# ------------------------------------
+# BLOCKFROST_PROJECT_ID - Blockfrost project ID
+#   Format: preprod... or mainnet...
+#   Get from: Blockfrost dashboard > Project > API Key
+#
+# BLOCKFROST_IPFS_PROJECT_ID - Blockfrost IPFS project ID
+#   Format: ipfs...
+#   Get from: Blockfrost dashboard > IPFS Project > API Key
+#
+# CARDANO_NETWORK - Cardano network
+#   Values: preprod | mainnet
+#   Use: preprod for testing, mainnet for production
+#
+# NFT_POLICY_ID - Cardano NFT policy ID (56 hex characters)
+#   Get from: Your NFT minting policy script
+#
+# PAYMENT_ADDRESS - Cardano payment address for transaction fees
+#   Format: addr_test1... (preprod) or addr1... (mainnet)
+#   Get from: Your Cardano wallet
+#
+# WALLET_SEED_PHRASE - Cardano wallet 24-word seed phrase
+#   Format: word1 word2 word3 ... word24
+#   SECURITY: Keep this secret! Never commit to Git!
+#
+# ROYALTY_ADDRESS - Cardano address for NFT royalties
+#   Format: addr_test1... (preprod) or addr1... (mainnet)
+#
+# ROYALTY_RATE - NFT royalty rate as decimal
+#   Format: 0.025 (for 2.5%)
+#   Range: 0.0 to 1.0
+
+# Authentication (JWT)
+# --------------------
+# JWT_SECRET - JWT secret for token signing (minimum 32 characters)
+#   Generate: openssl rand -base64 32
+#   SECURITY: Keep this secret! Never commit to Git!
+#
+# JWT_ISSUER - JWT issuer identifier
+#   Example: trivia-nft
+
+# ============================================================================
+# OPTIONAL ENVIRONMENT VARIABLES
+# ============================================================================
+
+# AWS S3 (Optional - for asset storage)
+# --------------------------------------
+# S3_BUCKET - AWS S3 bucket name
+# S3_REGION - AWS S3 region (e.g., us-east-1)
+# AWS_ACCESS_KEY_ID - AWS IAM access key (20 characters)
+# AWS_SECRET_ACCESS_KEY - AWS IAM secret key (40 characters)
+
+# Testing Flags
+# -------------
+# MINT_TO_BACKEND_WALLET - Mint NFTs to backend wallet for testing
+#   Values: true | false
+#   Default: false
+
+# ============================================================================
+# ENVIRONMENT-SPECIFIC NOTES
+# ============================================================================
+
+# Development:
+#   - Use Blockfrost preprod network
+#   - Use test wallet addresses (addr_test1...)
+#   - Can use local PostgreSQL or Neon dev database
+#
+# Preview (Git branches):
+#   - Automatic Neon database branch created
+#   - Automatic Inngest sandbox environment
+#   - Use Blockfrost preprod network
+#   - Use test wallet addresses
+#
+# Production:
+#   - Use Blockfrost mainnet network
+#   - Use production wallet addresses (addr1...)
+#   - Use production Neon database
+#   - Use production Inngest environment
+
+# ============================================================================
+# VERIFICATION
+# ============================================================================
+#
+# To verify all environment variables are set correctly, run:
+#   tsx scripts/verify-vercel-env.ts
+#
+# This will check:
+#   - All required variables are present
+#   - Variable formats are valid
+#   - Network consistency (preprod vs mainnet)
+#   - Database URL consistency (pooled vs unpooled)

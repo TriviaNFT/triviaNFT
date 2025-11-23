@@ -1,0 +1,27 @@
+{
+  "name": "General NFT #2",
+  "description": "General knowledge NFT #2",
+  "image": "ipfs://QmPlaceholdergeneral2",
+  "mediaType": "image/svg+xml",
+  "files": [
+    {
+      "name": "general-2.svg",
+      "mediaType": "image/svg+xml",
+      "src": "ipfs://QmPlaceholdergeneral2"
+    }
+  ],
+  "attributes": [
+    {
+      "trait_type": "Type",
+      "value": "Wisdom"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Uncommon"
+    },
+    {
+      "trait_type": "Level",
+      "value": "Intermediate"
+    }
+  ]
+}

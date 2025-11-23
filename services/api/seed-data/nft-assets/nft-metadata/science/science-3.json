@@ -1,0 +1,27 @@
+{
+  "name": "Periodic Master",
+  "description": "Chemistry champion",
+  "image": "ipfs://QmPlaceholderscience3",
+  "mediaType": "image/svg+xml",
+  "files": [
+    {
+      "name": "science-3.svg",
+      "mediaType": "image/svg+xml",
+      "src": "ipfs://QmPlaceholderscience3"
+    }
+  ],
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Lab"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Rare"
+    },
+    {
+      "trait_type": "Element",
+      "value": "Carbon"
+    }
+  ]
+}

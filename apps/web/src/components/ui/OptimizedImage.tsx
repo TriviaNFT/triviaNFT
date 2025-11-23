@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
-import { Image, View, ActivityIndicator } from 'react-native';
+import React, { useState, useEffect, useRef } from 'react';
+import { Image, View, ActivityIndicator, Platform } from 'react-native';
 import type { ImageProps, ImageSourcePropType } from 'react-native';
+import { useResponsive } from '../../hooks/useResponsive';
 
 export interface OptimizedImageProps extends Omit<ImageProps, 'source'> {
   source: ImageSourcePropType;
@@ -9,11 +10,14 @@ export interface OptimizedImageProps extends Omit<ImageProps, 'source'> {
   aspectRatio?: number;
   placeholder?: React.ReactNode;
   fallback?: React.ReactNode;
+  lazy?: boolean; // Enable lazy loading for below-fold images
+  priority?: boolean; // Disable lazy loading for above-fold images
 }
 
 /**
  * Optimized image component with lazy loading and responsive sizing.
  * Automatically handles loading states and errors.
+ * Supports lazy loading for below-fold images to improve performance.
  */
 export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   source,
@@ -22,12 +26,50 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   aspectRatio,
   placeholder,
   fallback,
+  lazy = false,
+  priority = false,
   className,
   style,
   ...props
 }) => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
+  const [shouldLoad, setShouldLoad] = useState(!lazy || priority);
+  const containerRef = useRef<View>(null);
+  const { width: screenWidth } = useResponsive();
+
+  // Intersection Observer for lazy loading (web only)
+  useEffect(() => {
+    if (Platform.OS !== 'web' || !lazy || priority || shouldLoad) {
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setShouldLoad(true);
+            observer.disconnect();
+          }
+        });
+      },
+      {
+        rootMargin: '50px', // Start loading 50px before entering viewport
+      }
+    );
+
+    const element = (containerRef.current as any)?._nativeTag 
+      ? document.querySelector(`[data-tag="${(containerRef.current as any)._nativeTag}"]`)
+      : null;
+
+    if (element) {
+      observer.observe(element);
+    }
+
+    return () => {
+      observer.disconnect();
+    };
+  }, [lazy, priority, shouldLoad]);
 
   const handleLoadStart = () => {
     setLoading(true);
@@ -43,6 +85,17 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
     setError(true);
   };
 
+  // Get responsive image source if source is a string URL
+  const getResponsiveSource = (): ImageSourcePropType => {
+    if (typeof source === 'object' && 'uri' in source) {
+      const uri = source.uri;
+      if (uri && typeof uri === 'string' && !uri.includes('?w=')) {
+        return { ...source, uri: getResponsiveImageSource(uri, screenWidth) };
+      }
+    }
+    return source;
+  };
+
   const containerStyle = {
     width,
     height,
@@ -54,21 +107,32 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   }
 
   return (
-    <View style={containerStyle} className={`relative ${className || ''}`}>
-      {loading && (
+    <View 
+      ref={containerRef}
+      style={containerStyle} 
+      className={`relative ${className || ''}`}
+    >
+      {loading && shouldLoad && (
         <View className="absolute inset-0 items-center justify-center bg-background-tertiary">
           {placeholder || <ActivityIndicator size="small" color="#6d4ee3" />}
         </View>
       )}
-      <Image
-        source={source}
-        style={[containerStyle, style]}
-        onLoadStart={handleLoadStart}
-        onLoadEnd={handleLoadEnd}
-        onError={handleError}
-        resizeMode="cover"
-        {...props}
-      />
+      {shouldLoad && (
+        <Image
+          source={getResponsiveSource()}
+          style={[containerStyle, style]}
+          onLoadStart={handleLoadStart}
+          onLoadEnd={handleLoadEnd}
+          onError={handleError}
+          resizeMode="cover"
+          {...props}
+        />
+      )}
+      {!shouldLoad && (
+        <View className="absolute inset-0 items-center justify-center bg-background-tertiary">
+          {placeholder || <ActivityIndicator size="small" color="#6d4ee3" />}
+        </View>
+      )}
     </View>
   );
 };

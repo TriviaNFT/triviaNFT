@@ -160,7 +160,7 @@ export default function ErrorHandlingDemo() {
           
           <Button
             variant="secondary"
-            onPress={() => gameToasts.mintSuccess('Science NFT #42')}
+            onPress={() => gameToasts.mintSuccess('Science NFT')}
             style={styles.gridButton}
           >
             Mint Success

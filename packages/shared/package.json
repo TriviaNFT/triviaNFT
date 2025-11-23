@@ -13,6 +13,7 @@
   },
   "scripts": {
     "build": "tsc",
+    "vercel-build": "tsc",
     "lint": "eslint .",
     "type-check": "tsc --noEmit",
     "test": "vitest run"
@@ -23,8 +24,10 @@
   },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.133",
+    "@types/minimatch": "^6.0.0",
     "@types/node": "^20.11.0",
     "@types/uuid": "^9.0.7",
+    "fast-check": "^4.3.0",
     "typescript": "^5.3.3",
     "vitest": "^1.2.2"
   }

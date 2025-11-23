@@ -1,0 +1,27 @@
+{
+  "name": "General NFT #10",
+  "description": "General knowledge NFT #10",
+  "image": "ipfs://QmPlaceholdergeneral10",
+  "mediaType": "image/svg+xml",
+  "files": [
+    {
+      "name": "general-10.svg",
+      "mediaType": "image/svg+xml",
+      "src": "ipfs://QmPlaceholdergeneral10"
+    }
+  ],
+  "attributes": [
+    {
+      "trait_type": "Type",
+      "value": "Genius"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Legendary"
+    },
+    {
+      "trait_type": "Level",
+      "value": "Omniscient"
+    }
+  ]
+}

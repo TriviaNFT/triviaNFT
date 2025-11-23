@@ -1,0 +1,27 @@
+{
+  "name": "General NFT #6",
+  "description": "General knowledge NFT #6",
+  "image": "ipfs://QmPlaceholdergeneral6",
+  "mediaType": "image/svg+xml",
+  "files": [
+    {
+      "name": "general-6.svg",
+      "mediaType": "image/svg+xml",
+      "src": "ipfs://QmPlaceholdergeneral6"
+    }
+  ],
+  "attributes": [
+    {
+      "trait_type": "Type",
+      "value": "Brain"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Rare"
+    },
+    {
+      "trait_type": "Level",
+      "value": "Genius"
+    }
+  ]
+}

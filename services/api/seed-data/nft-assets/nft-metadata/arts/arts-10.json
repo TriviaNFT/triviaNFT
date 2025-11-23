@@ -1,0 +1,27 @@
+{
+  "name": "Arts NFT #10",
+  "description": "Arts knowledge NFT #10",
+  "image": "ipfs://QmPlaceholderarts10",
+  "mediaType": "image/svg+xml",
+  "files": [
+    {
+      "name": "arts-10.svg",
+      "mediaType": "image/svg+xml",
+      "src": "ipfs://QmPlaceholderarts10"
+    }
+  ],
+  "attributes": [
+    {
+      "trait_type": "Style",
+      "value": "Baroque"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Legendary"
+    },
+    {
+      "trait_type": "Medium",
+      "value": "Marble"
+    }
+  ]
+}

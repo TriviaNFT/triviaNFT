@@ -322,6 +322,136 @@ export class Logger {
       ...metadata,
     });
   }
+
+  /**
+   * Log asset name generation
+   */
+  logAssetNameGeneration(
+    tier: string,
+    assetName: string,
+    success: boolean,
+    metadata?: Record<string, any>
+  ): void {
+    const level = success ? LogLevel.INFO : LogLevel.ERROR;
+    const message = success 
+      ? `Asset name generated: ${assetName}` 
+      : `Asset name generation failed for tier: ${tier}`;
+    
+    this.log(level, message, {
+      operation: 'asset_name_generation',
+      tier,
+      assetName: success ? assetName : undefined,
+      success,
+      ...metadata,
+    });
+  }
+
+  /**
+   * Log asset name parsing
+   */
+  logAssetNameParsing(
+    assetName: string,
+    success: boolean,
+    isLegacyFormat?: boolean,
+    metadata?: Record<string, any>
+  ): void {
+    const level = success ? LogLevel.DEBUG : LogLevel.WARN;
+    const message = success 
+      ? `Asset name parsed: ${assetName}${isLegacyFormat ? ' (legacy format)' : ''}` 
+      : `Asset name parsing failed: ${assetName}`;
+    
+    this.log(level, message, {
+      operation: 'asset_name_parsing',
+      assetName,
+      success,
+      isLegacyFormat,
+      ...metadata,
+    });
+  }
+
+  /**
+   * Log asset name validation
+   */
+  logAssetNameValidation(
+    assetName: string,
+    valid: boolean,
+    errorCode?: string,
+    errorDetails?: any
+  ): void {
+    const level = valid ? LogLevel.DEBUG : LogLevel.WARN;
+    const message = valid 
+      ? `Asset name validated: ${assetName}` 
+      : `Asset name validation failed: ${assetName} - ${errorCode}`;
+    
+    this.log(level, message, {
+      operation: 'asset_name_validation',
+      assetName,
+      valid,
+      errorCode,
+      errorDetails: errorCode ? sanitizeObject(errorDetails) : undefined,
+    });
+  }
+
+  /**
+   * Log hex ID generation
+   */
+  logHexIdGeneration(hexId: string, metadata?: Record<string, any>): void {
+    this.debug(`Hex ID generated: ${hexId}`, {
+      operation: 'hex_id_generation',
+      hexId,
+      ...metadata,
+    });
+  }
+
+  /**
+   * Log category code mapping
+   */
+  logCategoryCodeMapping(
+    operation: 'slug_to_code' | 'code_to_slug',
+    input: string,
+    output: string | null,
+    success: boolean,
+    metadata?: Record<string, any>
+  ): void {
+    const level = success ? LogLevel.DEBUG : LogLevel.WARN;
+    const message = success 
+      ? `Category code mapping: ${input} -> ${output}` 
+      : `Category code mapping failed: ${input}`;
+    
+    this.log(level, message, {
+      operation: 'category_code_mapping',
+      mappingType: operation,
+      input,
+      output,
+      success,
+      ...metadata,
+    });
+  }
+
+  /**
+   * Log season code operation
+   */
+  logSeasonCodeOperation(
+    operation: 'generate' | 'parse',
+    input: string,
+    output: string | null,
+    success: boolean,
+    metadata?: Record<string, any>
+  ): void {
+    const level = success ? LogLevel.DEBUG : LogLevel.WARN;
+    const message = success 
+      ? `Season code ${operation}: ${input} -> ${output}` 
+      : `Season code ${operation} failed: ${input}`;
+    
+    this.log(level, message, {
+      operation: 'season_code_operation',
+      operationType: operation,
+      input,
+      output,
+      success,
+      ...metadata,
+    });
+  }
 }
 
 /**

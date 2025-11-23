@@ -1,0 +1,27 @@
+{
+  "name": "Literature NFT #3",
+  "description": "Literature knowledge NFT #3",
+  "image": "ipfs://QmPlaceholderliterature3",
+  "mediaType": "image/svg+xml",
+  "files": [
+    {
+      "name": "literature-3.svg",
+      "mediaType": "image/svg+xml",
+      "src": "ipfs://QmPlaceholderliterature3"
+    }
+  ],
+  "attributes": [
+    {
+      "trait_type": "Genre",
+      "value": "Poetry"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Rare"
+    },
+    {
+      "trait_type": "Period",
+      "value": "Romantic"
+    }
+  ]
+}

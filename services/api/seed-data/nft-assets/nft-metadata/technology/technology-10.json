@@ -1,0 +1,27 @@
+{
+  "name": "Technology NFT #10",
+  "description": "Technology knowledge NFT #10",
+  "image": "ipfs://QmPlaceholdertechnology10",
+  "mediaType": "image/svg+xml",
+  "files": [
+    {
+      "name": "technology-10.svg",
+      "mediaType": "image/svg+xml",
+      "src": "ipfs://QmPlaceholdertechnology10"
+    }
+  ],
+  "attributes": [
+    {
+      "trait_type": "Field",
+      "value": "VR/AR"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Legendary"
+    },
+    {
+      "trait_type": "Innovation",
+      "value": "Metaverse"
+    }
+  ]
+}

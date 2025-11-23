@@ -1,0 +1,27 @@
+{
+  "name": "General NFT #7",
+  "description": "General knowledge NFT #7",
+  "image": "ipfs://QmPlaceholdergeneral7",
+  "mediaType": "image/svg+xml",
+  "files": [
+    {
+      "name": "general-7.svg",
+      "mediaType": "image/svg+xml",
+      "src": "ipfs://QmPlaceholdergeneral7"
+    }
+  ],
+  "attributes": [
+    {
+      "trait_type": "Type",
+      "value": "Smart"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Epic"
+    },
+    {
+      "trait_type": "Level",
+      "value": "Prodigy"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "name": "Technology NFT #7",
+  "description": "Technology knowledge NFT #7",
+  "image": "ipfs://QmPlaceholdertechnology7",
+  "mediaType": "image/svg+xml",
+  "files": [
+    {
+      "name": "technology-7.svg",
+      "mediaType": "image/svg+xml",
+      "src": "ipfs://QmPlaceholdertechnology7"
+    }
+  ],
+  "attributes": [
+    {
+      "trait_type": "Field",
+      "value": "Quantum"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Epic"
+    },
+    {
+      "trait_type": "Innovation",
+      "value": "Computing"
+    }
+  ]
+}

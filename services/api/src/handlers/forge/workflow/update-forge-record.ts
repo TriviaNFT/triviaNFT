@@ -18,6 +18,9 @@ interface UpdateForgeRecordInput {
   mintTxHash: string;
   assetFingerprint: string;
   ultimateMetadata: any;
+  assetName: string;
+  displayName: string;
+  typeCode: string;
 }
 
 interface UpdateForgeRecordOutput extends UpdateForgeRecordInput {
@@ -38,6 +41,8 @@ export const handler = async (
     mintTxHash,
     assetFingerprint,
     ultimateMetadata,
+    assetName,
+    typeCode,
   } = event;
 
   try {
@@ -70,22 +75,22 @@ export const handler = async (
         break;
     }
 
-    // Create Ultimate NFT record
+    // Create Ultimate NFT record with new asset name and type code
     const policyId = process.env.POLICY_ID || 'placeholder_policy_id';
-    const tokenName = `ultimate_${forgeId}`;
 
     await forgeService.createUltimateNFT(
       stakeKey,
       policyId,
       assetFingerprint,
-      tokenName,
+      assetName, // Use the new asset name format
       tier,
       categoryId,
       seasonId,
-      ultimateMetadata
+      ultimateMetadata,
+      typeCode // Pass the type code (ULT, MAST, or SEAS)
     );
 
-    console.log(`Forge operation ${forgeId} completed successfully`);
+    console.log(`Forge operation ${forgeId} completed successfully with asset name: ${assetName}`);
 
     return {
       ...event,

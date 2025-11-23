@@ -1,0 +1,27 @@
+{
+  "name": "Sports NFT #3",
+  "description": "Sports knowledge NFT #3",
+  "image": "ipfs://QmPlaceholdersports3",
+  "mediaType": "image/svg+xml",
+  "files": [
+    {
+      "name": "sports-3.svg",
+      "mediaType": "image/svg+xml",
+      "src": "ipfs://QmPlaceholdersports3"
+    }
+  ],
+  "attributes": [
+    {
+      "trait_type": "Sport",
+      "value": "Baseball"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Rare"
+    },
+    {
+      "trait_type": "Achievement",
+      "value": "Record"
+    }
+  ]
+}

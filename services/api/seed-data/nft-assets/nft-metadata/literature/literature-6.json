@@ -1,0 +1,27 @@
+{
+  "name": "Literature NFT #6",
+  "description": "Literature knowledge NFT #6",
+  "image": "ipfs://QmPlaceholderliterature6",
+  "mediaType": "image/svg+xml",
+  "files": [
+    {
+      "name": "literature-6.svg",
+      "mediaType": "image/svg+xml",
+      "src": "ipfs://QmPlaceholderliterature6"
+    }
+  ],
+  "attributes": [
+    {
+      "trait_type": "Genre",
+      "value": "Sci-Fi"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Rare"
+    },
+    {
+      "trait_type": "Period",
+      "value": "Futuristic"
+    }
+  ]
+}

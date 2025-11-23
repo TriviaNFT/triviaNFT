@@ -1,0 +1,27 @@
+{
+  "name": "History NFT #1",
+  "description": "Historical knowledge NFT #1",
+  "image": "ipfs://QmPlaceholderhistory1",
+  "mediaType": "image/svg+xml",
+  "files": [
+    {
+      "name": "history-1.svg",
+      "mediaType": "image/svg+xml",
+      "src": "ipfs://QmPlaceholderhistory1"
+    }
+  ],
+  "attributes": [
+    {
+      "trait_type": "Era",
+      "value": "Ancient"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Common"
+    },
+    {
+      "trait_type": "Civilization",
+      "value": "Egyptian"
+    }
+  ]
+}

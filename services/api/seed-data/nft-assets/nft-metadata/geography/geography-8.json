@@ -1,0 +1,27 @@
+{
+  "name": "Geography NFT #8",
+  "description": "Geographic knowledge NFT #8",
+  "image": "ipfs://QmPlaceholdergeography8",
+  "mediaType": "image/svg+xml",
+  "files": [
+    {
+      "name": "geography-8.svg",
+      "mediaType": "image/svg+xml",
+      "src": "ipfs://QmPlaceholdergeography8"
+    }
+  ],
+  "attributes": [
+    {
+      "trait_type": "Terrain",
+      "value": "Canyon"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Common"
+    },
+    {
+      "trait_type": "Climate",
+      "value": "Mediterranean"
+    }
+  ]
+}

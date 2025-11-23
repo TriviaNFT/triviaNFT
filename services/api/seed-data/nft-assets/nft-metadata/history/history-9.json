@@ -1,0 +1,27 @@
+{
+  "name": "History NFT #9",
+  "description": "Historical knowledge NFT #9",
+  "image": "ipfs://QmPlaceholderhistory9",
+  "mediaType": "image/svg+xml",
+  "files": [
+    {
+      "name": "history-9.svg",
+      "mediaType": "image/svg+xml",
+      "src": "ipfs://QmPlaceholderhistory9"
+    }
+  ],
+  "attributes": [
+    {
+      "trait_type": "Era",
+      "value": "Enlightenment"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Uncommon"
+    },
+    {
+      "trait_type": "Civilization",
+      "value": "Viking"
+    }
+  ]
+}

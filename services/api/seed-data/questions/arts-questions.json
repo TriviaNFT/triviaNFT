@@ -1,0 +1,602 @@
+﻿[
+{
+"question": "Who painted the famous artwork 'Mona Lisa'?",
+"options": ["Vincent van Gogh", "Pablo Picasso", "Leonardo da Vinci", "Claude Monet"],
+"correctIndex": 2,
+"explanation": "Leonardo da Vinci painted the 'Mona Lisa' during the early 16th century."
+},
+{
+"question": "Which playwright wrote 'Romeo and Juliet'?",
+"options": ["William Shakespeare", "Oscar Wilde", "George Bernard Shaw", "Arthur Miller"],
+"correctIndex": 0,
+"explanation": "William Shakespeare wrote 'Romeo and Juliet', one of his most famous tragedies."
+},
+{
+"question": "In which art form would you typically use a kiln?",
+"options": ["Sculpture", "Pottery", "Photography", "Ballet"],
+"correctIndex": 1,
+"explanation": "A kiln is a special oven used to fire and harden clay in pottery."
+},
+{
+"question": "Who wrote the novel '1984'?",
+"options": ["George Orwell", "Aldous Huxley", "J.R.R. Tolkien", "C.S. Lewis"],
+"correctIndex": 0,
+"explanation": "George Orwell wrote '1984', a famous dystopian novel."
+},
+{
+"question": "The story of 'Harry Potter' mainly takes place in which magical school?",
+"options": ["Ilvermorny", "Beauxbatons", "Durmstrang", "Hogwarts"],
+"correctIndex": 3,
+"explanation": "Hogwarts School of Witchcraft and Wizardry is the main setting for the Harry Potter series."
+},
+{
+"question": "Which artist is known for painting 'Starry Night'?",
+"options": ["Claude Monet", "Vincent van Gogh", "Edvard Munch", "Paul Cézanne"],
+"correctIndex": 1,
+"explanation": "Vincent van Gogh painted 'The Starry Night' in 1889."
+},
+{
+"question": "Who wrote the classic novel 'Pride and Prejudice'?",
+"options": ["Charlotte Brontë", "Jane Austen", "Emily Brontë", "Mary Shelley"],
+"correctIndex": 1,
+"explanation": "Jane Austen wrote 'Pride and Prejudice', published in 1813."
+},
+{
+"question": "Which of these is a type of poem?",
+"options": ["Sonnet", "Fresco", "Mosaic", "Symphony"],
+"correctIndex": 0,
+"explanation": "A sonnet is a structured poem, often with 14 lines and a set rhyme scheme."
+},
+{
+"question": "Which famous Spanish artist is known as a founder of Cubism?",
+"options": ["Salvador Dalí", "Francisco Goya", "Pablo Picasso", "Joan Miró"],
+"correctIndex": 2,
+"explanation": "Pablo Picasso helped develop Cubism, a revolutionary art style."
+},
+{
+"question": "Who is the author of 'The Hobbit'?",
+"options": ["J.K. Rowling", "J.R.R. Tolkien", "C.S. Lewis", "Rick Riordan"],
+"correctIndex": 1,
+"explanation": "J.R.R. Tolkien wrote 'The Hobbit', a fantasy adventure novel."
+},
+{
+"question": "Which artist is famous for painting water lilies?",
+"options": ["Claude Monet", "Henri Matisse", "Jackson Pollock", "Andy Warhol"],
+"correctIndex": 0,
+"explanation": "Claude Monet painted many works featuring water lilies in his garden at Giverny."
+},
+{
+"question": "In literature, what do we call a book that tells a made-up story?",
+"options": ["Non-fiction", "Biography", "Fiction", "Essay"],
+"correctIndex": 2,
+"explanation": "Fiction refers to stories that are invented or imagined by the author."
+},
+{
+"question": "Who wrote the play 'Hamlet'?",
+"options": ["Tennessee Williams", "William Shakespeare", "Anton Chekhov", "Henrik Ibsen"],
+"correctIndex": 1,
+"explanation": "'Hamlet' is one of William Shakespeare's most famous tragedies."
+},
+{
+"question": "Which book series features the character Katniss Everdeen?",
+"options": ["Divergent", "The Hunger Games", "Twilight", "Percy Jackson"],
+"correctIndex": 1,
+"explanation": "Katniss Everdeen is the main character in 'The Hunger Games' trilogy."
+},
+{
+"question": "Which country is the artist Frida Kahlo from?",
+"options": ["Spain", "Argentina", "Mexico", "Portugal"],
+"correctIndex": 2,
+"explanation": "Frida Kahlo was a Mexican painter known for her self-portraits."
+},
+{
+"question": "What do we call a book that tells the true story of someone's life, written by someone else?",
+"options": ["Autobiography", "Novel", "Biography", "Fable"],
+"correctIndex": 2,
+"explanation": "A biography is a true account of a person's life written by another person."
+},
+{
+"question": "Who wrote the famous novel 'Moby-Dick'?",
+"options": ["Herman Melville", "Mark Twain", "Charles Dickens", "Leo Tolstoy"],
+"correctIndex": 0,
+"explanation": "Herman Melville wrote 'Moby-Dick', about a captain's quest for a giant whale."
+},
+{
+"question": "Which of these is a famous sculpture by Michelangelo?",
+"options": ["The Thinker", "David", "Venus de Milo", "The Kiss"],
+"correctIndex": 1,
+"explanation": "Michelangelo's 'David' is a famous marble sculpture of a biblical hero."
+},
+{
+"question": "In which book would you find the character Sherlock Holmes?",
+"options": ["Detective Poirot", "The Da Vinci Code", "Sherlock Holmes stories", "The Hardy Boys"],
+"correctIndex": 2,
+"explanation": "Sherlock Holmes is a fictional detective created by Arthur Conan Doyle."
+},
+{
+"question": "Which art movement is Salvador Dalí associated with?",
+"options": ["Impressionism", "Cubism", "Surrealism", "Realism"],
+"correctIndex": 2,
+"explanation": "Salvador Dalí was a leading artist in the Surrealist movement."
+},
+{
+"question": "Who is the author of 'Charlie and the Chocolate Factory'?",
+"options": ["Roald Dahl", "Dr. Seuss", "Beatrix Potter", "E.B. White"],
+"correctIndex": 0,
+"explanation": "Roald Dahl wrote 'Charlie and the Chocolate Factory', a popular children's book."
+},
+{
+"question": "Which of these is a famous ballet?",
+"options": ["Swan Lake", "Moonlight Sonata", "The Four Seasons", "Carmen"],
+"correctIndex": 0,
+"explanation": "'Swan Lake' is a famous ballet with music by Tchaikovsky."
+},
+{
+"question": "Who painted the ceiling of the Sistine Chapel in Vatican City?",
+"options": ["Leonardo da Vinci", "Raphael", "Michelangelo", "Caravaggio"],
+"correctIndex": 2,
+"explanation": "Michelangelo painted the iconic ceiling of the Sistine Chapel."
+},
+{
+"question": "Which children's book character lives in the Hundred Acre Wood?",
+"options": ["Paddington Bear", "Winnie-the-Pooh", "Peter Rabbit", "The Gruffalo"],
+"correctIndex": 1,
+"explanation": "Winnie-the-Pooh lives in the Hundred Acre Wood with his friends."
+},
+{
+"question": "What do we call a short story that usually teaches a moral lesson and often uses animals as characters?",
+"options": ["Myth", "Fable", "Epic", "Legend"],
+"correctIndex": 1,
+"explanation": "A fable is a brief story that teaches a lesson, often using animals."
+},
+{
+"question": "Who wrote 'To Kill a Mockingbird'?",
+"options": ["Harper Lee", "John Steinbeck", "F. Scott Fitzgerald", "Toni Morrison"],
+"correctIndex": 0,
+"explanation": "Harper Lee wrote 'To Kill a Mockingbird', set in the American South."
+},
+{
+"question": "Which famous artist cut off part of his own ear?",
+"options": ["Paul Gauguin", "Vincent van Gogh", "Henri Toulouse-Lautrec", "Edvard Munch"],
+"correctIndex": 1,
+"explanation": "Vincent van Gogh is known for cutting off part of his ear during a crisis."
+},
+{
+"question": "Which of these is a famous fantasy book series by C.S. Lewis?",
+"options": ["The Chronicles of Narnia", "A Series of Unfortunate Events", "Goosebumps", "His Dark Materials"],
+"correctIndex": 0,
+"explanation": "C.S. Lewis wrote 'The Chronicles of Narnia', a classic fantasy series."
+},
+{
+"question": "In art, what are red, blue, and yellow called?",
+"options": ["Warm colors", "Secondary colors", "Primary colors", "Neutral colors"],
+"correctIndex": 2,
+"explanation": "Red, blue, and yellow are primary colors that can be mixed to create others."
+},
+{
+"question": "Who is the author of the 'Diary of a Wimpy Kid' series?",
+"options": ["Jeff Kinney", "Dav Pilkey", "R.L. Stine", "Judy Blume"],
+"correctIndex": 0,
+"explanation": "Jeff Kinney created the 'Diary of a Wimpy Kid' series."
+},
+{
+"question": "Which novel features the character Huckleberry Finn?",
+"options": ["Great Expectations", "The Adventures of Huckleberry Finn", "Of Mice and Men", "Moby-Dick"],
+"correctIndex": 1,
+"explanation": "'The Adventures of Huckleberry Finn' is a novel by Mark Twain."
+},
+{
+"question": "Which famous painter is known for his 'Blue Period'?",
+"options": ["Vincent van Gogh", "Pablo Picasso", "Claude Monet", "Rembrandt"],
+"correctIndex": 1,
+"explanation": "Pablo Picasso's 'Blue Period' features paintings dominated by blue tones."
+},
+{
+"question": "In literature, what do we call a humorous play with a happy ending?",
+"options": ["Tragedy", "Comedy", "Epic", "Elegy"],
+"correctIndex": 1,
+"explanation": "A comedy is a play or story that is light-hearted and ends happily."
+},
+{
+"question": "Who wrote the classic story 'The Little Prince'?",
+"options": ["Antoine de Saint-Exupéry", "Hans Christian Andersen", "Lewis Carroll", "L. Frank Baum"],
+"correctIndex": 0,
+"explanation": "Antoine de Saint-Exupéry wrote 'The Little Prince', a beloved novella."
+},
+{
+"question": "Which of these is a famous work by Leonardo da Vinci?",
+"options": ["The Last Supper", "The Night Watch", "Girl with a Pearl Earring", "Guernica"],
+"correctIndex": 0,
+"explanation": "Leonardo da Vinci painted 'The Last Supper', depicting Jesus and his disciples."
+},
+{
+"question": "Who is the creator of the character 'Matilda' in children's literature?",
+"options": ["Roald Dahl", "Lemony Snicket", "J.K. Rowling", "Dr. Seuss"],
+"correctIndex": 0,
+"explanation": "Roald Dahl wrote 'Matilda', about a brilliant young girl with special abilities."
+},
+{
+"question": "Which famous playwright wrote 'A Midsummer Night's Dream'?",
+"options": ["Molière", "William Shakespeare", "Arthur Miller", "Samuel Beckett"],
+"correctIndex": 1,
+"explanation": "'A Midsummer Night's Dream' is one of Shakespeare's well-known comedies."
+},
+{
+"question": "In painting, what is the term for a quick, light drawing made before the final artwork?",
+"options": ["Etching", "Sketch", "Mosaic", "Fresco"],
+"correctIndex": 1,
+"explanation": "A sketch is a rough drawing used to plan a finished piece of art."
+},
+{
+"question": "Who wrote the novel 'The Great Gatsby'?",
+"options": ["F. Scott Fitzgerald", "Ernest Hemingway", "John Steinbeck", "Harper Lee"],
+"correctIndex": 0,
+"explanation": "F. Scott Fitzgerald wrote 'The Great Gatsby', set in the Jazz Age."
+},
+{
+"question": "Which of these is a famous painting by Edvard Munch?",
+"options": ["The Scream", "Sunflowers", "The Birth of Venus", "American Gothic"],
+"correctIndex": 0,
+"explanation": "'The Scream' by Edvard Munch shows a figure holding its face in horror."
+},
+{
+"question": "Which author created the detective Hercule Poirot?",
+"options": ["Agatha Christie", "Arthur Conan Doyle", "Dorothy L. Sayers", "Raymond Chandler"],
+"correctIndex": 0,
+"explanation": "Agatha Christie created Hercule Poirot, a famous fictional detective."
+},
+{
+"question": "What is the term for a story passed down orally from generation to generation?",
+"options": ["Fairy tale", "Oral tradition", "Epic poem", "Romance"],
+"correctIndex": 1,
+"explanation": "Oral tradition refers to stories and history shared by word of mouth."
+},
+{
+"question": "Which artist is famous for colorful pop art images of soup cans and celebrities?",
+"options": ["Roy Lichtenstein", "Andy Warhol", "Keith Haring", "Banksy"],
+"correctIndex": 1,
+"explanation": "Andy Warhol was a leading pop artist known for images of everyday products."
+},
+{
+"question": "Who wrote the 'Percy Jackson & the Olympians' series?",
+"options": ["Rick Riordan", "Suzanne Collins", "Veronica Roth", "J.K. Rowling"],
+"correctIndex": 0,
+"explanation": "Rick Riordan wrote the Percy Jackson series based on Greek mythology."
+},
+{
+"question": "What do we call a long narrative poem about heroic deeds?",
+"options": ["Haiku", "Limerick", "Epic", "Ode"],
+"correctIndex": 2,
+"explanation": "An epic is a long poem that tells the story of a hero's adventures."
+},
+{
+"question": "Which famous writer created the character Alice who visits a strange wonderland?",
+"options": ["Lewis Carroll", "L. Frank Baum", "J.M. Barrie", "Beatrix Potter"],
+"correctIndex": 0,
+"explanation": "Lewis Carroll wrote the stories about Alice's adventures in a fantastical world."
+},
+{
+"question": "In a theater, who is responsible for directing the actors and shaping the performance?",
+"options": ["Playwright", "Director", "Stagehand", "Usher"],
+"correctIndex": 1,
+"explanation": "The director guides the actors and artistic vision of the production."
+},
+{
+"question": "Who wrote 'The Cat in the Hat'?",
+"options": ["Roald Dahl", "Dr. Seuss", "Judy Blume", "E.B. White"],
+"correctIndex": 1,
+"explanation": "Dr. Seuss wrote 'The Cat in the Hat', a classic rhyming children's book."
+},
+{
+"question": "Which of these is an art form that involves moving images and often sound?",
+"options": ["Sculpture", "Cinema", "Calligraphy", "Embroidery"],
+"correctIndex": 1,
+"explanation": "Cinema, or film, is an art form using moving images and sound."
+},
+{
+"question": "Which famous playwright wrote 'The Importance of Being Earnest'?",
+"options": ["Oscar Wilde", "Noël Coward", "George Bernard Shaw", "Tennessee Williams"],
+"correctIndex": 0,
+"explanation": "Oscar Wilde wrote 'The Importance of Being Earnest', a witty comedy."
+},
+{
+"question": "Who painted 'The Persistence of Memory', featuring melting clocks?",
+"options": ["Salvador Dalí", "Pablo Picasso", "Joan Miró", "Paul Klee"],
+"correctIndex": 0,
+"explanation": "Salvador Dalí painted 'The Persistence of Memory', a Surrealist masterpiece."
+},
+{
+"question": "In literature, what is a 'trilogy'?",
+"options": ["A book written in three languages", "A three-part series of works", "A story with three main heroes", "A poem of three stanzas"],
+"correctIndex": 1,
+"explanation": "A trilogy is a set of three related books, movies, or plays."
+},
+{
+"question": "Who wrote the classic novel 'Jane Eyre'?",
+"options": ["Jane Austen", "Charlotte Brontë", "Emily Brontë", "Louisa May Alcott"],
+"correctIndex": 1,
+"explanation": "Charlotte Brontë wrote 'Jane Eyre', a famous 19th-century novel."
+},
+{
+"question": "Which of these is a well-known Shakespearean tragedy?",
+"options": ["As You Like It", "The Tempest", "Macbeth", "Much Ado About Nothing"],
+"correctIndex": 2,
+"explanation": "'Macbeth' is one of Shakespeare's major tragedies."
+},
+{
+"question": "In drawing, what is a 'portrait'?",
+"options": ["A picture of a landscape", "A picture of a person", "A picture of a building", "A picture of animals"],
+"correctIndex": 1,
+"explanation": "A portrait is an artistic representation of a person, usually focusing on the face."
+},
+{
+"question": "Who is the author of 'The Lion, the Witch and the Wardrobe'?",
+"options": ["Roald Dahl", "C.S. Lewis", "J.R.R. Tolkien", "Madeleine L'Engle"],
+"correctIndex": 1,
+"explanation": "C.S. Lewis wrote 'The Lion, the Witch and the Wardrobe', part of the Narnia series."
+},
+{
+"question": "Which art style often uses small dots of color that blend from a distance?",
+"options": ["Cubism", "Pointillism", "Surrealism", "Baroque"],
+"correctIndex": 1,
+"explanation": "Pointillism uses tiny dots of color that visually mix when viewed from afar."
+},
+{
+"question": "Who wrote the play 'Death of a Salesman'?",
+"options": ["Arthur Miller", "Tennessee Williams", "Eugene O'Neill", "Harold Pinter"],
+"correctIndex": 0,
+"explanation": "Arthur Miller wrote 'Death of a Salesman', a classic American play."
+},
+{
+"question": "Which of these is a famous novel by Mary Shelley?",
+"options": ["Dracula", "Frankenstein", "Wuthering Heights", "Jane Eyre"],
+"correctIndex": 1,
+"explanation": "Mary Shelley wrote 'Frankenstein', about a scientist who creates a living being."
+},
+{
+"question": "In literature, what is a 'setting'?",
+"options": ["The problem in the story", "The characters' thoughts", "Where and when the story happens", "The lesson of the story"],
+"correctIndex": 2,
+"explanation": "The setting is the time and place in which a story takes place."
+},
+{
+"question": "Who painted the famous work often called 'The Girl with a Pearl Earring'?",
+"options": ["Johannes Vermeer", "Rembrandt", "Peter Paul Rubens", "Caravaggio"],
+"correctIndex": 0,
+"explanation": "Johannes Vermeer is credited with painting 'Girl with a Pearl Earring'."
+},
+{
+"question": "Which of these authors is famous for writing detective stories about a priest named Father Brown?",
+"options": ["G.K. Chesterton", "Agatha Christie", "Arthur Conan Doyle", "Dorothy L. Sayers"],
+"correctIndex": 0,
+"explanation": "G.K. Chesterton wrote detective stories featuring Father Brown."
+},
+{
+"question": "What do we call a book or movie that makes you laugh?",
+"options": ["Mystery", "Comedy", "Horror", "Tragedy"],
+"correctIndex": 1,
+"explanation": "A comedy is a work meant to be humorous and entertaining."
+},
+{
+"question": "Who wrote the children's book 'Charlotte's Web'?",
+"options": ["E.B. White", "Dr. Seuss", "Roald Dahl", "Beatrix Potter"],
+"correctIndex": 0,
+"explanation": "E.B. White wrote 'Charlotte's Web', a story about a pig and a spider."
+},
+{
+"question": "Which art tool is typically used to apply paint on a canvas?",
+"options": ["Chisel", "Hammer", "Paintbrush", "Needle"],
+"correctIndex": 2,
+"explanation": "A paintbrush is used to apply paint to a surface like canvas."
+},
+{
+"question": "Who wrote the novel 'Little Women'?",
+"options": ["Louisa May Alcott", "Jane Austen", "Emily Brontë", "Harper Lee"],
+"correctIndex": 0,
+"explanation": "Louisa May Alcott wrote 'Little Women', about four sisters growing up."
+},
+{
+"question": "Which of these is a famous painting by Grant Wood showing a farmer and his daughter?",
+"options": ["American Gothic", "Nighthawks", "Whistler's Mother", "The Gleaners"],
+"correctIndex": 0,
+"explanation": "'American Gothic' is a well-known painting by Grant Wood."
+},
+{
+"question": "In a story, who is the 'protagonist'?",
+"options": ["The main character", "The narrator", "The villain", "The author"],
+"correctIndex": 0,
+"explanation": "The protagonist is the main character around whom the story revolves."
+},
+{
+"question": "Which author created the fantasy world called Middle-earth?",
+"options": ["J.K. Rowling", "C.S. Lewis", "J.R.R. Tolkien", "Philip Pullman"],
+"correctIndex": 2,
+"explanation": "J.R.R. Tolkien created Middle-earth in works like 'The Lord of the Rings'."
+},
+{
+"question": "Which of these is a famous art museum in Paris?",
+"options": ["MoMA", "Uffizi Gallery", "The Louvre", "Tate Modern"],
+"correctIndex": 2,
+"explanation": "The Louvre in Paris houses many famous artworks, including the 'Mona Lisa'."
+},
+{
+"question": "Who wrote the novel 'The Chronicles of Narnia' series?",
+"options": ["C.S. Lewis", "J.R.R. Tolkien", "Rick Riordan", "Suzanne Collins"],
+"correctIndex": 0,
+"explanation": "C.S. Lewis is the author of 'The Chronicles of Narnia' series."
+},
+{
+"question": "What is the term for a book that tells the story of the author's own life?",
+"options": ["Biography", "Autobiography", "Novel", "Anthology"],
+"correctIndex": 1,
+"explanation": "An autobiography is a life story written by the person who lived it."
+},
+{
+"question": "Which famous Dutch artist is known for painting sunflowers?",
+"options": ["Vincent van Gogh", "Rembrandt", "Vermeer", "Mondrian"],
+"correctIndex": 0,
+"explanation": "Vincent van Gogh painted several well-known sunflower paintings."
+},
+{
+"question": "Which Shakespeare play features three witches and a Scottish general?",
+"options": ["King Lear", "Othello", "Macbeth", "Julius Caesar"],
+"correctIndex": 2,
+"explanation": "In 'Macbeth', three witches prophesy the general's rise and fall."
+},
+{
+"question": "Which of these is a graphic novel format superhero from comic books?",
+"options": ["Superman", "Hercules", "Robin Hood", "King Arthur"],
+"correctIndex": 0,
+"explanation": "Superman is a well-known superhero character from comic books."
+},
+{
+"question": "Who wrote the book 'The Fault in Our Stars'?",
+"options": ["John Green", "Stephen Chbosky", "Rainbow Rowell", "Veronica Roth"],
+"correctIndex": 0,
+"explanation": "John Green is the author of 'The Fault in Our Stars'."
+},
+{
+"question": "In art, what is a 'mural'?",
+"options": ["A tiny painting", "A painting on a wall or ceiling", "A sculpture in a garden", "A drawing in a notebook"],
+"correctIndex": 1,
+"explanation": "A mural is a large painting created directly on a wall or ceiling."
+},
+{
+"question": "Which of these authors is known for writing horror novels like 'The Shining'?",
+"options": ["Stephen King", "Neil Gaiman", "Dan Brown", "George R.R. Martin"],
+"correctIndex": 0,
+"explanation": "Stephen King is famous for many horror novels."
+},
+{
+"question": "Which book features a young wizard who attends a magical school?",
+"options": ["Harry Potter and the Sorcerer's Stone", "The Hobbit", "The Giver", "The Outsiders"],
+"correctIndex": 0,
+"explanation": "In 'Harry Potter and the Sorcerer's Stone', Harry attends a school for magic."
+},
+{
+"question": "Which art movement is known for using light and color to capture moments, often outdoors?",
+"options": ["Impressionism", "Cubism", "Baroque", "Gothic"],
+"correctIndex": 0,
+"explanation": "Impressionism focused on light and color to show brief moments, often outside."
+},
+{
+"question": "Who wrote the novel 'The Old Man and the Sea'?",
+"options": ["Ernest Hemingway", "F. Scott Fitzgerald", "Mark Twain", "John Steinbeck"],
+"correctIndex": 0,
+"explanation": "Ernest Hemingway wrote 'The Old Man and the Sea', about a fisherman's struggle."
+},
+{
+"question": "In a comic strip, what do we call the box where characters' words appear?",
+"options": ["Caption", "Panel", "Speech bubble", "Frame"],
+"correctIndex": 2,
+"explanation": "Speech bubbles are shapes containing characters' dialogue."
+},
+{
+"question": "Which of these is a famous work by the Russian writer Leo Tolstoy?",
+"options": ["War and Peace", "Crime and Punishment", "The Trial", "The Stranger"],
+"correctIndex": 0,
+"explanation": "Leo Tolstoy wrote 'War and Peace', a lengthy historical novel."
+},
+{
+"question": "Which famous sculptor created statues like 'The Thinker'?",
+"options": ["Auguste Rodin", "Henry Moore", "Donatello", "Brâncuși"],
+"correctIndex": 0,
+"explanation": "Auguste Rodin is known for sculptures including 'The Thinker'."
+},
+{
+"question": "Which of these books is a classic about a farm where animals take over?",
+"options": ["Animal Farm", "Black Beauty", "Watership Down", "Charlotte's Web"],
+"correctIndex": 0,
+"explanation": "'Animal Farm' by George Orwell is an allegory set on a farm run by animals."
+},
+{
+"question": "In literature, what is a 'cliffhanger'?",
+"options": ["An unexpected joke at the end", "A sad conclusion", "An ending that leaves the audience in suspense", "A story with no hero"],
+"correctIndex": 2,
+"explanation": "A cliffhanger is when a story ends at an exciting point, leaving questions unanswered."
+},
+{
+"question": "Who wrote the beloved children's series about a bear from Darkest Peru named Paddington?",
+"options": ["Michael Bond", "Beatrix Potter", "A.A. Milne", "Enid Blyton"],
+"correctIndex": 0,
+"explanation": "Michael Bond created Paddington Bear, a polite bear who loves marmalade."
+},
+{
+"question": "Which of these is a famous Renaissance artist?",
+"options": ["Rembrandt", "Michelangelo", "Van Gogh", "Picasso"],
+"correctIndex": 1,
+"explanation": "Michelangelo was a major artist of the Renaissance period."
+},
+{
+"question": "In poetry, what is a 'rhyme'?",
+"options": ["A repeated line", "A comparison using 'like' or 'as'", "Words with similar ending sounds", "A long narrative"],
+"correctIndex": 2,
+"explanation": "Rhyme occurs when words share similar ending sounds, like 'cat' and 'hat'."
+},
+{
+"question": "Who wrote 'The Very Hungry Caterpillar'?",
+"options": ["Eric Carle", "Maurice Sendak", "Dr. Seuss", "Shel Silverstein"],
+"correctIndex": 0,
+"explanation": "Eric Carle wrote and illustrated 'The Very Hungry Caterpillar'."
+},
+{
+"question": "Which of these is a famous play by William Shakespeare about two young lovers from feuding families?",
+"options": ["Romeo and Juliet", "The Merchant of Venice", "King Lear", "Twelfth Night"],
+"correctIndex": 0,
+"explanation": "'Romeo and Juliet' is Shakespeare's tragedy about star-crossed lovers."
+},
+{
+"question": "Which famous painter is known for his drip painting technique?",
+"options": ["Jackson Pollock", "Georgia O'Keeffe", "Edward Hopper", "Henri Matisse"],
+"correctIndex": 0,
+"explanation": "Jackson Pollock used a drip technique to create abstract paintings."
+},
+{
+"question": "Which of these authors wrote 'The Chronicles of Prydain' series, including 'The Black Cauldron'?",
+"options": ["Lloyd Alexander", "C.S. Lewis", "J.R.R. Tolkien", "Diana Wynne Jones"],
+"correctIndex": 0,
+"explanation": "Lloyd Alexander wrote 'The Chronicles of Prydain', a fantasy series."
+},
+{
+"question": "In a play, what is the 'stage'?",
+"options": ["The script", "The audience area", "The place where actors perform", "The lighting equipment"],
+"correctIndex": 2,
+"explanation": "The stage is the platform where actors perform for the audience."
+},
+{
+"question": "Which of these books was written by Mark Twain?",
+"options": ["The Call of the Wild", "The Adventures of Tom Sawyer", "Treasure Island", "White Fang"],
+"correctIndex": 1,
+"explanation": "Mark Twain wrote 'The Adventures of Tom Sawyer', set along the Mississippi River."
+},
+{
+"question": "Which type of art involves arranging photographs or images into a new combined picture?",
+"options": ["Collage", "Fresco", "Etching", "Lithography"],
+"correctIndex": 0,
+"explanation": "A collage is made by gluing together different images or materials."
+},
+{
+"question": "Which famous writer created the detective character Miss Marple?",
+"options": ["Agatha Christie", "Dorothy L. Sayers", "Ngaio Marsh", "Patricia Highsmith"],
+"correctIndex": 0,
+"explanation": "Agatha Christie created Miss Marple, an elderly amateur detective."
+},
+{
+"question": "In literature, what is a 'chapter'?",
+"options": ["A type of poem", "A short story within a novel", "A division of a book", "The author's note"],
+"correctIndex": 2,
+"explanation": "Chapters are sections that divide a book into smaller parts."
+},
+{
+"question": "Which of these is a classic novel by Charles Dickens?",
+"options": ["Oliver Twist", "The Jungle Book", "Peter Pan", "The Secret Garden"],
+"correctIndex": 0,
+"explanation": "Charles Dickens wrote 'Oliver Twist', about an orphan in London."
+},
+{
+"question": "In painting, what do we call a work created with small pieces of colored glass, stone, or tile?",
+"options": ["Mosaic", "Fresco", "Collage", "Sketch"],
+"correctIndex": 0,
+"explanation": "A mosaic is an artwork made from tiny pieces called tesserae."
+}
+]

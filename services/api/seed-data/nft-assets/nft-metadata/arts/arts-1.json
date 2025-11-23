@@ -1,0 +1,27 @@
+{
+  "name": "Arts NFT #1",
+  "description": "Arts knowledge NFT #1",
+  "image": "ipfs://QmPlaceholderarts1",
+  "mediaType": "image/svg+xml",
+  "files": [
+    {
+      "name": "arts-1.svg",
+      "mediaType": "image/svg+xml",
+      "src": "ipfs://QmPlaceholderarts1"
+    }
+  ],
+  "attributes": [
+    {
+      "trait_type": "Style",
+      "value": "Impressionism"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Common"
+    },
+    {
+      "trait_type": "Medium",
+      "value": "Oil"
+    }
+  ]
+}

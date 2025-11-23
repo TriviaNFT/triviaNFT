@@ -1,0 +1,722 @@
+﻿[
+  {
+    "question": "What is the largest animal on Earth?",
+    "options": ["African Elephant", "Giraffe", "Blue Whale", "Great White Shark"],
+    "correctIndex": 2,
+    "explanation": "The **Blue Whale** is the largest animal known to have ever lived on Earth."
+  },
+  {
+    "question": "Which planet is known as the 'Red Planet'?",
+    "options": ["Venus", "Mars", "Jupiter", "Saturn"],
+    "correctIndex": 1,
+    "explanation": "**Mars** is called the Red Planet because of the iron oxide (rust) prevalent on its surface, which gives it a reddish appearance."
+  },
+  {
+    "question": "What process do plants use to convert light energy into chemical energy?",
+    "options": ["Respiration", "Digestion", "Photosynthesis", "Fermentation"],
+    "correctIndex": 2,
+    "explanation": "**Photosynthesis** is the process where plants use sunlight, water, and carbon dioxide to create food (glucose) and oxygen."
+  },
+  {
+    "question": "Which gas makes up the majority of Earth's atmosphere?",
+    "options": ["Oxygen", "Carbon Dioxide", "Nitrogen", "Argon"],
+    "correctIndex": 2,
+    "explanation": "**Nitrogen** makes up approximately 78% of Earth's atmosphere."
+  },
+  {
+    "question": "What is the collective term for a group of lions?",
+    "options": ["Herd", "Pack", "Pride", "Flock"],
+    "correctIndex": 2,
+    "explanation": "A group of lions is called a **pride**."
+  },
+  {
+    "question": "What type of rock is formed from cooled and solidified magma or lava?",
+    "options": ["Sedimentary", "Metamorphic", "Igneous", "Sandstone"],
+    "correctIndex": 2,
+    "explanation": "**Igneous** rock (from the Latin word for fire, *ignis*) is formed through the cooling and solidification of magma or lava."
+  },
+  {
+    "question": "How many legs does an insect typically have?",
+    "options": ["Four", "Six", "Eight", "Ten"],
+    "correctIndex": 1,
+    "explanation": "Insects are defined by having three main body parts and **six** legs."
+  },
+  {
+    "question": "What is the hardest natural substance on Earth?",
+    "options": ["Quartz", "Iron", "Granite", "Diamond"],
+    "correctIndex": 3,
+    "explanation": "The **diamond** is the hardest naturally occurring mineral, scoring 10 on the Mohs scale of mineral hardness."
+  },
+  {
+    "question": "In what form is water when it is frozen?",
+    "options": ["Liquid", "Gas", "Steam", "Ice"],
+    "correctIndex": 3,
+    "explanation": "Frozen water is called **ice**."
+  },
+  {
+    "question": "What kind of animal is a King Cobra?",
+    "options": ["Lizard", "Frog", "Snake", "Spider"],
+    "correctIndex": 2,
+    "explanation": "The King Cobra is the world's longest venomous **snake**."
+  },
+  {
+    "question": "What is the primary product of a bee colony used for human consumption?",
+    "options": ["Wax", "Pollen", "Honey", "Royal Jelly"],
+    "correctIndex": 2,
+    "explanation": "**Honey** is the sweet substance made by bees from flower nectar."
+  },
+  {
+    "question": "Which layer of the Earth is the outermost, solid shell?",
+    "options": ["Mantle", "Core", "Crust", "Asthenosphere"],
+    "correctIndex": 2,
+    "explanation": "The **crust** is the outermost solid layer of the Earth."
+  },
+  {
+    "question": "What causes the tides on Earth?",
+    "options": ["Wind", "Earth's rotation", "Moon's gravity", "Sun's heat"],
+    "correctIndex": 2,
+    "explanation": "The gravitational pull of the **Moon** is the primary driver of ocean tides."
+  },
+  {
+    "question": "What gas do humans primarily exhale when they breathe out?",
+    "options": ["Oxygen", "Carbon Dioxide", "Nitrogen", "Hydrogen"],
+    "correctIndex": 1,
+    "explanation": "Humans exhale mostly **carbon dioxide** and nitrogen, with carbon dioxide being the primary gas exchanged in the lungs."
+  },
+  {
+    "question": "Which animal is famous for building dams in rivers and streams?",
+    "options": ["Otter", "Beaver", "Muskrat", "Coyote"],
+    "correctIndex": 1,
+    "explanation": "**Beavers** are known for their natural ability to construct dams, canals, and lodges."
+  },
+  {
+    "question": "What is the brightest star in the night sky?",
+    "options": ["Alpha Centauri", "Polaris", "Sirius", "Betelgeuse"],
+    "correctIndex": 2,
+    "explanation": "**Sirius** (also known as the Dog Star) is the brightest star in Earth's night sky."
+  },
+  {
+    "question": "What is the main ingredient of glass, found commonly in nature?",
+    "options": ["Clay", "Limestone", "Sand", "Coal"],
+    "correctIndex": 2,
+    "explanation": "**Sand**, primarily composed of silica ($SiO_2$), is the main ingredient used to make glass."
+  },
+  {
+    "question": "What is a young dog called?",
+    "options": ["Kid", "Kitten", "Pup", "Calf"],
+    "correctIndex": 2,
+    "explanation": "A young dog is called a **pup** or puppy."
+  },
+  {
+    "question": "Where is the Great Barrier Reef located?",
+    "options": ["Caribbean Sea", "Mediterranean Sea", "Pacific Ocean", "Indian Ocean"],
+    "correctIndex": 2,
+    "explanation": "The Great Barrier Reef, the world's largest coral reef system, is located in the Coral Sea, off the coast of Queensland, **Australia** (part of the Pacific Ocean)."
+  },
+  {
+    "question": "What is the unit of measurement for temperature used in most of the world?",
+    "options": ["Fahrenheit", "Kelvin", "Celsius", "Rankine"],
+    "correctIndex": 2,
+    "explanation": "**Celsius** is the most common temperature scale used globally."
+  },
+  {
+    "question": "What part of a plant absorbs water and nutrients from the soil?",
+    "options": ["Leaves", "Stem", "Flower", "Roots"],
+    "correctIndex": 3,
+    "explanation": "The **roots** of a plant anchor it and absorb water and dissolved minerals from the soil."
+  },
+  {
+    "question": "What is a large chunk of ice floating in the ocean called?",
+    "options": ["Glacier", "Ice Sheet", "Iceberg", "Ice Floe"],
+    "correctIndex": 2,
+    "explanation": "An **iceberg** is a large piece of freshwater ice that has broken off a glacier or ice shelf and floats freely in open water."
+  },
+  {
+    "question": "Which bird is famous for imitating human speech?",
+    "options": ["Eagle", "Pigeon", "Parrot", "Ostrich"],
+    "correctIndex": 2,
+    "explanation": "**Parrots** (specifically certain species like African Greys) are well-known for their ability to mimic sounds, including human speech."
+  },
+  {
+    "question": "What gas is primarily needed for fire to burn?",
+    "options": ["Hydrogen", "Carbon Monoxide", "Oxygen", "Nitrogen"],
+    "correctIndex": 2,
+    "explanation": "**Oxygen** is one of the three elements (fuel, heat, and oxygen) needed to start and maintain a fire."
+  },
+  {
+    "question": "What natural disaster is measured using the Richter Scale?",
+    "options": ["Hurricane", "Volcanic Eruption", "Earthquake", "Tornado"],
+    "correctIndex": 2,
+    "explanation": "The **Richter Scale** (or more accurately, the Moment Magnitude Scale) is used to measure the magnitude of an earthquake."
+  },
+  {
+    "question": "Which animal is the world's fastest land animal?",
+    "options": ["Lion", "Cheetah", "Gazelle", "Horse"],
+    "correctIndex": 1,
+    "explanation": "The **Cheetah** can reach speeds of up to 75 mph (120 km/h) in short bursts."
+  },
+  {
+    "question": "What is the process called when liquid water turns into water vapor?",
+    "options": ["Condensation", "Precipitation", "Evaporation", "Freezing"],
+    "correctIndex": 2,
+    "explanation": "**Evaporation** is the process of a substance in a liquid state changing to a gaseous state due to an increase in temperature."
+  },
+  {
+    "question": "What heavenly body does the Earth revolve around?",
+    "options": ["Moon", "Mars", "Sun", "Jupiter"],
+    "correctIndex": 2,
+    "explanation": "The Earth is the third planet from the **Sun** and revolves around it."
+  },
+  {
+    "question": "What do you call a scientist who studies rocks?",
+    "options": ["Biologist", "Geologist", "Meteorologist", "Astronomer"],
+    "correctIndex": 1,
+    "explanation": "A **geologist** studies the solid Earth, including rocks and their formation."
+  },
+  {
+    "question": "What is the primary color of most healthy plants?",
+    "options": ["Red", "Blue", "Yellow", "Green"],
+    "correctIndex": 3,
+    "explanation": "Plants appear **green** due to the pigment chlorophyll, which is essential for photosynthesis."
+  },
+  {
+    "question": "Which large flightless bird is native to Australia and is similar to an ostrich?",
+    "options": ["Cassowary", "Emu", "Rhea", "Kiwi"],
+    "correctIndex": 1,
+    "explanation": "The **Emu** is the second-largest living bird by height and is endemic to Australia."
+  },
+  {
+    "question": "What is the term for a boundary between two different air masses?",
+    "options": ["Jet Stream", "Front", "Pressure System", "Trough"],
+    "correctIndex": 1,
+    "explanation": "A weather **front** is a boundary separating two masses of air of different densities, often leading to changes in weather."
+  },
+  {
+    "question": "What metal is the liquid metal at room temperature?",
+    "options": ["Iron", "Gold", "Mercury", "Aluminum"],
+    "correctIndex": 2,
+    "explanation": "**Mercury** is the only common metal that is liquid at standard temperature and pressure."
+  },
+  {
+    "question": "What is the main source of energy for the Earth?",
+    "options": ["Gravity", "Volcanoes", "The Sun", "Wind"],
+    "correctIndex": 2,
+    "explanation": "The **Sun** provides most of the energy for life on Earth, driving climate and weather."
+  },
+  {
+    "question": "What is a baby cow called?",
+    "options": ["Foal", "Lamb", "Kid", "Calf"],
+    "correctIndex": 3,
+    "explanation": "A young cow is called a **calf**."
+  },
+  {
+    "question": "Which natural phenomenon causes rainbows?",
+    "options": ["Absorption", "Refraction", "Reflection", "Gravity"],
+    "correctIndex": 1,
+    "explanation": "Rainbows are caused by the **refraction** (bending) and reflection of sunlight by water droplets in the atmosphere."
+  },
+  {
+    "question": "What is the name of the volcano that famously erupted in 79 AD, burying Pompeii?",
+    "options": ["Mount Etna", "Mount Fuji", "Mount Vesuvius", "Mount St. Helens"],
+    "correctIndex": 2,
+    "explanation": "**Mount Vesuvius** erupted and destroyed the Roman cities of Pompeii and Herculaneum."
+  },
+  {
+    "question": "The process of a caterpillar turning into a butterfly is called:",
+    "options": ["Reproduction", "Migration", "Metamorphosis", "Hibernation"],
+    "correctIndex": 2,
+    "explanation": "**Metamorphosis** is a biological process by which an animal physically develops after birth or hatching, involving a conspicuous and relatively abrupt change in the animal's body structure."
+  },
+  {
+    "question": "Which part of the atmosphere contains the ozone layer?",
+    "options": ["Troposphere", "Stratosphere", "Mesosphere", "Thermosphere"],
+    "correctIndex": 1,
+    "explanation": "The **stratosphere** is where the ozone layer is predominantly found."
+  },
+  {
+    "question": "What is the term for animals that eat only plants?",
+    "options": ["Carnivores", "Omnivores", "Herbivores", "Insectivores"],
+    "correctIndex": 2,
+    "explanation": "**Herbivores** are animals anatomically and physiologically adapted to eating plant material."
+  },
+  {
+    "question": "What is a naturally occurring solid, inorganic substance with a definite chemical composition and crystal structure?",
+    "options": ["Rock", "Mineral", "Compound", "Element"],
+    "correctIndex": 1,
+    "explanation": "This is the definition of a **mineral**."
+  },
+  {
+    "question": "Which type of storm is characterized by a rotating column of air, often called a 'twister'?",
+    "options": ["Blizzard", "Hurricane", "Monsoon", "Tornado"],
+    "correctIndex": 3,
+    "explanation": "A **tornado** is a violently rotating column of air extending from a thunderstorm to the ground."
+  },
+  {
+    "question": "What is the main component of a spider's web?",
+    "options": ["Cotton", "Cellulose", "Silk", "Nylon"],
+    "correctIndex": 2,
+    "explanation": "Spider webs are spun from **silk**, a protein fiber extruded from spinnerets."
+  },
+  {
+    "question": "How long does it take for the Earth to complete one rotation on its axis?",
+    "options": ["7 days", "24 hours", "365 days", "12 hours"],
+    "correctIndex": 1,
+    "explanation": "One full rotation of the Earth on its axis takes approximately **24 hours**, defining a day."
+  },
+  {
+    "question": "Which of these is not a primary color of light?",
+    "options": ["Red", "Yellow", "Green", "Blue"],
+    "correctIndex": 1,
+    "explanation": "The primary colors of light (additive primaries) are **Red, Green, and Blue** (RGB). Yellow is a secondary color."
+  },
+  {
+    "question": "What is the hottest layer of the Earth?",
+    "options": ["Crust", "Mantle", "Outer Core", "Inner Core"],
+    "correctIndex": 3,
+    "explanation": "The **Inner Core** is the hottest part of the planet, with temperatures similar to the surface of the Sun."
+  },
+  {
+    "question": "What is the highest mountain on Earth above sea level?",
+    "options": ["Mount Kilimanjaro", "K2", "Mount Everest", "Denali"],
+    "correctIndex": 2,
+    "explanation": "**Mount Everest**, located in the Mahalangur Himalayas, is the highest mountain."
+  },
+  {
+    "question": "What celestial body is often visible during the day and is the Earth's only natural satellite?",
+    "options": ["Venus", "The Sun", "The Moon", "Polaris"],
+    "correctIndex": 2,
+    "explanation": "The **Moon** is Earth's only natural satellite and can often be seen in the daylight sky."
+  },
+  {
+    "question": "What is the name for the solid waste material excreted by an animal?",
+    "options": ["Urine", "Sweat", "Saliva", "Feces"],
+    "correctIndex": 3,
+    "explanation": "**Feces** is the solid or semi-solid remains of food that could not be digested or absorbed by the small intestine."
+  },
+  {
+    "question": "What is the liquid produced by clouds that falls to the Earth?",
+    "options": ["Dew", "Fog", "Rain", "Mist"],
+    "correctIndex": 2,
+    "explanation": "**Rain** is liquid precipitation in the form of water droplets."
+  },
+  {
+    "question": "What is the study of weather called?",
+    "options": ["Geology", "Ecology", "Meteorology", "Climatology"],
+    "correctIndex": 2,
+    "explanation": "**Meteorology** is the interdisciplinary scientific study of the atmosphere, focused on weather processes and forecasting."
+  },
+  {
+    "question": "Which natural phenomenon is a stream of water flowing over a vertical drop?",
+    "options": ["Geyser", "Waterfall", "River", "Pond"],
+    "correctIndex": 1,
+    "explanation": "A **waterfall** is a point in a river or stream where water flows over a vertical drop or a series of steep drops."
+  },
+  {
+    "question": "What is the name of the protective layer around the Earth that shields us from the Sun's ultraviolet radiation?",
+    "options": ["Ionosphere", "Exosphere", "Ozone Layer", "Magnetosphere"],
+    "correctIndex": 2,
+    "explanation": "The **Ozone Layer** is a region of Earth's stratosphere that absorbs most of the Sun's ultraviolet radiation."
+  },
+  {
+    "question": "Which of these animals is a marsupial?",
+    "options": ["Bear", "Rabbit", "Kangaroo", "Monkey"],
+    "correctIndex": 2,
+    "explanation": "A **Kangaroo** is a marsupial, meaning it gives birth to relatively undeveloped young that are carried and suckled in a pouch."
+  },
+  {
+    "question": "What is the chemical symbol for water?",
+    "options": ["$O_2$", "$CO_2$", "$NaCl$", "$H_2O$"],
+    "correctIndex": 3,
+    "explanation": "$H_2O$ is the chemical formula for **water**, meaning it has two hydrogen atoms and one oxygen atom."
+  },
+  {
+    "question": "What is the longest river in the world?",
+    "options": ["Amazon River", "Yangtze River", "Nile River", "Mississippi River"],
+    "correctIndex": 0,
+    "explanation": "While there has been debate, the **Amazon River** is now generally considered the longest river in the world."
+  },
+  {
+    "question": "What is a baby goat called?",
+    "options": ["Kid", "Cub", "Fawn", "Poult"],
+    "correctIndex": 0,
+    "explanation": "A young goat is called a **kid**."
+  },
+  {
+    "question": "What causes the sound of thunder?",
+    "options": ["Clouds colliding", "Lightning", "Raindrops hitting the ground", "Pressure change from wind"],
+    "correctIndex": 1,
+    "explanation": "**Thunder** is caused by the rapid heating of air around a lightning strike, which creates a shockwave."
+  },
+  {
+    "question": "Which of these fish is known for inflating its body when threatened?",
+    "options": ["Clownfish", "Tuna", "Pufferfish", "Salmon"],
+    "correctIndex": 2,
+    "explanation": "The **Pufferfish** (or blowfish) inflates its body by rapidly swallowing water or air to deter predators."
+  },
+  {
+    "question": "What is the name of the biggest star in our solar system?",
+    "options": ["Alpha Centauri", "Jupiter", "The Sun", "Proxima Centauri"],
+    "correctIndex": 2,
+    "explanation": "The **Sun** is the star at the center of our solar system."
+  },
+  {
+    "question": "What is the opposite of 'North' on a compass?",
+    "options": ["East", "West", "South", "North-East"],
+    "correctIndex": 2,
+    "explanation": "**South** is the direction opposite of North."
+  },
+  {
+    "question": "What do bats use to navigate and find prey in the dark?",
+    "options": ["Bright eyesight", "Echolocation", "Infrared vision", "Strong smell"],
+    "correctIndex": 1,
+    "explanation": "**Echolocation** is a sonar-like technique where bats emit sounds and listen to the echoes to 'see' their surroundings."
+  },
+  {
+    "question": "What color of light does a red object absorb?",
+    "options": ["Red", "Green", "Blue", "All colors except red"],
+    "correctIndex": 3,
+    "explanation": "An object appears **red** because it reflects (or bounces back) the red light and absorbs all the other colors of the visible spectrum."
+  },
+  {
+    "question": "What is the common name for the frozen precipitation that falls in flakes?",
+    "options": ["Hail", "Sleet", "Snow", "Graupel"],
+    "correctIndex": 2,
+    "explanation": "**Snow** consists of individual ice crystals that grow while suspended in the atmosphere."
+  },
+  {
+    "question": "Which large mammal is known for its black and white fur and diet of bamboo?",
+    "options": ["Zebra", "Orca", "Giant Panda", "Tapir"],
+    "correctIndex": 2,
+    "explanation": "The **Giant Panda** is native to China and almost exclusively eats bamboo."
+  },
+  {
+    "question": "What is the name of the force that pulls objects toward the center of the Earth?",
+    "options": ["Momentum", "Friction", "Gravity", "Inertia"],
+    "correctIndex": 2,
+    "explanation": "**Gravity** is the force that attracts a body toward the center of the Earth."
+  },
+  {
+    "question": "What is the chemical symbol for oxygen?",
+    "options": ["Ox", "O", "$O_2$", "Oc"],
+    "correctIndex": 1,
+    "explanation": "The chemical symbol for the element oxygen is **O**, and the common gas form is $O_2$."
+  },
+  {
+    "question": "Which continent is home to the Sahara Desert?",
+    "options": ["Asia", "South America", "Africa", "Australia"],
+    "correctIndex": 2,
+    "explanation": "The Sahara, the largest hot desert in the world, is located in **North Africa**."
+  },
+  {
+    "question": "What is the natural process that breaks down rock into smaller pieces?",
+    "options": ["Deposition", "Erosion", "Compaction", "Subduction"],
+    "correctIndex": 1,
+    "explanation": "**Erosion** involves the mechanical and chemical processes that break down rocks, soil, and minerals."
+  },
+  {
+    "question": "What part of a flower produces pollen?",
+    "options": ["Petal", "Ovary", "Stamen", "Pistil"],
+    "correctIndex": 2,
+    "explanation": "The **stamen** is the male reproductive organ of a flower, which consists of an anther (that produces pollen) and a filament."
+  },
+  {
+    "question": "What is the name of the biggest ocean on Earth?",
+    "options": ["Atlantic Ocean", "Indian Ocean", "Southern Ocean", "Pacific Ocean"],
+    "correctIndex": 3,
+    "explanation": "The **Pacific Ocean** is the largest and deepest of the world's five oceans."
+  },
+  {
+    "question": "Which of these is a flightless bird?",
+    "options": ["Sparrow", "Seagull", "Penguin", "Vulture"],
+    "correctIndex": 2,
+    "explanation": "**Penguins** are flightless birds that are highly adapted for life in the water."
+  },
+  {
+    "question": "What is the term for a crack in the Earth's crust along which movement occurs?",
+    "options": ["Canyon", "Valley", "Fault", "Trench"],
+    "correctIndex": 2,
+    "explanation": "A **fault** is a fracture or zone of fractures between two blocks of rock in the Earth's crust."
+  },
+  {
+    "question": "What animal undergoes a metamorphosis from a tadpole to its adult form?",
+    "options": ["Salamander", "Fish", "Frog", "Lizard"],
+    "correctIndex": 2,
+    "explanation": "The life cycle of a **frog** includes a larval stage called a tadpole."
+  },
+  {
+    "question": "Which gas is vital for plant life and is absorbed during photosynthesis?",
+    "options": ["Methane", "Oxygen", "Carbon Dioxide", "Helium"],
+    "correctIndex": 2,
+    "explanation": "**Carbon Dioxide** ($CO_2$) is converted into oxygen and food by plants through photosynthesis."
+  },
+  {
+    "question": "What is the term for a long period of low rainfall, leading to a shortage of water?",
+    "options": ["Flood", "Drought", "Tsunami", "Blizzard"],
+    "correctIndex": 1,
+    "explanation": "A **drought** is an extended period when a region experiences a deficiency in its water supply."
+  },
+  {
+    "question": "How many hours are in a week?",
+    "options": ["100", "168", "240", "70"],
+    "correctIndex": 1,
+    "explanation": "There are 7 days in a week, and $7 \times 24 = 168$ **hours**."
+  },
+  {
+    "question": "Which planet in our solar system is known for its prominent rings?",
+    "options": ["Jupiter", "Uranus", "Neptune", "Saturn"],
+    "correctIndex": 3,
+    "explanation": "**Saturn** is instantly recognizable for its extensive and beautiful system of planetary rings."
+  },
+  {
+    "question": "What is the name of the supercontinent that broke up millions of years ago?",
+    "options": ["Gondwana", "Laurasia", "Pangaea", "Rodinia"],
+    "correctIndex": 2,
+    "explanation": "**Pangaea** was a supercontinent that existed during the late Paleozoic and early Mesozoic eras."
+  },
+  {
+    "question": "What is the name for the animal classification of warm-blooded vertebrates with hair or fur?",
+    "options": ["Reptiles", "Fish", "Amphibians", "Mammals"],
+    "correctIndex": 3,
+    "explanation": "**Mammals** are characterized by having hair, being warm-blooded, and feeding their young with milk."
+  },
+  {
+    "question": "Which type of clouds are thin, wispy, and often found at high altitudes?",
+    "options": ["Cumulus", "Stratus", "Cirrus", "Nimbus"],
+    "correctIndex": 2,
+    "explanation": "**Cirrus** clouds are high-altitude, thin, wispy clouds composed of ice crystals."
+  },
+  {
+    "question": "What is the primary function of a plant's leaves?",
+    "options": ["Support", "Reproduction", "Photosynthesis", "Water Storage"],
+    "correctIndex": 2,
+    "explanation": "The leaves are the main site for **photosynthesis**, converting light into energy."
+  },
+  {
+    "question": "What is the term for the total disappearance of a species from Earth?",
+    "options": ["Migration", "Evolution", "Extinction", "Adaptation"],
+    "correctIndex": 2,
+    "explanation": "**Extinction** is the termination of an organism or of a group of organisms (taxon), usually a species."
+  },
+  {
+    "question": "What is the closest star to Earth?",
+    "options": ["Sirius", "Proxima Centauri", "Alpha Centauri", "The Sun"],
+    "correctIndex": 3,
+    "explanation": "The **Sun** is the star closest to our planet."
+  },
+  {
+    "question": "Which ocean borders the East Coast of the United States?",
+    "options": ["Pacific Ocean", "Arctic Ocean", "Atlantic Ocean", "Indian Ocean"],
+    "correctIndex": 2,
+    "explanation": "The **Atlantic Ocean** is on the eastern side of the United States."
+  },
+  {
+    "question": "What type of animal is a scorpion?",
+    "options": ["Insect", "Arachnid", "Reptile", "Amphibian"],
+    "correctIndex": 1,
+    "explanation": "A **scorpion** is an arachnid, a class of animals that also includes spiders and ticks, characterized by eight legs."
+  },
+  {
+    "question": "How many bones are in the average adult human body?",
+    "options": ["150", "206", "300", "180"],
+    "correctIndex": 1,
+    "explanation": "The average adult human skeleton consists of **206** bones."
+  },
+  {
+    "question": "What is the name of the magnetic field that protects Earth from solar wind and radiation?",
+    "options": ["Troposphere", "Ionosphere", "Magnetosphere", "Atmosphere"],
+    "correctIndex": 2,
+    "explanation": "The **Magnetosphere** is the region of space around Earth where the magnetic field is the dominant force."
+  },
+  {
+    "question": "What term describes animals that are active primarily at night?",
+    "options": ["Diurnal", "Crepuscular", "Nocturnal", "Arboreal"],
+    "correctIndex": 2,
+    "explanation": "**Nocturnal** animals are those that are active during the night and sleep during the day."
+  },
+  {
+    "question": "Which of these is a greenhouse gas?",
+    "options": ["Oxygen", "Nitrogen", "Argon", "Methane"],
+    "correctIndex": 3,
+    "explanation": "**Methane** ($CH_4$) is a potent greenhouse gas, meaning it traps heat in the atmosphere."
+  },
+  {
+    "question": "What is the main habitat of a polar bear?",
+    "options": ["Tropical Forests", "Desert", "Arctic Sea Ice", "Temperate Grasslands"],
+    "correctIndex": 2,
+    "explanation": "Polar bears live primarily within the **Arctic Circle**, where they hunt on the sea ice."
+  },
+  {
+    "question": "The scientific study of plants is called:",
+    "options": ["Zoology", "Geology", "Botany", "Ecology"],
+    "correctIndex": 2,
+    "explanation": "**Botany** is the scientific study of plants, including their structure, properties, and biochemical processes."
+  },
+  {
+    "question": "Which planet is closest to the Sun?",
+    "options": ["Earth", "Venus", "Mars", "Mercury"],
+    "correctIndex": 3,
+    "explanation": "**Mercury** is the innermost planet in the solar system."
+  },
+  {
+    "question": "What causes the Earth's seasons?",
+    "options": ["Distance from the Sun", "Ocean currents", "Earth's axial tilt", "Moon's orbit"],
+    "correctIndex": 2,
+    "explanation": "The Earth's **axial tilt** of about 23.5 degrees is the main reason for the change in seasons."
+  },
+  {
+    "question": "Which part of an egg is the main source of protein?",
+    "options": ["Yolk", "Shell", "Air Cell", "Albumen (White)"],
+    "correctIndex": 3,
+    "explanation": "The **albumen**, or egg white, is nearly pure protein with very little fat."
+  },
+  {
+    "question": "What unit is used to measure electric current?",
+    "options": ["Volt", "Ohm", "Watt", "Ampere"],
+    "correctIndex": 3,
+    "explanation": "The **ampere** (or amp) is the unit of electric current."
+  },
+  {
+    "question": "What is the common name for an animal with both male and female reproductive organs?",
+    "options": ["Hermaphrodite", "Sterile", "Androgynous", "Diploid"],
+    "correctIndex": 0,
+    "explanation": "An organism that has both male and female organs is called a **hermaphrodite**."
+  },
+  {
+    "question": "Which is the largest organ in the human body?",
+    "options": ["Brain", "Liver", "Lungs", "Skin"],
+    "correctIndex": 3,
+    "explanation": "The **skin** is the largest organ of the human body, covering the entire body."
+  },
+  {
+    "question": "What is the term for a violent, swirling disturbance in the ocean or a body of water?",
+    "options": ["Tide", "Ripple", "Whirlpool", "Current"],
+    "correctIndex": 2,
+    "explanation": "A **whirlpool** is a swirling body of water that draws things to its center."
+  },
+  {
+    "question": "What do you call the solid part of the Earth that includes the crust and upper mantle?",
+    "options": ["Hydrosphere", "Atmosphere", "Lithosphere", "Biosphere"],
+    "correctIndex": 2,
+    "explanation": "The **lithosphere** is the rigid, outermost shell of a rocky planet, including the crust and upper part of the mantle."
+  },
+  {
+    "question": "Which planet is known as the 'Morning Star' or 'Evening Star'?",
+    "options": ["Jupiter", "Mars", "Venus", "Mercury"],
+    "correctIndex": 2,
+    "explanation": "**Venus** is the brightest object in the sky after the Sun and Moon, often visible near the horizon before sunrise or after sunset."
+  },
+  {
+    "question": "What kind of animal is a common dolphin?",
+    "options": ["Fish", "Amphibian", "Reptile", "Mammal"],
+    "correctIndex": 3,
+    "explanation": "Dolphins are cetaceans, which are a group of marine **mammals**."
+  },
+  {
+    "question": "The speed of light is approximately:",
+    "options": ["343 m/s", "300 km/s", "300,000 km/s", "1,000,000 km/s"],
+    "correctIndex": 2,
+    "explanation": "Light travels at about **300,000 kilometers per second** (or 186,000 miles per second) in a vacuum."
+  },
+  {
+    "question": "What is the substance that gives blood its red color?",
+    "options": ["Plasma", "White Blood Cells", "Hemoglobin", "Platelets"],
+    "correctIndex": 2,
+    "explanation": "**Hemoglobin**, an iron-containing protein in red blood cells, is responsible for transporting oxygen and gives blood its red color."
+  },
+  {
+    "question": "Which type of clouds are thick, fluffy, and often look like cotton balls?",
+    "options": ["Cirrus", "Stratus", "Cumulus", "Lenticular"],
+    "correctIndex": 2,
+    "explanation": "**Cumulus** clouds are the common, puffy, fair-weather clouds."
+  },
+  {
+    "question": "What is a young kangaroo called?",
+    "options": ["Kid", "Cub", "Joey", "Fawn"],
+    "correctIndex": 2,
+    "explanation": "A young kangaroo is called a **joey**."
+  },
+  {
+    "question": "What is the science of classifying organisms?",
+    "options": ["Ecology", "Genetics", "Taxonomy", "Physiology"],
+    "correctIndex": 2,
+    "explanation": "**Taxonomy** is the branch of science concerned with the classification of organisms."
+  },
+  {
+    "question": "What term is used for the spinning motion of the Earth on its axis?",
+    "options": ["Revolution", "Rotation", "Orbit", "Cycle"],
+    "correctIndex": 1,
+    "explanation": "**Rotation** is the act of turning or spinning on an axis, which the Earth does daily."
+  },
+  {
+    "question": "Which force is responsible for the movement of tectonic plates?",
+    "options": ["Solar Wind", "Gravity", "Convection in the Mantle", "Tidal Forces"],
+    "correctIndex": 2,
+    "explanation": "**Convection currents** in the semi-molten mantle below the crust are believed to be the driving force behind plate tectonics."
+  },
+  {
+    "question": "What is the name of the process by which a plant turns towards the light?",
+    "options": ["Geotropism", "Thigmotropism", "Phototropism", "Hydrotropism"],
+    "correctIndex": 2,
+    "explanation": "**Phototropism** is the directional growth of a plant in response to light."
+  },
+  {
+    "question": "What material is a beaver's dam primarily made of?",
+    "options": ["Mud and Clay", "Stones and Rocks", "Branches and Mud", "Bones and Skin"],
+    "correctIndex": 2,
+    "explanation": "Beavers construct their dams and lodges using primarily **branches, logs, and mud**."
+  },
+  {
+    "question": "Which of these gases is the most abundant in the Sun?",
+    "options": ["Oxygen", "Carbon Dioxide", "Helium", "Hydrogen"],
+    "correctIndex": 3,
+    "explanation": "The Sun is made up almost entirely of **Hydrogen** (about 75%) and Helium (about 25%)."
+  },
+  {
+    "question": "What is the primary food source for a koala?",
+    "options": ["Insects", "Grass", "Eucalyptus Leaves", "Fruit"],
+    "correctIndex": 2,
+    "explanation": "Koalas have a very specialized diet, eating almost exclusively **eucalyptus leaves**."
+  },
+  {
+    "question": "What is the term for the movement of animals from one region to another in search of food or a mate?",
+    "options": ["Hibernation", "Adaptation", "Migration", "Camouflage"],
+    "correctIndex": 2,
+    "explanation": "**Migration** is the seasonal movement of animals from one region to another."
+  },
+  {
+    "question": "What type of scientist studies the universe beyond Earth's atmosphere?",
+    "options": ["Geologist", "Biologist", "Chemist", "Astronomer"],
+    "correctIndex": 3,
+    "explanation": "An **astronomer** is a scientist in the field of astronomy who studies celestial objects, space, and the physical universe."
+  },
+  {
+    "question": "Which large cat is famous for its black stripes on an orange coat?",
+    "options": ["Lion", "Leopard", "Tiger", "Jaguar"],
+    "correctIndex": 2,
+    "explanation": "The **Tiger** is the largest cat species and is easily identified by its pattern of dark vertical stripes."
+  },
+  {
+    "question": "What is the natural fuel formed from ancient plant and animal remains?",
+    "options": ["Wood", "Coal", "Uranium", "Peat"],
+    "correctIndex": 1,
+    "explanation": "**Coal** is a fossil fuel, a type of sedimentary rock formed from the remains of plants over millions of years."
+  },
+  {
+    "question": "What is the layer of fat beneath the skin of marine mammals like whales and seals?",
+    "options": ["Dermis", "Keratin", "Blubber", "Marrow"],
+    "correctIndex": 2,
+    "explanation": "**Blubber** is a thick layer of vascularized fat tissue, acting as an energy reserve and insulation."
+  },
+  {
+    "question": "What is the most common form of precipitation?",
+    "options": ["Snow", "Hail", "Sleet", "Rain"],
+    "correctIndex": 3,
+    "explanation": "**Rain** is the most common form of precipitation globally."
+  },
+  {
+    "question": "How many tentacles does a typical octopus have?",
+    "options": ["Six", "Eight", "Ten", "Twelve"],
+    "correctIndex": 1,
+    "explanation": "An octopus is an invertebrate with **eight** arms (often called tentacles)."
+  }
+]

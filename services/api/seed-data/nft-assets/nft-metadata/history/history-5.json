@@ -1,0 +1,27 @@
+{
+  "name": "History NFT #5",
+  "description": "Historical knowledge NFT #5",
+  "image": "ipfs://QmPlaceholderhistory5",
+  "mediaType": "image/svg+xml",
+  "files": [
+    {
+      "name": "history-5.svg",
+      "mediaType": "image/svg+xml",
+      "src": "ipfs://QmPlaceholderhistory5"
+    }
+  ],
+  "attributes": [
+    {
+      "trait_type": "Era",
+      "value": "Modern"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Uncommon"
+    },
+    {
+      "trait_type": "Civilization",
+      "value": "Mayan"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "name": "Gravity Wave",
+  "description": "Physics prodigy",
+  "image": "ipfs://QmPlaceholderscience4",
+  "mediaType": "image/svg+xml",
+  "files": [
+    {
+      "name": "science-4.svg",
+      "mediaType": "image/svg+xml",
+      "src": "ipfs://QmPlaceholderscience4"
+    }
+  ],
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Observatory"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Common"
+    },
+    {
+      "trait_type": "Element",
+      "value": "Oxygen"
+    }
+  ]
+}

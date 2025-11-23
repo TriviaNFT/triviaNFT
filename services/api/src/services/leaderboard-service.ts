@@ -5,7 +5,7 @@
  */
 
 import { query } from '../db/connection.js';
-import { RedisService } from './redis-service.js';
+import { UpstashRedisService } from './upstash-redis-service.js';
 
 interface PointsMetadata {
   nftsMinted: number;
@@ -34,10 +34,10 @@ interface LeaderboardPage {
 }
 
 export class LeaderboardService {
-  private redis: RedisService;
+  private redis: UpstashRedisService;
 
   constructor() {
-    this.redis = new RedisService();
+    this.redis = new UpstashRedisService();
   }
 
   /**
@@ -124,8 +124,7 @@ export class LeaderboardService {
 
     // Update Redis sorted set (global ladder)
     const leaderboardKey = `ladder:global:${seasonId}`;
-    const client = await (this.redis as any).getClient();
-    await client.zAdd(leaderboardKey, { score: compositeScore, value: stakeKey });
+    await this.redis.zAdd(leaderboardKey, { score: compositeScore, value: stakeKey });
   }
 
 
@@ -139,13 +138,12 @@ export class LeaderboardService {
     offset: number = 0
   ): Promise<LeaderboardPage> {
     const leaderboardKey = `ladder:global:${seasonId}`;
-    const client = await (this.redis as any).getClient();
 
     // Get total count
-    const total = await client.zCard(leaderboardKey);
+    const total = await this.redis.zCard(leaderboardKey);
 
     // Get entries with scores (ZREVRANGE returns highest to lowest)
-    const entries = await client.zRangeWithScores(leaderboardKey, offset, offset + limit - 1, {
+    const entries = await this.redis.zRangeWithScores(leaderboardKey, offset, offset + limit - 1, {
       REV: true,
     });
 
@@ -221,13 +219,12 @@ export class LeaderboardService {
     offset: number = 0
   ): Promise<LeaderboardPage> {
     const leaderboardKey = `ladder:category:${categoryId}:${seasonId}`;
-    const client = await (this.redis as any).getClient();
 
     // Get total count
-    const total = await client.zCard(leaderboardKey);
+    const total = await this.redis.zCard(leaderboardKey);
 
     // Get entries with scores
-    const entries = await client.zRangeWithScores(leaderboardKey, offset, offset + limit - 1, {
+    const entries = await this.redis.zRangeWithScores(leaderboardKey, offset, offset + limit - 1, {
       REV: true,
     });
 
@@ -409,7 +406,6 @@ export class LeaderboardService {
 
     // Update Redis sorted set (category ladder)
     const leaderboardKey = `ladder:category:${categoryId}:${seasonId}`;
-    const client = await (this.redis as any).getClient();
-    await client.zAdd(leaderboardKey, { score: compositeScore, value: stakeKey });
+    await this.redis.zAdd(leaderboardKey, { score: compositeScore, value: stakeKey });
   }
 }

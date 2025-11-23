@@ -1,10 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, ScrollView, ActivityIndicator, Pressable } from 'react-native';
-import { getProfile, getPlayerNFTs, getPlayerActivity } from '../services';
+import { useRouter } from 'expo-router';
+import { getProfile, getPlayerNFTs, getPlayerActivity, sessionService, mintService } from '../services';
 import { useAuth } from '../contexts/AuthContext';
 import { useCountdown } from '../hooks/useCountdown';
+import { useResponsive } from '../hooks/useResponsive';
 import type { NFT, Activity } from '@trivia-nft/shared';
 import { NFTCard } from './NFTCard';
+import { NFTDetailModal } from './NFTDetailModal';
+import { NFTGallery } from './NFTGallery';
+import { MintEligibilityList } from './MintEligibilityList';
+import { MintingInterface } from './MintingInterface';
+import { ForgeInterface } from './ForgeInterface';
+import { WalletConnect } from './WalletConnect';
+import { ProfileCreation } from './ProfileCreation';
 
 interface PlayerStats {
   totalSessions: number;
@@ -23,14 +32,30 @@ interface ProfileData {
   perfectScoresByCategory: Record<string, number>;
 }
 
-export const PlayerProfile: React.FC = () => {
-  const {} = useAuth();
+export interface PlayerProfileProps {
+  initialTab?: 'overview' | 'nfts' | 'activity' | 'minting' | 'forging' | 'settings';
+  initialEligibilityId?: string;
+  autoStartMinting?: boolean;
+}
+
+export const PlayerProfile: React.FC<PlayerProfileProps> = ({
+  initialTab = 'overview',
+  initialEligibilityId,
+  autoStartMinting = false,
+}) => {
+  const { player, isAuthenticated } = useAuth();
+  const router = useRouter();
+  const { isMobile, isTablet, isDesktop } = useResponsive();
   const [profile, setProfile] = useState<ProfileData | null>(null);
   const [nfts, setNfts] = useState<NFT[]>([]);
   const [activities, setActivities] = useState<Activity[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [activeTab, setActiveTab] = useState<'overview' | 'nfts' | 'activity'>('overview');
+  const [activeTab, setActiveTab] = useState<'overview' | 'nfts' | 'activity' | 'minting' | 'forging' | 'settings'>(initialTab);
+  const [showMintingInterface, setShowMintingInterface] = useState(autoStartMinting);
+  const [selectedEligibilityId, setSelectedEligibilityId] = useState<string | null>(initialEligibilityId || null);
+  const [selectedNFT, setSelectedNFT] = useState<NFT | null>(null);
+  const [showNFTModal, setShowNFTModal] = useState(false);
 
   const resetCountdown = useCountdown(profile?.resetAt || '');
 
@@ -38,25 +63,53 @@ export const PlayerProfile: React.FC = () => {
     fetchProfile();
   }, []);
 
+  // Clear URL parameters if eligibility is invalid on mount
+  useEffect(() => {
+    if (autoStartMinting && initialEligibilityId) {
+      // Check if eligibility is still valid
+      mintService.getEligibilities().then(response => {
+        const eligibility = response.eligibilities.find(e => e.id === initialEligibilityId);
+        if (!eligibility) {
+          // Eligibility not found - clear URL parameters
+          console.log('[Profile] Eligibility not found, clearing URL parameters');
+          router.replace('/profile?tab=minting');
+          setShowMintingInterface(false);
+          setSelectedEligibilityId(null);
+        }
+      }).catch(err => {
+        console.error('[Profile] Failed to check eligibility:', err);
+      });
+    }
+  }, [autoStartMinting, initialEligibilityId]);
+
+  // Refresh profile when countdown expires (sessions reset)
+  useEffect(() => {
+    if (resetCountdown.isExpired && profile) {
+      console.log('[Profile] Session limit reset detected, refreshing profile...');
+      fetchProfile();
+    }
+  }, [resetCountdown.isExpired]);
+
   const fetchProfile = async () => {
     try {
       setLoading(true);
       setError(null);
 
-      const [profileRes, nftsRes, activityRes] = await Promise.all([
+      const [profileRes, nftsRes, activityRes, limitsRes] = await Promise.all([
         getProfile(),
         getPlayerNFTs({ limit: 50 }),
         getPlayerActivity({ limit: 20 }),
+        sessionService.getSessionLimits(),
       ]);
 
       // Transform profile response
       setProfile({
         username: profileRes.player.username || 'Anonymous',
         stakeKey: profileRes.player.stakeKey || '',
-        remainingPlays: 10, // This should come from API
-        resetAt: new Date(Date.now() + 24 * 60 * 60 * 1000).toISOString(), // Mock reset time
+        remainingPlays: limitsRes.remainingSessions,
+        resetAt: limitsRes.resetAt,
         stats: profileRes.stats,
-        perfectScoresByCategory: {}, // This should come from API
+        perfectScoresByCategory: profileRes.stats.perfectScoresByCategory || {},
       });
 
       setNfts(nftsRes.nfts as NFT[]);
@@ -84,6 +137,8 @@ export const PlayerProfile: React.FC = () => {
         <Pressable
           onPress={fetchProfile}
           className="bg-primary px-6 py-3 rounded-lg"
+          accessibilityRole="button"
+          accessibilityLabel="Retry loading profile"
         >
           <Text className="text-white font-semibold">Retry</Text>
         </Pressable>
@@ -96,9 +151,18 @@ export const PlayerProfile: React.FC = () => {
   }
 
   return (
-    <ScrollView className="flex-1 bg-gray-900">
+    <>
+      <NFTDetailModal
+        nft={selectedNFT}
+        visible={showNFTModal}
+        onClose={() => {
+          setShowNFTModal(false);
+          setSelectedNFT(null);
+        }}
+      />
+      <ScrollView className="flex-1 bg-gray-900">
       {/* Header */}
-      <View className="bg-gradient-to-b from-primary/20 to-transparent p-6">
+      <View className="bg-gradient-to-b from-primary/20 to-transparent p-6 pt-24">
         <Text className="text-white text-2xl font-bold mb-2">
           {profile.username}
         </Text>
@@ -111,14 +175,17 @@ export const PlayerProfile: React.FC = () => {
       <View className="mx-4 mb-4 bg-gray-800 rounded-lg p-4">
         <View className="flex-row items-center justify-between mb-2">
           <Text className="text-white font-semibold">Daily Sessions</Text>
-          <Text className="text-primary text-lg font-bold">
-            {profile.remainingPlays}/10
+          <Text className="text-lg font-bold" style={{ color: '#6d4ee3' }}>
+            {profile.remainingPlays}/20
           </Text>
         </View>
-        <View className="bg-gray-700 h-2 rounded-full overflow-hidden">
+        <View className="bg-gray-700 h-3 rounded-full overflow-hidden">
           <View
-            className="bg-primary h-full"
-            style={{ width: `${(profile.remainingPlays / 10) * 100}%` }}
+            className="h-full rounded-full"
+            style={{ 
+              width: `${((20 - profile.remainingPlays) / 20) * 100}%`,
+              backgroundColor: '#6d4ee3'
+            }}
           />
         </View>
         <Text className="text-gray-400 text-xs mt-2">
@@ -127,59 +194,132 @@ export const PlayerProfile: React.FC = () => {
         </Text>
       </View>
 
-      {/* Tabs */}
-      <View className="flex-row mx-4 mb-4 bg-gray-800 rounded-lg p-1">
-        <Pressable
-          onPress={() => setActiveTab('overview')}
-          className={`flex-1 py-2 rounded-lg ${
-            activeTab === 'overview' ? 'bg-primary' : ''
-          }`}
+      {/* Tabs - Touch-friendly with min 44x44px targets */}
+      <View className="mx-4 mb-4 bg-gray-800 rounded-lg p-1">
+        <ScrollView 
+          horizontal 
+          showsHorizontalScrollIndicator={false}
         >
-          <Text
-            className={`text-center font-semibold ${
-              activeTab === 'overview' ? 'text-white' : 'text-gray-400'
+          <View className="flex-row">
+          <Pressable
+            onPress={() => setActiveTab('overview')}
+            className={`rounded-lg ${
+              activeTab === 'overview' ? 'bg-primary-500' : 'bg-transparent'
             }`}
+            style={[
+              { minWidth: 44, minHeight: 44, paddingHorizontal: 16, justifyContent: 'center' },
+              activeTab === 'overview' ? { backgroundColor: '#6d4ee3' } : {}
+            ]}
           >
-            Overview
-          </Text>
-        </Pressable>
-        <Pressable
-          onPress={() => setActiveTab('nfts')}
-          className={`flex-1 py-2 rounded-lg ${
-            activeTab === 'nfts' ? 'bg-primary' : ''
-          }`}
-        >
-          <Text
-            className={`text-center font-semibold ${
-              activeTab === 'nfts' ? 'text-white' : 'text-gray-400'
+            <Text
+              className={`text-center font-semibold text-base ${
+                activeTab === 'overview' ? 'text-white' : 'text-gray-400'
+              }`}
+            >
+              Overview
+            </Text>
+          </Pressable>
+          <Pressable
+            onPress={() => setActiveTab('nfts')}
+            className={`rounded-lg ${
+              activeTab === 'nfts' ? 'bg-primary-500' : 'bg-transparent'
             }`}
+            style={[
+              { minWidth: 44, minHeight: 44, paddingHorizontal: 16, justifyContent: 'center' },
+              activeTab === 'nfts' ? { backgroundColor: '#6d4ee3' } : {}
+            ]}
           >
-            NFTs ({nfts.length})
-          </Text>
-        </Pressable>
-        <Pressable
-          onPress={() => setActiveTab('activity')}
-          className={`flex-1 py-2 rounded-lg ${
-            activeTab === 'activity' ? 'bg-primary' : ''
-          }`}
-        >
-          <Text
-            className={`text-center font-semibold ${
-              activeTab === 'activity' ? 'text-white' : 'text-gray-400'
+            <Text
+              className={`text-center font-semibold text-base ${
+                activeTab === 'nfts' ? 'text-white' : 'text-gray-400'
+              }`}
+            >
+              NFTs ({nfts.length})
+            </Text>
+          </Pressable>
+          <Pressable
+            onPress={() => setActiveTab('minting')}
+            className={`rounded-lg ${
+              activeTab === 'minting' ? 'bg-primary-500' : 'bg-transparent'
             }`}
+            style={[
+              { minWidth: 44, minHeight: 44, paddingHorizontal: 16, justifyContent: 'center' },
+              activeTab === 'minting' ? { backgroundColor: '#6d4ee3' } : {}
+            ]}
           >
-            Activity
-          </Text>
-        </Pressable>
+            <Text
+              className={`text-center font-semibold text-base ${
+                activeTab === 'minting' ? 'text-white' : 'text-gray-400'
+              }`}
+            >
+              Minting
+            </Text>
+          </Pressable>
+          <Pressable
+            onPress={() => setActiveTab('forging')}
+            className={`rounded-lg ${
+              activeTab === 'forging' ? 'bg-primary-500' : 'bg-transparent'
+            }`}
+            style={[
+              { minWidth: 44, minHeight: 44, paddingHorizontal: 16, justifyContent: 'center' },
+              activeTab === 'forging' ? { backgroundColor: '#6d4ee3' } : {}
+            ]}
+          >
+            <Text
+              className={`text-center font-semibold text-base ${
+                activeTab === 'forging' ? 'text-white' : 'text-gray-400'
+              }`}
+            >
+              Forging
+            </Text>
+          </Pressable>
+          <Pressable
+            onPress={() => setActiveTab('activity')}
+            className={`rounded-lg ${
+              activeTab === 'activity' ? 'bg-primary-500' : 'bg-transparent'
+            }`}
+            style={[
+              { minWidth: 44, minHeight: 44, paddingHorizontal: 16, justifyContent: 'center' },
+              activeTab === 'activity' ? { backgroundColor: '#6d4ee3' } : {}
+            ]}
+          >
+            <Text
+              className={`text-center font-semibold text-base ${
+                activeTab === 'activity' ? 'text-white' : 'text-gray-400'
+              }`}
+            >
+              Activity
+            </Text>
+          </Pressable>
+          <Pressable
+            onPress={() => setActiveTab('settings')}
+            className={`rounded-lg ${
+              activeTab === 'settings' ? 'bg-primary-500' : 'bg-transparent'
+            }`}
+            style={[
+              { minWidth: 44, minHeight: 44, paddingHorizontal: 16, justifyContent: 'center' },
+              activeTab === 'settings' ? { backgroundColor: '#6d4ee3' } : {}
+            ]}
+          >
+            <Text
+              className={`text-center font-semibold text-base ${
+                activeTab === 'settings' ? 'text-white' : 'text-gray-400'
+              }`}
+            >
+              Settings
+            </Text>
+          </Pressable>
+        </View>
+        </ScrollView>
       </View>
 
       {/* Tab Content */}
       <View className="px-4 pb-6">
         {activeTab === 'overview' && (
           <View>
-            {/* Stats Grid */}
+            {/* Stats Grid - Responsive: 2 cols mobile, 2 cols tablet, 4 cols desktop */}
             <View className="flex-row flex-wrap -mx-2 mb-4">
-              <View className="w-1/2 px-2 mb-4">
+              <View className={`${isMobile ? 'w-1/2' : isTablet ? 'w-1/2' : 'w-1/4'} px-2 mb-4`}>
                 <View className="bg-gray-800 rounded-lg p-4">
                   <Text className="text-gray-400 text-xs mb-1">Total Sessions</Text>
                   <Text className="text-white text-2xl font-bold">
@@ -187,7 +327,7 @@ export const PlayerProfile: React.FC = () => {
                   </Text>
                 </View>
               </View>
-              <View className="w-1/2 px-2 mb-4">
+              <View className={`${isMobile ? 'w-1/2' : isTablet ? 'w-1/2' : 'w-1/4'} px-2 mb-4`}>
                 <View className="bg-gray-800 rounded-lg p-4">
                   <Text className="text-gray-400 text-xs mb-1">Perfect Scores</Text>
                   <Text className="text-green-400 text-2xl font-bold">
@@ -195,7 +335,7 @@ export const PlayerProfile: React.FC = () => {
                   </Text>
                 </View>
               </View>
-              <View className="w-1/2 px-2 mb-4">
+              <View className={`${isMobile ? 'w-1/2' : isTablet ? 'w-1/2' : 'w-1/4'} px-2 mb-4`}>
                 <View className="bg-gray-800 rounded-lg p-4">
                   <Text className="text-gray-400 text-xs mb-1">Total NFTs</Text>
                   <Text className="text-purple-400 text-2xl font-bold">
@@ -203,10 +343,10 @@ export const PlayerProfile: React.FC = () => {
                   </Text>
                 </View>
               </View>
-              <View className="w-1/2 px-2 mb-4">
+              <View className={`${isMobile ? 'w-1/2' : isTablet ? 'w-1/2' : 'w-1/4'} px-2 mb-4`}>
                 <View className="bg-gray-800 rounded-lg p-4">
                   <Text className="text-gray-400 text-xs mb-1">Season Points</Text>
-                  <Text className="text-primary text-2xl font-bold">
+                  <Text className="text-2xl font-bold" style={{ color: '#6d4ee3' }}>
                     {profile.stats.currentSeasonPoints}
                   </Text>
                 </View>
@@ -258,14 +398,183 @@ export const PlayerProfile: React.FC = () => {
                 </Text>
               </View>
             ) : (
-              <View className="flex-row flex-wrap -mx-2">
-                {nfts.map((nft) => (
-                  <View key={nft.id} className="w-1/2 px-2 mb-4">
-                    <NFTCard nft={nft} />
+              <NFTGallery 
+                nfts={nfts}
+                onNFTPress={(selectedNft) => {
+                  setSelectedNFT(selectedNft);
+                  setShowNFTModal(true);
+                }}
+              />
+            )}
+          </View>
+        )}
+
+        {activeTab === 'minting' && (
+          <View>
+            {showMintingInterface && selectedEligibilityId ? (
+              <MintingInterface
+                eligibilityId={selectedEligibilityId}
+                onComplete={(nft) => {
+                  console.log('Mint completed:', nft);
+                  // Clear URL parameters to prevent re-minting on refresh
+                  router.replace('/profile?tab=minting');
+                  // Don't close immediately - let user see success message and click button
+                  // The MintingInterface will call onCancel when user clicks "View My NFT Collection" or "Back to Lobby"
+                  // Refresh profile to update NFT count
+                  fetchProfile();
+                }}
+                onCancel={() => {
+                  setShowMintingInterface(false);
+                  setSelectedEligibilityId(null);
+                  // Clear URL parameters
+                  router.replace('/profile?tab=nfts');
+                  // Switch to NFTs tab to show the newly minted NFT
+                  setActiveTab('nfts');
+                }}
+              />
+            ) : (
+              <MintEligibilityList
+                onMintClick={(eligibilityId) => {
+                  setSelectedEligibilityId(eligibilityId);
+                  setShowMintingInterface(true);
+                }}
+                onConnectWallet={() => {
+                  console.log('Connect wallet clicked');
+                }}
+              />
+            )}
+          </View>
+        )}
+
+        {activeTab === 'forging' && (
+          <ForgeInterface
+            onComplete={() => {
+              // Refresh profile to update NFT counts
+              fetchProfile();
+            }}
+          />
+        )}
+
+        {activeTab === 'settings' && (
+          <View>
+            {/* Account Information */}
+            <View className="bg-gray-800 rounded-lg p-4 mb-4">
+              <Text className="text-white font-semibold text-lg mb-4">Account Information</Text>
+              
+              {/* Username */}
+              <View className="mb-4">
+                <Text className="text-gray-400 text-xs mb-1">Username</Text>
+                <Text className="text-white font-medium">{profile?.username || 'Not set'}</Text>
+              </View>
+
+              {/* Email */}
+              <View className="mb-4">
+                <Text className="text-gray-400 text-xs mb-1">Email</Text>
+                <Text className="text-white font-medium">{player?.email || 'Not provided'}</Text>
+              </View>
+
+              {/* Stake Address */}
+              <View className="mb-4">
+                <Text className="text-gray-400 text-xs mb-1">Stake Address</Text>
+                <Text className="text-white font-mono text-xs break-all">
+                  {profile?.stakeKey || 'Not connected'}
+                </Text>
+              </View>
+
+              {/* Payment Address */}
+              <View className="mb-4">
+                <Text className="text-gray-400 text-xs mb-1">Payment Address</Text>
+                <Text className="text-white font-mono text-xs break-all">
+                  {player?.paymentAddress || 'Not available'}
+                </Text>
+              </View>
+
+              {/* Account Created */}
+              <View>
+                <Text className="text-gray-400 text-xs mb-1">Member Since</Text>
+                <Text className="text-white font-medium">
+                  {new Date().toLocaleDateString('en-US', { 
+                    year: 'numeric', 
+                    month: 'long', 
+                    day: 'numeric' 
+                  })}
+                </Text>
+              </View>
+            </View>
+
+            {/* Wallet Connection */}
+            <View className="bg-gray-800 rounded-lg p-4 mb-4">
+              <Text className="text-white font-semibold text-lg mb-2">Wallet Connection</Text>
+              <Text className="text-gray-400 text-sm mb-4">
+                Manage your wallet connection and authentication
+              </Text>
+              
+              {isAuthenticated ? (
+                <View className="bg-green-900/20 border border-green-700/30 rounded-lg p-4">
+                  <View className="flex-row items-center mb-2">
+                    <View 
+                      className="w-3 h-3 rounded-full mr-2"
+                      style={{ backgroundColor: '#22c55e' }}
+                    />
+                    <Text className="text-green-400 font-semibold">Wallet Connected</Text>
                   </View>
-                ))}
+                  <Text className="text-gray-400 text-sm">
+                    Your Cardano wallet is connected and authenticated
+                  </Text>
+                </View>
+              ) : (
+                <WalletConnect
+                  onSuccess={() => {
+                    console.log('Wallet connected successfully!');
+                    fetchProfile();
+                  }}
+                  onError={(error) => {
+                    console.error('Wallet connection failed:', error);
+                  }}
+                />
+              )}
+            </View>
+
+            {/* Profile Setup */}
+            {isAuthenticated && !player?.username && (
+              <View className="bg-gray-800 rounded-lg p-4 mb-4">
+                <Text className="text-white font-semibold text-lg mb-2">Profile Setup</Text>
+                <Text className="text-gray-400 text-sm mb-4">
+                  Complete your player profile
+                </Text>
+                <ProfileCreation
+                  onSuccess={() => {
+                    console.log('Profile created successfully!');
+                    fetchProfile();
+                  }}
+                  onError={(error) => {
+                    console.error('Profile creation failed:', error);
+                  }}
+                />
               </View>
             )}
+
+            {/* Preferences */}
+            <View className="bg-gray-800 rounded-lg p-4">
+              <Text className="text-white font-semibold text-lg mb-4">Preferences</Text>
+              
+              <View className="mb-4">
+                <Text className="text-gray-400 text-sm mb-2">Network</Text>
+                <View className="bg-gray-700 rounded-lg p-3">
+                  <Text className="text-white font-medium">Preprod Testnet</Text>
+                  <Text className="text-gray-400 text-xs mt-1">
+                    Currently using Cardano preprod testnet
+                  </Text>
+                </View>
+              </View>
+
+              <View>
+                <Text className="text-gray-400 text-sm mb-2">Language</Text>
+                <View className="bg-gray-700 rounded-lg p-3">
+                  <Text className="text-white font-medium">English (US)</Text>
+                </View>
+              </View>
+            </View>
           </View>
         )}
 
@@ -277,42 +586,53 @@ export const PlayerProfile: React.FC = () => {
                 No activity yet
               </Text>
             ) : (
-              activities.map((activity) => (
-                <View
-                  key={activity.id}
-                  className="flex-row items-start py-3 border-b border-gray-700"
-                >
+              activities.map((activity) => {
+                const details = activity.details as any;
+                return (
                   <View
-                    className={`w-8 h-8 rounded-full items-center justify-center mr-3 ${
-                      activity.type === 'mint'
-                        ? 'bg-green-500/20'
-                        : activity.type === 'forge'
-                        ? 'bg-purple-500/20'
-                        : 'bg-blue-500/20'
-                    }`}
+                    key={activity.id}
+                    className="flex-row items-start py-3 border-b border-gray-700"
                   >
-                    <Text className="text-lg">
-                      {activity.type === 'mint'
-                        ? '🎨'
-                        : activity.type === 'forge'
-                        ? '⚒️'
-                        : '🎮'}
-                    </Text>
+                    <View
+                      className={`w-8 h-8 rounded-full items-center justify-center mr-3 ${
+                        activity.type === 'mint'
+                          ? 'bg-green-500/20'
+                          : activity.type === 'forge'
+                          ? 'bg-purple-500/20'
+                          : 'bg-blue-500/20'
+                      }`}
+                    >
+                      <Text className="text-lg">
+                        {activity.type === 'mint'
+                          ? '🎨'
+                          : activity.type === 'forge'
+                          ? '⚒️'
+                          : '🎮'}
+                      </Text>
+                    </View>
+                    <View className="flex-1">
+                      <Text className="text-white font-semibold capitalize">
+                        {activity.type === 'session' && details?.category
+                          ? `${details.category} Session`
+                          : activity.type}
+                      </Text>
+                      {activity.type === 'session' && details?.score !== undefined && (
+                        <Text className={`text-sm ${details.score === 10 ? 'text-green-400' : 'text-gray-300'}`}>
+                          Score: {details.score}/10 {details.score === 10 ? '🏆' : ''}
+                        </Text>
+                      )}
+                      <Text className="text-gray-400 text-xs mt-1">
+                        {new Date(activity.timestamp).toLocaleString()}
+                      </Text>
+                    </View>
                   </View>
-                  <View className="flex-1">
-                    <Text className="text-white font-semibold capitalize">
-                      {activity.type}
-                    </Text>
-                    <Text className="text-gray-400 text-xs mt-1">
-                      {new Date(activity.timestamp).toLocaleString()}
-                    </Text>
-                  </View>
-                </View>
-              ))
+                );
+              })
             )}
           </View>
         )}
       </View>
     </ScrollView>
+    </>
   );
 };

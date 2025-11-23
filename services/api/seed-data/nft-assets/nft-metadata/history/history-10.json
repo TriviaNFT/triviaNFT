@@ -1,0 +1,27 @@
+{
+  "name": "History NFT #10",
+  "description": "Historical knowledge NFT #10",
+  "image": "ipfs://QmPlaceholderhistory10",
+  "mediaType": "image/svg+xml",
+  "files": [
+    {
+      "name": "history-10.svg",
+      "mediaType": "image/svg+xml",
+      "src": "ipfs://QmPlaceholderhistory10"
+    }
+  ],
+  "attributes": [
+    {
+      "trait_type": "Era",
+      "value": "Revolution"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Legendary"
+    },
+    {
+      "trait_type": "Civilization",
+      "value": "Mongol"
+    }
+  ]
+}

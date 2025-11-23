@@ -9,11 +9,15 @@ interface BuildTransactionInput {
   playerId: string;
   stakeKey: string;
   categoryId: string;
+  categoryName: string;
   policyId: string;
   catalogId: string;
   nftName: string;
   ipfsCid: string;
   ipfsUrl: string;
+  videoCid?: string;
+  videoUrl?: string;
+  visualDescription?: string;
   attributes: any;
 }
 
@@ -34,16 +38,48 @@ export const handler = async (
     const tokenName = Buffer.from(input.nftName).toString('hex');
     const assetName = `${input.policyId}${tokenName}`;
 
-    // Build CIP-25 metadata
+    // Build rich description with visual details
+    const baseDescription = `Earned by achieving a perfect score in ${input.categoryName} trivia!`;
+    const visualDetail = input.visualDescription 
+      ? ` This NFT features ${input.visualDescription}.`
+      : '';
+    const fullDescription = baseDescription + visualDetail;
+
+    // Build files array with both thumbnail and video
+    const files = [
+      {
+        name: `${input.nftName}_thumbnail`,
+        mediaType: 'image/png',
+        src: input.ipfsUrl,
+      },
+    ];
+
+    // Add video file if available
+    if (input.videoUrl) {
+      files.push({
+        name: `${input.nftName}_video`,
+        mediaType: 'video/mp4',
+        src: input.videoUrl,
+      });
+    }
+
+    // Build CIP-25 metadata (full standard with multiple files)
     const metadata = {
       '721': {
         [input.policyId]: {
           [input.nftName]: {
             name: input.nftName,
-            image: input.ipfsUrl,
+            description: fullDescription,
+            image: input.ipfsUrl, // Primary image (thumbnail)
             mediaType: 'image/png',
-            description: `TriviaNFT - ${input.nftName}`,
-            attributes: input.attributes,
+            files,
+            attributes: {
+              ...input.attributes,
+              // Add visual description as attribute if available
+              ...(input.visualDescription && {
+                Visual: input.visualDescription.split(' ').slice(2, 5).join(' '), // Extract key visual element
+              }),
+            },
           },
         },
       },

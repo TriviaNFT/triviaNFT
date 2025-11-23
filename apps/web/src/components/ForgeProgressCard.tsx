@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Text, StyleSheet, Pressable } from 'react-native';
 import type { ForgeProgress } from '@trivia-nft/shared';
 import { colors } from '../theme';
+import { useResponsive } from '../hooks/useResponsive';
 
 interface ForgeProgressCardProps {
   progress: ForgeProgress;
@@ -12,6 +13,8 @@ export const ForgeProgressCard: React.FC<ForgeProgressCardProps> = ({
   progress,
   onForge,
 }) => {
+  const { isMobile } = useResponsive();
+  
   const getForgeTitle = () => {
     switch (progress.type) {
       case 'category':
@@ -39,12 +42,17 @@ export const ForgeProgressCard: React.FC<ForgeProgressCardProps> = ({
   };
 
   const progressPercentage = (progress.current / progress.required) * 100;
+  
+  // Responsive sizing
+  const cardPadding = isMobile ? 12 : 16;
+  const titleSize = isMobile ? 16 : 18;
+  const descriptionSize = isMobile ? 12 : 14;
 
   return (
-    <View style={styles.card}>
+    <View style={[styles.card, { padding: cardPadding }]}>
       <View style={styles.header}>
-        <Text style={styles.title}>{getForgeTitle()}</Text>
-        <Text style={styles.description}>{getForgeDescription()}</Text>
+        <Text style={[styles.title, { fontSize: titleSize }]}>{getForgeTitle()}</Text>
+        <Text style={[styles.description, { fontSize: descriptionSize }]}>{getForgeDescription()}</Text>
       </View>
 
       <View style={styles.progressSection}>
@@ -59,41 +67,42 @@ export const ForgeProgressCard: React.FC<ForgeProgressCardProps> = ({
             ]}
           />
         </View>
-        <Text style={styles.progressText}>
+        <Text style={[styles.progressText, { fontSize: isMobile ? 12 : 14 }]}>
           {progress.current}/{progress.required} NFTs
         </Text>
       </View>
 
       {progress.canForge && (
         <View style={styles.readySection}>
-          <Text style={styles.readyText}>✓ Ready to forge!</Text>
+          <Text style={[styles.readyText, { fontSize: isMobile ? 12 : 14 }]}>✓ Ready to forge!</Text>
           <Pressable
             style={({ pressed }) => [
               styles.forgeButton,
+              { minHeight: 44, minWidth: 44 }, // Touch-friendly sizing
               pressed && styles.forgeButtonPressed,
             ]}
             onPress={onForge}
           >
-            <Text style={styles.forgeButtonText}>Forge Now</Text>
+            <Text style={[styles.forgeButtonText, { fontSize: isMobile ? 14 : 16 }]}>Forge Now</Text>
           </Pressable>
         </View>
       )}
 
       {!progress.canForge && progress.current > 0 && (
         <View style={styles.nftPreview}>
-          <Text style={styles.nftPreviewTitle}>Collected NFTs:</Text>
+          <Text style={[styles.nftPreviewTitle, { fontSize: isMobile ? 12 : 14 }]}>Collected NFTs:</Text>
           <View style={styles.nftGrid}>
-            {progress.nfts.slice(0, 6).map((nft) => (
-              <View key={nft.id} style={styles.nftThumbnail}>
-                <Text style={styles.nftThumbnailText} numberOfLines={1}>
+            {progress.nfts.slice(0, isMobile ? 4 : 6).map((nft) => (
+              <View key={nft.id} style={[styles.nftThumbnail, { width: isMobile ? 50 : 60, height: isMobile ? 50 : 60 }]}>
+                <Text style={[styles.nftThumbnailText, { fontSize: isMobile ? 9 : 10 }]} numberOfLines={1}>
                   {nft.metadata.name}
                 </Text>
               </View>
             ))}
-            {progress.nfts.length > 6 && (
-              <View style={styles.nftThumbnail}>
-                <Text style={styles.nftThumbnailText}>
-                  +{progress.nfts.length - 6}
+            {progress.nfts.length > (isMobile ? 4 : 6) && (
+              <View style={[styles.nftThumbnail, { width: isMobile ? 50 : 60, height: isMobile ? 50 : 60 }]}>
+                <Text style={[styles.nftThumbnailText, { fontSize: isMobile ? 9 : 10 }]}>
+                  +{progress.nfts.length - (isMobile ? 4 : 6)}
                 </Text>
               </View>
             )}

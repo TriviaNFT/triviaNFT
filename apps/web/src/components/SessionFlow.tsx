@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { View, ActivityIndicator, Text } from 'react-native';
 import type { Session, SessionResult } from '@trivia-nft/shared';
-import { sessionService } from '../services';
+import { sessionService, questionService } from '../services';
 import { useSession } from '../contexts/SessionContext';
+import { useResponsive } from '../hooks/useResponsive';
 import { SessionStartScreen } from './SessionStartScreen';
 import { QuestionCard } from './QuestionCard';
 import { AnswerFeedback } from './AnswerFeedback';
@@ -10,7 +11,7 @@ import { AnswerFeedback } from './AnswerFeedback';
 export interface SessionFlowProps {
   categoryId: string;
   categoryName: string;
-  stockAvailable?: number;
+  nftCount?: number; // Number of NFT designs available
   onComplete: (result: SessionResult) => void;
   onError?: (error: Error) => void;
 }
@@ -20,7 +21,7 @@ type SessionState = 'loading' | 'start' | 'question' | 'feedback' | 'completing'
 export const SessionFlow: React.FC<SessionFlowProps> = ({
   categoryId,
   categoryName,
-  stockAvailable,
+  nftCount,
   onComplete,
   onError,
 }) => {
@@ -36,19 +37,38 @@ export const SessionFlow: React.FC<SessionFlowProps> = ({
     correctIndex: number;
     explanation: string;
     isTimeout: boolean;
+    questionId?: string;
   } | null>(null);
+  
+  // Track auto-advance timeout to cancel it if user manually advances
+  const autoAdvanceTimeoutRef = React.useRef<NodeJS.Timeout | null>(null);
+  
+  // Cleanup on unmount
+  useEffect(() => {
+    return () => {
+      if (autoAdvanceTimeoutRef.current) {
+        clearTimeout(autoAdvanceTimeoutRef.current);
+      }
+    };
+  }, []);
+
+  const handleReportQuestion = async (questionId: string, reason: string) => {
+    try {
+      await questionService.flagQuestion({ questionId, reason });
+      console.log('[SessionFlow] Question reported successfully:', questionId);
+    } catch (error) {
+      console.error('[SessionFlow] Error reporting question:', error);
+      throw error;
+    }
+  };
 
   // Initialize session
   useEffect(() => {
-    // Check if we're recovering a session
-    if (contextSession && contextSession.categoryId === categoryId) {
-      setSession(contextSession);
-      setState('question');
-      setAnswerStartTime(Date.now());
-    } else {
-      startSession();
-    }
-  }, [categoryId, contextSession]);
+    // Always start a fresh session - don't recover old ones
+    // User explicitly clicked to start a new session
+    clearActiveSession(); // Clear any old session first
+    startSession();
+  }, [categoryId]); // Only depend on categoryId, not contextSession
 
   const startSession = async () => {
     try {
@@ -73,17 +93,23 @@ export const SessionFlow: React.FC<SessionFlowProps> = ({
   useEffect(() => {
     if (state !== 'question' || !session) return;
 
-    if (timeRemaining <= 0) {
-      handleTimeout();
-      return;
-    }
+    setTimeRemaining(10); // Reset to 10 when starting new question
 
+    // Start fresh timer for this question
     const timer = setInterval(() => {
-      setTimeRemaining((prev) => Math.max(0, prev - 1));
+      setTimeRemaining((prev) => {
+        const next = prev - 1;
+        if (next <= 0) {
+          clearInterval(timer);
+          handleTimeout();
+          return 0;
+        }
+        return next;
+      });
     }, 1000);
 
     return () => clearInterval(timer);
-  }, [state, timeRemaining, session]);
+  }, [state, session, currentQuestionIndex]); // Only restart when question changes
 
   const handleTimeout = async () => {
     if (!session) return;
@@ -101,13 +127,14 @@ export const SessionFlow: React.FC<SessionFlowProps> = ({
         correctIndex: response.correctIndex,
         explanation: response.explanation,
         isTimeout: true,
+        questionId: session.questions[currentQuestionIndex].questionId,
       });
       setState('feedback');
 
-      // Auto-advance after 2 seconds
-      setTimeout(() => {
+      // Auto-advance after 5 seconds
+      autoAdvanceTimeoutRef.current = setTimeout(() => {
         advanceToNextQuestion();
-      }, 2000);
+      }, 5000);
     } catch (error) {
       console.error('Failed to submit timeout:', error);
       onError?.(error as Error);
@@ -132,13 +159,14 @@ export const SessionFlow: React.FC<SessionFlowProps> = ({
         correctIndex: response.correctIndex,
         explanation: response.explanation,
         isTimeout: false,
+        questionId: session.questions[currentQuestionIndex].questionId,
       });
       setState('feedback');
 
-      // Auto-advance after 2 seconds
-      setTimeout(() => {
+      // Auto-advance after 5 seconds
+      autoAdvanceTimeoutRef.current = setTimeout(() => {
         advanceToNextQuestion();
-      }, 2000);
+      }, 5000);
     } catch (error) {
       console.error('Failed to submit answer:', error);
       onError?.(error as Error);
@@ -148,19 +176,29 @@ export const SessionFlow: React.FC<SessionFlowProps> = ({
   const advanceToNextQuestion = () => {
     if (!session) return;
 
+    // Cancel any pending auto-advance timeout
+    if (autoAdvanceTimeoutRef.current) {
+      clearTimeout(autoAdvanceTimeoutRef.current);
+      autoAdvanceTimeoutRef.current = null;
+    }
+
     const nextIndex = currentQuestionIndex + 1;
 
     if (nextIndex >= session.questions.length) {
       // Session complete
       completeSession();
     } else {
-      // Move to next question
-      setCurrentQuestionIndex(nextIndex);
-      setSelectedIndex(undefined);
-      setTimeRemaining(10);
-      setAnswerStartTime(Date.now());
+      // First clear feedback and reset timer
       setFeedbackData(null);
-      setState('question');
+      setSelectedIndex(undefined);
+
+      // Then update question index and reset timer in next tick
+      // This ensures the timer effect cleanup runs before new timer starts
+      requestAnimationFrame(() => {
+        setCurrentQuestionIndex(nextIndex);
+        setAnswerStartTime(Date.now());
+        setState('question');
+      });
     }
   };
 
@@ -178,11 +216,16 @@ export const SessionFlow: React.FC<SessionFlowProps> = ({
     }
   };
 
+  const { isMobile } = useResponsive();
+  
+  // Responsive text sizing for loading states
+  const loadingTextSize = isMobile ? 'text-sm' : 'text-base';
+
   if (state === 'loading') {
     return (
-      <View className="flex-1 items-center justify-center bg-background">
+      <View className="flex-1 items-center justify-center bg-background w-full">
         <ActivityIndicator size="large" color="#6d4ee3" />
-        <Text className="text-text-secondary mt-4">Starting session...</Text>
+        <Text className={`text-text-secondary mt-4 ${loadingTextSize}`}>Starting session...</Text>
       </View>
     );
   }
@@ -191,7 +234,7 @@ export const SessionFlow: React.FC<SessionFlowProps> = ({
     return (
       <SessionStartScreen
         categoryName={categoryName}
-        stockAvailable={stockAvailable}
+        nftCount={nftCount}
         onStart={handleStartQuestions}
       />
     );
@@ -199,9 +242,9 @@ export const SessionFlow: React.FC<SessionFlowProps> = ({
 
   if (state === 'completing') {
     return (
-      <View className="flex-1 items-center justify-center bg-background">
+      <View className="flex-1 items-center justify-center bg-background w-full">
         <ActivityIndicator size="large" color="#6d4ee3" />
-        <Text className="text-text-secondary mt-4">Completing session...</Text>
+        <Text className={`text-text-secondary mt-4 ${loadingTextSize}`}>Completing session...</Text>
       </View>
     );
   }
@@ -213,6 +256,9 @@ export const SessionFlow: React.FC<SessionFlowProps> = ({
         correctIndex={feedbackData.correctIndex}
         explanation={feedbackData.explanation}
         isTimeout={feedbackData.isTimeout}
+        questionId={feedbackData.questionId}
+        onNext={advanceToNextQuestion}
+        onReportQuestion={handleReportQuestion}
       />
     );
   }

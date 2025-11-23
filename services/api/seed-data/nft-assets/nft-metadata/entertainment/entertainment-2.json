@@ -1,0 +1,27 @@
+{
+  "name": "Entertainment NFT #2",
+  "description": "Entertainment knowledge NFT #2",
+  "image": "ipfs://QmPlaceholderentertainment2",
+  "mediaType": "image/svg+xml",
+  "files": [
+    {
+      "name": "entertainment-2.svg",
+      "mediaType": "image/svg+xml",
+      "src": "ipfs://QmPlaceholderentertainment2"
+    }
+  ],
+  "attributes": [
+    {
+      "trait_type": "Genre",
+      "value": "Comedy"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Uncommon"
+    },
+    {
+      "trait_type": "Era",
+      "value": "2010s"
+    }
+  ]
+}

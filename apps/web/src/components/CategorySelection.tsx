@@ -7,6 +7,7 @@ import { Card } from './ui/Card';
 import { Badge } from './ui/Badge';
 import { Container } from './ui/Container';
 import { useResponsive } from '../hooks/useResponsive';
+import { useCountdown } from '../hooks/useCountdown';
 
 export interface CategorySelectionProps {
   onCategorySelect: (categoryId: string) => void;
@@ -24,29 +25,58 @@ export const CategorySelection: React.FC<CategorySelectionProps> = ({
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
+  const resetCountdown = useCountdown(sessionLimits?.resetAt || '');
+
   useEffect(() => {
     loadData();
   }, []);
+
+  // Refresh session limits when countdown expires (daily reset)
+  useEffect(() => {
+    if (resetCountdown.isExpired && sessionLimits) {
+      console.log('[CategorySelection] Session limit reset detected, refreshing limits...');
+      loadData();
+    }
+  }, [resetCountdown.isExpired]);
 
   const loadData = async () => {
     try {
       setLoading(true);
       setError(null);
 
+      console.log('[CategorySelection] Loading data...');
+      
       const [categoriesRes, limitsRes] = await Promise.all([
         categoryService.getCategories(),
         sessionService.getSessionLimits(),
       ]);
 
+      console.log('[CategorySelection] Categories response:', categoriesRes);
+      console.log('[CategorySelection] Limits response:', limitsRes);
+
+      if (!categoriesRes || !categoriesRes.categories) {
+        throw new Error('Invalid categories response');
+      }
+
+      if (!limitsRes || typeof limitsRes.remainingSessions === 'undefined') {
+        throw new Error('Invalid session limits response');
+      }
+
       setCategories(categoriesRes.categories);
       setSessionLimits({
         remainingSessions: limitsRes.remainingSessions,
-        resetAt: limitsRes.resetAt,
+        resetAt: limitsRes.resetAt || new Date(Date.now() + 86400000).toISOString(),
         cooldownEndsAt: limitsRes.cooldownEndsAt,
       });
+      
+      console.log('[CategorySelection] Data loaded successfully');
     } catch (err) {
-      console.error('Failed to load categories:', err);
-      setError('Failed to load categories. Please try again.');
+      console.error('[CategorySelection] Failed to load categories:', err);
+      console.error('[CategorySelection] Error details:', {
+        message: err instanceof Error ? err.message : String(err),
+        stack: err instanceof Error ? err.stack : undefined,
+      });
+      setError(`Failed to load categories: ${err instanceof Error ? err.message : 'Unknown error'}`);
     } finally {
       setLoading(false);
     }
@@ -83,9 +113,23 @@ export const CategorySelection: React.FC<CategorySelectionProps> = ({
     return seconds;
   };
 
+  // MUST call all hooks before any conditional returns
+  const { isMobile, isTablet } = useResponsive();
+
   const cooldownSeconds = getCooldownTime();
   const isOnCooldown = cooldownSeconds !== null && cooldownSeconds > 0;
   const hasSessionsRemaining = sessionLimits && sessionLimits.remainingSessions > 0;
+
+  // Responsive text sizing
+  const headerTextSize = isMobile ? 'text-2xl' : isTablet ? 'text-3xl' : 'text-4xl';
+  const subheaderTextSize = isMobile ? 'text-sm' : 'text-base';
+  
+  // Responsive grid columns
+  const gridClasses = isMobile 
+    ? 'gap-3' 
+    : isTablet 
+    ? 'gap-4 grid grid-cols-2' 
+    : 'gap-4 grid grid-cols-3';
 
   if (loading) {
     return (
@@ -110,39 +154,37 @@ export const CategorySelection: React.FC<CategorySelectionProps> = ({
     );
   }
 
-  const { isMobile } = useResponsive();
-
   return (
-    <View className="flex-1 bg-background">
+    <View className="flex-1 bg-background w-full">
       <ScrollView className="flex-1">
-        <Container maxWidth="lg" className="py-6">
-          {/* Header */}
-          <View className="mb-6">
-            <Text className={`font-bold text-text-primary mb-2 ${isMobile ? 'text-2xl' : 'text-3xl'}`}>
+        <Container maxWidth="lg" className="pt-24 pb-6">
+          {/* Header - responsive sizing */}
+          <View className="mb-4 sm:mb-6">
+            <Text className={`font-bold text-text-primary mb-2 ${headerTextSize}`}>
               Select a Category
             </Text>
-            <Text className={`text-text-secondary ${isMobile ? 'text-sm' : 'text-base'}`}>
+            <Text className={`text-text-secondary ${subheaderTextSize}`}>
               Choose a trivia category to start your session
             </Text>
           </View>
 
-        {/* Session Limits Card */}
+        {/* Session Limits Card - responsive layout */}
         {sessionLimits && (
-          <Card variant="outlined" className="mb-6">
-            <View className="flex-row items-center justify-between">
-              <View>
-                <Text className="text-text-secondary text-sm mb-1">
+          <Card variant="outlined" className="mb-4 sm:mb-6">
+            <View className={`items-center ${isMobile ? 'flex-col gap-3' : 'flex-row justify-between'}`}>
+              <View className={isMobile ? 'items-center' : ''}>
+                <Text className={`text-text-secondary mb-1 ${isMobile ? 'text-xs text-center' : 'text-sm'}`}>
                   Sessions Remaining
                 </Text>
-                <Text className="text-2xl font-bold text-text-primary">
+                <Text className={`font-bold text-text-primary ${isMobile ? 'text-xl' : 'text-2xl'}`}>
                   {sessionLimits.remainingSessions}
                 </Text>
               </View>
-              <View className="items-end">
-                <Text className="text-text-secondary text-sm mb-1">
+              <View className={`items-${isMobile ? 'center' : 'end'}`}>
+                <Text className={`text-text-secondary mb-1 ${isMobile ? 'text-xs text-center' : 'text-sm'}`}>
                   Resets in
                 </Text>
-                <Badge variant="primary" size="md">
+                <Badge variant="primary" size={isMobile ? 'sm' : 'md'}>
                   {getTimeUntilReset()}
                 </Badge>
               </View>
@@ -151,7 +193,7 @@ export const CategorySelection: React.FC<CategorySelectionProps> = ({
             {/* Cooldown Warning */}
             {isOnCooldown && (
               <View className="mt-4 pt-4 border-t border-background-tertiary">
-                <Text className="text-warning-500 text-sm">
+                <Text className={`text-warning-500 ${isMobile ? 'text-xs' : 'text-sm'}`}>
                   ⏱️ Cooldown active: {cooldownSeconds}s remaining
                 </Text>
               </View>
@@ -160,7 +202,7 @@ export const CategorySelection: React.FC<CategorySelectionProps> = ({
             {/* No Sessions Warning */}
             {!hasSessionsRemaining && (
               <View className="mt-4 pt-4 border-t border-background-tertiary">
-                <Text className="text-error-500 text-sm">
+                <Text className={`text-error-500 ${isMobile ? 'text-xs' : 'text-sm'}`}>
                   ⚠️ Daily limit reached. Come back after reset!
                 </Text>
               </View>
@@ -168,8 +210,8 @@ export const CategorySelection: React.FC<CategorySelectionProps> = ({
           </Card>
         )}
 
-        {/* Categories Grid */}
-        <View className="gap-4 md:grid md:grid-cols-2 lg:grid-cols-3">
+        {/* Categories Grid - responsive columns */}
+        <View className={gridClasses} style={{ width: '100%' }}>
           {categories.map((category) => (
             <CategoryCard
               key={category.id}

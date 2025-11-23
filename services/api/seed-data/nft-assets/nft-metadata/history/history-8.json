@@ -1,0 +1,27 @@
+{
+  "name": "History NFT #8",
+  "description": "Historical knowledge NFT #8",
+  "image": "ipfs://QmPlaceholderhistory8",
+  "mediaType": "image/svg+xml",
+  "files": [
+    {
+      "name": "history-8.svg",
+      "mediaType": "image/svg+xml",
+      "src": "ipfs://QmPlaceholderhistory8"
+    }
+  ],
+  "attributes": [
+    {
+      "trait_type": "Era",
+      "value": "Victorian"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Common"
+    },
+    {
+      "trait_type": "Civilization",
+      "value": "Inca"
+    }
+  ]
+}

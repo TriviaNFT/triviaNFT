@@ -20,3 +20,10 @@ export type { SwipeGestureConfig, SwipeGestureHandlers } from './useSwipeGesture
 // New performance hooks
 export { useNetworkStatus, useImageQuality, useShouldReduceAnimations } from './useNetworkStatus';
 export type { NetworkStatus } from './useNetworkStatus';
+
+// State preservation hooks
+export { useStatePreservation } from './useStatePreservation';
+
+// Accessibility hooks
+export { useFocusRing } from './useFocusRing';
+export { useReducedMotion, useAnimationDuration, useShouldAnimate } from './useReducedMotion';

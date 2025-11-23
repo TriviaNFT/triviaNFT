@@ -9,7 +9,7 @@
 
 import type { APIGatewayProxyEvent, APIGatewayProxyResult } from 'aws-lambda';
 import { QuestionService } from '../../services/question-service.js';
-import { RedisService } from '../../services/redis-service.js';
+import { UpstashRedisService } from '../../services/upstash-redis-service.js';
 
 interface SelectQuestionsRequest {
   categoryId: string;
@@ -65,7 +65,7 @@ export const handler = async (
 
     // Initialize services
     const questionService = new QuestionService();
-    const redisService = new RedisService();
+    const redisService = new UpstashRedisService();
 
     // Get pool size
     const poolSize = await questionService.getQuestionPoolCount(body.categoryId);

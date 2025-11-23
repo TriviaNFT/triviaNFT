@@ -35,7 +35,13 @@ export default defineConfig({
     
     /* Video on failure */
     video: 'retain-on-failure',
+    
+    /* Increase action timeout for slow Metro dev server */
+    actionTimeout: 15000,
   },
+  
+  /* Increase test timeout for slow Metro dev server */
+  timeout: 90000,
 
   /* Configure projects for major browsers */
   projects: [

@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { View, Text, TextInput, Alert } from 'react-native';
 import { Button, Card } from './ui';
 import { useAuth } from '../contexts';
+import { useResponsive, useStatePreservation } from '../hooks';
 
 export interface ProfileCreationProps {
   onSuccess?: () => void;
@@ -10,10 +11,33 @@ export interface ProfileCreationProps {
 
 export const ProfileCreation: React.FC<ProfileCreationProps> = ({ onSuccess, onError }) => {
   const { createProfile } = useAuth();
+  const { isMobile, isTablet } = useResponsive();
+  useStatePreservation(false); // Don't preserve scroll for form
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errors, setErrors] = useState<{ username?: string; email?: string }>({});
+
+  // Preserve form state in sessionStorage during resize
+  useEffect(() => {
+    const savedState = sessionStorage.getItem('profile-creation-state');
+    if (savedState) {
+      try {
+        const { username: savedUsername, email: savedEmail } = JSON.parse(savedState);
+        if (savedUsername) setUsername(savedUsername);
+        if (savedEmail) setEmail(savedEmail);
+      } catch (error) {
+        console.error('Failed to restore form state:', error);
+      }
+    }
+  }, []);
+
+  useEffect(() => {
+    // Save form state on changes
+    if (username || email) {
+      sessionStorage.setItem('profile-creation-state', JSON.stringify({ username, email }));
+    }
+  }, [username, email]);
 
   const validateForm = (): boolean => {
     const newErrors: { username?: string; email?: string } = {};
@@ -46,6 +70,8 @@ export const ProfileCreation: React.FC<ProfileCreationProps> = ({ onSuccess, onE
     try {
       setIsSubmitting(true);
       await createProfile(username.trim(), email.trim() || undefined);
+      // Clear saved state on successful submission
+      sessionStorage.removeItem('profile-creation-state');
       onSuccess?.();
     } catch (error) {
       console.error('Profile creation error:', error);
@@ -58,18 +84,51 @@ export const ProfileCreation: React.FC<ProfileCreationProps> = ({ onSuccess, onE
   };
 
   return (
-    <Card className="p-6">
-      <Text className="text-2xl font-bold text-text-primary mb-2">Create Your Profile</Text>
-      <Text className="text-text-secondary mb-6">
+    <Card 
+      className="w-full"
+      style={{
+        padding: isMobile ? 16 : 24,
+        maxWidth: isMobile ? '100%' : (isTablet ? 480 : 560),
+      }}
+    >
+      <Text 
+        className="font-bold text-text-primary mb-2"
+        style={{ fontSize: isMobile ? 20 : 24 }}
+      >
+        Create Your Profile
+      </Text>
+      <Text 
+        className="text-text-secondary"
+        style={{ 
+          marginBottom: isMobile ? 16 : 24,
+          fontSize: isMobile ? 14 : 16,
+        }}
+      >
         Choose a username to get started with TriviaNFT
       </Text>
 
-      <View className="mb-4">
-        <Text className="text-text-primary font-medium mb-2">
+      <View style={{ marginBottom: isMobile ? 12 : 16 }}>
+        <Text 
+          className="text-text-primary font-medium"
+          style={{ 
+            marginBottom: 8,
+            fontSize: isMobile ? 14 : 16,
+          }}
+        >
           Username <Text className="text-error-500">*</Text>
         </Text>
         <TextInput
-          className="input"
+          style={{
+            backgroundColor: '#1a1a2e',
+            borderWidth: 2,
+            borderColor: '#27324a',
+            borderRadius: 8,
+            paddingHorizontal: isMobile ? 12 : 16,
+            paddingVertical: isMobile ? 14 : 12,
+            fontSize: isMobile ? 16 : 16,
+            color: '#EAF2FF',
+            minHeight: 44, // Touch target minimum
+          }}
           value={username}
           onChangeText={(text) => {
             setUsername(text);
@@ -82,14 +141,37 @@ export const ProfileCreation: React.FC<ProfileCreationProps> = ({ onSuccess, onE
           maxLength={20}
         />
         {errors.username && (
-          <Text className="text-error-500 text-sm mt-1">{errors.username}</Text>
+          <Text 
+            className="text-error-500 mt-1"
+            style={{ fontSize: isMobile ? 12 : 14 }}
+          >
+            {errors.username}
+          </Text>
         )}
       </View>
 
-      <View className="mb-6">
-        <Text className="text-text-primary font-medium mb-2">Email (Optional)</Text>
+      <View style={{ marginBottom: isMobile ? 16 : 24 }}>
+        <Text 
+          className="text-text-primary font-medium"
+          style={{ 
+            marginBottom: 8,
+            fontSize: isMobile ? 14 : 16,
+          }}
+        >
+          Email (Optional)
+        </Text>
         <TextInput
-          className="input"
+          style={{
+            backgroundColor: '#1a1a2e',
+            borderWidth: 2,
+            borderColor: '#27324a',
+            borderRadius: 8,
+            paddingHorizontal: isMobile ? 12 : 16,
+            paddingVertical: isMobile ? 14 : 12,
+            fontSize: isMobile ? 16 : 16,
+            color: '#EAF2FF',
+            minHeight: 44, // Touch target minimum
+          }}
           value={email}
           onChangeText={(text) => {
             setEmail(text);
@@ -101,7 +183,14 @@ export const ProfileCreation: React.FC<ProfileCreationProps> = ({ onSuccess, onE
           autoCapitalize="none"
           autoCorrect={false}
         />
-        {errors.email && <Text className="text-error-500 text-sm mt-1">{errors.email}</Text>}
+        {errors.email && (
+          <Text 
+            className="text-error-500 mt-1"
+            style={{ fontSize: isMobile ? 12 : 14 }}
+          >
+            {errors.email}
+          </Text>
+        )}
       </View>
 
       <Button
@@ -109,6 +198,7 @@ export const ProfileCreation: React.FC<ProfileCreationProps> = ({ onSuccess, onE
         loading={isSubmitting}
         disabled={!username.trim() || isSubmitting}
         fullWidth
+        style={{ minHeight: 44 }} // Touch target minimum
       >
         Create Profile
       </Button>

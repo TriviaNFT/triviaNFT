@@ -1,0 +1,27 @@
+{
+  "name": "Sports NFT #7",
+  "description": "Sports knowledge NFT #7",
+  "image": "ipfs://QmPlaceholdersports7",
+  "mediaType": "image/svg+xml",
+  "files": [
+    {
+      "name": "sports-7.svg",
+      "mediaType": "image/svg+xml",
+      "src": "ipfs://QmPlaceholdersports7"
+    }
+  ],
+  "attributes": [
+    {
+      "trait_type": "Sport",
+      "value": "Swimming"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Epic"
+    },
+    {
+      "trait_type": "Achievement",
+      "value": "Gold Medal"
+    }
+  ]
+}

@@ -363,7 +363,7 @@ INSERT INTO categories (id, name, slug, description, display_order) VALUES
   (uuid_generate_v4(), 'Entertainment', 'entertainment', 'Questions about movies, TV shows, and pop culture', 6),
   (uuid_generate_v4(), 'Technology', 'technology', 'Questions about computers, internet, and modern technology', 7),
   (uuid_generate_v4(), 'Literature', 'literature', 'Questions about books, authors, and literary works', 8),
-  (uuid_generate_v4(), 'General', 'general', 'General knowledge questions from various topics', 9);
+  (uuid_generate_v4(), 'Weird & Wonderful', 'weird-wonderful', 'Questions about strange, surprising, and mind-blowing facts from all kinds of topics', 9);
 
 -- Insert initial season (Winter Season 1)
 INSERT INTO seasons (id, name, starts_at, ends_at, grace_days, is_active) VALUES
