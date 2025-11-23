@@ -496,7 +496,8 @@
   - Test critical queries
 
 
-- [-] 24. Deploy to production
+- [x] 24. Deploy to production
+
 
 
 
