@@ -12,9 +12,16 @@ This directory contains GitHub Actions workflows for the TriviaNFT platform.
 
 **Jobs**:
 - **lint-and-test**: Runs linting, formatting checks, type checking, and unit tests with coverage
+- **e2e-tests**: Runs end-to-end tests using Playwright with Vercel Dev
 - **build-infra**: Builds and validates CDK infrastructure code
 
 **Coverage Reporting**: Uploads test coverage to Codecov
+
+**E2E Testing**: 
+- Uses Vercel Dev for production-parity testing
+- Runs Playwright tests against local Vercel Dev server
+- Uploads Playwright HTML report as artifact
+- Requires environment variables (DATABASE_URL, REDIS_URL, etc.)
 
 ### 2. CDK PR Check (`cdk-pr-check.yml`)
 
@@ -108,6 +115,13 @@ Configure the following secrets in your GitHub repository:
 - `AWS_REGION`: AWS region (e.g., `us-east-1`)
 - `AWS_ROLE_ARN_STAGING`: IAM role ARN for staging deployments
 - `AWS_ROLE_ARN_PRODUCTION`: IAM role ARN for production deployments
+
+#### E2E Testing (Required for CI)
+- `DATABASE_URL`: PostgreSQL connection string for test database
+- `REDIS_URL`: Redis connection URL
+- `REDIS_TOKEN`: Redis authentication token
+- `INNGEST_EVENT_KEY`: Inngest event key for workflow testing
+- `INNGEST_SIGNING_KEY`: Inngest signing key for webhook verification
 
 #### Staging Environment
 - `STAGING_API_URL`: API Gateway URL for staging
@@ -281,6 +295,33 @@ aws cloudfront create-invalidation \
 3. Verify role ARN in GitHub secrets is correct
 4. Check GitHub Actions has `id-token: write` permission
 
+### E2E Tests Fail
+
+1. **Vercel Dev won't start**:
+   - Check all required environment variables are set in GitHub secrets
+   - Verify DATABASE_URL, REDIS_URL, REDIS_TOKEN, INNGEST_EVENT_KEY, INNGEST_SIGNING_KEY
+   - Check Vercel CLI is installed correctly in workflow
+
+2. **Tests timeout**:
+   - Vercel Dev can take 60-120 seconds to start in CI
+   - Playwright config has 120 second timeout - this should be sufficient
+   - Check workflow logs for Vercel Dev startup errors
+
+3. **Database connection fails**:
+   - Verify DATABASE_URL points to accessible test database
+   - Ensure test database allows connections from GitHub Actions runners
+   - Consider using a cloud-hosted test database (Neon, Supabase, etc.)
+
+4. **Environment variables not loaded**:
+   - Verify secrets are added to GitHub repository settings
+   - Check secret names match exactly (case-sensitive)
+   - Ensure secrets are available to the e2e-tests job
+
+5. **Playwright report not generated**:
+   - Check the "Actions" tab > workflow run > "Artifacts" section
+   - Download "playwright-report" artifact to view detailed test results
+   - Reports are retained for 30 days
+
 ## Best Practices
 
 1. **Always review CDK diffs** before merging infrastructure changes
@@ -290,6 +331,32 @@ aws cloudfront create-invalidation \
 5. **Tag production deployments** for easy rollback reference
 6. **Keep secrets up to date** in GitHub repository settings
 7. **Review IAM permissions** regularly for least privilege
+8. **Run E2E tests locally** before pushing to ensure they pass in CI
+9. **Use test databases** for E2E tests, never production databases
+10. **Review Playwright reports** when E2E tests fail to diagnose issues
+11. **Keep Vercel CLI updated** in CI workflow for latest features and fixes
+
+## E2E Testing Setup Quick Start
+
+To enable E2E tests in CI, you need to configure test environment secrets:
+
+1. **Set up a test database** (recommended: Neon or Supabase free tier)
+2. **Set up test Redis** (recommended: Upstash free tier)
+3. **Get Inngest credentials** from your Inngest account
+4. **Add secrets to GitHub**:
+   ```bash
+   # Go to: Repository Settings > Secrets and variables > Actions
+   # Add these secrets:
+   - DATABASE_URL
+   - REDIS_URL
+   - REDIS_TOKEN
+   - INNGEST_EVENT_KEY
+   - INNGEST_SIGNING_KEY
+   ```
+5. **Verify E2E tests run locally** with `pnpm --filter @trivia-nft/web test:e2e`
+6. **Push changes** and check the "e2e-tests" job in GitHub Actions
+
+**Important**: Use separate test credentials, never production credentials!
 
 ## Additional Resources
 
@@ -297,3 +364,5 @@ aws cloudfront create-invalidation \
 - [AWS CDK Documentation](https://docs.aws.amazon.com/cdk/)
 - [OIDC with GitHub Actions](https://docs.github.com/en/actions/deployment/security-hardening-your-deployments/configuring-openid-connect-in-amazon-web-services)
 - [Expo Web Deployment](https://docs.expo.dev/distribution/publishing-websites/)
+- [Playwright Documentation](https://playwright.dev/docs/intro)
+- [Vercel CLI Documentation](https://vercel.com/docs/cli)

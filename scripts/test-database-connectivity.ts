@@ -52,16 +52,26 @@ async function main() {
 
   // Check environment variable
   if (!process.env.DATABASE_URL) {
-    console.error('❌ DATABASE_URL environment variable is not set');
+    console.error('\n❌ DATABASE_URL environment variable is not set\n');
+    console.error('Please set DATABASE_URL in your .env.local file or environment.\n');
+    console.error('See VERCEL_SETUP.md for configuration instructions.\n');
     process.exit(1);
   }
 
   console.log('\n📋 Configuration:\n');
-  const dbUrl = new URL(process.env.DATABASE_URL);
-  console.log(`  Host: ${dbUrl.hostname}`);
-  console.log(`  Database: ${dbUrl.pathname.slice(1)}`);
-  console.log(`  SSL: ${dbUrl.searchParams.get('sslmode') || 'enabled'}`);
-  console.log(`  Pooled: ${dbUrl.hostname.includes('-pooler.') ? 'Yes' : 'No'}`);
+  
+  try {
+    const dbUrl = new URL(process.env.DATABASE_URL);
+    console.log(`  Host: ${dbUrl.hostname}`);
+    console.log(`  Database: ${dbUrl.pathname.slice(1)}`);
+    console.log(`  SSL: ${dbUrl.searchParams.get('sslmode') || 'enabled'}`);
+    console.log(`  Pooled: ${dbUrl.hostname.includes('-pooler.') ? 'Yes' : 'No'}`);
+  } catch (error) {
+    console.error('\n❌ Invalid DATABASE_URL format\n');
+    console.error('Expected format: postgresql://user:password@host:port/database\n');
+    console.error('See VERCEL_SETUP.md for configuration instructions.\n');
+    process.exit(1);
+  }
 
   console.log('\n' + '═'.repeat(80));
   console.log('\n🧪 Running Tests:\n');

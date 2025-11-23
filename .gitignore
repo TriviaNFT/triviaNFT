@@ -26,6 +26,9 @@ coverage/
 .env.*.local
 .env.test
 
+# Vercel
+.vercel
+
 # Logs
 *.log
 npm-debug.log*

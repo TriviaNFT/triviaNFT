@@ -2,6 +2,12 @@
  * Question Service
  * 
  * Handles question generation, selection, and management
+ * 
+ * NOTE: This service uses optional AWS services:
+ * - AWS Bedrock: For AI-generated questions (optional - questions can be manually created)
+ * - AWS S3: For storing generated questions (optional - can use Vercel Blob or database)
+ * 
+ * If not using these services, questions should be seeded manually using scripts/seed-questions.ts
  */
 
 import { BedrockRuntimeClient, InvokeModelCommand } from '@aws-sdk/client-bedrock-runtime';

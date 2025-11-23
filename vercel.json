@@ -6,7 +6,7 @@
   "outputDirectory": "apps/web/dist",
   "installCommand": "pnpm install",
   "framework": null,
-  "devCommand": "cd apps/web && pnpm dev",
+  "devCommand": "cd apps/web && next dev",
   "regions": ["iad1"],
   "headers": [
     {

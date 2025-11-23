@@ -122,13 +122,19 @@ function printResults(checks: EnvCheck[]) {
 }
 
 function printVercelInstructions() {
-  console.log('\n📝 To configure environment variables in Vercel:\n');
-  console.log('1. Go to https://vercel.com/dashboard');
-  console.log('2. Select your project');
-  console.log('3. Go to Settings → Environment Variables');
-  console.log('4. Add each missing variable');
-  console.log('5. Select appropriate environments (Preview, Production)');
-  console.log('6. Redeploy to apply changes\n');
+  console.log('\n📝 To configure environment variables:\n');
+  console.log('For local development:');
+  console.log('  1. Copy .env.local.example to .env.local');
+  console.log('  2. Fill in the required values');
+  console.log('  3. See VERCEL_SETUP.md for detailed setup instructions\n');
+  console.log('For Vercel deployments:');
+  console.log('  1. Go to https://vercel.com/dashboard');
+  console.log('  2. Select your project');
+  console.log('  3. Go to Settings → Environment Variables');
+  console.log('  4. Add each missing variable');
+  console.log('  5. Select appropriate environments (Preview, Production)');
+  console.log('  6. Redeploy to apply changes\n');
+  console.log('📖 For complete setup instructions, see: VERCEL_SETUP.md\n');
 }
 
 function main() {

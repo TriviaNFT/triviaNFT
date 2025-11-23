@@ -4,7 +4,6 @@
  * Handles JWT token generation and verification for authentication.
  */
 
-import { SecretsManagerClient, GetSecretValueCommand } from '@aws-sdk/client-secrets-manager';
 import { UnauthorizedError } from '@trivia-nft/shared';
 
 interface JWTPayload {
@@ -16,57 +15,15 @@ interface JWTPayload {
   exp: number;
 }
 
-interface JWTSecret {
-  secret: string;
-}
-
-let secretCache: { value: string; expiresAt: number } | null = null;
-
 /**
- * Get JWT secret from Secrets Manager with caching
+ * Get JWT secret from environment variable
  */
-async function getJWTSecret(): Promise<string> {
-  // Check cache first (5 minute TTL)
-  if (secretCache && secretCache.expiresAt > Date.now()) {
-    return secretCache.value;
+function getJWTSecret(): string {
+  const secret = process.env.JWT_SECRET;
+  if (!secret) {
+    throw new Error('JWT_SECRET environment variable must be set');
   }
-
-  // For local development, use environment variable
-  if (process.env.JWT_SECRET) {
-    return process.env.JWT_SECRET;
-  }
-
-  const secretArn = process.env.JWT_SECRET_ARN;
-  if (!secretArn) {
-    throw new Error('JWT_SECRET or JWT_SECRET_ARN must be set');
-  }
-
-  const client = new SecretsManagerClient({});
-  
-  try {
-    const response = await client.send(
-      new GetSecretValueCommand({
-        SecretId: secretArn,
-      })
-    );
-
-    if (!response.SecretString) {
-      throw new Error('JWT secret value is empty');
-    }
-
-    const secret: JWTSecret = JSON.parse(response.SecretString);
-    
-    // Cache for 5 minutes
-    secretCache = {
-      value: secret.secret,
-      expiresAt: Date.now() + 5 * 60 * 1000,
-    };
-    
-    return secret.secret;
-  } catch (error) {
-    console.error('Error retrieving JWT secret:', error);
-    throw error;
-  }
+  return secret;
 }
 
 /**
@@ -104,7 +61,7 @@ async function createSignature(data: string, secret: string): Promise<string> {
  * Generate JWT token
  */
 export async function generateToken(payload: Omit<JWTPayload, 'iat' | 'exp'>): Promise<string> {
-  const secret = await getJWTSecret();
+  const secret = getJWTSecret();
   
   const now = Math.floor(Date.now() / 1000);
   const fullPayload: JWTPayload = {
@@ -130,7 +87,7 @@ export async function generateToken(payload: Omit<JWTPayload, 'iat' | 'exp'>): P
  * Verify and decode JWT token
  */
 export async function verifyToken(token: string): Promise<JWTPayload> {
-  const secret = await getJWTSecret();
+  const secret = getJWTSecret();
   
   const parts = token.split('.');
   if (parts.length !== 3) {
