@@ -22,7 +22,9 @@
     "test:upstash": "tsx src/scripts/test-upstash-redis.ts",
     "verify:inngest": "tsx src/scripts/verify-inngest-setup.ts",
     "verify:env": "tsx ../../scripts/verify-vercel-env.ts",
-    "test:migration": "tsx src/scripts/test-neon-migration.ts"
+    "test:migration": "tsx src/scripts/test-neon-migration.ts",
+    "backup:database": "tsx ../../scripts/backup-production-database.ts",
+    "restore:database": "tsx ../../scripts/restore-to-neon.ts"
   },
   "dependencies": {
     "@aws-sdk/client-appconfigdata": "^3.927.0",

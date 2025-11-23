@@ -231,7 +231,7 @@ Generate ${count} questions now:`;
    */
   async getQuestionPoolCount(categoryId: string): Promise<number> {
     const result = await query(
-      'SELECT COUNT(*) as count FROM questions WHERE category_id = $1 AND is_active = true',
+      'SELECT COUNT(*) as count FROM questions WHERE category_id = $1::uuid AND is_active = true',
       [categoryId]
     );
 
@@ -261,7 +261,7 @@ Generate ${count} questions now:`;
         `SELECT id, category_id as "categoryId", text, options, correct_index as "correctIndex", 
                 explanation, source, hash
          FROM questions
-         WHERE category_id = $1 
+         WHERE category_id = $1::uuid 
            AND is_active = true
            AND id NOT IN (${excludeIds.length > 0 ? excludeIds.map((_, i) => `$${i + 2}`).join(',') : 'SELECT NULL'})
          ORDER BY RANDOM()
@@ -280,7 +280,7 @@ Generate ${count} questions now:`;
         `SELECT id, category_id as "categoryId", text, options, correct_index as "correctIndex",
                 explanation, source, hash
          FROM questions
-         WHERE category_id = $1 
+         WHERE category_id = $1::uuid 
            AND is_active = true
            AND id NOT IN (${excludeIds.length > 0 ? excludeIds.map((_, i) => `$${i + 2}`).join(',') : 'SELECT NULL'})
          ORDER BY created_at ASC, RANDOM()
@@ -298,7 +298,7 @@ Generate ${count} questions now:`;
         `SELECT id, category_id as "categoryId", text, options, correct_index as "correctIndex",
                 explanation, source, hash
          FROM questions
-         WHERE category_id = $1 
+         WHERE category_id = $1::uuid 
            AND is_active = true
            AND id NOT IN (${[...excludeIds, ...reused.map(q => q.id)].map((_, i) => `$${i + 2}`).join(',')})
          ORDER BY created_at DESC, RANDOM()
