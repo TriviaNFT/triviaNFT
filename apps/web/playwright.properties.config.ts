@@ -1,11 +1,11 @@
 import { defineConfig, devices } from '@playwright/test';
 
 /**
- * Playwright configuration for E2E testing
- * See https://playwright.dev/docs/test-configuration
+ * Playwright configuration for property-based tests
+ * These tests don't require a running web server as they test configuration files
  */
 export default defineConfig({
-  testDir: './e2e',
+  testDir: './e2e/properties',
   
   /* Run tests in files in parallel */
   fullyParallel: true,
@@ -24,9 +24,6 @@ export default defineConfig({
   
   /* Shared settings for all the projects below */
   use: {
-    /* Base URL to use in actions like `await page.goto('/')` */
-    baseURL: process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3000',
-    
     /* Collect trace when retrying the failed test */
     trace: 'on-first-retry',
     
@@ -35,13 +32,10 @@ export default defineConfig({
     
     /* Video on failure */
     video: 'retain-on-failure',
-    
-    /* Increase action timeout for slow Metro dev server */
-    actionTimeout: 15000,
   },
   
-  /* Increase test timeout for slow Metro dev server */
-  timeout: 90000,
+  /* Standard test timeout */
+  timeout: 30000,
 
   /* Configure projects for major browsers */
   projects: [
@@ -51,11 +45,5 @@ export default defineConfig({
     },
   ],
 
-  /* Run your local dev server before starting the tests */
-  webServer: {
-    command: 'vercel dev --yes',
-    url: 'http://localhost:3000',
-    reuseExistingServer: !process.env.CI,
-    timeout: 120 * 1000,
-  },
+  /* No web server needed for property tests */
 });
