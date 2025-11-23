@@ -4,6 +4,7 @@ import { Button, Card } from './ui';
 import { useAuth } from '../contexts';
 import { detectWallets } from '../utils/wallet';
 import { useResponsive, useStatePreservation } from '../hooks';
+import { modalOverlay, combine } from '../utils/common-styles';
 import type { WalletInfo } from '../types';
 
 export interface WalletConnectProps {
@@ -94,8 +95,7 @@ export const WalletConnect: React.FC<WalletConnectProps> = ({
         onRequestClose={() => setShowModal(false)}
       >
         <Pressable
-          className="flex-1 bg-black/80 justify-center items-center"
-          style={{ padding: isMobile ? 16 : 24 }}
+          style={combine(modalOverlay, { padding: isMobile ? 16 : 24 })}
           onPress={() => setShowModal(false)}
           accessibilityLabel="Close wallet selection modal"
         >
