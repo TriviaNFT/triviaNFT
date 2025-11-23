@@ -10,7 +10,7 @@
     "dev:vercel": "vercel dev",
     "dev:ui": "expo start",
     "dev:clean": "expo start --web --clear",
-    "build": "expo export --platform web",
+    "build": "expo export --platform web --clear",
     "vercel-build": "pnpm --filter @trivia-nft/shared build && pnpm build",
     "lint": "eslint .",
     "type-check": "tsc --noEmit",
