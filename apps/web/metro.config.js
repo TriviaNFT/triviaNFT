@@ -21,6 +21,8 @@ config.resolver.blockList = [
   /\/infra\/node_modules\/.*/,
   // Exclude NativeWind cache files that cause SHA-1 issues
   /react-native-css-interop\/\.cache\/.*/,
+  /\.cache\/web\.css$/,
+  /node_modules\/.*\/\.cache\/.*/,
   // Exclude Next.js API routes (only used in Vercel deployment, not Expo)
   /\/app\/api\/.*\/route\.ts$/,
 ];
