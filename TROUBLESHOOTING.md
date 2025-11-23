@@ -34,11 +34,11 @@ NativeWind generates cache files during the Metro bundling process. In a pnpm mo
 
 ### Solution
 
-The project now includes an automatic cache cleanup script that runs before each build:
+The issue is resolved by skipping NativeWind's Metro wrapper for web builds:
 
-1. **Automatic cleanup** - The `build` script now runs `pnpm clean:cache` before `expo export`
-2. **Manual cleanup** - Run `pnpm clean:cache` in `apps/web` to manually clean cache directories
-3. **Metro config updated** - Added `isCSSEnabled: true` to properly handle CSS processing
+1. **Metro config updated** - Web builds skip `withNativeWind` wrapper since web uses PostCSS instead of Metro for CSS processing
+2. **API routes excluded** - Added blockList patterns to exclude Next.js API routes from Metro bundling
+3. **Cache cleanup** - Automatic cleanup script runs before each build as a safety measure
 
 **Verify the fix:**
 ```bash
@@ -47,6 +47,12 @@ pnpm build
 ```
 
 The build should now complete without SHA-1 errors.
+
+**Technical Details:**
+- Web builds don't need NativeWind's Metro-level CSS processing
+- The `withNativeWind` wrapper causes react-native-css-interop to generate cache files
+- In pnpm monorepos with symlinks, Metro can't compute SHA-1 for dynamically generated files
+- Solution: Use conditional Metro config that skips the wrapper for web platform
 
 ---
 

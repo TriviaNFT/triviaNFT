@@ -16,6 +16,7 @@ cdk.out/
 # Expo
 .expo/
 .expo-shared/
+.nativewind-cache/
 
 # Testing
 coverage/

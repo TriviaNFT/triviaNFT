@@ -43,7 +43,8 @@ NativeWind's `react-native-css-interop` generates `.cache/web.css` files during 
 #### C. Enhanced Metro Configuration
 **File:** `apps/web/metro.config.js`
 - Added `isCSSEnabled: true` to Expo config
-- Maintains existing blockList patterns for cache directories
+- **Skip withNativeWind wrapper for web builds** - Web uses PostCSS, not Metro CSS processing
+- Enhanced blockList to exclude Next.js API routes from Metro bundling
 - Properly configures CSS processing for web builds
 
 ### Testing

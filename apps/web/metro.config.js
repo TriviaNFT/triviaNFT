@@ -26,8 +26,10 @@ config.resolver.blockList = [
   /react-native-css-interop\/\.cache\/.*/,
   /\.cache\/web\.css$/,
   /node_modules\/.*\/\.cache\/.*/,
+  /\.nativewind-cache/,
   // Exclude Next.js API routes (only used in Vercel deployment, not Expo)
-  /\/app\/api\/.*\/route\.ts$/,
+  /\/app\/api\/.*/,
+  /\\app\\api\\.*/,
 ];
 
 // Allow require.context (used by expo-router)
@@ -78,4 +80,14 @@ config.resolver = {
 };
 
 // Wrap with NativeWind to enable Tailwind CSS processing
-module.exports = withNativeWind(config, { input: './global.css' });
+// For web builds, we don't need NativeWind's Metro wrapper since we use PostCSS
+// This avoids SHA-1 cache issues with react-native-css-interop in pnpm monorepo
+if (process.env.EXPO_PUBLIC_PLATFORM === 'web' || process.argv.includes('--platform') && process.argv.includes('web')) {
+  // Export config without NativeWind wrapper for web
+  module.exports = config;
+} else {
+  // Use NativeWind wrapper for native platforms
+  module.exports = withNativeWind(config, { 
+    input: './global.css',
+  });
+}
