@@ -279,3 +279,37 @@
   - Verify all documentation is complete and accurate
   - Confirm Vercel Dev is the default development approach
   - Test that a new developer can follow docs and get running
+
+
+- [x] 25. Resolve Metro Bundler SHA-1 Cache Error
+
+
+
+
+  - Created `apps/web/scripts/clean-cache.js` to remove NativeWind cache directories
+  - Updated `apps/web/package.json` build script to run cache cleanup before expo export
+  - Enhanced `apps/web/metro.config.js` with `isCSSEnabled: true` for proper CSS handling
+  - Verified script successfully removes `.cache` directories from node_modules
+  - _Issue: Metro SHA-1 error with react-native-css-interop cache files_
+
+- [x] 26. Resolve Peer Dependency Warnings
+
+
+
+
+  - Aligned vitest versions across workspace: updated to `vitest@1.6.1` and `@vitest/ui@1.6.1`
+  - Updated `packages/shared/package.json` with matching vitest versions
+  - Updated `services/api/package.json` with matching vitest versions
+  - Created `apps/web/.npmrc` with peer dependency resolution configuration
+  - _Issue: Peer dependency mismatches causing build warnings_
+
+- [x] 27. Document build fixes and troubleshooting
+
+
+
+
+  - Created `VERCEL_BUILD_FIXES.md` with comprehensive resolution summary
+  - Updated `TROUBLESHOOTING.md` with Metro SHA-1 and peer dependency sections
+  - Documented root causes, solutions, and verification steps
+  - Added testing checklist for future builds
+  - _Documentation: Build issue resolution and prevention_

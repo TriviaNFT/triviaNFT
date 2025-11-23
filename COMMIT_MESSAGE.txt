@@ -1,0 +1,38 @@
+fix: resolve Metro SHA-1 cache error and peer dependency warnings
+
+This commit addresses critical build failures on Vercel caused by Metro bundler
+SHA-1 cache errors and peer dependency version mismatches.
+
+Changes:
+
+1. Metro Bundler SHA-1 Cache Error Fix:
+   - Created apps/web/scripts/clean-cache.js to remove NativeWind cache directories
+   - Updated build script to run cache cleanup before expo export
+   - Enhanced metro.config.js with isCSSEnabled: true for proper CSS handling
+   - Prevents "SHA-1 for file ... is not computed" errors
+
+2. Peer Dependency Resolution:
+   - Aligned vitest versions to 1.6.1 across packages/shared and services/api
+   - Added @vitest/ui@1.6.1 to match vitest version
+   - Created apps/web/.npmrc with peer dependency auto-resolution
+   - Reduces peer dependency warnings during pnpm install
+
+3. Documentation:
+   - Created VERCEL_BUILD_FIXES.md with comprehensive resolution summary
+   - Updated TROUBLESHOOTING.md with new sections for these issues
+   - Created TESTING_CHECKLIST.md for verification steps
+   - Updated .kiro/specs/vercel-local-testing/tasks.md with completion status
+
+Root Cause Analysis:
+- NativeWind generates cache files during Metro bundling in pnpm monorepo
+- Metro's file watcher discovers dynamically created files but can't compute SHA-1
+- pnpm symlinks in monorepo structure exacerbate the timing issue
+- Pre-build cache cleanup ensures clean slate before Metro starts
+
+Testing:
+- Cache cleanup script verified working locally
+- All modified files pass diagnostics checks
+- Ready for Vercel deployment testing
+
+Closes: Metro SHA-1 cache error
+Closes: Peer dependency version mismatches

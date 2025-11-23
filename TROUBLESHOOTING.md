@@ -4,12 +4,93 @@ This guide covers common issues you may encounter when working with Vercel Dev a
 
 ## Table of Contents
 
+- [Metro Bundler SHA-1 Cache Error](#metro-bundler-sha-1-cache-error)
+- [Peer Dependency Warnings](#peer-dependency-warnings)
 - [Command Not Found: vercel](#command-not-found-vercel)
 - [Port 3000 Already in Use](#port-3000-already-in-use)
 - [Environment Variables Not Found](#environment-variables-not-found)
 - [Vercel Project Not Linked](#vercel-project-not-linked)
 - [Slow Startup](#slow-startup)
 - [Database Connection Failures](#database-connection-failures)
+
+---
+
+## Metro Bundler SHA-1 Cache Error
+
+### Problem
+
+When building for Vercel, you see:
+
+```
+ReferenceError: SHA-1 for file /vercel/path0/node_modules/.pnpm/react-native-css-interop@0.2.1_.../node_modules/react-native-css-interop/.cache/web.css is not computed.
+Potential causes:
+  1) You have symlinks in your project - watchman does not follow symlinks.
+  2) Check `blockList` in your metro.config.js and make sure it isn't excluding the file path.
+```
+
+### Root Cause
+
+NativeWind generates cache files during the Metro bundling process. In a pnpm monorepo with symlinks, Metro's file watcher discovers these dynamically created files but cannot compute their SHA-1 hash because they weren't in the initial dependency graph.
+
+### Solution
+
+The project now includes an automatic cache cleanup script that runs before each build:
+
+1. **Automatic cleanup** - The `build` script now runs `pnpm clean:cache` before `expo export`
+2. **Manual cleanup** - Run `pnpm clean:cache` in `apps/web` to manually clean cache directories
+3. **Metro config updated** - Added `isCSSEnabled: true` to properly handle CSS processing
+
+**Verify the fix:**
+```bash
+cd apps/web
+pnpm build
+```
+
+The build should now complete without SHA-1 errors.
+
+---
+
+## Peer Dependency Warnings
+
+### Problem
+
+During `pnpm install`, you see warnings like:
+
+```
+WARN  Issues with peer dependencies found
+apps/web
+└─┬ react-test-renderer 19.2.0
+  └── ✕ unmet peer react@^19.2.0: found 18.2.0
+
+packages/shared
+├─┬ vitest 1.6.1
+│ └── ✕ unmet peer @vitest/ui@1.6.1: found 4.0.13
+└─┬ @vitest/ui 4.0.13
+  └── ✕ unmet peer vitest@4.0.13: found 1.6.1
+```
+
+### Root Cause
+
+Version mismatches between packages and their peer dependencies in the monorepo.
+
+### Solution
+
+The following fixes have been applied:
+
+1. **Vitest versions aligned** - Updated `packages/shared` and `services/api` to use `vitest@1.6.1` and `@vitest/ui@1.6.1`
+2. **pnpm configuration** - Added `apps/web/.npmrc` with:
+   ```
+   auto-install-peers=true
+   strict-peer-dependencies=false
+   shamefully-hoist=true
+   ```
+
+**Verify the fix:**
+```bash
+pnpm install
+```
+
+Warnings should be significantly reduced. Some warnings from transitive dependencies (like react-test-renderer) may persist but won't affect builds.
 
 ---
 
