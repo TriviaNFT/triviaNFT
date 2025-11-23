@@ -146,7 +146,7 @@ export class MintService {
     const query = `
       SELECT COUNT(*) as available
       FROM nft_catalog
-      WHERE category_id = $1
+      WHERE category_id = $1::uuid
         AND is_minted = false
         AND tier = 'category'
     `;
@@ -164,7 +164,7 @@ export class MintService {
     const query = `
       SELECT COUNT(*) as available
       FROM nft_catalog
-      WHERE category_id = $1
+      WHERE category_id = $1::uuid
         AND is_minted = false
         AND tier = 'category'
     `;
@@ -192,7 +192,7 @@ export class MintService {
         attributes,
         created_at as "createdAt"
       FROM nft_catalog
-      WHERE category_id = $1
+      WHERE category_id = $1::uuid
         AND is_minted = false
         AND tier = 'category'
       ORDER BY RANDOM()

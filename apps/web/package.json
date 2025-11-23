@@ -54,6 +54,7 @@
     "babel-preset-expo": "~10.0.0",
     "buffer": "^6.0.3",
     "crypto-browserify": "^3.12.1",
+    "dotenv": "^17.2.3",
     "fast-check": "^4.3.0",
     "jsdom": "^27.2.0",
     "metro": "~0.80.0",

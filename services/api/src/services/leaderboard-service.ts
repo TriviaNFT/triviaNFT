@@ -250,7 +250,7 @@ export class LeaderboardService {
               MIN(s.started_at) as first_achieved_at
        FROM sessions s
        JOIN players p ON s.stake_key = p.stake_key
-       WHERE s.category_id = $1 AND s.stake_key = ANY($2)
+       WHERE s.category_id = $1::uuid AND s.stake_key = ANY($2)
        GROUP BY s.stake_key, p.username`,
       [categoryId, stakeKeys]
     );
@@ -380,7 +380,7 @@ export class LeaderboardService {
          COUNT(*) as sessions_used,
          MIN(started_at) as first_achieved_at
        FROM sessions
-       WHERE stake_key = $1 AND category_id = $2`,
+       WHERE stake_key = $1 AND category_id = $2::uuid`,
       [stakeKey, categoryId]
     );
 
