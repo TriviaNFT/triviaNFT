@@ -91,7 +91,7 @@ export interface AssetNameComponents {
 const PREFIX = 'TNFT';
 const VERSION = 'V1';
 const MAX_LENGTH = 32;
-const VALID_CHARS_REGEX = /^[A-Za-z0-9_]+$/; // Allow both uppercase and lowercase for hex IDs
+// const VALID_CHARS_REGEX = /^[A-Za-z0-9_]+$/; // Allow both uppercase and lowercase for hex IDs
 const HEX_ID_REGEX = /^[0-9a-f]{8}$/;
 
 // ============================================================================
